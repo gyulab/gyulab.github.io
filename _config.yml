@@ -85,8 +85,8 @@ social:
 
   - name: Facebook
     icon: facebook
-    username: Gyujun Jeong
-    url: ""
+    username: "Gyujun Jeong"
+    url: "https://www.facebook.com/gyujoon"
     desc: Friend me on Facebook
     share: true
 
