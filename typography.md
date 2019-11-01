@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Typography library
+title: Typography Library
 permalink: /typography/
 main_nav: true
 ---
