@@ -9,8 +9,8 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Gyujun Jeong's Semiconductor Weblab
-subtitle: "제작중"
+title: Kyu's Semiconductor Weblab
+subtitle: "Gyujoon Jeong, **KAIST** Electrical Eng. Dept. Device Division."
 email: jkj3480@kaist.ac.kr
 name: Gyujun Jeong
 description: >
