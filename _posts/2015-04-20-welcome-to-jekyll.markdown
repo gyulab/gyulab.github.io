@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Manual II (Do not click)"
 date:   2015-04-20 08:43:59
 author: Ben Centra
-categories: Jekyll
+categories: Manual
 tags:	jekyll welcome
 cover:  "/assets/instacode.png"
 ---
