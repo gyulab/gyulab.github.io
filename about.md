@@ -7,7 +7,7 @@ main_nav: true
 
 ![alt text]({{ site.baseurl }}/assets/certificate.png "Profile Picture"){:.profile}
 
-Hello. My name is Gyujun Jeong, who is studying Electric Engineering on KAIST, Rep of Korea.
+Hello. My name is Gyujun Jeong, who is studying Electric Engineering on Korea Advanced Institute of Science and Technology (KAIST).
 I made this website to arrange my semiconductor device knowledges and share my daily life related to academics.
 Thanks!
 
