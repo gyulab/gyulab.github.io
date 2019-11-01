@@ -6,8 +6,8 @@ author: Gyujun Jeong
 categories: Semiconductors
 ---
 
-• Equivalent circuit models are needed to analyze transistor circuits.
-• Representative 3 equivalent-circuit models for the bipolar transistor.
+Equivalent circuit models are needed to analyze transistor circuits.
+Representative 3 equivalent-circuit models for the bipolar transistor.
 a. Ebers-Moll model:
 - is based on the interacting diode junctions (B-E and B-C).
 - is applicable for any of the transistor operating modes
