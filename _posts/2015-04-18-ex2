@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Integrating e^-x^2"
+date:   2019-10-29T14:25:52-05:00
+author: Gyujun Jeong
+categories: Knowledge
+---
+
+e^-x^2 함수의 적분은 많이는 아니지만 erf 등을 구할 때 유용하게 사용된다.
+![alt text]({{ site.baseurl }}/assets/images/ex2.PNG "Profile Picture"){:.profile}
