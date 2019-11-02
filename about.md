@@ -6,6 +6,7 @@ main_nav: true
 ---
 
 ![alt text]({{ site.baseurl }}/assets/certificate.png "Profile Picture"){:.profile}
+<img src="{{ site.baseurl }}/assets/certificate.png "Profile Picture"" width="40%">
 
 Greetings. 
 I'm Gyujun Jeong, studying Electric Engineering on KAIST, Daejeon.
