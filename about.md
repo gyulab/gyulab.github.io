@@ -1,13 +1,14 @@
 ---
 layout: page
-title: About my Website
+title: Introduction
 permalink: /about/
 main_nav: true
 ---
 
 ![alt text]({{ site.baseurl }}/assets/certificate.png "Profile Picture"){:.profile}
 
-Hello. My name is Gyujun Jeong, studying Electric Engineering on Korea Advanced Institute of Science and Technology (KAIST).
+Greetings. 
+I'm Gyujun Jeong, studying Electric Engineering on KAIST, Daejeon.
 I made this website to arrange my semiconductor device knowledges and share my daily life related to academics.
 Thanks!
 
