@@ -3,7 +3,7 @@ layout: post
 title:  "Manual (Do not click)"
 date:   2015-04-18T14:25:52-05:00
 author: Ben Centra
-categories: Manual
+categories: Academics
 tags:	jekyll welcome
 cover:  "/assets/instacode.png"
 ---
