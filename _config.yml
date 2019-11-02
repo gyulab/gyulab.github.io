@@ -9,7 +9,7 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: yu's Semiconductor Weblab
+title: Gyu's Semiconductor Weblab
 subtitle: "Gyujun Jeong, KAIST Electrical Eng. Dept. Device Division."
 email: jkj3480@kaist.ac.kr
 name: Gyujun Jeong
