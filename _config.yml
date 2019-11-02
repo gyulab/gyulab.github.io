@@ -28,11 +28,14 @@ markdown: kramdown
 inter_post_navigation: false
 highlightjs_theme: "monokai-sublime"
 
+paginate: 5
+gems:
+  - jekyll-paginate
 # Pagination Settings
 # https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
 pagination:
   enabled: true
-  per_page: 4
+  per_page: 5
   permalink: "/page/:num/"
   sort_reverse: true
 
