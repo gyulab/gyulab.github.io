@@ -7,7 +7,7 @@ main_nav: true
 
 ![alt text]({{ site.baseurl }}/assets/certificate.png "Profile Picture"){:.profile}{:width="40%" height="40%"}
 
-&nbsp;&nbsp;&nbsp;&nbsp;Greetings. I'm Gyujun Jeong, studying Electrical Engineering on KAIST, Daejeon.
+&nbsp;&nbsp;&nbsp;&nbsp;Greetings. I'm Gyujun Jeong, studying Electrical Engineering on KAIST, Daejeon.<br>
 I made this website to arrange my semiconductor device knowledges and share my daily life related to academics.
 Thanks! 
 
