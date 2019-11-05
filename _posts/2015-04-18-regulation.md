@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "일본의 반도체 품목 수출규제에 관한 이야기"
-date:   2019-11-05T14:25:52-05:00
+date:   2019-11-01T14:25:52-05:00
 author: Gyujun Jeong
 categories: Issues
 ---
