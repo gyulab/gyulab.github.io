@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Manual (Do not click)"
-date:   2015-04-18T14:25:52-05:00
+title:  "Archive"
+date:   2019-10-02T14:25:52-05:00
 author: Ben Centra
 categories: Academics
 tags:	jekyll welcome
