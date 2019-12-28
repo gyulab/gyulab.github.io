@@ -207,5 +207,4 @@ protocols:
     os_src: "git@github.com:bencentra/centrarium.com.git"
     
     
-plugins:
-  - jekyll-sitemap
+
