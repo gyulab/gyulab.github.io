@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Breakdown Phenomena"
-date:   2019-12-27T14:25:52-05:00
+date:   2019-12-22T11:25:52-05:00
 author: Gyujun Jeong
 categories: Academics
 ---
