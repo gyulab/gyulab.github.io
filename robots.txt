@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://gyulab.github.io/sitemap.xml
