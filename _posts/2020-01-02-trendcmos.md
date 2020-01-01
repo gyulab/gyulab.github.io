@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "반도체의 Scaling Trend (CMOS)"
+title:  "반도체(CMOS)의 Scaling Trend"
 date:   2020-01-02T14:25:52-05:00
 author: Gyujun Jeong
 categories: Issues
@@ -13,14 +13,22 @@ categories: Issues
 
 <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;1971년, 강대원 박사의 MOSFET 트랜지스터 개발 이후, 10 마이크로미터의 Channel 길이로 시작한 반도체 산업은 세월이 지나 현재 2019년, 삼성, 하이닉스, TSMC와 같은 굴지의 기업들이 5nm 공정까지의 개발을 성공하게 된다. 세계적인 반도체 기업인 Intel은 2019년 12월, 기술 컨퍼런스에서 2027년까지 1nm 공정을 개발하는 것을 목표로 한 Roadmap을 공개하게 된다. 오늘은 빨간색으로 표시한 250, 130, 90, 45 나노 공정에 들어간 기술에 대하여 알아 보도록 하자. 
+&nbsp;&nbsp;&nbsp;&nbsp;1971년, 강대원 박사의 MOSFET 트랜지스터 개발 이후, 10 마이크로미터의 Channel 길이로 시작한 반도체 산업은 세월이 지나 현재 2019년, 삼성, 하이닉스, TSMC와 같은 굴지의 기업들이 5nm 공정까지의 개발을 성공하게 된다. 세계적인 반도체 기업인 Intel은 2019년 12월, 기술 컨퍼런스에서 2027년까지 1nm 공정을 개발하는 것을 목표로 한 Roadmap을 공개하였다. 오늘은 빨간색으로 표시한 250, 130, 90, 45 나노 공정에 들어간 기술에 대하여 알아 보도록 하자. 
 <br>
-(2012년과 2021년에 다르게 색칠해 놓은 FinFET과 GAAFET의 경우 저번 포스팅에서 다루었으므로 저번 포스팅을 참고하도록 하자: https://gyulab.github.io//issues/2019/12/23/finfet.html)
+&nbsp;&nbsp;&nbsp;&nbsp;(2012년과 2021년에 다르게 색칠해 놓은 FinFET과 GAAFET의 경우 저번 포스팅에서 다루었으므로 저번 포스팅을 참고하도록 하자: https://gyulab.github.io//issues/2019/12/23/finfet.html)
 <br>
 
-![alt text]({{ site.baseurl }}/assets/images/mosfet/m2.PNG "Profile Picture"){:.profile}
- 
-&nbsp;&nbsp;&nbsp;&nbsp;이제 FET에 대하여 알아보자. FET이랑 Field Effect Transistor의 약자로, 앞에서 본 MOS구조에 2개의 Terminal (Source, Drain)을 달고, 이 Terminal에 Voltage를 걸어 줘서 (=Field Effect 형성) Current의 흐름을 제어 및 증폭 (=Transistor 역할) 이 가능하다. 즉, Voltage-Controlled Current Source(VCCS)가 되는 것이다.
+![alt text]({{ site.baseurl }}/assets/images/mosfet/s3.png "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/mosfet/s4.gif "image"){:.profile}
+
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;각 나노 공정을 살펴보기 전에, 반도체 업계에서 가장 많이 알려진 법칙이 있다. 세계적인 반도체 기업인 Intel의 공동설립자인 Gordon Moore가 제시한 무어의 법칙이다. 이는 반도체 집적회로의 성능이 24개월마다 2배로 증가한다는 법칙이다. 즉, 2년마다 2배의 성능이 향상된다고 생각할 수 있다. 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;하지만, 점점 Scaling의 한계에 봉착하기 시작했다. 2번째 그림과 같이 channel length를 작게 하면, 오른쪽 그림과 같이 Tunneling이 발생하여 더 이상 소자가 제 기능을 하지 못하는 현상이 발생하게 된다. 설사 가능하다 하더라도 cost의 문제로 인해 포기를 해야 한다는 의견이 나오고 있다. Moore의 법칙이 더 이상 valid하지 않다와 아직까지는 valid하다는 의견이 분분하다.
+
+
+
 <br>
 
  
