@@ -32,11 +32,11 @@ categories: Issues
 
 <br>
 
- 
+![alt text]({{ site.baseurl }}/assets/images/mosfet/m10.PNG "image"){:.profile}
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/s5.png "image"){:.profile}
 <br>
   
-&nbsp;&nbsp;&nbsp;&nbsp; 저번 시간에 봤던 Short Channel Effect이다. Channel이 짧아질수록 Threshold Voltage가 Roll up되게 되며, Switching을 해야 할 때도 open이 되어 트랜지스터로써의 역할을 수행할 수 없는 결과가 발생하게 된다. 이제 각 나노공정별로 어떻게 Short Channel Effect를 극복했는지 알아보도록 하자.
+&nbsp;&nbsp;&nbsp;&nbsp; 저번 시간에 봤던 Short Channel Effect이다. 수율 면으로나 성능 면으로나 소자를 더욱 작게 만드는 것은 중요하나, 점점 작게 만듬으로써 Channel이 짧아지게 되고, 이로 인해 Threshold Voltage가 Roll up되게 되며, Switching을 해야 할 때도 open이 되어 트랜지스터로써의 역할을 수행할 수 없는 결과가 발생하게 된다. 이제 각 나노공정별로 어떻게 Short Channel Effect를 극복했는지 알아보도록 하자.
 <br>
 
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/s6.png "image"){:.profile}
@@ -52,10 +52,10 @@ categories: Issues
 5. Thin Gate oxide (refer to Vt roll up formula)
 <br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;논문의 그래프를 보게 되면, RTA, 즉 고온으로 장시간 유지시킨 후 급속 냉각하는 열처리(annealing)을 한 것이 하지 않은 것보다 Vt roll up이 획기적으로 줄었다는 것을 알 수 있다.
+논문의 그래프를 보게 되면, RTA, 즉 고온으로 장시간 유지시킨 후 급속 냉각하는 열처리(annealing)을 한 것이 하지 않은 것보다 Vt roll up이 획기적으로 줄었다는 것을 알 수 있다.
 <br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;IBM의 Bijan Davari는 250nm dual-gate CMOS의 구조를 논문에 게재하였다. 소자의 구조는 2번째 그림과 같다.
+IBM의 Bijan Davari는 250nm dual-gate CMOS의 구조를 논문에 게재하였다. 소자의 구조는 2번째 그림과 같다.
 
 <br>
 
