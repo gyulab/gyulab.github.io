@@ -6,9 +6,9 @@ author: Gyujun Jeong
 categories: Academics
 ---
 
-BJT에서 Ideal 하다는 조건은 Constant 한 Doping, Low level injection, Emitter와 Base region의 width 가 일정, Energy gap이 일정하고 전체 current가 일정한 조건이다.
+&nbsp;&nbsp;&nbsp;&nbsp;BJT에서 Ideal 하다는 조건은 Constant 한 Doping, Low level injection, Emitter와 Base region의 width 가 일정, Energy gap이 일정하고 전체 current가 일정한 조건이다.
 
-이러한 Ideal한 조건이 붕괴되는 것을 Non-ideal이라고 하고, 각각의 Nonideal한 상황에서의 Effect를 알아 볼 것이다.
+&nbsp;&nbsp;&nbsp;&nbsp;이러한 Ideal한 조건이 붕괴되는 것을 Non-ideal이라고 하고, 각각의 Nonideal한 상황에서의 Effect를 알아 볼 것이다.
 
 Nonideal한 Effect 에는 크게 6가지가 있다. 
 
