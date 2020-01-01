@@ -3,7 +3,7 @@ layout: post
 title:  "Archive"
 date:   2019-10-02T14:25:52-05:00
 author: Ben Centra
-categories: Manual
+categories: 
 tags:	jekyll welcome
 cover:  "/assets/instacode.png"
 ---
