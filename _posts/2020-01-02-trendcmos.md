@@ -49,20 +49,18 @@ categories: Issues
 2. Shallow S/D junctions
 3. BF2+ implant
 4. RTA (Rapid Thermal Annealing)
-5. Thin Gate oxide (refer to Vt roll up formula)
+5. Thin Gate oxide (refer to Vt roll up formula)<br>
 <br>
-<br>
-논문의 그래프를 보게 되면, RTA, 즉 고온으로 장시간 유지시킨 후 급속 냉각하는 열처리(annealing)을 한 것이 하지 않은 것보다 Vt roll up이 획기적으로 줄었다는 것을 알 수 있다.
-<br>
+논문의 그래프를 보게 되면, RTA, 즉 고온으로 장시간 유지시킨 후 급속 냉각하는 열처리(annealing)을 한 것이 하지 않은 것보다 Vt roll up이 획기적으로 줄었다는 것을 알 수 있다.<br>
 <br>
 IBM의 Bijan Davari는 250nm dual-gate CMOS의 구조를 논문에 게재하였다. 소자의 구조는 2번째 그림과 같다.
 
 <br>
 
-![alt text]({{ site.baseurl }}/assets/images/mosfet/m5.PNG "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/mosfet/s8.png "image"){:.profile}
 
 <br>
  
-&nbsp;&nbsp;&nbsp;&nbsp;MOS의 I-V characteristics이다. 처음에는 Id가 linear하게 올라가다가, Vde가 증가하게 되면서 Drain에 걸리는 전압차가 줄어들게 되어 Drain의 inversion charge density가 줄어들게 되고, 이에 따라 channel conductance가 감소하여 I-V slope가 점점 감소하게 된다. Vds가 Vgs-Vt가 될 때 saturation이 발생하며, 이 때의 inversion charge는 0이 되어 pinch-off가 발생한다. 이후, Vds가 더 커짐에 따라 pinch-off가 source쪽으로 이동하게 된다. 오른쪽의 그림은 MOS의 Enhancement mode와 Depletion mode를 나타내는데, Enhancement mode는 normally off device이고, Depletion mode는 normally on device로, off 하기 위해서는 minus Vg를 걸어서 G oxide에 SCR를 induce하여, n-channel region의 두께를 reduce해야 한다.
+&nbsp;&nbsp;&nbsp;&nbsp;130nm 공정은 2001년 Fujitsu, IBM 등의 기업에 의해 상용화가 시작된 공정으로, 1990년 IBM의 T.J. Watson 연구센터의 Bijan Davari 연구진이 개발을 성공하였다.
 
 다음 시간에는 Non-ideal한 몇 가지 effects에 대하여 알아보도록 하자.
