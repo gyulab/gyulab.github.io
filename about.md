@@ -5,7 +5,7 @@ permalink: /about/
 main_nav: true
 ---
 
-![alt text]({{ site.baseurl }}/assets/certificate.png "Profile Picture"){:.profile}{:width="200" height="300"}
+![alt text]({{ site.baseurl }}/assets/certificate.png "Profile Picture"){:.profile}{:width="225" height="300"}
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Greetings. I'm Gyujun Jeong, studying Electrical Engineering on KAIST, Daejeon.<br>
