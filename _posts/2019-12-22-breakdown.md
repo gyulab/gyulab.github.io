@@ -50,4 +50,4 @@ categories: Academics
 <br>
 
 
-다음 시간에는 Bipolar Junction Transistor에 대하여 알아보도록 하자.
+
