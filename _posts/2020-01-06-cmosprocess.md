@@ -3,7 +3,7 @@ layout: post
 title:  "반도체 공정 (CMOS Process)"
 date:   2020-01-06T14:25:52-05:00
 author: Gyujun Jeong
-categories: Issues
+categories: Academics
 ---
 
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/w1.png "image"){:.profile}
