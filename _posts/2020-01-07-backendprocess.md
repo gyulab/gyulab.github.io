@@ -88,6 +88,6 @@ categories: Academics
 
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/e26.jpg "image"){:.profile}
-&nbsp;&nbsp;&nbsp;&nbsp;이러한 복잡하고 다양한 공정을 통해 마침내 하나의 IC chip을 생산할 수 있다.
+&nbsp;&nbsp;&nbsp;&nbsp;이러한 복잡하고 다양한 공정을 통해 마침내 하나의 IC Chip을 생산할 수 있다.
 
 
