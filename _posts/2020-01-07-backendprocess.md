@@ -45,7 +45,7 @@ categories: Academics
 
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/e14.jpg "image"){:.profile}
-&nbsp;&nbsp;&nbsp;&nbsp;먼저 C를 어떻게 reduce할까? 소재역학적 관점에서 관찰하자면, 일반적인 SiO2의 유전율은 3.9e이다. SiOC를 보게 되면 polarization이 줄게 되는데, 이렇게 되면 K를 줄일 수 있게 된다. 이를 통해 C를 reduce할 수 있다. 또 다른 방법으로는, airgap을 introduce하여 C를 줄일 수 있다.
+&nbsp;&nbsp;&nbsp;&nbsp;먼저 C를 어떻게 reduce할까? 소재역학적 관점에서 관찰하자면, 일반적인 SiO2의 유전율은 3.9e이다. SiOC를 보게 되면 polarization이 줄게 되는데, 이렇게 되면 K를 줄일 수 있게 된다. 이를 통해 C를 reduce할 수 있다. 또 다른 방법으로는, Airgap을 introduce하여 C를 줄일 수 있다.
 
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/e15.jpg "image"){:.profile}
@@ -68,7 +68,7 @@ categories: Academics
 &nbsp;&nbsp;&nbsp;&nbsp;Copper를 deposit하는 방법을 조금 더 자세하게 알아보자. Damascene 공정은 상감기법을 생각하면 되는데, 도자기를 만들 때 먼저 홈을 파고, 다른 재료를 채워서 구운 뒤에 표면을 갈아내는 기법을 사용하는데, 이도 마찬가지의 공정을 가진다고 생각하면 된다.
 
 <br>
-![alt text]({{ site.baseurl }}/assets/images/mosfet/e19.jpg "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/mosfet/e20.jpg "image"){:.profile}
 &nbsp;&nbsp;&nbsp;&nbsp;표면을 갈아내는 기법을 planarization process라고 하는데, Thremal Flow, Etch back, CMP와 같은 다양한 공정을 통해 표면을 polish 할 수 있다.
 
 <br>
