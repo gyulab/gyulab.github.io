@@ -35,7 +35,7 @@ categories: Academics
 
 <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;위의 CMOS 공정을 gif 파일로 나타내보면 다음과 같다.
+&nbsp;&nbsp;&nbsp;&nbsp;위의 CMOS 공정을 연속적으로 나타내보면 다음과 같다.
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/w17.gif "image"){:.profile}
 <br>
