@@ -25,8 +25,10 @@ categories: Academics
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/e8.jpg "image"){:.profile}
 &nbsp;&nbsp;&nbsp;&nbsp;이후 CVD deposition 공정을 통해서, 플러그 역할을 할 W(텅스텐)을 씌워준다.
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;이 공정을 gif로 표현하자면 다음과 같게 된다.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;이 공정을 연속적으로 나타내면 다음과 같게 된다.
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/e2d.gif "image"){:.profile}
+&nbsp;&nbsp;&nbsp;&nbsp;이 공정을 3D structure로 나타내면 다음과 같게 된다.
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/e3d.gif "image"){:.profile}
 
 
