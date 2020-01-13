@@ -18,24 +18,27 @@ categories: Academics
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/i5.jpg "image"){:.profile}
 &nbsp;&nbsp;&nbsp;&nbsp;Reverse biased diode를 이용한 diffusion isolation이다. Bipolar Transistor에서 사용되었으며, well을 통한 isolation으로 현재 이용한다.
-![alt text]({{ site.baseurl }}/assets/images/mosfet/e6.jpg "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/mosfet/i6.jpg "image"){:.profile}
 &nbsp;&nbsp;&nbsp;&nbsp;Oxide를 이용한 isolation으로, MOS 개발 초기에 이용된 기술이다. 하지만 다양한 단점들로 인해 다음에 소개될 LOCOS 기법이나 Trench Isolation등을 이용하게 된다.
-![alt text]({{ site.baseurl }}/assets/images/mosfet/e7.jpg "image"){:.profile}
-&nbsp;&nbsp;&nbsp;&nbsp;TiN은 barrier로 작용하는데, plug가 될 metal이 oxide로 diffuse되는 것을 막아준다.
-![alt text]({{ site.baseurl }}/assets/images/mosfet/e8.jpg "image"){:.profile}
-&nbsp;&nbsp;&nbsp;&nbsp;이후 CVD deposition 공정을 통해서, 플러그 역할을 할 W(텅스텐)을 씌워준다.
-<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;이 공정을 연속적으로 나타내면 다음과 같게 된다.
-![alt text]({{ site.baseurl }}/assets/images/mosfet/e2d.gif "image"){:.profile}
-&nbsp;&nbsp;&nbsp;&nbsp;이 공정을 3D structure로 나타내면 다음과 같게 된다.
-![alt text]({{ site.baseurl }}/assets/images/mosfet/e3d.gif "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/mosfet/i7.jpg "image"){:.profile}
+&nbsp;&nbsp;&nbsp;&nbsp;LOCOS기법은 LOCal Oxidation of Si의 약어로, 옛날 자료를 정리하느라 오늘날의 method라고 나와 있는데, 실제로는 현재의 나노공정에서 LOCOS는 후술하겠지만 Bird's Beak과 같은 side effect들로 인하여 지금은 사용하지 않고 있다.
+![alt text]({{ site.baseurl }}/assets/images/mosfet/i8.jpg "image"){:.profile}
+&nbsp;&nbsp;&nbsp;&nbsp;Trench Isolation의 Trench는 트렌치 코트 할 때의 Trench, 즉 참호이다. 공정이 복잡하다는 단점이 있지만, Packing density를 획기적으로 올릴 수 있어서 오늘날 가장 많이 사용하는 기법 중 하나이다.
 
 
-<br>
-![alt text]({{ site.baseurl }}/assets/images/mosfet/e11.jpg "image"){:.profile}
-&nbsp;&nbsp;&nbsp;&nbsp;Plug를 설치하였으니, 이 plug들을 유기적으로 연결해 줄 interconnection line에 대하여 알아보도록 하자.
-<br>
+
+![alt text]({{ site.baseurl }}/assets/images/mosfet/i9.jpg "image"){:.profile}
+&nbsp;&nbsp;&nbsp;&nbsp;앞서 소개한 LOCOS 공정에 대하여 조금 더 자세하게 알아보도록 하자.
+![alt text]({{ site.baseurl }}/assets/images/mosfet/i11.jpg "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/mosfet/i10.jpgg "image"){:.profile}
+&nbsp;&nbsp;&nbsp;&nbsp;LOCOS 공정의 순서는 위의 그림과 같은데, 마지막 그림에서 field oxide를 grow하는 과정에서 oxide가 휘는 현상을 관찰할 수 있다.
+![alt text]({{ site.baseurl }}/assets/images/mosfet/i12.jpg "image"){:.profile}
+&nbsp;&nbsp;&nbsp;&nbsp;이렇게 휘는 현상을 새의 부리를 닮았다고 해서 Bird's Beak 현상이라고 부르는데, 이는 Device의 Active Area를 낮추는 효과를 가져와 LOCOS의 Limiting factor로 작용한다. 
+![alt text]({{ site.baseurl }}/assets/images/mosfet/i13.jpg "image"){:.profile}
+&nbsp;&nbsp;&nbsp;&nbsp;이러한 Bird's Beak 현상을 해결하기 위하여, SWAMI, SPOT, OSELO, FUROX와 같은 다양한 기법을 사용했다.
+
+
+
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/e12.jpg "image"){:.profile}
 &nbsp;&nbsp;&nbsp;&nbsp;위의 그림과 같이, interconnect line layer는 9~10층, 혹은 그 이상으로 위로 쌓을 수 있으며, 트랜지스터 간의 신호를 주고받는 통로 역할을 수행하게 된다.
 
