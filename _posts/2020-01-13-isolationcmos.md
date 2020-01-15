@@ -6,7 +6,7 @@ author: Gyujun Jeong
 categories: Academics
 ---
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/i1.jpg "image"){:.profile}
-&nbsp;&nbsp;&nbsp;&nbsp;CMOS란 Complementary MOS의 abbreviation으로, n-channel MOS와 p-channel MOS라는 서로 다른 두 종류의 MOS 소자를 하나의 wafer 안에 놓은 MOS 소자이다. 이렇게 두 종류의 소자를 하나의 기판 위에 놓게 되면, 누설 전류나 Latch-up과 같은 다양한 문제들이 발생한다. 오늘은 이 소자들을 분리시키는 isolation technique에 대하여 알아보도록 하자.
+&nbsp;&nbsp;&nbsp;&nbsp;CMOS란 Complementary MOS의 약어로, n-channel MOS와 p-channel MOS라는 서로 다른 두 종류의 MOS 소자를 하나의 wafer 안에 놓은 MOS 소자이다. 이렇게 두 종류의 소자를 하나의 기판 위에 놓게 되면, 누설 전류나 Latch-up과 같은 다양한 문제들이 발생한다. 오늘은 이 소자들을 분리시키는 isolation technique에 대하여 알아보도록 하자.
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/i2.jpg "image"){:.profile}
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/i3.jpg "image"){:.profile}
