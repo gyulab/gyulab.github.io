@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "반도체(CMOS)의 Scaling Trend"
+title:  "Scaling Trend of Semiconductor"
 date:   2020-01-02T14:25:52-05:00
 author: Gyujun Jeong
 categories: Issues
