@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Isolation Technique (소자 절연기술)"
+title:  "Isolation Technique | 소자 절연기술"
 date:   2020-01-13T14:25:52-05:00
 author: Gyujun Jeong
 categories: Academics
