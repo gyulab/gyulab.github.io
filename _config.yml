@@ -9,7 +9,7 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Gyu's Semiconductor Website
+title: Gyu's Device Website
 subtitle: "Gyujun Jeong, KAIST, Dept. of Electrical Eng., Device & Ckt Division."
 email: gj.jeong@kaist.ac.kr
 name: Gyujun Jeong
