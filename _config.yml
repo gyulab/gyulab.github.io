@@ -9,8 +9,8 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Kyu's Device Website
-subtitle: "Gyujun Jeong, KAIST, Dept. of Electrical Eng., Device Division."
+title: Gyu's Device Website
+subtitle: Gyujun Jeong, KAIST, Dept. of Electrical Eng., Device Division.
 email: gj.jeong@kaist.ac.kr
 name: Gyujun Jeong
 description: >
