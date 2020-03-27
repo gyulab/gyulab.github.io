@@ -9,7 +9,7 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Gyu's Device Website
+title: Kyu's Device Website
 subtitle: "Gyujun Jeong, KAIST, Dept. of Electrical Eng., Device Division."
 email: gj.jeong@kaist.ac.kr
 name: Gyujun Jeong
@@ -21,7 +21,7 @@ description: >
 baseurl: "https://gyulab.github.io/" # the subpath of your site, e.g. /blog/
 url: "https://gyulab.github.io/" # the base hostname & protocol for your site
 cover: "/assets/circuit.jpg"
-logo: "/assets/gyulablogo.png"
+logo: "/assets/gyulogo.png"
 
 # Build settings
 markdown: kramdown
