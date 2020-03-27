@@ -21,7 +21,7 @@ description: >
 baseurl: "https://gyulab.github.io/" # the subpath of your site, e.g. /blog/
 url: "https://gyulab.github.io/" # the base hostname & protocol for your site
 cover: "/assets/circuit.jpg"
-logo: "/assets/logo2.png"
+logo: "/assets/gyulablogo.png"
 
 # Build settings
 markdown: kramdown
