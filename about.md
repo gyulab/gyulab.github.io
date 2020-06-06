@@ -5,7 +5,7 @@ permalink: /about/
 main_nav: true
 ---
 
-![alt text]({{ site.baseurl }}/assets/images/gyulab/profile.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/certificate.png "Profile Picture"){:.profile}
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Welcome! This is Gyujun Jeong, studying Electrical Engineering at Korea Advanced Institute of Science and Technology(KAIST). I made this website to arrange my semiconductor device knowledge and share my daily life related to academics.
