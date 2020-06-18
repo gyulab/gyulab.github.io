@@ -105,4 +105,18 @@ Fin의 꼭대기 부분에 channel과 gate electrode의 isolation을 위해 gate
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/t2.PNG "image"){:.profile}
 <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;그림을 보게 되면, Bulk-FinFET과 공정이 거의 유사하다는 것을 알 수 있다. 다만, Oxide layer가 wafer 사이에 끼여 있기 때문에, etch를 할 때 이 oxide가 stop layer의 역할을 하게 되면서, 기판과 Fin이 isolate되는 형태를 가진다는 것을 알 수 있다. FinFET의 isolation을 위해서, SOI 뿐만 아니라 N과 P-bulk 사이의 latch-up을 방지하기 위해 Shallow Trench Isolation (STI) 을 사용하기도 한다.
-
+<br><br><br><br>
+[Reference]
+<br>[1] D. Hisamoto, T. Kaga, Y. Kawamoto and E. Takeda, "A fully depleted lean-channel transistor (DELTA)-a novel vertical ultra thin SOI MOSFET," International Technical Digest on Electron Devices Meeting, Washington, DC, USA, 1989, pp. 833-836, doi: 10.1109/IEDM.1989.74182.
+<br>[2] Colinge, J.-P. (2011). FinFETs and other multi-gate transistors. New York: Springer. 
+<br>[3] Victor Moroz, “Managing FinFET design and variability analysis,” EE Times India, 2012
+<br>[4] Chang, L., Leong, M., Yang, M., Chang, L., Leong, M., & Yang, M. (2004). CMOS Circuit Performance Enhancement by Surface Orientation Optimization. IEEE Transactions on Electron Devices, 51(10), 1621–1627.doi:10.1109/ted.2004.834912 
+<br>[5] P. Gaubert et al., "Relation Between the Mobility, 1/f Noise, and Channel Direction in MOSFETs Fabricated on (100) and (110) Silicon-Oriented Wafers, IEEE TED, 2010.
+<br>[6] H. Nakamura et al., "Effects of Selecting Channel Direction in Improving Performance of Sub-100 nm MOSFETs Fabricated on (110) Surface Si Substrate, Japanese Journal of Applied Physics, 2004.
+<br>[7] Hisayo S. Momose and Sadayuki Yoshitomi, "Effects of Si Channel Orientation on MOSFET Characteristics", Intl. Conference on MIEL, 2008.
+<br>[8] Q. Ouyang et al., "Investigation of CMOS Devices with Embedded SiGe Source/Drain on Hybrid Orientation Substrates, VLSI Tech., 2005.
+<br>[9] Seiji Inumiya et al 2006 Jpn. J. Appl. Phys. 45 2898 
+<br>[10] T. Hook, “FinFET Isolation Approaches and Ramifications: Bulk vs. SOI,” FDSOI Workshop at Hsinchu, Taiwan, April, 2013. 
+<br>[11] A. Yagishita, “Process and Device Technologies for FinFET and Its Alternative Devices,” IEEE SOI Conference Short Course, Foster City, CA, October, 2009. 
+<br>[12] X. Sun, T.-J. King Liu, “Spacer Gate Lithography for Reduced Variability due to Line Edge Roughness,” IEEE Transactions on Semiconductor Manufacturing, Vol.23, No.2, pp.311-315, 2010. [26] Retrieved from EECS Berkeley Lecture Notes, 2013: 
+https://inst.eecs.berkeley.edu/~ee290d/fa13/LectureNotes/Lecture7.pdf
