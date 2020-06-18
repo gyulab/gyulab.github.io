@@ -61,7 +61,7 @@ categories: Academics
 &nbsp;&nbsp;&nbsp;&nbsp;20nm급 FinFET 공정에서는 ArF light source를 사용할 수 있는데, 이때 lithography 장비의 huge jump (ArF -> EUV)를 compensate하기 위해 Mask pattern을 살짝 더 크게 만들어서 corner diffraction을 고려해서 원하는 패턴을 새기는OPC(Optical Proximity Correction)나 더 나은 resolution을 얻기 위한 phase shifting 과 같은 mask engineering, 그리고 Resolution을 낮추어 더 미세한 pattern을 새기기 위해,
 <br>Resolution R=k_1  λ/NA = k_1  λ/nsinα<br>
 &nbsp;&nbsp;&nbsp;&nbsp;위 식에 의해 NA를 높일 수 있는 방법, 즉 굴절률이 높은 물에서 lithography을 진행하는 immersion lithography 과 같은 다양한 lithography engineering도 함께 사용된다.
-
+<br>
 2. Fin Etch<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Fin들은 고도의 anisotropic etch (Degree of anisotropy A=1), 즉 밑으로 directional한 etch를 통해 만들어진다. Isotropic etching이 발생하게 되면 직각 모양의 Fin을 제대로 만들 수 없게 된다. 따라서 LAM research에서 설명해주신 것과 같이, selectivity와 anisotropic 특성이 모두 높은 ion-enhanced etching 공정을 사용한다. Ion-enhanced etching의 성능이 좋은 이유는 SiF4를 plasma bombardment로 분해를 시켜 F etch가 enhance되며, surface에 damage를 주어서 Si가 깨지면서 불소와 결합을 용이하게 하여 reactivity를 높이기 때문이다.
 SOI와 다르게 bulk wafer는 stop layer가 없기 때문에, etch process는 시간에 따라 이루어져야 한다. 즉, 저절로 limit되지 않는다. 22nm process에서의 일반적인 dimension criterion은 보통 fin의 넓이는 10~15nm(Channel length의 2/3 이하) 정도이고, 높이는 넓이의 2배 이상(Channel length의 4/3 이상) 정도로 만들어진다.
