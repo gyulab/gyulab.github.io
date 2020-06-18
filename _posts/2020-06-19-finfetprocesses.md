@@ -91,7 +91,7 @@ VII. Deposition of the Gate<br>
 VIII. Source/Drain Doping (Raised S/D Epitaxy)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;
 		Source와 Drain을 Fin에 Doping을 한다. 하지만 일반적으로 단순하게 doping을 하지는 않는다. Short Channel Effect를 충분히 억제하기 위해서는 FinFET의 핀을 채널의 길이보다 훨씬 좁게 만들어야 한다. 따라서, 만약 S/D를 Fin위에만 도핑을 하게 된다면, S와 D 또한 매우 얇게 되어 이 부분과 contact part가 접한 면적이 매우 작게 되고. 이 지점에서의 contact resistance가 매우 높게 됨을 알 수 있다. 접촉 저항이 높으면 흐르는 전류를 막는 힘이 높다고 볼 수 있고, 이는 device performance 하락을 의미한다. 이와 비슷한 예시로, Backend process에서 contact window의 크기가 작을 때, contact resistance가 커지면서 dominant하게 작용하는 것을 배웠다. 
-		<br>
+		<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;따라서, 이와 같은 문제를 해결하기 위해 RSD 구조가 탄생하게 되었다. RSD구조는 S/D가 기존의 핀 영역에만 국한된 것이 아니라, 이 S/D 부분만 epitaxy성장시켜 이 영역을 gate electrode과의 접촉 면적을 넓혀 접촉 저항을 감소시키는 효과를 낸다. 정확하게는 SEG (Selective Epitaxial Growth) 를 통해 dry etch로 Fin spacer만 제거한 뒤, S와 D만 성장시키는 것이다. 그 결과로, RSD구조가 형성되어 S/D contact resistance를 감소시킬 수 있다. 하지만 이렇게 튀어 나온 S/D region이 Gate electrode와 마주보게 되어parasitic capacitance가 추가적으로 나타나는 단점이 있다.
 
  
