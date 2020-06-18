@@ -86,7 +86,7 @@ Poly-Si와 다르게 metal은 carrier (electron)이 매우 abundant하기 때문
 <br>
 
 
-[Reference]
+[Reference]<br>
 [1] Lee, B. H., Oh, J., Tseng, H. H., Jammy, R., & Huff, H. (2006). Gate stack technology for nanoscale devices. Materials Today, 9(6), 32–40. doi:10.1016/s1369-<br>
 [2] Bersuker, G., Park, C. S., Barnett, J., Lysaght, P. S., Kirsch, P. D., Young, C. D., … Ryan, J. T. (2006). The effect of interfacial layer properties on the performance of Hf-based gate stack devices. Journal of Applied Physics, 100(9), 094108.doi:10.1063/1.2362905 <br>
 [3] Inoue, T., Yamamoto, Y., Koyama, S., Suzuki, S., & Ueda, Y. (1990). Epitaxial growth of CeO2layers on silicon. Applied Physics Letters, 56(14), 1332–1333.doi:10.1063/1.103202 
