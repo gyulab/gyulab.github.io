@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "High-K Deposition Methods"
-date:   2020-06-18T14:26:52-05:00
+date:   2020-06-16T14:26:52-05:00
 author: Gyujun Jeong
 categories: Academics
 ---
