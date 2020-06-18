@@ -10,7 +10,7 @@ categories: Academics
 &nbsp;&nbsp;&nbsp;&nbsp;일반적으로 device의 크기가 작아질수록 성능이 향상되고 소비전력과 cost 또한 감소한다. 하지만 소자의 크기가 20nm 이하 수준으로 매우 작아짐에 따라 source-drain 간 physical distance가 짧아지고, 이는 곧 device의 gate가 channel에 대한 controllability를 잃게 되는 원인이 되었다. MOSFET의 채널 길이가 매우 짧아져 2D planar structure의 MOS로는 더 이상 leakage current나 drain current를 control하기 어려워졌다. 따라서 gate를 여러 개 사용하여 channel에 흐르는 전류를 더 잘 제어할 수 있는 방법을 연구하기 시작하였다. 그에 따라, 채널 길이가 짧은 만큼 비례하여 증가하는 Short Channel Effect를 막기 위하여 기존의 MOS와 다른 3D structure의 소자들이 개발되기 시작하였다. 22nm 구조를 위한 device structure 중 가장 유명한 것은 바로 FinFET이다. FinFET의 이름은 device의 channel 구조가 물고기의 지느러미 (fin) 처럼 형성되어 있다는 점에서 붙여진 이름이다. 
 
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/t2.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/ff1.png "image"){:.profile}
 <br> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;FinFET 소자는 크게 Bulk-FinFET과 SOI-FinFET으로 구분할 수 있다. SOI랑 Silicon-on-insulator의 약자로, Silicon-insulator-silicon와 같이 layered substrate를 사용함으로써 parasitic capacitance를 줄여주고device간의 isolation을 향상시켜주는 역할을 한다. 그림을 보게 되면 SOI-FinFET은 Oxide 위에 fin이 만들어져 substrate와 완벽하게 isolated 되어 있지만, Bulk-FinFET은 fin이 substrate bulk와 연결되어 있다는 것을 알 수 있다. Bulk의 performance 자체는 좋지만, SOI는 Vth나 소자의 on 속도와 관련 있는 Subthreshold Swing 특성, 그리고 인접 device와의 isolation을 주기 때문에, SOI가 더 preferred된 FinFET이라고 할 수 있다. 하지만, SOI 기판의 특성으로 인하여 비용의 문제점과 채널의 역할을 하는 핀 부분과 실리콘 바디 부분이 oxide층으로 인하여 절연되어 있기 때문에, device 구동 시 채널의 열을 쉽게 방출하지 못하는 열전도 문제도 존재한다.
@@ -22,7 +22,7 @@ categories: Academics
 - Bulk-FinFET Process Flow
  
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/t2.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/ff2.png "image"){:.profile}
 <br> 
 
 
@@ -31,14 +31,14 @@ categories: Academics
 &nbsp;&nbsp;&nbsp;&nbsp;p-substrate 위에 Hard mask (e.g., Silicon Nitride)와 PR 패턴을 만들어 올린다. 하지만 실제 공정은 간단하지만은 않다. 솟아 오른 지느러미 모양의 채널인 핀을 만드는 과정에 있어서LER (Line Edge Roughness)과 같은 문제가 발생한다. 이는 핀의 패턴 형성을 위한 Lithography 공정 중 생기는 현상으로, 매우 짧은 핀을 만들 때 핀의 표면이 울퉁불퉁한 모양으로 형성되게 된다. 게다가 이 현상은 확률적으로 발생하는 현상(Stochastic process) 이라 같은 공정이라 할지라도 생산된 device 각각의 성능이 달라지는 문제점이 발생한다. 이러한 문제점은 나중에 device를 이용하여 회로를 구성할 때에 구성된 circuit이 정상적으로 작동하지 않게 될 수 있어 큰 문제가 될 수 있다. 
  
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/t2.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/ff3.png "image"){:.profile}
 <br> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;이러한 문제를 해소하기 위해, FinFET공정에서는 더 정교한 lithography를 요구한다. Fin Patterning에서 가장 중요한 technique는 Spacer Lithography (Double Patterning) 라고 할 수 있다. Double Patterning의 방법에는 LELE(Litho-Etch-Litho-Etch)와 SADP(Self-Aligned Double Patterning)가 있는데, SADP는 처음 기초 패턴을 한 번 형성한 후, 여러 번 etching을 통해 패턴을 미세화하는 작업이고, LELE는 Lithography와 etching을 번갈아 하면서 패턴을 2번 나누어서 그린다. LELE가 패턴을 2번 그릴 수 있으므로 더 정교하지만 비싸서 메모리에서는 주로 SADP를 사용한다. 10nm 공정에서는 SAQP(Quadraple-)과 LELELE로 더욱 미세화되었다.
 
 
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/t2.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/ff4.png "image"){:.profile}
 <br> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;SADP 공정 방법에 대해서 조금 자세히 알아보고자 한다. 위의 Figure은 Spacer Lithography 방법을 나타낸다. 먼저 1장에서 보았던 Poly-Si Dummy Gate와 같이, 사용하지 않는 희생층(sacrificial layer)를 증착하고 patterning한다. 이후 Spacer를 만들기 위해 mask를 증착 후 etch-back을 하여 3번 모양처럼 만든다. 마지막으로 sacrificial layer를 etch를 통해 없앤다. (현재는SiO2 spacer를 표면에서 mobility가 좋아 step coverage가 우수한 TEOS를 활용한 ALD를 통해 형성한다.) 이 방법을 이전 페이지와 같이 여러 개의 fin을 통해 만들게 되면, n번째 lithography를 시행했을 때 2^n개의 line을 만들 수 있게 된다. Fin pitch 또한 pattern layer의 ½만큼의 값을 가지게 될 것이다. 즉, 이 방법을 통해 처음 lithography를 통해서 50nm 선폭을 만들고, 2번째 lithography를 통해 25nm의 선폭을 만들 수 있게 된 것이다.
@@ -46,14 +46,14 @@ categories: Academics
 &nbsp;&nbsp;&nbsp;&nbsp;이러한 spacer lithography 기술은 크게 2가지의 이점이 있다. 첫 번째로는 한 번의 lithography 과정을 통해 여러 개의 fin pitch를 만들 수 있다. 앞에서 언급했던 것과 같이, n번째 litho 공정을 하게 되면, 아래 Figure와 같이 2^n개의 line을 만들 수 있게 된다.
  
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/t2.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/ff5.png "image"){:.profile}
 <br> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;또 하나의 장점으로는 앞서 언급한 Fin Edge Roughness를 개선할 수 있다. 실험적으로Spacer Lithography의 표준편차가 기존의 conventional한 lithography보다 더 작기 때문이다. 앞서 보았듯이 Edge Roughness 현상은 Stochastic한 process여서, 표준편차를 줄임으로써 Edge의 Roughness함을 개선할 수 있었다.
 
  
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/t2.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/ff6.png "image"){:.profile}
 <br> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;특히 10나노급 FinFET 공정에서는, Lithography 장비 또한 기존의 KrF (λ=248nm,0.18um 공정 이상), ArF ( λ=193nm) 과 같은 light source보다 더 파장이 짧은 장비를 사용해야 한다. 더 미세한 그림을 그리기 위해서는 더 얇은 샤프를 사용해야 하는 것과 비슷하다고 생각할 수 있다. 예를 들어서, 삼성의 7nm 공정에서는 파장이 13.5nm인 네덜란드의ASML EUV 장비를 도입하였다.
@@ -96,13 +96,13 @@ Fin의 꼭대기 부분에 channel과 gate electrode의 isolation을 위해 gate
 
  
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/t2.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/ff7.png "image"){:.profile}
 <br> 
 
 - SOI-FinFET Process Flow
  
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/t2.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/ff8.png "image"){:.profile}
 <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;그림을 보게 되면, Bulk-FinFET과 공정이 거의 유사하다는 것을 알 수 있다. 다만, Oxide layer가 wafer 사이에 끼여 있기 때문에, etch를 할 때 이 oxide가 stop layer의 역할을 하게 되면서, 기판과 Fin이 isolate되는 형태를 가진다는 것을 알 수 있다. FinFET의 isolation을 위해서, SOI 뿐만 아니라 N과 P-bulk 사이의 latch-up을 방지하기 위해 Shallow Trench Isolation (STI) 을 사용하기도 한다.
 <br><br><br><br>
