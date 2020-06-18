@@ -27,7 +27,7 @@ categories: Academics
 
 
 
-1. Substrate & Lithography<br>
+I. Substrate & Lithography<br>
 &nbsp;&nbsp;&nbsp;&nbsp;p-substrate 위에 Hard mask (e.g., Silicon Nitride)와 PR 패턴을 만들어 올린다. 하지만 실제 공정은 간단하지만은 않다. 솟아 오른 지느러미 모양의 채널인 핀을 만드는 과정에 있어서LER (Line Edge Roughness)과 같은 문제가 발생한다. 이는 핀의 패턴 형성을 위한 Lithography 공정 중 생기는 현상으로, 매우 짧은 핀을 만들 때 핀의 표면이 울퉁불퉁한 모양으로 형성되게 된다. 게다가 이 현상은 확률적으로 발생하는 현상(Stochastic process) 이라 같은 공정이라 할지라도 생산된 device 각각의 성능이 달라지는 문제점이 발생한다. 이러한 문제점은 나중에 device를 이용하여 회로를 구성할 때에 구성된 circuit이 정상적으로 작동하지 않게 될 수 있어 큰 문제가 될 수 있다. 
  
 <br>
@@ -62,33 +62,33 @@ categories: Academics
 <br>Resolution R=k_1  λ/NA = k_1  λ/nsinα<br>
 &nbsp;&nbsp;&nbsp;&nbsp;위 식에 의해 NA를 높일 수 있는 방법, 즉 굴절률이 높은 물에서 lithography을 진행하는 immersion lithography 과 같은 다양한 lithography engineering도 함께 사용된다.
 <br>
-2. Fin Etch<br>
+II. Fin Etch<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Fin들은 고도의 anisotropic etch (Degree of anisotropy A=1), 즉 밑으로 directional한 etch를 통해 만들어진다. Isotropic etching이 발생하게 되면 직각 모양의 Fin을 제대로 만들 수 없게 된다. 따라서 LAM research에서 설명해주신 것과 같이, selectivity와 anisotropic 특성이 모두 높은 ion-enhanced etching 공정을 사용한다. Ion-enhanced etching의 성능이 좋은 이유는 SiF4를 plasma bombardment로 분해를 시켜 F etch가 enhance되며, surface에 damage를 주어서 Si가 깨지면서 불소와 결합을 용이하게 하여 reactivity를 높이기 때문이다.
 SOI와 다르게 bulk wafer는 stop layer가 없기 때문에, etch process는 시간에 따라 이루어져야 한다. 즉, 저절로 limit되지 않는다. 22nm process에서의 일반적인 dimension criterion은 보통 fin의 넓이는 10~15nm(Channel length의 2/3 이하) 정도이고, 높이는 넓이의 2배 이상(Channel length의 4/3 이상) 정도로 만들어진다.
 <br><br>&nbsp;&nbsp;&nbsp;&nbsp;22nm 세대에서는 파운드리 업체마다 핀의 모양이 약간씩 다름을 알 수 있었다. Intel은 Tapered Fin 모양이고, IBM과 TSMC는 Rectangular fin모양을 채택하였다. 인텔에서 Tapered Fin 모양을 채택한 이유는 Corner Effect를 개선하기 위함이다. Corner Effect란 gate가 채널을 감싸듯이 형성되기 때문에 Fin의 모퉁이 부분이 gate의 영향을 가장 크게 받는다고 생각할 수 있고, 이로 인해 gate전압이 threshold voltage에 미치지 않은 상태에서 코너에서만 미리 inversion layer가 발생하는 현상이다. 즉, 미리 형성된 inversion layer로 인하여 예상치 못할 때에 device가 켜지게 되어 소자의 OFF상태에 대한 특성을 악화시키게 된다. 따라서, 이러한 문제를 해결하기 위해 Intel에서는 Tapered 핀을 채택했다고 한다. 
 <br><br>
-3. Oxide Deposition<br>
+III. Oxide Deposition<br>
 &nbsp;&nbsp;&nbsp;&nbsp;
 각각의 Fin을 서로 isolate하기 위해, High AR (Aspect Ratio)로 oxide를 deposit해야 한다.
 <br><br>
-4. Planarization<br>
+IV. Planarization<br>
 &nbsp;&nbsp;&nbsp;&nbsp;
     Oxide가 CMP (Chemical Mechanical Polishing)으로 planarized된다. 여기서 Hard mask가 stop layer로 작용한다.
 <br><br>
 
-5. Recess Etch<br>
+V. Recess Etch<br>
 &nbsp;&nbsp;&nbsp;&nbsp;
 Fin의 측면을 isolation시키기 위해 oxide film을 recess하기 위한 etch가 진행된다.
 <br><br>
-6. Gate Oxide<br>
+VI. Gate Oxide<br>
 &nbsp;&nbsp;&nbsp;&nbsp;
 Fin의 꼭대기 부분에 channel과 gate electrode의 isolation을 위해 gate oxide가 thermal oxidation (현재는 ALD)을 통해 deposit된다. 그림에는 나와있지 않지만, Fin이 여전히 oxide 하부에 있기 때문에, Fin 밑쪽 부분에 high-dose angled implant를 함으로써 dopant junction을 만들고, isolation을 마무리한다. 
 <br><br>
-7. Deposition of the Gate<br>
+VII. Deposition of the Gate<br>
 &nbsp;&nbsp;&nbsp;&nbsp;
 마지막으로 n+-doped poly-Si layer (현재는 Metal Gate)를 Fin 위에 deposit한다. 이렇게 만들면 최대 3개의 gate가 channel을 감싸는 형태를 띄게 된다. (양 측면에 각각 1개씩, gate oxide의 두께에 따라 상단에 1개) Nitride laayer를 채널 위에 깔면 위쪽 게이트의 영향을 없앨 수 있다.
 <br><br>
-8. Source/Drain Doping (Raised S/D Epitaxy)<br>
+VIII. Source/Drain Doping (Raised S/D Epitaxy)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;
 		Source와 Drain을 Fin에 Doping을 한다. 하지만 일반적으로 단순하게 doping을 하지는 않는다. Short Channel Effect를 충분히 억제하기 위해서는 FinFET의 핀을 채널의 길이보다 훨씬 좁게 만들어야 한다. 따라서, 만약 S/D를 Fin위에만 도핑을 하게 된다면, S와 D 또한 매우 얇게 되어 이 부분과 contact part가 접한 면적이 매우 작게 되고. 이 지점에서의 contact resistance가 매우 높게 됨을 알 수 있다. 접촉 저항이 높으면 흐르는 전류를 막는 힘이 높다고 볼 수 있고, 이는 device performance 하락을 의미한다. 이와 비슷한 예시로, Backend process에서 contact window의 크기가 작을 때, contact resistance가 커지면서 dominant하게 작용하는 것을 배웠다. 
 		<br>
