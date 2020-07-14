@@ -10,7 +10,7 @@ exclude:
 
 # Site settings
 title: Gyu's Semiconductor Website
-subtitle: Gyujun Jeong, KAIST <br> Dept. of Electrical Eng.
+subtitle: Gyujun Jeong, KAIST, Dept. of Electrical Eng.
 email: gj.jeong@kaist.ac.kr
 name: Gyujun Jeong
 description: >
@@ -151,7 +151,7 @@ social:
 
   - name: Steam
     icon: steam
-    username: "(+82) 10-4675-3480"
+    username: ""
     url: "gyulab.github.io"
     desc: Friend me on Steam
     share: false
