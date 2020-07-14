@@ -152,7 +152,7 @@ social:
   - name: Steam
     icon: steam
     username: ""
-    url: "gyulab.github.io"
+    url: ""
     desc: Friend me on Steam
     share: false
 
