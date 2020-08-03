@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "FinFET Doping Issue: Overcoming Shadow Effect Problem duing S/D Implantation"
+title:  "FinFET Doping Issue: Overcoming Shadow Effect Problem during S/D Implantation"
 date:   2020-07-10T14:28:52-05:00
 author: Gyujun Jeong
 categories: Academics
