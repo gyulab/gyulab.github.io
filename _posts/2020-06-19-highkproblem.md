@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Problems and Solution for the High-K Materials"
+title:  "Problems and Solutions for the High-K Materials"
 date:   2020-06-18T14:28:52-05:00
 author: Gyujun Jeong
 categories: Academics
