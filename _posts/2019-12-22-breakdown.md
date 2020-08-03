@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Breakdown Phenomena | 항복 현상"
+title:  "Breakdown Phenomena"
 date:   2019-12-22T11:25:52-05:00
 author: Gyujun Jeong
 categories: Academics
