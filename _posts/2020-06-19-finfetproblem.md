@@ -10,11 +10,6 @@ categories: Academics
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/fd1.PNG "image"){:.profile}
 <br>
 
-1.	Silicon interface 상태 문제:  Silicon 위에 High-K layer deposition을 진행하게 되면, 그 high-K layer가 실리콘을 제대로 passivate하지 못하게 된다. 따라서 interface trap 및 charge가 많아지게 되고 performance degradation이 발생하게 된다.<br><br>
-2.	Silicon의 Metal에 의한Contamination 발생: High-K layer는 metal oxide가 많기 때문에, metal atom들이 silicon내부에 deep trap을 형성하여 문제를 야기하였다.<br><br>
-3.	당시 사용하던 Gate electrode였던 Poly-Si와의 호환성 문제:  당시 65nm technology node에서는 polysilicon gate를 사용하였는데, 45nm 공정으로 넘어가면서 High-K dielectric을 사용하려고 하니 다양한 side effect들이 발생하였다. 대표적으로, Poly-Si gate와 High-K dielectric을 같이 사용하게 되면 work-function 문제 (Fermi Level Pinning)가 발생하였다. <br><br>
-4.	Device reliability문제:  Metal oxide는 SiO2에 비해서 bandgap이 작기 때문에,  dielectric layer가 high electric field 또는radiation에 노출되었을 때, 전자가 쉽게 큰 에너지를 받아 high-k layer의 bandgap을 넘게 되어 의도치 않은 current flow가 발생한다.<br><br>
-5.	Process에서의 문제: Metal oxide 공정 시 여러 화학 물질과 공정 환경에서 SiO2보다 상대적으로 잘 견디지 못한다. 이는 기존 공정과의 호환성에 문제가 되었다. SiO2를 대체할 High-K material은 기존의 deposition, etching, annealing, cleaning 공정을 모두 견딜 수 있는 물질이어야 한다.<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;Multi-gate channel은 fin의 측면에 있게 때문에, parasitic resistance를 없애기 위해서 sidewall을 따라 일정하게 도핑 되어야 한다. 하지만 이전의 FinFET 공정에서는 그림의 24번과 같이 두껍게 패터닝이 된 PR Mask를 써야 했는데, 이 PR Mask의 두께로 인해서, implant 공정이 그림에서 수직면을 기준으로 𝜃* 을 넘는 각도로 tilt되어서 진행이 된다면, 24E1과 같이 Mask 측면에 가려져 sidewall쪽의 implant가 아예 진행이 되지 않게 되어 버린다. 또한, FinFET은 Gate가 솟아 나있는 모양으로 높이를 가지기 때문에, ion implantation을 할 때 shadow effect가 발생하게 된다.<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;우리는 ion implantation 공정에서, Boron과 같이 작은 입자들이 실리콘 격자 구조를 따라 들어가버리는 channeling effect를 막기 위하여, wafer를 7도 정도 tilt하여 실리콘의 격자 구조를 조금 더 빽빽하게 만드는 방법을 사용한다는 것을 배웠다. 위의 그림에서도 26A와 같이 implant beam이 입사할 때, 7도 정도의 기울기를 가지고 implant하는 것을 알수 있다. 이를 통해 우리는 sidewall 전체에 골고루 dopant material을 implant할 수 있게 되었다고 생각했지만, tilt를 해서 implant를 하면 위에서 보았던 것처럼 PR에 의해서 shadow가 될 수 있고, fin의 한쪽 면만doping이 되게 되는, fin 모양 그 자체에 의한 shadow effect가 발생하게 되어 버린다.<br><br>
 
