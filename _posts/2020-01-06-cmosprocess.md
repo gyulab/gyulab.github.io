@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CMOS Process | 반도체 공정"
+title:  "ecapitulative CMOS Process"
 date:   2020-01-06T14:25:52-05:00
 author: Gyujun Jeong
 categories: Academics
