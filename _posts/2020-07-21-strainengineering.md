@@ -20,7 +20,7 @@ categories: Academics
 
 
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/se1.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/se1.png "image"){:.profile}
 <br>
 
 <br><br>
@@ -33,7 +33,7 @@ categories: Academics
 
 
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/se2.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/se2.png "image"){:.profile}
 <br>
 
 <br><br>
@@ -47,12 +47,12 @@ categories: Academics
 
 
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/se3.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/se3.png "image"){:.profile}
 <br>
 <br><br>
 &nbsp; &nbsp; &nbsp; &nbsp;위의 두 가지의 대표적인 공정 방법 이외에도 SMT (Stress Memorization Technology)과 sSOI (Strained Silicon-On-Insulator) 방법 등 stress enginnering에는 매우 다양한 방법이 있다.
 <br><br>
 &nbsp; &nbsp; &nbsp; &nbsp;SMT의 경우 크게 Poly-Si gate에 strain을 가하는 것과 Source/Drain에 가하는 두 가지 방법이 있는데, 여기서는 Gate로 stress를 가하는 것을 알아 볼 것이다. 이 방법은 Polysilicon이 annealing 공정에서 팽창되는 효과를 사용하는 것이다. Annealing을 하면 Gate가 팽창이 되고, 이렇게 팽창된 gate는 channel을 눌러 채널에 tensile stress를 가해주는 효과를 얻을 수 있다. 마치 치약 통(Channel)을 손(Gate)으로 꽉 누리면 치약(Carrier)이 나오는 것과 같은 원리라고 생각할 수 있다. 팽창되는 압력이 채널 부분에 전달이 되면서 stress 효과를 주게 되며 이 효과를 NMOS에 사용할 수 있었다. 하지만 이 방법의 가장 치명적인 단점은 metal gate에 적용을 할 수 없다는 것이다. 앞서 discuss한 바와 같이, technology node가 낮아지면서 HK/MG process를 적용해야 하는데, Metal Gate의 경우 고온에서 annealing을 할 수 없기 때문에 사용할 수 없게 되었다.
 
-![alt text]({{ site.baseurl }}/assets/images/gyulab/se4.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/se4.png "image"){:.profile}
 <br>
