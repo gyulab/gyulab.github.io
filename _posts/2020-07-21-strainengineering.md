@@ -5,7 +5,8 @@ date:   2020-07-21T14:28:52-05:00
 author: Gyujun Jeong
 categories: Academics
 ---
-
+![alt text]({{ site.baseurl }}/assets/images/gyulab/se0.jpeg "image"){:.profile}
+<br>
 &nbsp; &nbsp; &nbsp; &nbsp;사람들은 항상 더 빠른 chip을 얻기 위해 노력하였다. Backend process에서 배웠듯이, 비록 Aluminum에 비해서 Copper를 실리콘 공정에 사용하기가 매우 어려웠지만, 더 빠른 칩을 위해서 Damascene 공법을 통해 결국 Copper를 사용할 수 있게 만들었다. 이처럼, 소자의 성능을 향상시키기 위해 많은 노력을 기울여왔다. 그 중 mobility를 향상시키면, drain current가 향상이 되고, chip의 속도가 향상된다는 점에서, mobility enhancement에 대해서 많은 연구가 이루어졌다. 이러한 mobility enhancement 에 대한 방법과, 이 방법으로 나오게 된 새로운 문제들에 대하여 알아볼 것이다.
 <br><br>
 &nbsp; &nbsp; &nbsp; &nbsp;Strain engineering는 실리콘 기반의 mobility enhancement 방법 중 가장 널리 쓰이는 방법이다. Device에 intentional한 stress를 가해 carrier의 mobility를 향상시켜 on current를 증가시키려는 시도라고 생각할 수 있다. Stress를 가한다는 의미는, carrier들이 이동하는 어떤 공간에 특정한 압력 등의 효과를 주어 carrier가 더 빨리 이동하도록 하게 함을 말한다. 격자 구조를 약간 눌러서, 늘린 방향으로 힘을 받아 mobility를 향상시킨다고 생각할 수 있다. 
@@ -23,7 +24,7 @@ categories: Academics
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/se1.png "image"){:.profile}
 <br>
 
-<br><br>
+<br>
 &nbsp; &nbsp; &nbsp; &nbsp;PMOS에 가해지는 compressive stress란 Si에 비해 원자와 격자 구조의 크기가 큰 Ge를 혼합하여 source, drain에 사용하는 것으로, channel이 양 방향으로 줄어드는 stress를 가해준다. 원자들 간의 공간이 줄어들기 때문에, PMOS의 hole들의 mobility가 향상되는 효과를 나타낸다. 이를 eSiGe (embedded-SiGe) 공정이라고 부른다. 또한 SiGe를 쓰게 되면 hole의 Schottky barrier를 낮출 수 있어 전류를 더 잘 흐르게 만들 수 있었다. 〖Si〗_(1-x) 〖Ge〗_x alloy의 lattice constant는 다음과 같이 superposition과 같은 형태로 간단하게 구할 수 있다.
 <br>
 α_(〖Si〗_(1-x) 〖Ge〗_x )=(1-x) α_Si+xα_Ge
@@ -36,7 +37,7 @@ categories: Academics
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/se2.png "image"){:.profile}
 <br>
 
-<br><br>
+<br>
 &nbsp; &nbsp; &nbsp; &nbsp;SiGe와 Si의 lattice mismatch는 channel의 compressive stress를 주며, 이러한 x방향의 compressive stress는 hole의 mobility를 향상시킨다.
 <br><br>
 &nbsp; &nbsp; &nbsp; &nbsp;반대로NMOS에 가해지는 tensile stress에 대해 알아보자면, Si에 비해 원자와 격자 구조의 크기가 작은 Carbon을 혼합하여 source, drain에 사용함으로써 채널이 양 방향으로 늘어날 수 있는 stress를 가해주는 것을 의미한다. 원자들 간의 공간이 늘어나기 때문에 NMOS의 electron들이 움직이는 mobility가 향상되는 효과를 나타낸다. 이 공정을 eSiC (embedded-SiC) 공정이라고 부른다.
@@ -49,7 +50,7 @@ categories: Academics
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/se3.png "image"){:.profile}
 <br>
-<br><br>
+<br>
 &nbsp; &nbsp; &nbsp; &nbsp;위의 두 가지의 대표적인 공정 방법 이외에도 SMT (Stress Memorization Technology)과 sSOI (Strained Silicon-On-Insulator) 방법 등 stress enginnering에는 매우 다양한 방법이 있다.
 <br><br>
 &nbsp; &nbsp; &nbsp; &nbsp;SMT의 경우 크게 Poly-Si gate에 strain을 가하는 것과 Source/Drain에 가하는 두 가지 방법이 있는데, 여기서는 Gate로 stress를 가하는 것을 알아 볼 것이다. 이 방법은 Polysilicon이 annealing 공정에서 팽창되는 효과를 사용하는 것이다. Annealing을 하면 Gate가 팽창이 되고, 이렇게 팽창된 gate는 channel을 눌러 채널에 tensile stress를 가해주는 효과를 얻을 수 있다. 마치 치약 통(Channel)을 손(Gate)으로 꽉 누리면 치약(Carrier)이 나오는 것과 같은 원리라고 생각할 수 있다. 팽창되는 압력이 채널 부분에 전달이 되면서 stress 효과를 주게 되며 이 효과를 NMOS에 사용할 수 있었다. 하지만 이 방법의 가장 치명적인 단점은 metal gate에 적용을 할 수 없다는 것이다. 앞서 discuss한 바와 같이, technology node가 낮아지면서 HK/MG process를 적용해야 하는데, Metal Gate의 경우 고온에서 annealing을 할 수 없기 때문에 사용할 수 없게 되었다.
