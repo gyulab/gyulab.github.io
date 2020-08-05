@@ -7,10 +7,15 @@ categories: Academics
 ---
 
 <br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/fd1.PNG "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/fd0.jpg "image"){:.profile}
 <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Multi-gate channel은 fin의 측면에 있게 때문에, parasitic resistance를 없애기 위해서 sidewall을 따라 일정하게 도핑 되어야 한다. 하지만 이전의 FinFET 공정에서는 그림의 24번과 같이 두껍게 패터닝이 된 PR Mask를 써야 했는데, 이 PR Mask의 두께로 인해서, implant 공정이 그림에서 수직면을 기준으로 𝜃* 을 넘는 각도로 tilt되어서 진행이 된다면, 24E1과 같이 Mask 측면에 가려져 sidewall쪽의 implant가 아예 진행이 되지 않게 되어 버린다. 또한, FinFET은 Gate가 솟아 나있는 모양으로 높이를 가지기 때문에, ion implantation을 할 때 shadow effect가 발생하게 된다.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Multi-gate channel은 fin의 측면에 있게 때문에, parasitic resistance를 없애기 위해서 sidewall을 따라 일정하게 도핑 되어야 한다. 하지만 이전의 FinFET 공정에서는 그림의 24번과 같이 두껍게 패터닝이 된 PR Mask를 써야 했는데, 이 PR Mask의 두께로 인해서, implant 공정이 그림에서 수직면을 기준으로 𝜃* 을 넘는 각도로 tilt되어서 진행이 된다면, 24E1과 같이 Mask 측면에 가려져 sidewall쪽의 implant가 아예 진행이 되지 않게 되어 버린다. 또한, FinFET은 Gate가 솟아 나있는 모양으로 높이를 가지기 때문에, ion implantation을 할 때 shadow effect가 발생하게 된다.<br>
+
+<br>
+![alt text]({{ site.baseurl }}/assets/images/gyulab/fd1.PNG "image"){:.profile}
+<br><br>
+
 &nbsp;&nbsp;&nbsp;&nbsp;우리는 ion implantation 공정에서, Boron과 같이 작은 입자들이 실리콘 격자 구조를 따라 들어가버리는 channeling effect를 막기 위하여, wafer를 7도 정도 tilt하여 실리콘의 격자 구조를 조금 더 빽빽하게 만드는 방법을 사용한다는 것을 배웠다. 위의 그림에서도 26A와 같이 implant beam이 입사할 때, 7도 정도의 기울기를 가지고 implant하는 것을 알수 있다. 이를 통해 우리는 sidewall 전체에 골고루 dopant material을 implant할 수 있게 되었다고 생각했지만, tilt를 해서 implant를 하면 위에서 보았던 것처럼 PR에 의해서 shadow가 될 수 있고, fin의 한쪽 면만doping이 되게 되는, fin 모양 그 자체에 의한 shadow effect가 발생하게 되어 버린다.<br><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;엔지니어들은 이러한 shadow effect를 막기 위해서 여러 가지 방법을 시도해 보았다. 먼저, 위의 그림과 같이 26과 같이 우측 하방 (Figure에서 ‘26’ 방향)을 가리키는 방향으
