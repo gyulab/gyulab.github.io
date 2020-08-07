@@ -48,7 +48,7 @@ categories: Academics
 
 
 <br>
-&nbsp; &nbsp; &nbsp; &nbsp;이 방법에도 단점은 존재한다. 다른 orientation에서 process를 진행하게 되면, 기본적으로 다른 orientation의 wafer를 같이 붙이므로 mismatch와 같은 side effect가 발생하여 reliability 문제가 가장 큰 문제가 될 것이다. 또한, (100) orientation에 비해 (110) wafer는 interface trap density가 높아지기 때문에, device의 크기를 더 작게 하면 오히려 더 치명적인 factor로 작용할 수 있다. 논문의 저자 또한 이 process는 32nm dimension이하에서의 trap density에 대해서는 고려하지 않았다고 한 것으로 미루어 보았을 때, 충분히 가능한 문제라고 생각한다.
+&nbsp; &nbsp; &nbsp; &nbsp;이 방법에도 단점은 존재한다. 다른 orientation에서 process를 진행하게 되면, 기본적으로 다른 orientation의 wafer를 같이 붙이므로 mismatch와 같은 side effect가 발생하여 reliability 문제가 가장 큰 문제가 될 것이다. 또한, (100) orientation에 비해 (110) wafer는 interface trap density가 높아지기 때문에, device의 크기를 더 작게 하면 오히려 더 치명적인 factor로 작용할 수 있다. 논문의 저자 또한 이 process는 32nm dimension이하에서의 trap density에 대해서는 고려하지 않았다고 언급하였다.
 
 <br>
 <br>
