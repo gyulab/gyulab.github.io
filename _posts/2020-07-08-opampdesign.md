@@ -3,7 +3,7 @@ layout: post
 title:  "Designing CMOS Op-amp By SPICE"
 date:   2020-07-08T14:28:52-05:00
 author: Gyujun Jeong
-categories: Homework
+categories: Homeworks
 ---
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/ps1.png "image"){:.profile}
 
