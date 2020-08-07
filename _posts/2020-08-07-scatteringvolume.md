@@ -7,52 +7,39 @@ categories: Academics
 ---
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/sm1.jpg "image"){:.profile}
 <br>
-&nbsp; &nbsp; &nbsp; &nbsp;이전 포스팅에서 가장 widely하게 이용되는 Mobility Enhancement Technique인 Strain Engineering에 대해서 알아보았다. 이번 포스팅에서는 반도체를 만들 때 가장 기초가 되는 Wafer를 이용하여 Mobility를 향상시키는 기술에 대해서 알아보고자 한다.
+&nbsp; &nbsp; &nbsp; &nbsp;이전 포스팅까지 Carrier Mobility Enhancement를 위한 2가지 method를 알아보았다. 이번 시간에 알아볼 Scattering Mechanism Reduction은 재료공학에 대한 이해도가 있어야 이해할 수 있지만, 간단하게 먼저 소개해보고자 한다.<br><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;전하가 Field를 받아 움직이는 속도인 drift velocity와 Field 간의 비례상수가 mobility이다. 따라서 mobility가 클수록 전자나 전공이 더 빠르게 움직이므로 반도체 공정에서 매우 중요한 물리량이라는 것을 이야기해왔다.<br><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;하지만 이러한 mobility는 scattering mechanism에 의해 제한되게 된다. Scattering이란 electron이나 hole이 이동 중 Si Lattice나 ionized impurity 등에 의해 carrier의 움직임이 제한을 받게 되는 현상이고, 이로 인해 mobility degradation이 발생하게 된다. Scattering mechanism에는 아주 다양한 종류가 있지만, 가장 대표적인 2가지 종류의 scattering에 대해서 먼저 간단하게 알아보고자 한다.<br><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;첫 번째로는 Phonon (Lattice) Scattering이 있다. 온도에 의해 thermal energy를 받게 되면, lattice에 있는 atom들이 vibration을 하게 되며, 온도가 높아지면 이러한 vibration이 더 커지게 된다. 즉, lattice scattering에 의한 mobility degradation은 온도 상승에 의해 커진다고 할 수 있다. 이 scattering mechanism은 주로 고온, High E-field의 regime에서 mobility degradation factor로 작용하게 된다.<br><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;두 번째로는 Coulomb (Impurity) Scattering이 있다. Impurity들은 electron이나 hole을 내 놓은 후, 고정된 ion의 형태로 존재한다. 따라서 carrier들이 움직이게 되면 이러한 ion들과의 coulomb force에 의해 mobility가. 낮아지게 된다. 이러한 impurity scattering은 lattice scattering과 다르게 온도가 높아질수록 mobility 감소가 줄어들게 된다. 이 mechanism은 주로 저온, Low E-field, low inversion charge의 regime에서 mobility degradation factor로 작용하게 된다.<br>
+
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/sm2.png "image"){:.profile}
-<br>
-
-&nbsp; &nbsp; &nbsp; &nbsp;Wafer orientation과 관련하여 배운 흥미로운 내용들에 대해 잠깐 정리해보고자 한다. (111) orientation은 그림과 같이 unit area당 가장 많은 atom이 들어갈 수 있다. 반대로 (100) orientation은 unit area당 가장 적은 atom이 들어갈 수 있다. 하지만 (111) orientation은 surface에 dangling bond가 많아 interface trap을 형성하여 surface quality를 저하시킨다. CMOS process는 surface current flow를 기반으로 만들기 때문에, (100) wafer에서 fabrication을 해야 한다. 반면 Bipolar Transistor process의 경우 subjacent한 current flow를 가지므로, surface current이 중요하지 않다. 따라서 모든 orientation 모두 가능하지만, Czochralski method로 가장 쉽고 싸게 만들 수 있는 (111) wafer를 사용한다. 여담으로, Wafer 모양으로 orientation을 알 수 있다. Primary flat을 기준으로 secondary flat이 90도를 이루고 있으면 (100) wafer이고, 45도 각도를 이루고 있으면 (111) wafer이다.
-<br><br>
-<br>
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/sm3.png "image"){:.profile}
 <br>
 
-&nbsp; &nbsp; &nbsp; &nbsp;이제 Wafer orientation으로 moility를 향상시키는 방법에 대해 알아보자. Orientation에 따라 electron과 hole carrier의 mobility가 달라지는데, 아래 figure로부터 (110)에서 (100) orientation으로 갈수록 mobility가 향상되고, hole은 (100) orientation에서 (110) orientation으로 갈수록 mobility가 향상되어서, 두 carrier 사이에 trade-off 관계가 있음을 알 수 있다.
+&nbsp; &nbsp; &nbsp; &nbsp;먼저 Phonon scattering을 없애는 방법을 알아보도록 하자. 2단원에서 알아보았던 FinFET과 같은 multigate device를 사용하면 phonon scattering을 현저하게 낮출 수 있다. 그 원리는 바로 multigate device의 특성인 ‘volume inversion’ 에 있다. Si의 두께가 20nm 수준으로 감소하고 multigate structure가 되면서, 2개의 potential well 사이의 interaction이 발생한다. 이 condition에서, inversion layer가 silicon과 dielectric의 계면에만 발생하는 것이 아니라 거의 silicon 전체에 형성이 되게 된다. 즉, Si/Dielectric interface에 더 이상 carrier들이 묶여있지 않고 Silicon 전체로 퍼져나가게 되는 것이다. 이는 oxide와 interface charge와의 scattering을 줄여줌으로써, phonon scattering을 줄여주고, mobility enhancement를 가져오게 된다. 사실 volume inversion이 mobility를 enhance하는 방법이고, phonon scattering reduction은 volume inversion에 따른 결과이기는 하나, 서로 연관성이 있다는 것을 보여주기 위해 여기에 작성하게 되었다.
 <br>
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/sm4.png "image"){:.profile}
 <br>
-&nbsp; &nbsp; &nbsp; &nbsp;이러한 경향성으로 인해, (100)에서 (110)으로 갈수록 NMOS의 drain current는 감소하고, PMOS의 drain current는 증가하게 된다. 이러한 표면 방향에 따라 캐리어의 mobility가 변화하는 요인에는 각 면에서의 effective mass와 surface roughness scattering의 차이 때문인 것으로 알려져 있다. 
 <br>
+&nbsp; &nbsp; &nbsp; &nbsp;Volume inversion으로 phonon scattering을 낮추는 방법에 대한 단점으로는, device의 크기가 수 원자 크기 정도로 작아짐으로써 발생하는 양자역학적 문제들이 발생한다. Volume inversion이 발생하는 곳 부근에서 Quantum Confinement Effect가 발생하여, Bandgap이 커지는 효과가 일어나게 되고 (Blue-shift 같은 현상), threshold voltage가 커지게 된다. [34][35] 이와 같은 양자역학적인 문제들을 추가로 고려하여 공정 조건을 다시 설계해야 한다는 단점이 있다. 또한, Volume inversion을 obtain하기 위해서는 multi-gate structure를 만들어야 하는데, 이러한 structure를 만들기 위해서는 Planar structure보다 공정의 복잡도가 올라가 cost가 올라간다는 단점이 있다.<br><br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;Coulomb Scattering은 앞서 discuss 했던 것 과 같이, inversion charge concentration과 E-field의 세기가 낮은 region에서 main scattering mechanism으로 작용한다. 이러한 coulomb scattering을 낮추기 위해서는 High-K dielectric을 사용하면 된다. High-K dielectric을 사용할 경우, SiO2와 비교하였을 때 coulomb perturbation potential이 감소하는 효과를 가져온다는 것을 실험적으로 알 수 있었다. [1] 이 방법에 대한 단점은 1.3.절에서 알아보았던 High-K dielectric의 problem인 mobility degradation과 Fermi level pinning등과 동일하며, 이러한 문제들은 HK/MG process로 대부분 해결할 수 있었다.
 <br>
+
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/sm5.png "image"){:.profile}
 <br>
+&nbsp; &nbsp; &nbsp; &nbsp;Scattering reduction으로 mobility를 증가시킨 비교적 최신 연구도 찾을 수 있었다. 2018년, N. Huo, et al. 연구진들은 CVD-grown monolayer MoS2 FET에서 ALD process를 이용한 Hafnia (HfO2) cover를 통해서 coulomb scattering과 phonon scattering을 억제함으로서 훨씬 더 improved 된 mobility를 얻을 수 있었다고 한다. [2]
 
-&nbsp; &nbsp; &nbsp; &nbsp;Wafer orientation 뿐만 아니라 MOS의 channel orientation도 mobility에 영향을 주게 된다. 위의 Figure를 보게 되면, (100) wafer orientation을 가진 기판에서 제작된 <100>, <110> channel 방향을 갖는 MOSFET에 대해, electron의 mobility의 경우 channel orientation에 거의 영향을 받지 않지만, hole mobility의 경우 특히 낮은 Electric field region에서 <110> channel orientation에서 improve되었다는 것을 알 수 있다. (110) wafer orientation을 가진 기판에서 제작된 경우를 보면, electron은 <100> channel에서, hole은 <110> channel orientation에서 mobility 향상을 obtain 할 수 있었다.
-<br><br>
-&nbsp; &nbsp; &nbsp; &nbsp;정리하자면, electron mobility는 (100) wafer와 channel orientation에서 성능이 improve되어 NMOS의 성능이 가장 좋고, hole mobility는 (110) wafer와 channel orientation에서 성능이 inprove되어 PMOS의 성능이 가장 좋다는 것을 알 수 있다. 이에 기반하여, 2005년 IBM에서는 기존의 동일 orientation을 가지는 wafer에서의 CMOS process에서, NMOS와 PMOS의 orientation을 각각 달리 하여 fabrication하는 Hybrid orientation 기술을 발표했다.
-
-
-<br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/wo6.png "image"){:.profile}
-<br>
-
-&nbsp; &nbsp; &nbsp; &nbsp;위의 Figure를 보게 되면, 3.1.에서 알아보았던 eSiGe와 tensile stressed liner, 즉 intentional한 stress enhancement또한 적용이 되어 있음을 알 수 있다.
-<br>
-<br>
-![alt text]({{ site.baseurl }}/assets/images/gyulab/wo7.png "image"){:.profile}
-<br>
-&nbsp; &nbsp; &nbsp; &nbsp;결과적으로, (100)면에서 NMOS를, (110)에서 PMOS를 fabrication할 경우, PMOS와 hole mobility의 향상을 얻을 수 있다는 것을 알 수 있다.
-<br>
-
-
-<br>
-&nbsp; &nbsp; &nbsp; &nbsp;이 방법에도 단점은 존재한다. 다른 orientation에서 process를 진행하게 되면, 기본적으로 다른 orientation의 wafer를 같이 붙이므로 mismatch와 같은 side effect가 발생하여 reliability 문제가 가장 큰 문제가 될 것이다. 또한, (100) orientation에 비해 (110) wafer는 interface trap density가 높아지기 때문에, device의 크기를 더 작게 하면 오히려 더 치명적인 factor로 작용할 수 있다. 논문의 저자 또한 이 process는 32nm dimension이하에서의 trap density에 대해서는 고려하지 않았다고 언급하였다.
 
 <br>
 <br>
 [Reference]<br>
-[1] Chang, L., Leong, M., Yang, M., Chang, L., Leong, M., & Yang, M. (2004). CMOS Circuit Performance Enhancement by Surface Orientation Optimization. IEEE Transactions on Electron Devices, 51(10), 1621–1627.doi:10.1109/ted.2004.834912 <br>
-[2] P. Gaubert et al., "Relation Between the Mobility, 1/f Noise, and Channel Direction in MOSFETs Fabricated on (100) and (110) Silicon-Oriented Wafers, IEEE TED, 2010.<br>
-[3] H. Nakamura et al., "Effects of Selecting Channel Direction in Improving Performance of Sub-100 nm MOSFETs Fabricated on (110) Surface Si Substrate, Japanese Journal of Applied Physics, 2004.
+[1] Jiménez-Molinos, F., Gámiz, F., & Donetti, L. (2008). Coulomb scattering in high-κ gate stack silicon-on-insulator metal-oxide-semiconductor field effect transistors. Journal of Applied Physics, 104(6), 063704. doi:10.1063/1.2975993 <br>
+[2] Huo, N., Yang, Y., Wu, Y.-N., Zhang, X.-G., Pantelides, S. T., & Konstantatos, G. (2018). High carrier mobility in monolayer CVD-grown MoS2 through phonon suppression. Nanoscale, 10(31), 15071–15077.doi:10.1039/c8nr04416c 
