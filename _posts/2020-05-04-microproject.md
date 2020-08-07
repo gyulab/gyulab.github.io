@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Microelectronics Project: Detailed Analysis"
+title:  "Microelectronics Project"
 date:   2020-07-08T14:28:52-05:00
 author: Gyujun Jeong
 categories: Homeworks
