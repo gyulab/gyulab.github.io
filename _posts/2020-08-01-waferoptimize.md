@@ -50,7 +50,8 @@ categories: Academics
 <br>
 &nbsp; &nbsp; &nbsp; &nbsp;이 방법에도 단점은 존재한다. 다른 orientation에서 process를 진행하게 되면, 기본적으로 다른 orientation의 wafer를 같이 붙이므로 mismatch와 같은 side effect가 발생하여 reliability 문제가 가장 큰 문제가 될 것이다. 또한, (100) orientation에 비해 (110) wafer는 interface trap density가 높아지기 때문에, device의 크기를 더 작게 하면 오히려 더 치명적인 factor로 작용할 수 있다. 논문의 저자 또한 이 process는 32nm dimension이하에서의 trap density에 대해서는 고려하지 않았다고 한 것으로 미루어 보았을 때, 충분히 가능한 문제라고 생각한다.
 
-
+<br>
+<br>
 [Reference]<br>
 [1] Chang, L., Leong, M., Yang, M., Chang, L., Leong, M., & Yang, M. (2004). CMOS Circuit Performance Enhancement by Surface Orientation Optimization. IEEE Transactions on Electron Devices, 51(10), 1621–1627.doi:10.1109/ted.2004.834912 <br>
 [2] P. Gaubert et al., "Relation Between the Mobility, 1/f Noise, and Channel Direction in MOSFETs Fabricated on (100) and (110) Silicon-Oriented Wafers, IEEE TED, 2010.<br>
