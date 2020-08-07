@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Scattering Reduction using Volume Inversion Phenomenon"
+title:  "Scattering Reduction using Volume Inversion"
 date:   2020-08-07T14:28:52-05:00
 author: Gyujun Jeong
 categories: Academics
