@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Microelectronics Project: Detailed Analysis"
+date:   2020-07-08T14:28:52-05:00
+author: Gyujun Jeong
+categories: Homeworks
+---
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-01 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-02 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-03 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-04 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-05 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-06 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-07 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-08 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-09 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-10 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-11 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-12 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-13 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-14 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-15 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-16"image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-17 "image"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/gyulab/EE304_Project_20180583_Gyujun Jeong-01 "image"){:.profile}
