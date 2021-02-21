@@ -6,19 +6,16 @@ author: Gyujun Jeong
 categories: Daily
 ---
 
-1. Cadence Tool 공부 (중요!!!)
+1. Cadence Virtuoso EDA Tool 공부 (+Synopsys HSPICE)
 
-2. ADC 공부: 이미지 센서에 들어가는 A2D 회로 공부
+2. ADC 공부: 이미지 센서에 들어가는 A2D 회로 공부 (SS ADC, DSM, SAR, etc)
 
 3. LNA 공부: Low-noise Amplifier: RF Microelectronics 공부 (Chapter 2,4,5)
 
 4. ML 공부: 방학 때 조금 질릴 때 머신 러닝을 좀 공부해 놓아서, 선형화/최적화에 적용해보고자 함
 
--추후 Revision 예정 :)
-
-
-겨울학기도 화이팅~
-
+<br>
+<br>
 
 Appendix)
 - Design Tool: Spectre, HSPICE
