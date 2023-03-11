@@ -26,7 +26,7 @@ fft.fft(a, n=None, axis=-1, norm=None)
 ```
 Compute the one-dimensional discrete Fourier Transform. This function computes the one-dimensional n-point discrete Fourier Transform (DFT) with the efficient Fast Fourier Transform (FFT) algorithm [CT].<br>
 
-- Example 1 (Rudimentary one): FFT the following signal: \\[ y(t) = 0.6*cos(2*pi*60*t)+0.8*sin(2*pi*120*t) \\]<br>
+- Example 1 (Rudimentary one): FFT the following signal: \\(  y(t) = 0.6*cos(2*pi*60*t)+0.8*sin(2*pi*120*t)  \\)  <br>
 
 <script src="https://gist.github.com/gyulab/68759683ee07a9c6dc775fa9450347de.js"></script><br>
 Result plot:<br>
