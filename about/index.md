@@ -6,17 +6,20 @@ date: 2023-03-10
 comments: false
 ---
     
-## Features
+## Introduction
 * I am a senior student in <a href="https://ee.kaist.ac.kr/en/">School of Electrical Engineering, KAIST</a>(Korea Advanced Institute of Science and Technology). 
 * I am currently in my military service in the National Defense Security Agency, in charge of research on signal processing. 
+
+## Research Experiences
 * During my BS degree, I am majoring in Electrical Engineering, where I did research internships at following labs:
 * <a href="https://semiconductor.samsung.com/about-us/business-area/system-lsi/">Analog IP Team, System LSI, Samsung Electronics</a>
 * <a href="https://www.icsl.kaist.ac.kr">Integrated Circuits and Systems Laboratory</a>, Prof. Jaehyeok Choi
 * <a href="http://hsnl.kaist.ac.kr">High-Speed Nanoelectronics Laboratory</a>, Prof. Kyeonghoon Yang
+
+## Objectives
 * I am deeply interested in Circuit Design, especially in Imager Sensors, RF electronics and Analog to Digital Converter. Signal Processing and Communication Systems are also my research interest. My goal is to enhance productivity and creativity in the circuit designing process.
 
 
-## Preview
 
 {% capture images %}
     https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png
