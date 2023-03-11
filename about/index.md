@@ -2,12 +2,10 @@
 layout: page
 title: About me
 tags: [about, Jekyll, theme, moon]
-date: 2016-03-21
+date: 2023-03-10
 comments: false
 ---
     
-<center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
-
 ## Features
 * I am a senior student in <a href="https://ee.kaist.ac.kr/en/">School of Electrical Engineering, KAIST</a>(Korea Advanced Institute of Science and Technology). 
 * I am currently in my military service in the National Defense Security Agency, in charge of research on signal processing. 
