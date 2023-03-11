@@ -5,7 +5,7 @@ description:        "Gyujun Jeong, School of Electrical Engineering, KAIST"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/images/gyulab/london11.png'
-background:         'assets/images/asset_depreciated/circuit.jpg'
+background:         'assets/img/placeholder-big.jpg'    #'assets/images/asset_depreciated/circuit.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://gyulab.github.io
@@ -42,7 +42,7 @@ email: gj.jeong@kaist.ac.kr
 #facebook:           username
 #github-url:         gyulab
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-linkedin:          "https://www.linkedin.com/in/gyujun-jeong/"
+linkedin:          gyujun-jeong
 #xing:              username
 instagram:          kyuriteria
 #lastfm:            username
