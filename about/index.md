@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About the Theme
+title: About me
 tags: [about, Jekyll, theme, moon]
 date: 2016-03-21
 comments: false
@@ -9,16 +9,14 @@ comments: false
 <center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
 
 ## Features
-* Minimal, you can focus on your content
-* Responsive
-* Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support
+* I am a senior student in <a href="https://ee.kaist.ac.kr/en/">School of Electrical Engineering, KAIST</a>(Korea Advanced Institute of Science and Technology). 
+* I am currently in my military service in the National Defense Security Agency, in charge of research on signal processing. 
+* During my BS degree, I am majoring in Electrical Engineering, where I did research internships at following labs:
+* <a href="https://semiconductor.samsung.com/about-us/business-area/system-lsi/">Analog IP Team, System LSI, Samsung Electronics</a>
+* <a href="https://www.icsl.kaist.ac.kr">Integrated Circuits and Systems Laboratory</a>, Prof. Jaehyeok Choi
+* <a href="http://hsnl.kaist.ac.kr">High-Speed Nanoelectronics Laboratory</a>, Prof. Kyeonghoon Yang
+* I am deeply interested in Circuit Design, especially in Imager Sensors, RF electronics and Analog to Digital Converter. Signal Processing and Communication Systems are also my research interest. My goal is to enhance productivity and creativity in the circuit designing process.
+
 
 ## Preview
 
