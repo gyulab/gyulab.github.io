@@ -9,7 +9,7 @@ categories: Research@signal
 &nbsp;&nbsp;&nbsp;&nbsp;The documents and videos below are the good materials to study and understand the Convolutional Codes & Viterbi Decoding, from MIT 6.02 DRAFT Lecture Notes. Let's simulate various convolutional code encoders and Viterbi coding through MATLAB.
 <br><br>
 <b>1. Convolutional Codes</b><br>
-<center><iframe width="95%" height="315" src="https://www.youtube.com/embed/kRIfpmiMCpU" frameborder="0" allowfullscreen></iframe></center><br>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/kRIfpmiMCpU" frameborder="0" allowfullscreen></iframe></center><br>
 <iframe src="https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/fea2b27744e25ff21846374a56ceb256_MIT6_02F12_lec06.pdf" type="application/pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
 <br>
 
@@ -27,7 +27,7 @@ Registers are filled with the value of LSB of the frame and terminate when the s
 
 <a href="https://ieeexplore.ieee.org/document/282266" target="_blank">R. V. Cox and C. E. W. Sundberg, "An efficient adaptive circular Viterbi algorithm for decoding generalized tailbiting convolutional codes," in IEEE Transactions on Vehicular Technology, vol. 43, no. 1, pp. 57-68, Feb. 1994<br>
 
-<center><iframe width="95%" height="315" src="https://www.youtube.com/embed/nrP61KiG8fE" frameborder="0" allowfullscreen></iframe></center><br>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/nrP61KiG8fE" frameborder="0" allowfullscreen></iframe></center><br>
 
 <b>Main code</b> <br>
 <code>codedout = convenc(msg,trellis,puncpat)</code> specifies a puncture pattern, puncpat, to enable higher rate encoding than unpunctured coding.<br>
@@ -64,7 +64,7 @@ e.g., <code>const_len = [5 4]</code> -> k= 2 -> Block length should be multiple 
 
 <br>
 <b>2. Viterbi Decoding</b><br>
-<center><iframe width="95%" height="315" src="https://www.youtube.com/embed/dKIf6mQUfnY" frameborder="0" allowfullscreen></iframe></center><br>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/dKIf6mQUfnY" frameborder="0" allowfullscreen></iframe></center><br>
 <iframe src="https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/f398fa4a366439301b3d17e45e028952_MIT6_02F12_lec07.pdf" type="application/pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
 <br>
 <iframe src="https://drive.google.com/file/d/1k4IPiEL9k0gHBtbEWu5XTynfB1UFTqtq/preview" type="application/pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
