@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "Nonideal Effects on BJT"
+date:   2019-11-02T14:25:52-05:00
+author: Gyujun Jeong
+categories: Research@HSNL
+---
+
+&nbsp;&nbsp;&nbsp;&nbsp;The conditions of Ideal in BJT are constant doping, low level injection, width of emitter and base region are constant, energy gap is constant, and overall current is constant.
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;The collapse of these ideal conditions is called nonideal, and the effect in each nonideal situation will be examined.
+<br><br>
+There are six main nonideal effects:
+<br><br>
+1. Base Width Modulation ( = Early Effect)
+2. High Level Injection
+3. Emiter's Effective Bandgap Narrowing (Due to High-Doping)
+4. Current Crowding Effect (Due to Resistance of Base)
+5. Non-Uniform Base Doping Effect
+6. Breakdown (Punch-through, Avalanche, Zener)
+<br><br>
+Now let's take a look at these six nonideal effects in a precautionary way.
+<br><br>
+
+
+
+![alt text]({{ site.baseurl }}/assets/images/0046.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/0047.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/0048.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/0049.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/0050.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/0051.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/0052.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/0053.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/0054.jpg "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/images/0055.jpg "Profile Picture"){:.profile}
+
+<br>
+[References: Neamen's Semiconductor Physics and and Devices, 4th Ed.]
+
+
+
