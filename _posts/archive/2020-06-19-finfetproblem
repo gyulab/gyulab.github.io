@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "[EE463] FinFET Doping Issue: Overcoming Shadow Effect Problem during S/D Implantation"
+date:   2020-07-10T14:28:52-05:00
+author: Gyujun Jeong
+categories: Projects
+---
+
+<br>
+![alt text]({{ site.baseurl }}/assets/images/gyulab/fd0.jpg "image"){:.profile}
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Since the multi-gate channel is on the side of the fin, it must be uniformly doped along the sidewall to eliminate parasitic resistance. However, in the previous FinFET process, a thick patterned PR mask was used as shown in Figure 24, and if the implant process is tilted at an angle exceeding 𝜃* relative to the vertical plane in Figure, the implant on the sidewall side will not proceed at all, as shown in 24E1. In addition, since FinFET has a height in the shape of a gate rising, a shadow effect occurs during ion implantation.<br>
+
+<br>
+![alt text]({{ site.baseurl }}/assets/images/gyulab/fd1.PNG "image"){:.profile}
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;We learned that in the ion implantation process, to prevent the channeling effect of small particles such as Boron entering the silicon lattice structure, we use a method of tilting the wafer by about 7 degrees to make the silicon lattice structure a little more dense. In the above figure, it can be seen that when the implant beam enters, it imparts with a slope of about 7 degrees. Through this, we thought that we could implant the dopant material evenly throughout the sidewall, but if we tilt and implant it, it can be shadowed by PR as seen above, and only one side of the fin is doped, resulting in a shadow effect by the fin shape itself.<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Engineers have tried various methods to prevent this shadow effect. First, as shown in the figure above, if the implant beam is fired in a direction pointing downward to the right (direction '26' in the Figure), the left side of fin can be implanted. After that, if the wafer is rotated 180 degrees while the implant equipment is fixed, the direction of incidence of the implant beam can be changed to the direction pointing downward to the left (To the direction '30' on the figure). In this case, the right side of fin can be implanted, and both sides of fin can be implanted.<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;A lot of effort was made to solve the shadowing effect by the PR mask. One of them is to increase the pitch of the PR mask (indicated by the green pen in Figure above) until it does not cover the fin. However, since this method lowers the packing density, it is not used because it is contrary to the production intention of FinFET, which is part of the effort to increase the degree of integration. The way to fundamentally eliminate the shadowing effect by the PR mask is to lay down the vertically established mask. In other words, it is to solve this problem in a lithographic way. If we lay the mask larger than 𝜃* in the figure above, that is, non-vertical, we can eliminate the shadowing effect.<br><br>
+
+
+<br>
+![alt text]({{ site.baseurl }}/assets/images/gyulab/fd2.PNG "image"){:.profile}
+<br>
+![alt text]({{ site.baseurl }}/assets/images/gyulab/fd3.PNG "image"){:.profile}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The angle of the PR pattern can usually be adjusted to about 30 to 60 degrees, and this angle can also be adjusted according to the desired process. As a method of adjusting this angle, the absolute rate of the photoresist may be adjusted. Looking at the graphs of Figure 2D and E, the remaining photoresist layer disappears at the point where the exposure dose is E100. Here, if the slope of Figure 2D is more steady, it means that the time for expose dose to reach E100 from E0 (initial dose) is faster, which means that PR will disappear faster. In order to reduce the arrival time from E0 to E100, it is necessary to increase the absolute percentage rate of PR. The PR disappears quickly while accommodating more lithography sources (KrF), thereby obtaining a lower angle PR pattern.
+<br>
+<br>
+![alt text]({{ site.baseurl }}/assets/images/gyulab/fd4.PNG "image"){:.profile}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;As an example, a mask pattern of a smaller angle was obtained by using a higher absolute rate of PR used in Figure 2G compared to the PR used in Figure 2F.
+
+[Reference]<br>
+[1] U.S. Patent No. 20140113420A1 (2012)
