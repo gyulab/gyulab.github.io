@@ -4,8 +4,8 @@ bio:                'Gyujun Jeong, School of Electrical Engineering, KAIST'
 description:        "Gyujun Jeong, School of Electrical Engineering, KAIST"
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.png'
-background:         'assets/img/placeholder-big.jpg'
+logo:               'assets/images/gyulab/4B594944-CFE5-467E-965F-5153B24341D4.jpeg'
+background:         'assets/images/asset_depreciated/circuit.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://gyulab.github.io
