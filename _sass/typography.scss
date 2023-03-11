@@ -148,3 +148,17 @@ table {
 dt {
     font-weight: bolder;
 }
+
+.gist-meta{display: none;}
+/* Import gist dark mode color */
+/*@import url('https://gist.github.com/adimancv/eb2f4b46d3c95e6b8fe4dd52375236b2/raw/836892954954f1aef96d745fe77e69448cb26bdb/css_dark_mode_gist_embed_code.css'); */
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/d49b91b3/stylesheets/one-dark.css');
+
+/* Decorate gist to dark mode */
+.gist-meta{display: none;} /* Remove meta text zone "hosted by Github" */
+.gist .markdown-body .csv-data th,
+.gist .markdown-body .csv-data td,
+.gist .markdown-body .csv-data .blob-num {background: #373737; background-color: #373737;}
+.gist .blob-interaction-bar .octicon-search > path {fill: #fff}
+.gist .blob-interaction-bar > input {background: #373737}
+.gist .blob-interaction-bar {background: #373737}
