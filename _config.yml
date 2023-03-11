@@ -1,8 +1,8 @@
 # Site
 title:              Gyu's ECE Lab
 bio:                'Gyujun Jeong, School of Electrical Engineering, KAIST'
-description:        "Gyujun Jeong, School of Electrical Engineering, KAIST"
-reading_time:       true
+description:        "Gyu's ECE Laboratory<br>Designed by Kyu Jeong<br>This website is intended for academic and non-profit purposes only."
+reading_time:       false
 words_per_minute:   200
 logo:               'assets/images/gyulab/london11.png'
 background:         'assets/img/placeholder-big.jpg'    #'assets/images/asset_depreciated/circuit.jpg'
