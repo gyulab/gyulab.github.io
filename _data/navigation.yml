@@ -1,21 +1,21 @@
 # Site navigation links
-- title: Research at Agency
-  url: /tags/#Research@Agency
+#- title: Samsung Electronics
+#  url: /tags/#Internship@samsung.electronics
 
-- title: Samsung Electronics
-  url: /tags/#Internship@samsung.electronics
-
-- title: Research at ICSL
-  url: /tags/##Research@ICSL
-
-- title: Research at HSNL
-  url: /tags/##Research@HSNL
+#- title: Research at Agency
+#  url: /tags/#Research@Agency
   
-- title: Projects
-  url: /tags/#projects
+#- title: Research at ICSL
+#  url: /tags/##Research@ICSL
 
-- title: Misc Blog
-  url: /tags/#miscellaneous
+#- title: Research at HSNL
+#  url: /tags/##Research@HSNL
+  
+#- title: Projects
+#  url: /tags/#projects
 
-- title: Study Notes
-  url: /tags/#Study_notes
+#- title: Misc Blog
+#  url: /tags/#miscellaneous
+
+#- title: Study Notes
+#  url: /tags/#Study_notes
