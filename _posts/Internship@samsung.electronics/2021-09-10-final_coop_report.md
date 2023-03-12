@@ -6,10 +6,10 @@ author: Gyujun Jeong
 tags: Internship@samsung.electronics
 ---
 
-![alt text]({{ site.baseurl }}/assets/images/intern/IMG-2618.jpg "image"){:.profile}<br>
-<center>DSR Tower, Laboratory of Samsung Electronics</center>
-![alt text]({{ site.baseurl }}/assets/images/intern/IMG-1881.jpg "image"){:.profile}<br>
-<center>ID Card of Samsung Electronics</center>
+![alt text]({{ site.baseurl }}/assets/images/intern/IMG-2618.jpg "image"){:.profile}
+<center><b>DSR Tower, Laboratory of Samsung Electronics</b></center>
+![alt text]({{ site.baseurl }}/assets/images/intern/IMG-1881.jpg "image"){:.profile}
+<center><b>ID Card of Samsung Electronics</b></center>
 
 &nbsp; &nbsp; &nbsp; &nbsp;First of all, through the internship, I was able to have a valuable experience living in society for the first time outside of school. After graduating from high school early, I went to KAIST and lived almost only studying for about five years, but I was able to seize for a while and have various experiences and broaden my knowledge. I was wondering about whether to get a job right after my undergraduate or go to graduate school to improve my skills. Through this internship in Samsung Electronics, I realized that my knowledge was much less than I thought, and it would be better to study more and do what I can do well, so it helped me decide to undergo grad school. <br>
 
