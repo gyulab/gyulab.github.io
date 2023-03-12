@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Multi-threading and processing on signal processing"
-date:   2023-01-13-02T14:28:52-05:00
+date:   2022-10-31-02T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
 ---
