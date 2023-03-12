@@ -20,8 +20,8 @@ body {
 	background-position: center center;
 	background-attachment: fixed;
 	@media #{$small} {
-	    background: transparent !important;
-	}
+	    background-image: none !important;
+		background: $white;	}
 }
 * {
 	box-sizing: border-box;
