@@ -2,23 +2,23 @@
 - title: Home
   url: /
 
-- title: Agency
-  url: /agency/
+- title: Research at Agency
+  url: /tags/#Research@Agency
 
 - title: Samsung Electronics
-  url: /samsungelectronics/
+  url: /tags/#Internship@samsung.electronics
 
-- title: ICSL
-  url: /icsl/
+- title: Research at ICSL
+  url: /tags/##Research@ICSL
 
-- title: HSNL
-  url: /hsnl/
+- title: Research at HSNL
+  url: /tags/##Research@HSNL
   
 - title: Projects
-  url: /projects/
+  url: /tags/#projects
 
-- title: Miscellaneous
-  url: /misc/
+- title: Misc Blog
+  url: /tags/#miscellaneous
 
-- title: StudyNotes
-  url: /studynotes/
+- title: Study Notes
+  url: /tags/#Study_notes
