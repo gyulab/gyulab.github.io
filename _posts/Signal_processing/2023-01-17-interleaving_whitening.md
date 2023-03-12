@@ -15,7 +15,7 @@ tags: Research@Agency
 
 
 <br>
-Important Note: From these patterns, we can finally extract the following general interleaving formula: I(i,j) = D(j,(i−(j+1)%SF))where I is the interleaved matrix and D the deinterleaved one. {: .notice}
+> Important Note: From these patterns, we can finally extract the following general interleaving formula: I(i,j) = D(j,(i−(j+1)%SF))where I is the interleaved matrix and D the deinterleaved one.
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/27.PNG "image"){:.profile}<br>
 
@@ -36,7 +36,7 @@ Important Note: From these patterns, we can finally extract the following genera
 
 
 <br>
-Important Note: The whitening is based around the 9-bit LFSR polynomial x^9+x^5+1. With this structure, the least significant bit (LSB) at the output of the LFSR is XORed with the most significant bit (MSB) of the data. {: .notice}
+> Important Note: The whitening is based around the 9-bit LFSR polynomial x^9+x^5+1. With this structure, the least significant bit (LSB) at the output of the LFSR is XORed with the most significant bit (MSB) of the data.
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/31.PNG "image"){:.profile}<br>
 
