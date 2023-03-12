@@ -24,7 +24,7 @@ tags: Research@Agency
 <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;The videos below is the good material to understand fixed point conversion.<br>
-<center><iframe width="95%" height="315" src="https://www.youtube.com/embed/kUNVW-mal0A" frameborder="0" allowfullscreen></iframe></center><br>
+<center><iframe width="540" height="315" src="https://www.youtube.com/embed/kUNVW-mal0A" frameborder="0" allowfullscreen></iframe></center><br>
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;So, How could we read out the signal file to a processable bit-file? The MATLAB and Python codes below convert the signal file in the fixed point with binary point scaling, the word length of w, and fraction length of f as a big-endian order.
