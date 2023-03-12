@@ -46,6 +46,11 @@ body {
 	@media only screen and (max-height: 500px) {
 	    display: block !important;
 	}
+    @media only screen and (max-width: 767px) {
+  .site-header {
+    background-attachment: scroll;
+  }
+}
 }
 .flex {
 	display: -webkit-box;
