@@ -2,14 +2,23 @@
 - title: Home
   url: /
 
-- title: Blog
-  url: /blog/
+- title: Agency
+  url: /agency/
 
+- title: Samsung Electronics
+  url: /samsungelectronics/
+
+- title: ICSL
+  url: /icsl/
+
+- title: HSNL
+  url: /hsnl/
+  
 - title: Projects
   url: /projects/
 
-- title: About
-  url: /about/
+- title: Miscellaneous
+  url: /misc/
 
-- title: Moon
-  url: http://taylantatli.me/Moon
+- title: StudyNotes
+  url: /studynotes/
