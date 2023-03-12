@@ -6,19 +6,16 @@ author: Gyujun Jeong
 tags: Research@Agency
 ---
 <b>1. Interleaving and De-interleaving method of CSS modulation</b><br>
-
+![alt text]({{ site.baseurl }}/assets/images/general_research/26.PNG "image"){:.profile}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Interleaving is a technique used to improve the performance of error correction codes by breaking the correlation between errors caused by noise or fading. It works by spreading the bits of a codeword across multiple symbols, so that if a symbol is corrupted, the errors will be distributed across multiple codewords rather than concentrated in one. This increases the effectiveness of the error correction code, but also increases the latency of the communication. Interleaving can also be used to improve the robustness of data transmitted over a noisy channel.<br>
 
-![alt text]({{ site.baseurl }}/assets/images/general_research/26.PNG "image"){:.profile}<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;LoRa applies diagonal interleaving instead of conventional row-line interleaving. Figure 9(a) shows the column-major order row-line interleaving of eight symbols. For row-line interleaving, the LSBs (bi,1) of the eight symbols are assembled into a byte. From Section 3 we know that the LSBs of a symbol are more fragile than the most signiicant bits (MSBs) of the symbol. From the perspective of FEC, it is a bad design to group fragile bits together. Figure 9(b) shows diagonal interleaving used in LoRa. Diagonal interleaving distributes the fragile LSBs into diferent bytes and is more robust. We then manipulate the transmitted packets to derive the detailed diagonal mapping.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;LoRa applies diagonal interleaving instead of conventional row-line interleaving. The Figure (a) shows the column-major order row-line interleaving of eight symbols. For row-line interleaving, the LSBs (bi,1) of the eight symbols are assembled into a byte. From Section 3 we know that the LSBs of a symbol are more fragile than the most signiicant bits (MSBs) of the symbol. From the perspective of FEC, it is a bad design to group fragile bits together. Figure 9(b) shows diagonal interleaving used in LoRa. Diagonal interleaving distributes the fragile LSBs into diferent bytes and is more robust. We then manipulate the transmitted packets to derive the detailed diagonal mapping.<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;As an example, we send packets with SF = 8 and CR = 4/8 in implicit header mode. Thus, the interleaving block is an 8 × 8 block as shown in Figure 9(b). First, we assume the FEC used in CR = 4/8 is the standard (7,4) Hamming code with one bit extension. Therefore, after Gray coding and Whitening, the codeword for nibble 0000 is 00000000, and the codeword for 1111 is 11111111. Suppose the sending bytes are all zeros except that the fourth byte is 0x0F, we observe b11 = b22 = · · · = b88 = 1 in Figure 9(b). Therefore the main diagonal represents the fourth byte 0x0F. The one bin shift problem mentioned in Gray coding relects here that we cannot always get eight ones in a block if we directly apply the standard Gray coding. Shifting the mapping by one solves this problem and perfectly matches our following decoding process. By changing the all-1 data bits in the transmitted packet, we can derive the entire mapping for interleaving as shown in Figure9(b). For other parameters, the deinterleaving process is similar. The only diference is that the block size becomes 4/CR × SF.<br>
 
 
 <br>
-> Important Note: From these patterns, we can finally extract the following general interleaving formula:
-I(i,j) = D(j,(i−(j+1)%SF))where I is the interleaved matrix and D the deinterleaved one. 
+Important Note: From these patterns, we can finally extract the following general interleaving formula: I(i,j) = D(j,(i−(j+1)%SF))where I is the interleaved matrix and D the deinterleaved one. {: .notice}
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/27.PNG "image"){:.profile}<br>
 
@@ -39,7 +36,7 @@ I(i,j) = D(j,(i−(j+1)%SF))where I is the interleaved matrix and D the deinterl
 
 
 <br>
-> Important Note: The whitening is based around the 9-bit LFSR polynomial x^9+x^5+1. With this structure, the least significant bit (LSB) at the output of the LFSR is XORed with the most significant bit (MSB) of the data. 
+Important Note: The whitening is based around the 9-bit LFSR polynomial x^9+x^5+1. With this structure, the least significant bit (LSB) at the output of the LFSR is XORed with the most significant bit (MSB) of the data. {: .notice}
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/31.PNG "image"){:.profile}<br>
 
