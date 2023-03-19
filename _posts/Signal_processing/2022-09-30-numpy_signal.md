@@ -12,12 +12,11 @@ FYI) Here is the link for <a href="https://numpy.org">numpy.org</a> and <a href=
 <b>Contents of signal processing (and some linear algebras!)</b><br>
 1. FFT (Fast Fourier Transform)<br>
 2. Bit File readout / write example <br>
-3. GF (Galois Field generation for channel coding)<br>
-4. Gaussian Elimination<br>
+3. Gaussian Elimination<br>
 
 
 <br>
-<b>1. FFT of the signal file</b><br>
+<b>FFT of the signal file</b><br>
 
 - Main Code
 
@@ -33,12 +32,10 @@ Result plot:<br>
 ![alt text]({{ site.baseurl }}/assets/images/general_research/21.PNG "image"){:.profile}<br>
 
 
-<b>2. Bit File readout / write example </b><br>
+<b>Bit File readout / write example </b><br>
 <script src="https://gist.github.com/gyulab/f5d09d6cbe17a7a4ce00a4a1855e8d2c.js"></script><br>
 
-<b>3. GF (Galois Field generation for channel coding) </b><br>
-
-<b>4. Gaussian Elimination</b><br>
+<b>Gaussian Elimination</b><br>
 <script src="https://gist.github.com/gyulab/097c6370a470b70170e3a5562ed7515d.js"></script>
 
 <br><br>
