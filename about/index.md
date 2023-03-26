@@ -11,7 +11,7 @@ comments: false
 * <b>My name is Gyujun Jeong (Kyu / 정규준).</b>
 * I am currently looking forward to a doctoral program in the US to continue my research!
 * I am a senior student in <a href="https://ee.kaist.ac.kr/en/">School of Electrical Engineering, KAIST</a>(Korea Advanced Institute of Science and Technology). 
-* I am currently in my military service in the National Defense Security Agency, in charge of research on signal processing.
+* I am currently in my military service in the National Agency, in charge of research on signal processing.
 
 ## Contact Info
 * <b>Here is my Curriculum Viate: <a href="https://drive.google.com/file/d/1K55L5gBM32n33XbAczWg0OZ10w3rRmRP/view?usp=share_link">(link)</a></b>
@@ -27,6 +27,6 @@ comments: false
 ## Objectives
 * I am deeply interested in Circuit Design, especially in Imager Sensors, RF electronics and Analog to Digital Converter. 
 * Signal Processing and Communication Systems are also my research interest. 
-* My goal is to enhance productivity and creativity in the circuit designing process.
+* My goal is to enhance productivity and creativity in the circuit designing process by leveraging Machine Learning and Artificial Intelligence.
 
 
