@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LoRa Signal and CSS Modulation for IoT device communication"
+title:  "LoRa PHY and Chirp Spread Spectrum(CSS) for IoT device communication"
 date:   2023-02-10T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
