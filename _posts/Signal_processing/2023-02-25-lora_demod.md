@@ -22,7 +22,7 @@ $$
 <br>
 where R(f) is implemented as the fast Fourier transform (FFT) of the FSK signal, R(f) = FFT{r(t)}.
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Based on this, we can implement the LoRaWan-like demodulator as follows. Note that this is simple snippets.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Using this approach, we can easily implement a LoRaWan-like demodulator by following these simple  snippet.<br>
 <script src="https://gist.github.com/gyulab/5f53d28e4dc56e6195da004598742dbe.js"></script>
 
 &nbsp;&nbsp;&nbsp;&nbsp;To de-chirp the signal, we start by cross-correlating it with a reference downchirp. This is done using <code>np.convolve</code> with mode <code>'valid'</code>. The index where the maximum correlation is achieved corresponds to the timing of the received data, which we obtain using <code>data_index = argmax(crosscorr_result)</code>. We then perform an FFT on each dechirped data and proceed with symbol-to-bit mapping as described earlier.
