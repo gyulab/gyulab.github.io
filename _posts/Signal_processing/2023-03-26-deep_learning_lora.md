@@ -21,38 +21,32 @@ tags: Research@Agency
 
 &nbsp;&nbsp;&nbsp;&nbsp;In general, deep learning algorithms can be used for various signal processing and demodulation tasks such as signal classification, denoising, feature extraction, and modulation recognition. The choice of algorithm depends on the specific problem's nature and the available data.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Here, we will look at two approaches of LoRa signal detection and demodulation from different papers.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;In this section, we will explore two different approaches to detecting and demodulating LoRa signals as presented in various research papers.<br>
 <br>
 
 <b>1. Kosta Dakic et al, LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;The paper "LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach" by Kosta Dakic et al. proposes a new approach for demodulating LoRa signals using deep learning techniques. The authors observe that the existing demodulation methods for LoRa signals are computationally expensive and require a high sampling rate, which is not practical for many real-world applications. The proposed approach uses a convolutional neural network (CNN) to directly demodulate the LoRa signal in the time-domain. The CNN is trained on a large dataset of LoRa signals with different modulation indices and spreading factors, and is able to accurately estimate the symbol rate, spreading factor, and modulation index of the received signal.<br>
 
+Here are a diagram and datasets illustrating the utilized CNN to demodulate I/Q signal of LoRa symbols:
+![alt text]({{ site.baseurl }}/assets/images/general_research/39.PNG "image"){:.profile}<br>
+![alt text]({{ site.baseurl }}/assets/images/general_research/40.PNG "image"){:.profile}<br>
 
+Before implementing the NN, we should undergo some steps as follows:
+- Data collection and pre-processing: Collect a dataset of LoRa signals with different modulation indices and spreading factors. Pre-process the data by applying filtering, resampling, and normalization techniques.
+- Data preparation: Split the dataset into training, validation, and test sets. Prepare the data in the time-domain by dividing the signal into smaller segments and applying a sliding window technique.-
+- Model architecture: Define a CNN architecture for demodulating the LoRa signals. The CNN should have multiple convolutional layers followed by max-pooling layers, and then fully connected layers for classification. 
+- Training: Train the CNN using the prepared dataset. Use a suitable loss function, optimizer, and learning rate for training. You can also use techniques like data augmentation and early stopping to improve the performance of the model.
+- Testing: Evaluate the performance of the trained model on the test dataset. Measure metrics like accuracy, 
+precision, and recall to evaluate the performance
 
+&nbsp;&nbsp;&nbsp;&nbsp;Now, let's implement the CNN using Tensorflow based on the paper:<br>
+<script src="https://gist.github.com/gyulab/df42521a46d4f1e6f059ce057e351b4f.js"></script>
 
-
-
-
-
-
-Typically, LoRa detection is achieved in two steps: (i) first, the signal is de-chirped, then (ii) typical FSK demodulation is applied. De-chirping is achieved by mixing the received LoRa symbol with an inverted chirp (down-chirp) with no frequency offset. Since the demodulator has no prior knowledge of the transmit symbols, the de-chirping signal utilizes γ(0) = −B/2. Hence, the resulting signal is given as follows:<br>
-<center>$$
-s(t) = \sqrt{\frac{E_b}{N_0}} \sqrt{SF} \exp\left(j2\pi mδ_f t\right){}
-$$
-</center>
+&nbsp;&nbsp;&nbsp;&nbsp;The authors evaluate the performance of the proposed approach on both simulated and real-world datasets, and compare it with the existing demodulation methods. The results show that the proposed approach is computationally efficient and can achieve high accuracy even in low signal-to-noise ratio (SNR) conditions.Overall, the paper presents a novel approach for demodulating LoRa signals using deep learning techniques that can improve the efficiency and accuracy of LoRa communication systems.<br>
 <br>
-which is a typical M-ary FSK signal. Each symbol is now represented with a frequency shift of mδf, where δf is the bandwidth divided by the number of steps. In LoRa, it happens that this value is equivalent to the symbol rate as follows, δf = 1/T.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Now that the symbol is modulated using FSK, we can use conventional FSK demodulation methods to detect the symbol. Here, we utilized Non-coherent detection, attained by using energy detection in the frequency domain, where the maximum PSD peak location indicates the extracted symbol, formulated as follows:<br>
-<center>$$
-\hat{m}_{n-coh} = \frac{1}{δ_f}argmax[[R(f)] − 0.5]
-$$
-</center>
 <br>
-where R(f) is implemented as the fast Fourier transform (FFT) of the FSK signal, R(f) = FFT{r(t)}.
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Using this approach, we can easily implement a LoRaWan-like demodulator by following these simple  snippet.<br>
-<script src="https://gist.github.com/gyulab/5f53d28e4dc56e6195da004598742dbe.js"></script>
+<b>Angesom Ataklity Tesfay et al, Deep Learning-based Signal Detection for Uplink in LoRa-like Networks</b><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;To de-chirp the signal, we start by cross-correlating it with a reference downchirp. This is done using <code>np.convolve</code> with mode <code>'valid'</code>. The index where the maximum correlation is achieved corresponds to the timing of the received data, which we obtain using <code>data_index = argmax(crosscorr_result)</code>. We then perform an FFT on each dechirped data and proceed with symbol-to-bit mapping as described earlier. Using multiprocessing, as discussed in earlier post, can accelerate the iterative loop.
 
 
 
