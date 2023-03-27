@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LoRa Signal and CSS Modulation"
+title:  "LoRa Signal and CSS Modulation for IoT device communication"
 date:   2022-10-14T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
