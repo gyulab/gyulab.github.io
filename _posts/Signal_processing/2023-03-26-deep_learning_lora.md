@@ -33,7 +33,7 @@ Here are a diagram and datasets illustrating the utilized CNN to demodulate I/Q 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/39.PNG "image"){:.profile}<br>
 ![alt text]({{ site.baseurl }}/assets/images/general_research/40.PNG "image"){:.profile}<br>
 
-Before implementing the NN, we should undergo some steps as follows:
+Before implementing the NN, we should go through some steps as follows:
 - Data collection and pre-processing: Collect a dataset of LoRa signals with different modulation indices and spreading factors. Pre-process the data by applying filtering, resampling, and normalization techniques.
 - Data preparation: Split the dataset into training, validation, and test sets. Prepare the data in the time-domain by dividing the signal into smaller segments and applying a sliding window technique.-
 - Model architecture: Define a CNN architecture for demodulating the LoRa signals. The CNN should have multiple convolutional layers followed by max-pooling layers, and then fully connected layers for classification. 
