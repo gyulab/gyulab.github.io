@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "LoRa Signal and CSS Modulation for IoT device communication"
-date:   2022-10-14T14:28:52-05:00
+date:   2023-02-10T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
 ---
@@ -17,19 +17,27 @@ tags: Research@Agency
 &nbsp;&nbsp;&nbsp;&nbsp; Chirp: Signals with constantly increasing(Up-) or decreasing(Down-) frequency<br>
 &nbsp;&nbsp;&nbsp;&nbsp; Usually up-chirp utilized on LoRa Mod<br>
 
-- By the way, what does the word ‘Chirp’ mean?<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Oxford Languages: typically of a small bird, utter a short, sharp, high-pitched sound<br>
-&nbsp;&nbsp;&nbsp;&nbsp;In engineering: Compressed High Intensity Radar Pulse<br>
-
-- Key parameter: Spreading Factor (SF)
-&nbsp;&nbsp;&nbsp;&nbsp;SF(Spreading Factor): Bits per symbol (5<SF<13)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Suppose we transmit the siganl with consistnt BW..<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Low SF: Short symbol duration -> Tough Identification -> High SNR required<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High SF: Long symbol duration -> Easy identification -> Low SNR affordable<br>
-&nbsp;&nbsp;&nbsp;&nbsp;i.e., Symbol duration increases -> Energy per bit increases -> Remote transmission available<br>
+- Key parameter: Spreading Factor (SF)<br>
+SF(Spreading Factor): Bits per symbol (5<SF<13)<br>
+The SF satisfies SF = B · T , where B is bandwidth and T is chirp period. There are at most SF cyclically shifted up-chirp symbols given a specific SF. An up-chirp can be represented as the following formula:
+$$
+chirp(t; f0) = Aexp[j2πf0+ \frac{B}{2T} t)t]
+$$
+The higher the SF, the longer the time on air, resulting in higher energy per bit.
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/general_research/3.PNG "image"){:.profile}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Read the following link to elaborate idea of SF: <a href="https://www.rfwireless-world.com/Terminology/What-is-difference-between-Chip-and-Chirp-in-LoRaWAN.html">What is difference between Chip and Chirp in LoRaWAN, LoRa?</a><br>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;A LoRa symbol is a cyclic shift in frequency that is controlled by chirping rates represented with a spreading factor (SF), which determines the symbol’s spreading over time. A normalized up-chirp LoRa signal is expressed as follows:
+$$
+s(t) = \sqrt{\frac{E_b}{N_0}} \sqrt{SF} \exp\left(j2\pi\[gamma(m) + \beta t/2]\right) \mod B - \frac{B}{2}t
+$$
+&nbsp;&nbsp;&nbsp;&nbsp;The frequency offset, γ(m), and chirp slope, β, are obtained from m, the symbol being modulated, B, the transmission bandwidth, and Ts, the symbol time. The SF has a range of SF ∈ {6, 7, 8, 9, 10, 11, 12}, while the bandwidth B ∈ {125, 250, 500} kHz. The chirp rate has a slope of fhigh − flow = B/Ts. 
+![alt text]({{ site.baseurl }}/assets/images/general_research/36.PNG "image"){:.profile}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;An example of a LoRa chirp is shown in the above figure, which depicts the spectrogram of a LoRa symbol, highlighting the cyclic frequency shift. Each symbol represents M = 2^SF bits according to the LoRa modulation convention.
+
+
+
 <br>
 <b>3. LoRa Waveform Structure</b><br>
 ![alt text]({{ site.baseurl }}/assets/images/general_research/4.PNG "image"){:.profile}<br>
@@ -40,6 +48,9 @@ tags: Research@Agency
 &nbsp;&nbsp;&nbsp;&nbsp;SFD(Start Frame Delimiter): Identifier, i.e., Delimiter, Down-chirp<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Data: CSS-Modulated data, varying start frequency <br>
 
+
+
+
 <br><br>
 
 <b>[References]</b>
@@ -47,3 +58,4 @@ tags: Research@Agency
 2. Tapparel Joachim, Complete Reverse Engineering of LoRa PHY: https://www.epfl.ch/labs/tcl/wp-content/uploads/2020/02/Reverse_Eng_Report.pdf
 3. https://lora.readthedocs.io/en/latest/
 4. Modulation, 2015. LoRa Modulation Basics, Rev.2., https://www.semtech.com/uploards/documents/an1200.22.pdf
+5. Kosta Dakic et al, LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach
