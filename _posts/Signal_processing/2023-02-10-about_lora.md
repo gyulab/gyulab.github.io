@@ -24,6 +24,7 @@ The SF satisfies SF = B · T , where B is bandwidth and T is chirp period. There
 chirp(t; f0) = Aexp[j2πf0+ \frac{B}{2T} t)t]
 $$</center>
 <br>
+
 The higher the SF, the longer the time on air, resulting in higher energy per bit.
 <br>
 ![alt text]({{ site.baseurl }}/assets/images/general_research/3.PNG "image"){:.profile}<br>
@@ -35,10 +36,13 @@ s(t) = \sqrt{\frac{E_b}{N_0}} \sqrt{SF} \exp\left(j2\pi[\gamma(m) + \beta t/2\ri
 $$
 </center>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;The frequency offset, γ(m), and chirp slope, β, are obtained from m, the symbol being modulated, B, the transmission bandwidth, and Ts, the symbol time. The SF has a range of SF ∈ {6, 7, 8, 9, 10, 11, 12}, while the bandwidth B ∈ {125, 250, 500} kHz. The chirp rate has a slope of fhigh − flow = B/Ts. 
-![alt text]({{ site.baseurl }}/assets/images/general_research/36.PNG "image"){:.profile}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;An example of a LoRa chirp is shown in the above figure, which depicts the spectrogram of a LoRa symbol, highlighting the cyclic frequency shift. Each symbol represents M = 2^SF bits according to the LoRa modulation convention.
+&nbsp;&nbsp;&nbsp;&nbsp;The frequency offset, γ(m), and chirp slope, β, are obtained from m, the symbol being modulated, B, the transmission bandwidth, and Ts, the symbol time. The SF has a range of SF ∈ {6, 7, 8, 9, 10, 11, 12}, while the bandwidth B ∈ {125, 250, 500} kHz. The chirp rate has a slope of fhigh − flow = B/Ts.
 
+
+![alt text]({{ site.baseurl }}/assets/images/general_research/36.PNG "image"){:.profile}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;An example of a LoRa chirp is shown in the above figure, which depicts the spectrogram of a LoRa symbol, highlighting the cyclic frequency shift. Each symbol represents M = 2^SF bits according to the LoRa modulation convention.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;With these knowledges, we can make chirp generator program for given domain as follows:<br>
+<script src="https://gist.github.com/gyulab/c2c829eb765c6fb3e9e24549e11ad3c1.js"></script>
 
 
 <br>
