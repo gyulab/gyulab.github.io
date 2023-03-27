@@ -67,6 +67,8 @@ Here is the implement the DFNN using Pytorch based on the paper:<br>
 Now, let's implement the CNN using Pytorch based on the paper:<br>
 <script src="https://gist.github.com/gyulab/c3c6ab94c45eb4634646abbc398b4e07.js"></script>
 
+Training:
+<script src="https://gist.github.com/gyulab/24cf41d9380c59ca622b1e80fa5905f2.js"></script>
 <br><br>
 
 <b>[References]</b>
