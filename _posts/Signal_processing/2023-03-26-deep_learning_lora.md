@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "Deep Learning-based Signal Demodulation: Paper review and Implementation"
+date:   2023-03-26T14:28:52-05:00
+author: Gyujun Jeong
+tags: Research@Agency
+---
+
+![alt text]({{ site.baseurl }}/assets/images/general_research/38.PNG "image"){:.profile}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Deep learning algorithms have shown significant success in various signal processing and demodulation tasks. Some commonly used deep learning algorithms for signal processing and demodulation are as follows:
+
+- Convolutional Neural Networks (CNNs): CNNs are widely used in image processing applications but can also be applied to 1D signals such as audio and time-series data. In signal processing, CNNs can be used for tasks such as noise reduction, denoising, and filtering.
+
+- Recurrent Neural Networks (RNNs): RNNs are commonly used in speech recognition, natural language processing, and time-series analysis. In signal processing, RNNs can be used for tasks such as speech recognition, signal prediction, and modulation classification.
+
+- Autoencoders: Autoencoders are neural networks that can be used for unsupervised feature learning and dimensionality reduction. In signal processing, autoencoders can be used for tasks such as signal compression, denoising, and feature extraction.
+
+- Generative Adversarial Networks (GANs): GANs are used for generating new data samples that are similar to the training data. In signal processing, GANs can be used for tasks such as signal generation, anomaly detection, and signal restoration.
+
+- Deep Reinforcement Learning (DRL): DRL algorithms can be used for tasks such as adaptive filtering, dynamic spectrum access, and cognitive radio. In DRL, agents learn to optimize actions based on the environment's feedback to achieve a specific goal.
+
+&nbsp;&nbsp;&nbsp;&nbsp;In general, deep learning algorithms can be used for various signal processing and demodulation tasks such as signal classification, denoising, feature extraction, and modulation recognition. The choice of algorithm depends on the specific problem's nature and the available data.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Here, we will look at two approaches of LoRa signal detection and demodulation from different papers.<br>
+<br>
+
+<b>1. Kosta Dakic et al, LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach</b><br>
+
+
+
+
+
+
+
+
+
+Typically, LoRa detection is achieved in two steps: (i) first, the signal is de-chirped, then (ii) typical FSK demodulation is applied. De-chirping is achieved by mixing the received LoRa symbol with an inverted chirp (down-chirp) with no frequency offset. Since the demodulator has no prior knowledge of the transmit symbols, the de-chirping signal utilizes γ(0) = −B/2. Hence, the resulting signal is given as follows:<br>
+<center>$$
+s(t) = \sqrt{\frac{E_b}{N_0}} \sqrt{SF} \exp\left(j2\pi mδ_f t\right){}
+$$
+</center>
+<br>
+which is a typical M-ary FSK signal. Each symbol is now represented with a frequency shift of mδf, where δf is the bandwidth divided by the number of steps. In LoRa, it happens that this value is equivalent to the symbol rate as follows, δf = 1/T.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Now that the symbol is modulated using FSK, we can use conventional FSK demodulation methods to detect the symbol. Here, we utilized Non-coherent detection, attained by using energy detection in the frequency domain, where the maximum PSD peak location indicates the extracted symbol, formulated as follows:<br>
+<center>$$
+\hat{m}_{n-coh} = \frac{1}{δ_f}argmax[[R(f)] − 0.5]
+$$
+</center>
+<br>
+where R(f) is implemented as the fast Fourier transform (FFT) of the FSK signal, R(f) = FFT{r(t)}.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Using this approach, we can easily implement a LoRaWan-like demodulator by following these simple  snippet.<br>
+<script src="https://gist.github.com/gyulab/5f53d28e4dc56e6195da004598742dbe.js"></script>
+
+&nbsp;&nbsp;&nbsp;&nbsp;To de-chirp the signal, we start by cross-correlating it with a reference downchirp. This is done using <code>np.convolve</code> with mode <code>'valid'</code>. The index where the maximum correlation is achieved corresponds to the timing of the received data, which we obtain using <code>data_index = argmax(crosscorr_result)</code>. We then perform an FFT on each dechirped data and proceed with symbol-to-bit mapping as described earlier. Using multiprocessing, as discussed in earlier post, can accelerate the iterative loop.
+
+
+
+<br><br>
+
+<b>[References]</b>
+1. Kosta Dakic et al, LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach
+2. Angesom Ataklity Tesfay et al, Deep Learning-based Signal Detection for Uplink in LoRa-like Networks
+3. A Primer on Deep Learning Architectures and Applications in Speech Processing
