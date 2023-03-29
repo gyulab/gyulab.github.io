@@ -25,8 +25,7 @@ comments: false
 * <a href="http://hsnl.kaist.ac.kr">High-Speed Nanoelectronics Laboratory</a>, Prof. Kyeonghoon Yang
 
 ## Objectives
-* I am deeply interested in Circuit Design, especially in Imager Sensors, RF electronics and Analog to Digital Converter. 
-* Signal Processing and Communication Systems are also my research interest. 
-* My goal is to enhance productivity and creativity in the circuit designing process by leveraging Machine Learning and Artificial Intelligence.
+* I am deeply interested in Circuit and communication system design, especially in Sensors and RF electronics. 
+* My goal is to enhance performance and productivity in the electronics designing process by leveraging Artificial Intelligence.
 
 
