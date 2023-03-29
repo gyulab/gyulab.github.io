@@ -2,22 +2,22 @@
 $bodycolor           : #D24D57;
 $black           	 : #000;
 $white               : #fff;
-$color_gray          : #d3d3d3;
-$red                 : #d3d3d3;
-$maroon              : #d3d3d3;
-$color_tuatara       : #d3d3d3;
-$color_shark         : #d3d3d3;
-$color_mischka       : #d3d3d3;
-$color_mercury       : #d3d3d3;
-$color_bon_jour      : #d3d3d3;
-$color_gallery       : #d3d3d3;
-$color_stack         : #d3d3d3;
-$color_alabaster     : #d3d3d3;
-$color_tundora       : #d3d3d3;
-$color_fuscous_gray  : #d3d3d3;
-$color_alabaster     : #d3d3d3;
-$color_celeste       : #d3d3d3;
-$color_pink_swan     : #d3d3d3;
+$color_gray          : #e8e8e8;
+$red                 : #FF4136;
+$maroon              : #85144b;
+$color_tuatara       : #383838;
+$color_shark         : #282828;
+$color_mischka       : #d0d1d5;
+$color_mercury       : #e5e6e9;
+$color_bon_jour      : #dfe0e4;
+$color_gallery       : #f0f0f0;
+$color_stack         : #8c8b8b;
+$color_alabaster     : #f9f9f9;
+$color_tundora       : #444;
+$color_fuscous_gray  : #555;
+$color_alabaster     : #fcfcfc;
+$color_celeste       : #ccc;
+$color_pink_swan     : #bbb;
 $comp-color 	     : complement(#222); 
 
 //button colors
@@ -27,7 +27,7 @@ $danger				 : #C64537;
 $info		         : #308cbc;
 
 //fonts
-$font1               : 'SF Pro', -apple-system, BlinkMacSystemFont, 'Roboto', 'Fira Sans', Oxygen-Sans, Ubuntu, Cantarell, 'Fira Sans', sans-serif;
+$font1               : 'SF Pro', -apple-system, BlinkMacSystemFont, 'Fira Sans', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Fira Sans', sans-serif;
 $font2               : Inconsolata;
 $alt-font            : serif;
 $doc-font-size       : 16;
