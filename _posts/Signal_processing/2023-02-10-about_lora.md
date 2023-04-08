@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LoRa PHY and Chirp Spread Spectrum(CSS) for IoT device communication"
+title:  "LoRa PHY/MAC and CSS Modulation for IoT device communication"
 date:   2023-02-10T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
@@ -56,7 +56,44 @@ $$
 &nbsp;&nbsp;&nbsp;&nbsp;Data: CSS-Modulated data, varying start frequency <br>
 
 
+<br>
+<b>4. LoRaWAN MAC layer message formats (after decoding)</b><br>
+![alt text]({{ site.baseurl }}/assets/images/general_research/48.PNG "image"){:.profile}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;LoRaWAN consists of End Devices and LoRa gateway. The gateway functions similar to base station of cellular network and End Devices function as mobile phones. Like other wireless network, transmission from LoRa Gateway module to End devices is known as "downlink" while transmissions from end devices to LoRa Gateway is known as "uplink".<br>
 
+The LoRaWAN MAC layer performs following functions.
+• Establishes connection between MAC layer of peers (i.e. between LoRa Gateway and End device).
+• The MAC layer handles transmission and reception of MAC commands and data from application layer. All the LoRaWAN MAC messages are identified based on MAC message types. This is shown in the table-1.
+• MAC layer adds MHDR (MAC header) and MIC (message integrity code) at the beginning and end of MAC payload. MAC header is 1 octet in size and MIC is 4 octet in size. As mentioned MAC payload carries either MAC commands or data.
+• The MAC layer data is used by PHY layer which incorporates Preamble, PHY header at the beginning and PHY header CRC and entire frame CRC at the end while constructing PHY payload at the transmit end. The reverse process i.e. stripping of preamble, PHY header and CRC is done at receive end. <br>
+
+<b>LoRaWAN MAC commands</b><br>
+Following table mentions list of LoRaWAN MAC commands with CID, transmitted by end device or gateway and their functions:<br>
+![alt text]({{ site.baseurl }}/assets/images/general_research/43.PNG "image"){:.profile}<br>
+
+<b>LoRaWAN MAC message formats</b><br>
+Following are the LoRaWAN MAC message formats at each protocol stack:<br>
+![alt text]({{ site.baseurl }}/assets/images/general_research/44.PNG "image"){:.profile}<br>
+
+Following table mentions MAC message types with its 3 bit "MType field": <br>
+![alt text]({{ site.baseurl }}/assets/images/general_research/45.PNG "image"){:.profile}<br>
+
+- Join Request & Join Accept: These messages are used to establish connection between LoRa end device and Gateway.
+- Confirmed Data Message: This message type requires to be acknowledged by its receiver.
+- Unconfirmed Data Message: This message type does not require any acknowledgment.
+- Proprietary : This message type is used to incorporate non standard message format functionalities.
+- RFU : It means Reserved for Future Usage.
+
+![alt text]({{ site.baseurl }}/assets/images/general_research/46.PNG "image"){:.profile}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The figure-2 mentions LoRaWAN PHY payload and figure-3 mentioned contents of LoRaWAN MAC payload structure. For more information refer LoRaWAN specification about each of these fields.
+![alt text]({{ site.baseurl }}/assets/images/general_research/47.PNG "image"){:.profile}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;MAC commands are used for network administration between server (i.e. Gateway) and end device. These commands are non visible to applications running in the LoRa server and end devices. A single data frame consists of one or multiple MAC commands(either piggybacked or transmitted as separate frame). MAC commands are segregated based on CID field of size 1 octet long. CID stands for Command IDentifier. These mac commands are used by end device or by gateway or by both.<br>
+
+For example,<br>
+- Value of 0x02 CID is used for 'LinkCheckReq' command (by End Device for transmission to Gateway)
+- Value of 0x02 CID is also used for 'LinkCheckAns' (by Gateway for transmission to End device)
+- Value of 0x03 CID is used by Gateway to transmit 'LinkADRReq' command.
+- Value of 0x03 CID is also used by End device to transmit 'LinkADRAns' command.
 
 <br><br>
 
@@ -66,3 +103,4 @@ $$
 3. https://lora.readthedocs.io/en/latest/
 4. Modulation, 2015. LoRa Modulation Basics, Rev.2., https://www.semtech.com/uploards/documents/an1200.22.pdf
 5. Kosta Dakic et al, LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach
+6. https://www.rfwireless-world.com/Tutorials/LoRaWAN-MAC-layer-inside.html
