@@ -61,11 +61,11 @@ $$
 ![alt text]({{ site.baseurl }}/assets/images/general_research/48.PNG "image"){:.profile}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;LoRaWAN consists of End Devices and LoRa gateway. The gateway functions similar to base station of cellular network and End Devices function as mobile phones. Like other wireless network, transmission from LoRa Gateway module to End devices is known as "downlink" while transmissions from end devices to LoRa Gateway is known as "uplink".<br>
 
-The LoRaWAN MAC layer performs following functions.
-• Establishes connection between MAC layer of peers (i.e. between LoRa Gateway and End device).
-• The MAC layer handles transmission and reception of MAC commands and data from application layer. All the LoRaWAN MAC messages are identified based on MAC message types. This is shown in the table-1.
-• MAC layer adds MHDR (MAC header) and MIC (message integrity code) at the beginning and end of MAC payload. MAC header is 1 octet in size and MIC is 4 octet in size. As mentioned MAC payload carries either MAC commands or data.
-• The MAC layer data is used by PHY layer which incorporates Preamble, PHY header at the beginning and PHY header CRC and entire frame CRC at the end while constructing PHY payload at the transmit end. The reverse process i.e. stripping of preamble, PHY header and CRC is done at receive end. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;The LoRaWAN MAC layer performs following functions.<br>
+- Establishes connection between MAC layer of peers (i.e. between LoRa Gateway and End device).
+- The MAC layer handles transmission and reception of MAC commands and data from application layer. All the LoRaWAN MAC messages are identified based on MAC message types. This is shown in the table-1.
+- MAC layer adds MHDR (MAC header) and MIC (message integrity code) at the beginning and end of MAC payload. MAC header is 1 octet in size and MIC is 4 octet in size. As mentioned MAC payload carries either MAC commands or data.
+- The MAC layer data is used by PHY layer which incorporates Preamble, PHY header at the beginning and PHY header CRC and entire frame CRC at the end while constructing PHY payload at the transmit end. The reverse process i.e. stripping of preamble, PHY header and CRC is done at receive end. <br>
 
 <b>LoRaWAN MAC commands</b><br>
 Following table mentions list of LoRaWAN MAC commands with CID, transmitted by end device or gateway and their functions:<br>
