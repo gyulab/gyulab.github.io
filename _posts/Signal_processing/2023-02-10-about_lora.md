@@ -74,7 +74,8 @@ Following table mentions list of LoRaWAN MAC commands with CID, transmitted by e
 &nbsp;&nbsp;&nbsp;&nbsp;Here, CID stands for "Collision ID" in LoRaWAN MAC analysis. CID is a mechanism used in LoRaWAN to handle collisions and ensure that all devices have a fair chance to transmit their data without interference.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;CID is a 4-bit field in the LoRaWAN MAC layer frame that immediately follows the FCtrl field. It is represented by a single hexadecimal character in the nibble hex data. To find the CID field in the nibble hex data, you need to first identify the FCtrl field, which is also a 4-bit field that immediately follows the MType field. The FCtrl field is represented by a single hexadecimal character in the nibble hex data.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Once identified the FCtrl field, you can find the CID field by looking at the next nibble (4 bits) in the nibble hex data. The CID field is located in the second nibble of the second byte of the FCtrl field. Specifically, the MSB of the CID field is the first bit of the second nibble of the FCtrl field, and the LSB of the CID field is the fourth bit of the same nibble.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;For example, suppose you have the following nibble hex data representing a LoRaWAN MAC layer frame: 01 82 03 00 00 00 01 00 6D 0D<br>
+&nbsp;&nbsp;&nbsp;&nbsp;For instance, suppose you have the following nibble hex data representing a LoRaWAN MAC layer frame: <br>
+<center>01 82 03 00 00 00 01 00 6D 0D</center><br>
 &nbsp;&nbsp;&nbsp;&nbsp;In this case, the FCtrl field is "8" (represented by the second nibble of the second byte). The CID field immediately follows the FCtrl field and is represented by the third nibble of the second byte, which is "3" in this example. Therefore, the CID field value is 0x3 or 3 in decimal notation.<br>
 
 <b>LoRaWAN MAC message formats</b><br>
