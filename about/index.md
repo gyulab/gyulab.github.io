@@ -14,7 +14,7 @@ comments: false
 * I am currently in my military service in the National Agency, in charge of research on signal processing.
 
 ## Contact Info
-* <b>Here is my Curriculum Viate: <a href=>(soon be updated)</a></b> <!--"https://drive.google.com/file/d/1UE4Aw3-B4jKyIXXkRAjHyJrl5-k9XKZa/preview">(link)</a></b>-->
+* <b>Here is my Curriculum Viate: (soon be updated)</b> <!--<a href="https://drive.google.com/file/d/1UE4Aw3-B4jKyIXXkRAjHyJrl5-k9XKZa/preview">(link)</a></b>-->
 * <b>Linkedin: <a href="https://www.linkedin.com/in/gyujun-jeong-155a5225a/">(link)</a></b>
 * <b>E-mail: <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a></b>
 
