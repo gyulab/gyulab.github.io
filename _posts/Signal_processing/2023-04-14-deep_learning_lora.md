@@ -76,7 +76,107 @@ Training:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Taking the spectrogram of both amplitude and phase as input, they first design a mask-enabled Deep Neural Network (DNN) filter that extracts multi-dimension features to capture clean chirp symbols. Second, they develop a spectrogram-based DNN decoder to decode these chirp symbols accurately. Finally, they propose a generic packet demodulation system by incorporating a method that generates high-quality chirp symbols from received signals. <br>
 
+![alt text]({{ site.baseurl }}/assets/images/general_research/52.PNG "image"){:.profile}<br>
 
+&nbsp;&nbsp;&nbsp;&nbsp;The paper introduces a neural-enhanced demodulation approach for LoRa (Low Range) signals. The proposed approach uses a dual-channel spectrogram of the chirp symbol as input to a deep neural network (DNN) model for decoding the encoded data bits. The dual-DNN model consists of two modules: a noise filter and a spectrogram-based decoder. The noise filter aims to preserve the primary features of the chirp symbol by masking the raw spectrogram, and it contains multiple blocks of convolutional neural networks (CNN) and one long short-term memory (LSTM) layer. The masked spectrogram is then input to a CNN-based decoder to capture the spatial energy peak distribution and temporal staggered pattern for decoding. The DNN model is trained using two loss functions for back-propagation, one for the noise filter and one for the decoder, with the goal of minimizing the average loss on the training dataset. Data augmentation techniques are also employed to improve the generalization of the DNN model. Experimental results demonstrate that the proposed neural-enhanced demodulation approach outperforms existing methods in terms of demodulation accuracy for LoRa signals, especially under low signal-to-noise ratio (SNR) conditions. <br>
+
+Here is the demo code to build a network based on this paper:<br>
+```python
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+# Define the DNN model
+class DualDNN(nn.Module):
+    def __init__(self):
+        super(DualDNN, self).__init__()
+        # Define the noise filter module
+        self.noise_filter = nn.Sequential(
+            nn.Conv2d(2, 8, kernel_size=3, padding=1),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(8, 8, kernel_size=3, padding=1),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(8, 8, kernel_size=3, padding=1),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(8, 8, kernel_size=3, padding=1),
+            nn.ReLU(inplace=True),
+            nn.LSTM(8, 8, batch_first=True),
+            nn.ReLU(inplace=True),
+            nn.Linear(8, 8),
+            nn.ReLU(inplace=True),
+            nn.Linear(8, 1),
+            nn.Sigmoid()
+        )
+        # Define the spectrogram-based decoder module
+        self.decoder = nn.Sequential(
+            nn.Conv2d(2, 16, kernel_size=3, padding=1),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(16, 16, kernel_size=3, padding=1),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(16, 16, kernel_size=3, padding=1),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(16, 16, kernel_size=3, padding=1),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(16, 1, kernel_size=3, padding=1),
+            nn.ReLU(inplace=True),
+            nn.Flatten(),
+            nn.Linear(t * f, 512),
+            nn.ReLU(inplace=True),
+            nn.Linear(512, 256),
+            nn.ReLU(inplace=True),
+            nn.Linear(256, 128),
+            nn.ReLU(inplace=True),
+            nn.Linear(128, num_classes)
+        )
+
+    def forward(self, x):
+        # Pass input through the noise filter
+        noise_mask = self.noise_filter(x)
+        x = x * noise_mask
+        # Pass the masked input through the decoder
+        x = self.decoder(x)
+        return x
+
+# Define hyperparameters
+batch_size = 32
+learning_rate = 0.001
+num_epochs = 100
+
+# Create an instance of the DualDNN model
+model = DualDNN()
+
+# Define the loss function
+criterion = nn.CrossEntropyLoss()
+
+# Define the optimizer
+optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+
+# Training loop
+for epoch in range(num_epochs):
+    # Iterate over batches of data
+    for i, (input_data, target) in enumerate(train_loader):
+        # Zero the gradients
+        optimizer.zero_grad()
+        # Forward pass
+        output = model(input_data)
+        # Compute the loss
+        loss = criterion(output, target)
+        # Backward pass
+        loss.backward()
+        # Update the weights
+        optimizer.step()
+        # Print progress
+        if (i+1) % 10 == 0:
+            print(f'Epoch [{epoch+1}/{num_epochs}], Step [{i+1}/{len(train_loader)}], Loss: {loss.item():.4f}')
+
+# Testing loop
+model.eval()
+with torch.no_grad():
+    correct = 0
+    total = 0
+    for input_data, target in test_loader:
+    
+```
 
 <b>[References]</b>
 1. Kosta Dakic et al, LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach
