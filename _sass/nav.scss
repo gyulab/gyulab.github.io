@@ -187,9 +187,9 @@ All this is done for any sub-level being entered.
 }
 /* Animation classes for moving out and in */
 .dl-menu.dl-animate-out {
-	-webkit-animation: MenuAnimOut 0.4s ease;
-	-moz-animation: MenuAnimOut 0.4s ease;
-	animation: MenuAnimOut 0.4s ease;
+	-webkit-animation: MenuAnimOut 0.2s ease;
+	-moz-animation: MenuAnimOut 0.2s ease;
+	animation: MenuAnimOut 0.2s ease;
 }
 @-webkit-keyframes MenuAnimOut {
 	100% {
@@ -210,9 +210,9 @@ All this is done for any sub-level being entered.
 	}
 }
 .dl-menu.dl-animate-in {
-	-webkit-animation: MenuAnimIn 0.4s ease;
-	-moz-animation: MenuAnimIn 0.4s ease;
-	animation: MenuAnimIn 0.4s ease;
+	-webkit-animation: MenuAnimIn 0.2s ease;
+	-moz-animation: MenuAnimIn 0.2s ease;
+	animation: MenuAnimIn 0.2s ease;
 }
 @-webkit-keyframes MenuAnimIn {
 	0% {
