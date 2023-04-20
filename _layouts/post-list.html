@@ -8,6 +8,14 @@ layout: compress
 <!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]-->
 <head>
     {% include head.html %}
+    <style>
+        .post-list ul:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+
 </head>
 <body>
     {% include nav.html %}
