@@ -81,7 +81,7 @@
         @include font-rem(14);
     }
 }
-
+/*
 // hr break
 hr {
 	border: 0;
@@ -101,6 +101,27 @@ hr {
 		background-image: -moz-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
 		background-image: -ms-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
 		background-image: -o-linear-gradient(left, $color_gallery, $color_stack, $color_gallery);
+	}
+}
+*/
+hr {
+	border: 0;
+	height: 1px;
+	opacity: .8;
+    margin: 1em 0;
+	background-image: -webkit-linear-gradient(left, #ccc, $color_stack, #ccc);
+	background-image: -moz-linear-gradient(left, #ccc, $color_stack, #ccc);
+	background-image: -ms-linear-gradient(left, #ccc, $color_stack, #ccc);
+	background-image: -o-linear-gradient(left, #ccc, $color_stack, #ccc);
+	&.hr-line {
+		border: 0;
+		height: 1px;
+		opacity: .15;
+		margin: 1em 0;
+		background-image: -webkit-linear-gradient(left, #ccc, $color_stack, #ccc);
+		background-image: -moz-linear-gradient(left, #ccc, $color_stack, #ccc);
+		background-image: -ms-linear-gradient(left, #ccc, $color_stack, #ccc);
+		background-image: -o-linear-gradient(left, #ccc, $color_stack, #ccc);
 	}
 }
 
