@@ -37,7 +37,7 @@ Before implementing the NN, we should go through some steps as follows:
 - Testing: Evaluate the performance of the trained model on the test dataset. Measure metrics like accuracy, 
 precision, and recall to evaluate the performance.<br>
 
-First, we have to generate the data giving AWGN, frequency/time offset for the noise-robust demodulation. Here is the figure and MATLAB code to generate datasets.:
+First, we have to generate the data giving AWGN, frequency/time offset for the noise-robust demodulation. Here are the figure and MATLAB code to generate datasets:
 ![alt text]({{ site.baseurl }}/assets/images/general_research/53.PNG "image"){:.profile}
 <script src="https://gist.github.com/gyulab/13917ebf1f4b7a004bf3a859e4ed6f88.js"></script>
 <br>
