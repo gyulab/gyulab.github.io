@@ -15,10 +15,6 @@ tags: Research@Agency
 
 - Autoencoders: Autoencoders are neural networks that can be used for unsupervised feature learning and dimensionality reduction. In signal processing, autoencoders can be used for tasks such as signal compression, denoising, and feature extraction.
 
-- Generative Adversarial Networks (GANs): GANs are used for generating new data samples that are similar to the training data. In signal processing, GANs can be used for tasks such as signal generation, anomaly detection, and signal restoration.
-
-- Deep Reinforcement Learning (DRL): DRL algorithms can be used for tasks such as adaptive filtering, dynamic spectrum access, and cognitive radio. In DRL, agents learn to optimize actions based on the environment's feedback to achieve a specific goal.
-
 &nbsp;&nbsp;&nbsp;&nbsp;In general, deep learning algorithms can be used for various signal processing and demodulation tasks such as signal classification, denoising, feature extraction, and modulation recognition. The choice of algorithm depends on the specific problem's nature and the available data.
 
 &nbsp;&nbsp;&nbsp;&nbsp;In this section, we will explore three different approaches to detecting and demodulating LoRa signals as presented in various research papers.<br>
@@ -41,7 +37,13 @@ Before implementing the NN, we should go through some steps as follows:
 - Testing: Evaluate the performance of the trained model on the test dataset. Measure metrics like accuracy, 
 precision, and recall to evaluate the performance.<br>
 
-Now, let's implement the CNN using Tensorflow based on the paper:<br>
+First, we have to generate the data giving AWGN, frequency/time offset for the noise-robust demodulation. Here is the figure and MATLAB code to generate datasets.:
+![alt text]({{ site.baseurl }}/assets/images/general_research/53.PNG "image"){:.profile}
+<script src="https://gist.github.com/gyulab/13917ebf1f4b7a004bf3a859e4ed6f88.js"></script>
+<br>
+Now, let's process our data, i.e., bring the data from MATLAB and preprocess data to train our network:
+<script src="https://gist.github.com/gyulab/6c74659a2a3d07495a17102ea7c070cd.js"></script>
+Finally, let's implement the CNN using Tensorflow based on the paper:
 <script src="https://gist.github.com/gyulab/df42521a46d4f1e6f059ce057e351b4f.js"></script>
 
 &nbsp;&nbsp;&nbsp;&nbsp;In this code, we define the input shape of the neural network as a 2D real-valued array with size [2 × n]. Then we create a sequential model and add convolutional layers interlaced with max pooling layers. After that, we add a fully connected layer with a Softmax activation function. We compile the model with stochastic gradient descent optimizer and categorical cross-entropy loss function. Then we train the model with the training dataset and evaluate the model with the testing dataset.<br>
