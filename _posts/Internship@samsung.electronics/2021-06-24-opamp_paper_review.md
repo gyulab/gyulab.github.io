@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JSSC Paper Review: Rail-to-Rail Op-Amp by Hogervost(1994)"
+title:  "JSSC Paper Study: Rail-to-Rail Op-Amp by Hogervost(1994)"
 date:   2021-06-24T14:25:52-05:00
 author: Gyujun Jeong
 tags: Samsung_Electronics_Internship
