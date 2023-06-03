@@ -7,6 +7,7 @@ tags: Research@Agency
 ---
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/38.PNG "image"){:.profile}<br>
+# Introduction
 &nbsp;&nbsp;&nbsp;&nbsp;Deep learning algorithms have shown significant success in various signal processing and demodulation tasks. Some commonly used deep learning algorithms for signal processing and demodulation are as follows:
 
 - Convolutional Neural Networks (CNNs): CNNs are widely used in image processing applications but can also be applied to 1D signals such as audio and time-series data. In signal processing, CNNs can be used for tasks such as noise reduction, denoising, and filtering.
@@ -19,7 +20,8 @@ tags: Research@Agency
 
 &nbsp;&nbsp;&nbsp;&nbsp;In this section, we will explore three different approaches to detecting and demodulating LoRa signals as presented in various research papers.<br>
 <br>
-<b><a href="https://www.researchgate.net/publication/351449349_LoRa_Signal_Demodulation_Using_Deep_Learning_a_Time-Domain_Approach">I. Kosta Dakic et al, LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach</a></b><br>
+# I. Kosta Dakic et al, LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach 
+<a href="https://www.researchgate.net/publication/351449349_LoRa_Signal_Demodulation_Using_Deep_Learning_a_Time-Domain_Approach">(link)</a><br>
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;The paper "LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach" by Kosta Dakic et al. proposes a new approach for demodulating LoRa signals using deep learning techniques. The authors observe that the existing demodulation methods for LoRa signals are computationally expensive and require a high sampling rate, which is not practical for many real-world applications. <br>
@@ -51,7 +53,8 @@ Finally, let's implement the CNN using Tensorflow based on the paper:
 &nbsp;&nbsp;&nbsp;&nbsp;The authors evaluate the performance of the proposed approach on both simulated and real-world datasets, and compare it with the existing demodulation methods. The results show that the proposed approach is computationally efficient and can achieve high accuracy even in low signal-to-noise ratio (SNR) conditions.Overall, the paper presents a novel approach for demodulating LoRa signals using deep learning techniques that can improve the efficiency and accuracy of LoRa communication systems.<br>
 <br>
 <br>
-<b><a href="https://hal.science/hal-03373813/file/Deep_Learning_based_Signal_Detection_for_Uplink_in_LoRa_like_Network.pdf">II. Angesom Ataklity Tesfay et al, Deep Learning-based Signal Detection for Uplink in LoRa-like Networks</a></b><br>
+# II. Angesom Ataklity Tesfay et al, Deep Learning-based Signal Detection for Uplink in LoRa-like Network
+<a href="https://hal.science/hal-03373813/file/Deep_Learning_based_Signal_Detection_for_Uplink_in_LoRa_like_Network.pdf">(link)</a><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;The paper "Deep Learning-based Signal Detection for Uplink in LoRa-like Networks" by Angesom Ataklity Tesfay et al. proposes a deep learning-based signal detection approach for LoRa-like networks. The authors observe that traditional signal detection approaches for LoRa-like networks have limitations in terms of accuracy and computational complexity, and that machine learning techniques can potentially improve the performance.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Unlike previous approach, the proposed approach uses two NNs: the first is based on Deep forward Neural Network (DFNN), and the second on convolutional neural network (CNN), to detect the uplink signals in the presence of interference and noise.<br>
@@ -73,7 +76,8 @@ Training:
 <script src="https://gist.github.com/gyulab/24cf41d9380c59ca622b1e80fa5905f2.js"></script>
 <br><br>
 
-<b><a href="https://cse.msu.edu/~caozc/papers/sensys21-li.pdf">III. Chenning Li et al, NELoRa: Towards Ultra-low SNR LoRa Communication with Neural-enhanced Demodulation</a></b><br>
+# III. Chenning Li et al, NELoRa: Towards Ultra-low SNR LoRa Communication with Neural-enhanced Demodulation
+<a href="https://cse.msu.edu/~caozc/papers/sensys21-li.pdf">(link)</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;LoRa enables low signal-to-noise ratio (SNR) communication. However, the standard demodulation method does not fully exploit the properties of chirp signals, thus yields a sub-optimal SNR threshold under which the decoding fails. Consequently, the communication range and energy consumption have to be compromised for robust transmission. This paper presents NELoRa, a neural-enhanced LoRa demodulation method, exploiting the feature abstraction ability of deep learning to support ultra-low SNR LoRa communication.<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Taking the spectrogram of both amplitude and phase as input, they first design a mask-enabled Deep Neural Network (DNN) filter that extracts multi-dimension features to capture clean chirp symbols. Second, they develop a spectrogram-based DNN decoder to decode these chirp symbols accurately. Finally, they propose a generic packet demodulation system by incorporating a method that generates high-quality chirp symbols from received signals. <br>
@@ -87,7 +91,7 @@ Here is the demo code to build a network based on this paper:<br>
 
 <br>
 
-<b>[References]</b>
+# References 
 1. Kosta Dakic et al, LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach
 2. Angesom Ataklity Tesfay et al, Deep Learning-based Signal Detection for Uplink in LoRa-like Networks
 3. Chenning Li et al, NELoRa: Towards Ultra-low SNR LoRa Communication with Neural-enhanced Demodulation
