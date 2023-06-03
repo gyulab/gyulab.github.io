@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Detecting precise center frequency of 8PSK modulated signal"
+title:  "Automatic detection of center frequency of 8PSK modulated signal"
 date:   2023-06-02T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
 ---
+![alt text]({{ site.baseurl }}/assets/images/general_research/57.PNG "image"){:.profile}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;In the realm of digital communication systems, 8PSK (8-Phase Shift Keying) modulation plays a crucial role in achieving higher data rates and improved spectral efficiency. 8PSK (8-Phase Shift Keying) is a digital modulation scheme used in communication systems to transmit data over radio frequency or optical channels. It is an extension of the binary PSK modulation, where instead of two phase states (0 and π), it uses eight equally spaced phase states around a unit circle (0, π/4, π/2, 3π/4, π, 5π/4, 3π/2, and 7π/4). The eight possible phase states allow for encoding a larger number of bits per symbol compared to binary PSK modulation. This results in higher data transmission rates and increased spectral efficiency. Its utilization can be found in satellite communication, digital broadcasting, wireless LANs, mobile communication systems, and digital modems, among others.<br>
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/54.PNG "image"){:.profile}<br>
@@ -12,26 +13,27 @@ tags: Research@Agency
 &nbsp;&nbsp;&nbsp;&nbsp;Detecting the highly accurate center frequency of an 8PSK signal is essential for precise demodulation and reliable data recovery. It enables accurate phase detection, symbol recovery, and carrier frequency estimation. It also ensures optimal interference rejection, spectral efficiency, and compatibility with receiving systems. Deviations in the center frequency can lead to errors, degraded performance, and interference with neighboring signals. Overall, accurate center frequency detection is vital for achieving high-quality demodulation and maximizing the effectiveness of 8PSK communication systems.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;To accurately detect the center frequency of an 8PSK signal, a careful analysis of the 8th power spectrum becomes essential. This article explores the process of identifying two distinct peaks in the 8th power spectrum and leveraging their spacing to determine the center frequency of an 8PSK signal.<br>
 
-# Understanding the 8th Power Spectrum: <br>
+# Understanding the 8th Power Spectrum
 &nbsp;&nbsp;&nbsp;&nbsp;The power spectrum is a valuable tool for analyzing the spectral characteristics of a signal. In the context of 8PSK signals, the 8th power spectrum exhibits distinct peaks that provide key insights into the underlying modulation scheme. Each peak in the 8th power spectrum corresponds to the frequency associated with a specific phase state of the 8PSK signal. By examining these peaks, we can infer important information about the signal, including the center frequency. For instance, the 4th power spectrum of a QPSK signal below reveals a multitude of distinct peaks, each corresponding to a specific phase state of the modulation scheme.<br>
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/55.PNG "image"){:.profile}<br>
 
+Theoretically, when observing the m-th power spectrum of an m-ary PSK modulated signal, such as the 8th power spectrum of 8PSK or the 4th power spectrum of 4PSK, we expect to observe distinct peaks, as illustrated in the following figure:<br>
+![alt text]({{ site.baseurl }}/assets/images/general_research/58.PNG "image"){:.profile}<br>
 
-# Identifying the Distinct Peaks: <br>
+# Identifying the Distinct Peaks
 &nbsp;&nbsp;&nbsp;&nbsp;To detect the center frequency of an 8PSK signal, we focus on identifying two distinct peaks in the 8th power spectrum. These peaks are separated by a distance equal to twice the baud rate of the signal. By leveraging this property, we can accurately determine the center frequency. The baud rate represents the rate at which symbols are transmitted, and its doubling in this context ensures that we capture the phase transitions necessary for reliable detection.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;However, The spectrum of an 8PSK signal is more challenging to detect distinct peaks compared to BPSK and QPSK due to the increased number of phase states, which results in a higher density of peaks and a greater likelihood of overlapping frequencies in the power spectrum, as you can see in the below figure:<br>
-
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/56.PNG "image"){:.profile}<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Due to the lack of clear peak identification, manually selecting peaks in the spectrum of an 8PSK signal is nearly impossible. To overcome this challenge, it is crucial to focus on identifying relatively distinct peaks that are separated by a distance equal to twice the baud rate of the signal. This approach ensures reliable detection of the desired peaks in the spectrum.<br>
 
 
-# Calculating the Center Frequency: <br>
+# Calculating the Center Frequency
 &nbsp;&nbsp;&nbsp;&nbsp;Once the two distinct peaks in the 8th power spectrum are identified by program, we can calculate the center frequency of the 8PSK signal. The center frequency is determined by finding the middle point between the frequencies associated with the two peaks. This approach leverages the fact that the two peaks are evenly spaced around the center frequency.<br>
 
-# Code<br>
+# Code
 &nbsp;&nbsp;&nbsp;&nbsp;I have implemented MATLAB codes to perform the aforementioned task, allowing for the accurate identification of relatively distinct peaks in the spectrum of an 8PSK signal based on the specified criteria.<br>
 
 Now, let's implement the CNN using Pytorch based on the paper:<br>
@@ -40,13 +42,13 @@ Now, let's implement the CNN using Pytorch based on the paper:<br>
 Training:
 <script src="https://gist.github.com/gyulab/24cf41d9380c59ca622b1e80fa5905f2.js"></script>
 
-# Application and Importance: <br>
+# Application and Importance
 &nbsp;&nbsp;&nbsp;&nbsp;Accurate detection of the center frequency in an 8PSK signal holds significant implications in various communication applications. In satellite communication systems, it allows for optimal frequency allocation and spectrum management, ensuring efficient and reliable data transmission. In digital broadcasting, identifying the center frequency enables precise channel tuning and reception. Additionally, in wireless LANs and mobile communication systems, detecting the center frequency of 8PSK signals facilitates efficient data transmission, enabling faster and more reliable wireless connectivity.<br>
 
-# Conclusion: <br>
+# Conclusion
 &nbsp;&nbsp;&nbsp;&nbsp;Detecting the center frequency of an 8PSK signal is a crucial step in various communication systems. By analyzing the 8th power spectrum and identifying two distinct peaks with a spacing equal to twice the baud rate, we can accurately determine the center frequency. This approach allows for optimal frequency allocation, spectral efficiency, and reliable data transmission in applications ranging from satellite communication to wireless networks. Understanding the intricacies of the 8th power spectrum and its role in center frequency detection empowers engineers and researchers in their pursuit of efficient and robust communication systems.<br>
 
-# References<br>
+# References
 1. Tatu, S. & Moldovan, E. & Brehm, Gailon & Wu, Ke & Bosisio, Renato. (2002). Ka-band direct digital receiver. Microwave Theory and Techniques, IEEE Transactions on. 50. 2436 - 2442. 10.1109/TMTT.2002.804646. 
 2. Kolumban, Geza & Krebesz, Tamas & Lau, Francis. (2012). Theory and Application of Software Defined Electronics: Design Concepts for the Next Generation of Telecommunications and Measurement Systems. IEEE Circuits and Systems Magazine - IEEE CIRCUITS SYST MAG. 12. 8-34. 10.1109/MCAS.2012.2193435. 
 3. https://www.mathworks.com/help/comm/ug/modulate-and-demodulate-8-psk-signal.html
