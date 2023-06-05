@@ -39,14 +39,33 @@ tags: Research@Agency
 # Calculating the Center Frequency
 &nbsp;&nbsp;&nbsp;&nbsp;Once the two distinct peaks in the 8th power spectrum are identified by program, we can calculate the center frequency of the 8PSK signal. The center frequency is determined by finding the middle point between the frequencies associated with the two peaks. This approach leverages the fact that the two peaks are evenly spaced around the center frequency.<br>
 
-# Code
+
+# Impairments in Digital Communication Systems
+&nbsp;&nbsp;&nbsp;&nbsp;Demodulating a PSK (Phase Shift Keying) signal involves several steps, including matched filtering, symbol timing synchronization, carrier frequency synchronization, carrier phase synchronization, and equalization. Each step plays a crucial role in extracting the transmitted information accurately. Let's elaborate on each of these steps:<br>
+
+1. Matched Filtering:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Matched filtering is the first step in demodulating a PSK signal. It involves convolving the received signal with a matched filter that has a response matched to the shape of the transmitted pulse. Matched filtering helps improve the signal-to-noise ratio and enhances the detection of the symbols.<br>
+
+2. Symbol Timing Synchronization:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Symbol timing synchronization is essential for accurately sampling the received signal at the symbol boundaries. It involves estimating the optimal sampling instants to correctly demodulate the symbols. Timing synchronization ensures that each symbol is sampled precisely, minimizing timing errors and improving the overall demodulation performance.<br>
+
+3. Carrier Frequency Synchronization:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Carrier frequency synchronization is necessary to compensate for any frequency offset between the received signal and the local oscillator at the receiver. By estimating and correcting the frequency offset, carrier frequency synchronization ensures that the receiver is operating at the correct frequency, allowing for accurate demodulation of the PSK signal.<br>
+
+4. Carrier Phase Synchronization:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Carrier phase synchronization involves estimating and compensating for any phase offset between the received signal and the local oscillator. Accurate carrier phase synchronization is crucial because PSK modulation relies on precise phase differences between symbols. By aligning the carrier phase, the receiver can correctly decode the symbol information embedded in the phase shifts.<br>
+
+5. Equalization:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Equalization is performed to combat the effects of channel distortion, such as multipath fading and intersymbol interference. It aims to restore the received signal to its original form by compensating for the channel-induced distortions. Equalization techniques help mitigate the adverse effects of the channel and improve the accuracy of symbol demodulation.<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;By going through these steps of matched filtering, symbol timing synchronization, carrier frequency synchronization, carrier phase synchronization, and equalization, the demodulation process for a PSK signal becomes robust and reliable. Each step addresses specific challenges introduced by the channel and ensures accurate recovery of the transmitted information.<br>
+
+Here is the example code to accomplish above impairment steps:
+<script src="https://gist.github.com/gyulab/707ee779e53743116ba0d7f58ebef64f.js"></script>
+
+# Code to detect the Center Frequency of 8PSK
 &nbsp;&nbsp;&nbsp;&nbsp;I have implemented MATLAB codes to perform the aforementioned task, allowing for the accurate identification of relatively distinct peaks in the spectrum of an 8PSK signal based on the specified criteria.<br>
-
-Now, let's implement the CNN using Pytorch based on the paper:<br>
-<script src="https://gist.github.com/gyulab/c3c6ab94c45eb4634646abbc398b4e07.js"></script>
-
-Training:
-<script src="https://gist.github.com/gyulab/24cf41d9380c59ca622b1e80fa5905f2.js"></script>
+<script src="https://gist.github.com/gyulab/c7ff0970a9d326dca8c5e629ac5122e2.js"></script>
 
 # Application and Importance
 &nbsp;&nbsp;&nbsp;&nbsp;Accurate detection of the center frequency in an 8PSK signal holds significant implications in various communication applications. In satellite communication systems, it allows for optimal frequency allocation and spectrum management, ensuring efficient and reliable data transmission. In digital broadcasting, identifying the center frequency enables precise channel tuning and reception. Additionally, in wireless LANs and mobile communication systems, detecting the center frequency of 8PSK signals facilitates efficient data transmission, enabling faster and more reliable wireless connectivity.<br>
