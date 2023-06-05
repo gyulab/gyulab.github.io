@@ -40,7 +40,9 @@ tags: Research@Agency
 &nbsp;&nbsp;&nbsp;&nbsp;Once the two distinct peaks in the 8th power spectrum are identified by program, we can calculate the center frequency of the 8PSK signal. The center frequency is determined by finding the middle point between the frequencies associated with the two peaks. This approach leverages the fact that the two peaks are evenly spaced around the center frequency.<br>
 
 
-# Impairments in Digital Communication Systems
+# Impairments in Digital Communication
+<b><a href="https://www.gaussianwaves.com/2013/11/symbol-timing-recovery-for-qpsk-digital-modulations/">Symbol Timing Recovery for QPSK</a></b>: This article will help you a lot to comprehend the contents below.<br>
+
 &nbsp;&nbsp;&nbsp;&nbsp;Demodulating a PSK (Phase Shift Keying) signal involves several steps, including matched filtering, symbol timing synchronization, carrier frequency synchronization, carrier phase synchronization, and equalization. Each step plays a crucial role in extracting the transmitted information accurately. Let's elaborate on each of these steps:<br>
 
 1. Matched Filtering:<br>
@@ -48,6 +50,8 @@ tags: Research@Agency
 
 2. Symbol Timing Synchronization:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Symbol timing synchronization is essential for accurately sampling the received signal at the symbol boundaries. It involves estimating the optimal sampling instants to correctly demodulate the symbols. Timing synchronization ensures that each symbol is sampled precisely, minimizing timing errors and improving the overall demodulation performance.<br>
+
+![alt text]({{ site.baseurl }}/assets/images/general_research/60.PNG "image"){:.profile}<br>
 
 3. Carrier Frequency Synchronization:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Carrier frequency synchronization is necessary to compensate for any frequency offset between the received signal and the local oscillator at the receiver. By estimating and correcting the frequency offset, carrier frequency synchronization ensures that the receiver is operating at the correct frequency, allowing for accurate demodulation of the PSK signal.<br>
@@ -63,7 +67,7 @@ tags: Research@Agency
 Here is the example code to accomplish above impairment steps:
 <script src="https://gist.github.com/gyulab/707ee779e53743116ba0d7f58ebef64f.js"></script>
 
-# Code to detect the Center Frequency of 8PSK
+# Detecting Center Frequency of 8PSK
 &nbsp;&nbsp;&nbsp;&nbsp;I have implemented MATLAB codes to perform the aforementioned task, allowing for the accurate identification of relatively distinct peaks in the spectrum of an 8PSK signal based on the specified criteria.<br>
 <script src="https://gist.github.com/gyulab/c7ff0970a9d326dca8c5e629ac5122e2.js"></script>
 
