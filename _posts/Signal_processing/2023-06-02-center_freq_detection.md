@@ -18,11 +18,17 @@ tags: Research@Agency
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/55.PNG "image"){:.profile}<br>
 
-Theoretically, when observing the m-th power spectrum of an m-ary PSK modulated signal, such as the 8th power spectrum of 8PSK or the 4th power spectrum of 4PSK, we expect to observe distinct peaks, as illustrated in the following figure:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Theoretically, when observing the m-th power spectrum of an m-ary PSK modulated signal, such as the 8th power spectrum of 8PSK or the 4th power spectrum of 4PSK, we expect to observe distinct peaks, as illustrated in the following figure:<br>
 ![alt text]({{ site.baseurl }}/assets/images/general_research/58.PNG "image"){:.profile}<br>
 
 # Identifying the Distinct Peaks
 &nbsp;&nbsp;&nbsp;&nbsp;To detect the center frequency of an 8PSK signal, we focus on identifying two distinct peaks in the 8th power spectrum. These peaks are separated by a distance equal to twice the baud rate of the signal. By leveraging this property, we can accurately determine the center frequency. The baud rate represents the rate at which symbols are transmitted, and its doubling in this context ensures that we capture the phase transitions necessary for reliable detection.<br>
+
+![alt text]({{ site.baseurl }}/assets/images/general_research/59.PNG "image"){:.profile}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;To track the carrier one first needs to at least roughly estimate the frequency of the signal. This is easy for MSK and OQPSK at least. It consists of producing a nonlinearity and then performing a FFT (Fast Fourier Transform). Simply squaring the audio signal and taking the FFT results in the following figure. As can be seen there is no peak where the carrier is. However, there are two peaks evenly spaced around where the carrier would be. Taking the average of the two peaks you obtain the carrier frequency of the transmission. Here, the difference between the two peaks are 10500bps, hence the baud rate is 5250 baud.
+
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;However, The spectrum of an 8PSK signal is more challenging to detect distinct peaks compared to BPSK and QPSK due to the increased number of phase states, which results in a higher density of peaks and a greater likelihood of overlapping frequencies in the power spectrum, as you can see in the below figure:<br>
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/56.PNG "image"){:.profile}<br>
@@ -54,3 +60,4 @@ Training:
 3. https://www.mathworks.com/help/comm/ug/modulate-and-demodulate-8-psk-signal.html
 4. https://www.eecs.umich.edu/courses/eecs555/lect06.pdf
 5. https://core.ac.uk/reader/42776140
+6. https://jontio.zapto.org/hda1/oqpsk.html
