@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Automatic detection of center frequency of 8PSK modulated signal"
+title:  "Automatic detection of center frequency of PSK modulated signal"
 date:   2023-06-02T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
 ---
 ![alt text]({{ site.baseurl }}/assets/images/general_research/57.PNG "image"){:.profile}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;In the realm of digital communication systems, 8PSK (8-Phase Shift Keying) modulation plays a crucial role in achieving higher data rates and improved spectral efficiency. 8PSK (8-Phase Shift Keying) is a digital modulation scheme used in communication systems to transmit data over radio frequency or optical channels. It is an extension of the binary PSK modulation, where instead of two phase states (0 and π), it uses eight equally spaced phase states around a unit circle (0, π/4, π/2, 3π/4, π, 5π/4, 3π/2, and 7π/4). The eight possible phase states allow for encoding a larger number of bits per symbol compared to binary PSK modulation. This results in higher data transmission rates and increased spectral efficiency. Its utilization can be found in satellite communication, digital broadcasting, wireless LANs, mobile communication systems, and digital modems, among others.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;In the realm of digital communication systems, PSK modulated signals, especially 8PSK (8-Phase Shift Keying) modulation plays a crucial role in achieving higher data rates and improved spectral efficiency. 8PSK (8-Phase Shift Keying) is a digital modulation scheme used in communication systems to transmit data over radio frequency or optical channels. It is an extension of the binary PSK modulation, where instead of two phase states (0 and π), it uses eight equally spaced phase states around a unit circle (0, π/4, π/2, 3π/4, π, 5π/4, 3π/2, and 7π/4). The eight possible phase states allow for encoding a larger number of bits per symbol compared to binary PSK modulation. This results in higher data transmission rates and increased spectral efficiency. Its utilization can be found in satellite communication, digital broadcasting, wireless LANs, mobile communication systems, and digital modems, among others.<br>
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/54.PNG "image"){:.profile}<br>
 
