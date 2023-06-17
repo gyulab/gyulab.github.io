@@ -5,6 +5,8 @@ date:   2023-04-14T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
 ---
+# Note
+Some of the source code has been redacted for the convenience purpose.<br>
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/38.PNG "image"){:.profile}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Deep learning algorithms have shown significant success in various signal processing and demodulation tasks. Some commonly used deep learning algorithms for signal processing and demodulation are as follows:
@@ -29,15 +31,7 @@ Here are a diagram and datasets illustrating the utilized CNN to demodulate I/Q 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/39.PNG "image"){:.profile}<br>
 ![alt text]({{ site.baseurl }}/assets/images/general_research/40.PNG "image"){:.profile}<br>
 
-Before implementing the NN, we should go through some steps as follows:
-- Data collection and pre-processing: Collect a dataset of LoRa signals with different modulation indices and spreading factors. Pre-process the data by applying filtering, resampling, and normalization techniques.
-- Data preparation: Split the dataset into training, validation, and test sets. Prepare the data in the time-domain by dividing the signal into smaller segments and applying a sliding window technique.-
-- Model architecture: Define a CNN architecture for demodulating the LoRa signals. The CNN should have multiple convolutional layers followed by max-pooling layers, and then fully connected layers for classification. 
-- Training: Train the CNN using the prepared dataset. Use a suitable loss function, optimizer, and learning rate for training. You can also use techniques like data augmentation and early stopping to improve the performance of the model.
-- Testing: Evaluate the performance of the trained model on the test dataset. Measure metrics like accuracy, 
-precision, and recall to evaluate the performance.<br>
-
-First, we have to generate the data giving AWGN, frequency/time offset for the noise-robust demodulation. Here are the figure and MATLAB code to generate datasets:
+&nbsp;&nbsp;&nbsp;&nbsp;First, we have to generate the data giving AWGN, frequency/time offset for the noise-robust demodulation. Here are the figure and MATLAB code to generate datasets:
 ![alt text]({{ site.baseurl }}/assets/images/general_research/53.PNG "image"){:.profile}
 <script src="https://gist.github.com/gyulab/13917ebf1f4b7a004bf3a859e4ed6f88.js"></script>
 <br>
