@@ -5,8 +5,7 @@ date:   2023-04-14T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
 ---
-# Note
-Some of the source code has been redacted for the convenience purpose.<br>
+<b>Note: Some of the source code has been redacted for the convenience purpose.</b><br>
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/38.PNG "image"){:.profile}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Deep learning algorithms have shown significant success in various signal processing and demodulation tasks. Some commonly used deep learning algorithms for signal processing and demodulation are as follows:
