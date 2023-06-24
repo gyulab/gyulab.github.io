@@ -5,9 +5,8 @@ date:   2023-04-14T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
 ---
-<b>Note: Some of the source code has been redacted for the convenience purpose.</b><br>
-
 ![alt text]({{ site.baseurl }}/assets/images/general_research/38.PNG "image"){:.profile}<br>
+<b>Note: Some of the source code has been redacted for the convenience purpose.</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;Deep learning algorithms have shown significant success in various signal processing and demodulation tasks. Some commonly used deep learning algorithms for signal processing and demodulation are as follows:
 
 - Convolutional Neural Networks (CNNs): CNNs are widely used in image processing applications but can also be applied to 1D signals such as audio and time-series data. In signal processing, CNNs can be used for tasks such as noise reduction, denoising, and filtering.
