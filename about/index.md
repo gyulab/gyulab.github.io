@@ -14,18 +14,17 @@ comments: false
 * I am currently in my military service in the National Agency, in charge of research on signal processing.
 
 ## Contact Info
-* <b>Here is my Curriculum Viate: (soon be updated)</b> <!--<a href="https://drive.google.com/file/d/1UE4Aw3-B4jKyIXXkRAjHyJrl5-k9XKZa/preview">(link)</a></b>-->
-* <b>Linkedin: <a href="https://www.linkedin.com/in/gyujun-jeong-155a5225a/">(link)</a></b>
+* <b>Here is my Curriculum Vitae: </b> <a href="https://drive.google.com/file/d/1_s8ro1zxCbltcoEcNRJxpxb46rJixbEF/preview">(link)</a></b>
 * <b>E-mail: <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a></b>
 
 ## Research Experiences
-* During my BS degree, I am majoring in Electrical Engineering, where I did research internships at following labs:
+* Defense Security Agency, Ministry of National Defense
 * <a href="https://semiconductor.samsung.com/about-us/business-area/system-lsi/">Analog IP Team, System LSI, Samsung Electronics</a>
 * <a href="https://www.icsl.kaist.ac.kr">Integrated Circuits and Systems Laboratory</a>, Prof. Jaehyeok Choi
 * <a href="http://hsnl.kaist.ac.kr">High-Speed Nanoelectronics Laboratory</a>, Prof. Kyeonghoon Yang
 
 ## Objectives
-* I am deeply interested in Circuit and communication system design, especially in Sensors and RF electronics. 
+* I am deeply interested in circuit and communication system design, especially in Sensors and RF electronics. 
 * My goal is to enhance performance and productivity in the electronics designing process by leveraging Artificial Intelligence.
 
 
