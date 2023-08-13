@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "OFDM demodulation with synchronization techniques - CFO and Equalization"
+title:  OFDM demodulation with synchronization techniques - CFO and Equalization
 date:   2023-08-12T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
@@ -16,7 +16,19 @@ The materials below are helpful to comprehend this post:<br>
 <a href="https://wirelesspi.com/timing-synchronization-in-ofdm-systems/" target="_blank">Timing Synchronization in OFDM Systems</a><br>
 
 I have aligned some useful notes to organize OFDM synchronization and demodulation in the following note:<br>
-<iframe src="https://drive.google.com/file/d/1AEJol-bRUNF_ENH5fEIbjCvCcVrMa12E/view?usp=sharing" type="application/pdf" style="width:100%; height:600px;" frameborder="0"></iframe><br>
+<iframe src="https://drive.google.com/file/d/1AEJol-bRUNF_ENH5fEIbjCvCcVrMa12E/preview" type="application/pdf" style="width:100%; height:600px;" frameborder="0"></iframe><br>
+
+Now, we will discuss about the code implementation of the OFDM synchronization process. <br>
+
+# DCM Autocorrelation and Find Peak
+![alt text]({{ site.baseurl }}/assets/images/general_research/67.PNG "image"){:.profile}<br>
+<script src="https://gist.github.com/gyulab/d0c4216e798fadd68379bc43a3680f01.js"></script>
+
+# CFO Estimation
+<script src="https://gist.github.com/gyulab/2896b3287e7a3891220f8a72ad1bdd89.js"></script>
+
+# LS Equalization
+<script src="https://gist.github.com/gyulab/2bcc8608479706c8329571d8fb854882.js"></script>
 
 
 # References
