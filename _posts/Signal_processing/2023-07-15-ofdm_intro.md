@@ -9,7 +9,7 @@ tags: Research@Agency
 ![alt text]({{ site.baseurl }}/assets/images/general_research/61.PNG "image"){:.profile}<br>
 Orthogonal Frequency Division Multiplexing (OFDM) is a multi-carrier modulation technique that has significantly impacted modern data transmission. By distributing data bits across multiple subcarriers, OFDM transforms communication methods, effectively addressing challenges such as multipath propagation.<br>
 
-#Advantages of OFDM
+# Advantages of OFDM
 ![alt text]({{ site.baseurl }}/assets/images/general_research/62.PNG "image"){:.profile}<br>
 OFDM effectively addresses the challenge of multipath propagation, a common issue in wireless communication. Unlike traditional single-carrier systems, where multipath signals can lead to Intersymbol Interference (ISI), OFDM's use of orthogonal subcarriers prevents such problems.<br>
 The division of data into parallel subcarriers allows OFDM to handle multipath propagation adeptly. Even if some subcarriers experience fading or interference due to multipath effects, the overall impact on the data stream remains minimal. This inherent capability eliminates ISI, ensuring data accuracy and communication reliability.<br>
@@ -17,7 +17,7 @@ The division of data into parallel subcarriers allows OFDM to handle multipath p
 Moreover, OFDM offers enhanced spectral efficiency and interference resilience. Its ability to divide a broad frequency band into numerous narrow subcarriers facilitates efficient spectrum utilization, enabling higher data rates and accommodating multiple users simultaneously.<br>
 OFDM's capacity to mitigate multipath effects and provide robust data transmission has solidified its role as a pivotal technology in modern wireless communication systems. As we delve deeper into the mechanics of OFDM, we will uncover the principles that underlie its transformative impact on data transmission.<br>
 
-# Orthogonality: The Foundation of OFDM's Remarkable Efficiency
+# Orthogonality: The Foundation of OFDM's Efficiency
 Orthogonal Frequency Division Multiplexing (OFDM) derives its name from a fundamental concept in mathematics and signal processing—orthogonality. This concept plays a key role in OFDM's ability to efficiently transmit data across multiple carriers, enabling robust and high-throughput communication.<br>
 The orthogonality of subcarriers in OFDM brings several key advantages:<br>
 - Interference Mitigation: Since the carriers are orthogonal, they do not overlap in frequency, reducing the chances of intercarrier interference. This is particularly advantageous in environments with multipath propagation, as it helps maintain data integrity and communication quality.
