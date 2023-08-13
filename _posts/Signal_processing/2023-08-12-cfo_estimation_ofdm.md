@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  OFDM demodulation with synchronization techniques - CFO and Equalization
+title: OFDM demodulation with synchronization techniques - CFO and Equalization
 date:   2023-08-12T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
