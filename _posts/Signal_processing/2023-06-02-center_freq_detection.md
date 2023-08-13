@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Automatic detection of center frequency of PSK modulated signal"
+title:  "Automatic detection of center frequency of 8-PSK modulated signal"
 date:   2023-06-02T14:28:52-05:00
 author: Gyujun Jeong
 tags: Research@Agency
