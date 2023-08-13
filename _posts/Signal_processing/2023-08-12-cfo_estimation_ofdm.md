@@ -22,12 +22,29 @@ Now, we will discuss about the code implementation of the OFDM synchronization p
 
 # DCM Autocorrelation and Find Peak
 ![alt text]({{ site.baseurl }}/assets/images/general_research/67.PNG "image"){:.profile}<br>
+DCM (Delay-Conjugate Multiply) autocorrelation in OFDM improves signal quality by reducing fading effects caused by multipath propagation. It's evaluated by delaying, conjugating, and multiplying received subcarriers, then measuring their correlation. This process enhances reliability and reduces errors in wireless communication systems. The code below calculates DCM Autocorrelation and Maximum Likelihood peak values:<br>
 <script src="https://gist.github.com/gyulab/d0c4216e798fadd68379bc43a3680f01.js"></script>
 
 # CFO Estimation
+CFO (Carrier Frequency Offset) estimation in OFDM is necessary to correct frequency discrepancies between transmitted and received signals, caused by factors like Doppler shifts. Accurate CFO estimation prevents subcarrier misalignment and interference.<br>
+To evaluate CFO:<br>
+1. Use pilot symbols (known data) in OFDM frames.
+2. Measure phase difference between received and expected pilot symbols.
+3. Calculate CFO from phase difference.
+4. Compensate CFO to align subcarriers and maintain signal integrity.
+5. CFO estimation ensures reliable data recovery in dynamic wireless environments.<br>
+The following code estimates and compensates CFO by following aforementioned sequences:<br>
 <script src="https://gist.github.com/gyulab/2896b3287e7a3891220f8a72ad1bdd89.js"></script>
 
 # LS Equalization
+LS (Least Squares) equalization in OFDM is essential for mitigating channel distortions and improving signal quality. It's needed to counteract the effects of multipath fading and frequency-selective channels.<br>
+To evaluate LS equalization:<br>
+1. Collect pilot symbols (known data) transmitted in OFDM frames.
+2. Measure the received pilot symbols' values.
+3. Construct a channel response matrix.
+4. Apply the LS algorithm to calculate equalization coefficients.
+5. Use equalization coefficients to enhance data recovery from distorted subcarriers.
+The following code is for the LS-Equalization process as aforementioned sequences:<br>
 <script src="https://gist.github.com/gyulab/2bcc8608479706c8329571d8fb854882.js"></script>
 
 
