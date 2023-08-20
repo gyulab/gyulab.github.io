@@ -73,9 +73,10 @@ Training:
 ![alt text]({{ site.baseurl }}/assets/images/general_research/52.PNG "image"){:.profile}<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;The paper introduces a neural-enhanced demodulation approach for LoRa (Low Range) signals. The proposed approach uses a dual-channel spectrogram of the chirp symbol as input to a deep neural network (DNN) model for decoding the encoded data bits. The dual-DNN model consists of two modules: a noise filter and a spectrogram-based decoder. The noise filter aims to preserve the primary features of the chirp symbol by masking the raw spectrogram, and it contains multiple blocks of convolutional neural networks (CNN) and one long short-term memory (LSTM) layer. The masked spectrogram is then input to a CNN-based decoder to capture the spatial energy peak distribution and temporal staggered pattern for decoding. The DNN model is trained using two loss functions for back-propagation, one for the noise filter and one for the decoder, with the goal of minimizing the average loss on the training dataset. Data augmentation techniques are also employed to improve the generalization of the DNN model. Experimental results demonstrate that the proposed neural-enhanced demodulation approach outperforms existing methods in terms of demodulation accuracy for LoRa signals, especially under low signal-to-noise ratio (SNR) conditions. <br>
-
+<!--
 Here is the demo code to build a network based on this paper:<br>
 <script src="https://gist.github.com/gyulab/f07c362fc3b8d7e031ef64579c762030.js"></script>
+-->
 
 <br>
 
