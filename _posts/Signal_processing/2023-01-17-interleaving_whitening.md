@@ -9,7 +9,7 @@ tags: Research@Agency
 ![alt text]({{ site.baseurl }}/assets/images/general_research/69.PNG "image"){:.profile}<br>
 The LoRa receiver performs synchronization, frequency-offset estimation, and compensation prior to demodulation. Gray coding, de-interleaving, de-whitening, and Hamming decoding are carried out to recover the information as described in the figure above. In this post, we will discuss the concept of those decoding processes in general and how they apply to the LoRa decoding process.
 
-# Gray coding in CSS demodulation
+# Gray coding
 ![alt text]({{ site.baseurl }}/assets/images/general_research/6.PNG "image"){:.profile}<br>
 
 A gray coding is a mapping between a symbol in any numeric representation to a binary sequence. The particularity of the obtained binary sequence is that adjacent symbols in the original representation only differ by one bit in the gray representation. This property of a gray codes make them very useful in many wireless communication modulations where it is more likely to misinterpret a symbol by an adjacent one than another random one. It is noteworthy that in the case of CSS modulation it is not the white noise that causes this misinterpretation between adjacent symbols but the carrier and sampling frequency offset. In the case of LoRa, the symbols can be seen as integers between 0 and 2^SF − 1 and by making usage of gray coding to map them to binary strings, we increase the performance of the forward error correction mechanisms capable of correcting one erroneous bit in a codeword.<br>
@@ -19,8 +19,6 @@ Unfortunately, it is possible to create different binary string sequences respec
 ![alt text]({{ site.baseurl }}/assets/images/general_research/7.PNG "image"){:.profile}<br>
 > Important Note: The standard gray code being used is given by Cn = Bn XOR (Bn >> 1) where Bn is the left MSB binary representation of n. On top of the mapping using this gray code, a shift of -1 is used, i.e., v = (v0 − 1) XOR ((v0 − 1) >> 1).
 
-
-  
   
 - In MATLAB<br>
 Read the following document to understand the <a href="https://www.mathworks.com/help/comm/ref/bin2gray.html">bin2gray</a> function.<br>
@@ -30,14 +28,12 @@ Read the following document to understand the <a href="https://www.mathworks.com
 - In Python<br>
 <script src="https://gist.github.com/gyulab/aa8a11f9440eff532411433bcd71abbf.js"></script>
 <br>
-  
-  
 
 We can note that the gray coding doesn’t occur in the conventional order but in reverse which still holds the property that one adjacent symbol mistake leads only to one bit being wrong. The figure 2.5 present the binary values obtained after gray encoding of the received LoRa symbols line by line. The white and black square are respectively ones and zeros.<br>
 ![alt text]({{ site.baseurl }}/assets/images/general_research/8.PNG "image"){:.profile}<br>
 
 
-# Interleaving and De-interleaving method of LoRa/CSS modulation
+# Interleaving and De-interleaving
 ![alt text]({{ site.baseurl }}/assets/images/general_research/26.PNG "image"){:.profile}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Interleaving is a technique used to improve the performance of error correction codes by breaking the correlation between errors caused by noise or fading. It works by spreading the bits of a codeword across multiple symbols, so that if a symbol is corrupted, the errors will be distributed across multiple codewords rather than concentrated in one. This increases the effectiveness of the error correction code, but also increases the latency of the communication. Interleaving can also be used to improve the robustness of data transmitted over a noisy channel.<br>
 
@@ -56,9 +52,8 @@ We can note that the gray coding doesn’t occur in the conventional order but i
 <script src="https://gist.github.com/gyulab/da3eae1e719987c6b474f1702b083840.js?theme=dark"></script>
 <br>
 <br>
-<br>
 
-# Whitening and De-whitening (De-randomizing) method of CSS modulation
+# Whitening and De-whitening (De-randomizing)
 
 ![alt text]({{ site.baseurl }}/assets/images/general_research/28.PNG "image"){:.profile}<br>
 
