@@ -96,7 +96,7 @@ The process of K-means are discussed below:<br>
 Here is the demo code to apply K-means to eliminate noise floor:<br>
 <script src="https://gist.github.com/gyulab/f07c362fc3b8d7e031ef64579c762030.js"></script>
 
-K-Means efficiently determines an energy threshold by distinguishing noise and signal clusters. This threshold becomes a reliable marker for accurate signal detection, reducing false positives. K-Means Clustering and LoRa signal detection offer more than noise removal. They improve spectral efficiency, communication reliability, and reduce false positives. 
+K-Means efficiently determines an energy threshold by distinguishing noise and signal clusters especially in LoRa burst. This threshold becomes a reliable marker for accurate signal detection, reducing false positives. K-Means Clustering and LoRa signal detection offer more than noise removal. They improve spectral efficiency, communication reliability, and reduce false positives. 
 
 
 
@@ -107,3 +107,4 @@ K-Means efficiently determines an energy threshold by distinguishing noise and s
 2. Angesom Ataklity Tesfay et al, Deep Learning-based Signal Detection for Uplink in LoRa-like Networks
 3. Chenning Li et al, NELoRa: Towards Ultra-low SNR LoRa Communication with Neural-enhanced Demodulation
 4. A Primer on Deep Learning Architectures and Applications in Speech Processing
+5. https://www.datacamp.com/tutorial/k-means-clustering-python
