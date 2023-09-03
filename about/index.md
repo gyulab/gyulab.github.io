@@ -14,7 +14,7 @@ comments: false
 * I am currently in my military service in the National Agency, in charge of research on signal processing.
 
 ## Contact Info
-* <b>Here is my CV: <a href="https://drive.google.com/file/d/1S1SU--Uql4vAvXCuUWYic5AETPw8Z3WW/preview">(link)</a></b>
+* <b>Here is my CV: <a href="https://drive.google.com/file/d/1oN1ayLtZJWivW0bx4LB4AEgA44t8qu63/preview">(link)</a></b>
 * <b>E-mail: <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a></b>
 
 ## Research Experiences
