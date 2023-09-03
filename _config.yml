@@ -5,7 +5,7 @@ description:        "Kyu's ECE Laboratory<br>Designed by Kyu Jeong<br>This websi
 reading_time:       false
 words_per_minute:   200
 logo:               'assets/images/gyulab/london11.png'
-background:         'assets/images/asset_depreciated/panton_navy.png' #'assets/img/stanford_filter.jpg' 
+background:         'assets/images/asset_depreciated/85625716-07E4-496D-97CD-D78536201C36.jpeg' #'assets/img/stanford_filter.jpg' 
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://gyulab.github.io
