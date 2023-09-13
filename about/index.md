@@ -11,10 +11,10 @@ comments: false
 * <b>My name is Gyujun Jeong (Kyu / 정규준).</b>
 * I am currently looking forward to a doctoral program in the US to continue my research!
 * I am a senior student in <a href="https://ee.kaist.ac.kr/en/">School of Electrical Engineering, KAIST</a>(Korea Advanced Institute of Science and Technology). 
-* I am currently in my military service in the National Agency, in charge of research on signal processing.
+* I will be at Georgia Tech for the spring semester of 2024.
 
 ## Contact Info
-* <b>Here is my CV: <a href="https://drive.google.com/file/d/1oN1ayLtZJWivW0bx4LB4AEgA44t8qu63/preview">(link)</a></b>
+* <b>Here is my CV: <a href="https://drive.google.com/file/d/16XZprF7o3-25b0VJhIAigQN8eGRBIMk_/preview">(link)</a></b>
 * <b>E-mail: <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a></b>
 
 ## Research Experiences
