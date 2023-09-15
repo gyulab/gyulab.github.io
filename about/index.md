@@ -11,14 +11,14 @@ comments: false
 * <b>My name is Gyujun Jeong (Kyu / 정규준).</b>
 * I am currently looking forward to a doctoral program in the US to continue my research!
 * I am a senior student in <a href="https://ee.kaist.ac.kr/en/">School of Electrical Engineering, KAIST</a>(Korea Advanced Institute of Science and Technology). 
-* I will be at Georgia Tech for the spring semester of 2024.
+* I will be at Georgia Tech from the spring semester of 2024.
 
 ## Contact Info
-* <b>Here is my CV: <a href="https://drive.google.com/file/d/16XZprF7o3-25b0VJhIAigQN8eGRBIMk_/preview">(link)</a></b>
+* <b>Here is my CV: <a href="https://drive.google.com/file/d/14qfPp1ll7WbfQ8d_TyUWmrqT48Sx1yNl/preview">(link)</a></b>
 * <b>E-mail: <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a></b>
 
 ## Research Experiences
-* Defense Security Agency, Ministry of National Defense
+* National Agency at the Ministry of National Defense
 * <a href="https://semiconductor.samsung.com/about-us/business-area/system-lsi/">Analog IP Team, System LSI, Samsung Electronics</a>
 * <a href="https://www.icsl.kaist.ac.kr">Integrated Circuits and Systems Laboratory</a>, Prof. Jaehyeok Choi
 * <a href="http://hsnl.kaist.ac.kr">High-Speed Nanoelectronics Laboratory</a>, Prof. Kyeonghoon Yang
