@@ -18,7 +18,7 @@ comments: false
 * <b>E-mail: <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a></b>
 
 ## Research Experiences
-* National Agency at the Ministry of National Defense
+* National Agency of the Ministry of National Defense
 * <a href="https://semiconductor.samsung.com/about-us/business-area/system-lsi/">Analog IP Team, System LSI, Samsung Electronics</a>
 * <a href="https://www.icsl.kaist.ac.kr">Integrated Circuits and Systems Laboratory</a>, Prof. Jaehyeok Choi
 * <a href="http://hsnl.kaist.ac.kr">High-Speed Nanoelectronics Laboratory</a>, Prof. Kyeonghoon Yang
