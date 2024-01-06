@@ -1,11 +1,11 @@
 # Site
 title:              Kyu's ECE Lab
-bio:                "Gyujun 'Kyu' Jeong<br>School of Electrical Engineering, KAIST<br>"
+bio:                "Gyujun 'Kyu' Jeong<br>School of Electrical Engineering, KAIST<br>Now in ECE, Georgia Tech"
 description:        "Kyu's ECE Laboratory<br>Designed by Kyu Jeong<br>This website is intended for academic and non-profit purposes only."
 reading_time:       false
 words_per_minute:   200
 logo:               'assets/images/IMG_0011.jpeg'
-background:         'assets/images/asset_depreciated/central_park.PNG' #'assets/img/stanford_filter.jpg' 
+background:         'assets/images/gyulab/IMG_6673.jpg' #'assets/img/stanford_filter.jpg' 
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://gyulab.github.io
