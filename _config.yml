@@ -1,10 +1,10 @@
 # Site
 title:              "Gyujun Jeong"
-bio:                "Gyujun 'Kyu' Jeong<br>School of Electrical Engineering, KAIST<br>Now at Georgia Tech"
+bio:                "Department of Electrical Engineering, KAIST<br>Now at Georgia Tech"
 description:        "Gyujun Jeong<br>Designed by Kyu Jeong<br>This website is intended for academic and non-profit purposes only."
 reading_time:       false
 words_per_minute:   200
-logo:               'assets/images/IMG_0011.jpeg'
+logo:               'assets/images/IMG_0011.jpeg' #'assets/images/gyulab/IMG_3995.jpg'
 background:         'assets/images/navy.png' #'assets/img/stanford_filter.jpg' 
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
@@ -40,11 +40,11 @@ disqus_shortname:   taylantatli
 email: gj.jeong@kaist.ac.kr
 #twitter:            username
 #facebook:           username
-#github-url:         gyulab
+github-url:         gyulab
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 linkedin:          gyujun-jeong
 #xing:              username
-instagram:          kyuriteria
+#instagram:          kyuriteria
 #lastfm:            username
 #tumblr:            username
 #medium:            '@username'
