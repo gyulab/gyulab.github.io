@@ -40,7 +40,7 @@ disqus_shortname:   taylantatli
 email: gj.jeong@kaist.ac.kr
 #twitter:            username
 #facebook:           username
-github-url:         gyulab
+#github-url:         gyulab
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 linkedin:          gyujun-jeong
 #xing:              username
@@ -61,7 +61,7 @@ linkedin:          gyujun-jeong
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
-cv-url:            'https://drive.google.com/file/d/1xhpE8W0U8fNpVsqfjQ3sdflkr0bAAk5v/preview'
+cv-url:            'https://drive.google.com/file/d/1LT-fcVCiSOm-3IK-0p3YyXvrdoWwa0Ca/preview'
 
 # Gems
 gems:
