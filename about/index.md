@@ -20,7 +20,7 @@ comments: false
 ## Research Interest
 * Analog Circuit Design
 * Artificial Intelligence Application
-* Memory and IoT Devices
+* Memory and IoT Devices <br>
 My research objective is in the area of analog circuit design and artificial intelligence application. Through my research, I would like to leverage artificial intelligence to address challenges in the field of traditional analog circuit design.
 
 ## Experiences
