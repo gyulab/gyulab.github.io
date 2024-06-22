@@ -9,9 +9,11 @@ comments: false
 
 ## Introduction
 * <b>My name is Gyujun Jeong (Kyu / 정규준).</b>
-* I am currently looking forward to a doctoral program in the US to continue my research.
-* I am a senior student in <a href="https://ee.kaist.ac.kr/en/">School of Electrical Engineering, KAIST</a>(Korea Advanced Institute of Science and Technology). 
-* I am in Georgia Tech from the spring semester of 2024.
+* I am an undergraduate student in <a href="https://ee.kaist.ac.kr/en/">Electrical Engineering, KAIST</a> (Korea Advanced Institute of Science and Technology).
+* I am currently at <a href="https://ece.gatech.edu/">Georgia Institute of Technology</a> from the spring semester of 2024 for an exchange program and student research, advised by <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a> and working with <a href="https://research.ibm.com/">IBM Research</a>. <br>
+
+## Research Interest
+My research objective is in the area of analog circuit design and artificial intelligence application. Through my research, I would like to leverage artificial intelligence to address challenges in the field of traditional analog circuit design.
 
 ## Contact Info
 * <b>Here is my CV: Updating Now
@@ -24,9 +26,3 @@ comments: false
 * <a href="https://semiconductor.samsung.com/about-us/business-area/system-lsi/">Analog IP Team, System LSI, Samsung Electronics</a>
 * <a href="https://www.icsl.kaist.ac.kr">Integrated Circuits and Systems Laboratory, KAIST</a>, Prof. Jaehyeok Choi
 * <a href="http://hsnl.kaist.ac.kr">High-Speed Nanoelectronics Laboratory, KAIST</a>, Prof. Kyeonghoon Yang
-
-## Objectives
-* I am deeply interested in circuit and communication system design, especially in Sensors and RF electronics. 
-* My goal is to enhance performance and productivity in the electronics designing process by leveraging Artificial Intelligence.
-
-
