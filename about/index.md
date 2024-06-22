@@ -13,9 +13,8 @@ comments: false
 * I am currently at <a href="https://ece.gatech.edu/">Georgia Institute of Technology</a> from the spring semester of 2024 for an exchange program and student research, advised by <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a> and working with <a href="https://research.ibm.com/">IBM Research</a>. <br>
 
 ## Contact Info
-* <b>CV: Updating Now
-<!--<a href="https://drive.google.com/file/d/14qfPp1ll7WbfQ8d_TyUWmrqT48Sx1yNl/preview">(link)</a></b>-->
-* <b>E-mail: <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a> or <a href="mailto:gjeong35@gatech.edu">gjeong35@gatech.edu</a> </b>
+* <b>CV: <a href="https://drive.google.com/file/d/1LT-fcVCiSOm-3IK-0p3YyXvrdoWwa0Ca/preview">(link)</a></b>
+* <b>E-mail: <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a> or <a href="mailto:gjeong35@gatech.edu">gjeong35@gatech.edu</a></b>; both are actively used. Feel free to contact me at your preference.
 
 ## Research Interest
 * Analog Circuit Design
