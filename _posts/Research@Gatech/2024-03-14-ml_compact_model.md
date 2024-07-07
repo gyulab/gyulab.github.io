@@ -7,7 +7,7 @@ tags: Research@GAtech
 ---
 
 
-<a href="https://github.com/gyulab/aihwkit/tree/master" target="_blank" class="github-button">
+<a href="https://github.com/gyulab/GTEEGyujun-MLproject-Share" target="_blank" class="github-button">
   <img src="/assets/images/GitHub-Mark.png" alt="GitHub Logo" style="width: 20px; height: 20px;">
   View GitHub Repository
 </a>
@@ -18,7 +18,7 @@ tags: Research@GAtech
     align-items: center;
     padding: 10px 15px;
     background-color: #24292e;
-    color: white;
+    color: #ffffff !important;
     text-decoration: none;
     border-radius: 5px;
     font-family: Arial, sans-serif;
