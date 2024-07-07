@@ -6,7 +6,37 @@ author: Gyujun Jeong
 tags: Research@GAtech
 ---
 
-<a href="https://github.com/gyulab/GTEEGyujun-MLproject-Share" target="_blank">Click to view the github repository.</a><br><br>
+
+<a href="https://github.com/gyulab/aihwkit/tree/master" target="_blank" class="github-button">
+  <img src="/assets/images/GitHub-Mark.png" alt="GitHub Logo" style="width: 20px; height: 20px;">
+  View GitHub Repository
+</a>
+
+<style>
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #24292e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: fit-content;
+}
+
+.github-button:hover {
+    background-color: #444c56;
+}
+
+.github-button img {
+    margin-right: 8px;
+}
+</style>
+
 <iframe src="https://drive.google.com/file/d/1xhpE8W0U8fNpVsqfjQ3sdflkr0bAAk5v/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 <iframe src="https://drive.google.com/file/d/14jAImOqkpUt8Iwys6V-jgGepVQ7wCgy8/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 <iframe src="https://drive.google.com/file/d/1k9BSEuny9ZW9h1hAT2mp6Db5Kpg1cLHN/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
