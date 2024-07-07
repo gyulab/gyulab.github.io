@@ -37,7 +37,6 @@ tags: Research@GAtech
 }
 </style>
 <br>
-<br>
 
 <iframe src="https://drive.google.com/file/d/1xhpE8W0U8fNpVsqfjQ3sdflkr0bAAk5v/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 <iframe src="https://drive.google.com/file/d/14jAImOqkpUt8Iwys6V-jgGepVQ7wCgy8/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
