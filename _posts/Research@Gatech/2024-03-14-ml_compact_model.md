@@ -36,8 +36,7 @@ tags: Research@GAtech
     margin-right: 8px;
 }
 </style>
-<br>
-<center>Currently switched to a private repository for security. Please request access from the author.</center>
+<center>Currently switched to a private repository for security issues. Please request access from the author.</center>
 <br>
 
 <iframe src="https://drive.google.com/file/d/1xhpE8W0U8fNpVsqfjQ3sdflkr0bAAk5v/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
