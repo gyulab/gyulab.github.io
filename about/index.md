@@ -8,7 +8,7 @@ comments: false
 ![alt text]({{ site.baseurl }}/assets/images/san-francisco.JPG "image")
 
 ## About Me
-* <b>My name is Gyujun Jeong (Kyu / 정규준).</b>
+* <b>My name is Gyujun Jeong (Kyu).</b>
 * I am an undergraduate student in <a href="https://ee.kaist.ac.kr/en/">Electrical Engineering, KAIST</a> (Korea Advanced Institute of Science and Technology).
 * I am currently at <a href="https://ece.gatech.edu/">Georgia Institute of Technology</a> from the spring semester of 2024 for an exchange program and student research, advised by <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a> and working with <a href="https://research.ibm.com/">IBM Research</a>. <br>
 
