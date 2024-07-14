@@ -3,7 +3,7 @@ layout: post
 title:  "Deep Learning-based LoRa Signal Demodulation: Paper review and Implementation"
 date:   2023-04-14T14:28:52-05:00
 author: Gyujun Jeong
-tags: Research@Agency
+tags: 2_SIGINT_Agency
 ---
 ![alt text]({{ site.baseurl }}/assets/images/general_research/38.PNG "image"){:.profile}<br>
 <b>Note: Some of the source code has been redacted due to security issues.</b><br>
