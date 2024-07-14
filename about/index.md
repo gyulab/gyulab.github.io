@@ -14,7 +14,7 @@ comments: false
 
 ## Contact Info
 * <b>CV: <a href="https://drive.google.com/file/d/1LT-fcVCiSOm-3IK-0p3YyXvrdoWwa0Ca/preview">(link)</a></b>
-* <b>E-mail: <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a> or <a href="mailto:gjeong35@gatech.edu">gjeong35@gatech.edu</a></b>; both are actively used. Feel free to contact me at your preference.
+* <b>E-mail: <a href="mailto:gyujun.jeong@gatech.edu">gyujun.jeong@gatech.edu</a></b> or <a href="mailto:gj.jeong@kaist.ac.kr">gj.jeong@kaist.ac.kr</a> ; both are actively used. Feel free to contact me at your preference.
 
 ## Research Interest
 * Analog Circuit Design
