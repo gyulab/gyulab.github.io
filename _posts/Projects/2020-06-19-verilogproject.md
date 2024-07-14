@@ -3,7 +3,7 @@ layout: post
 title:  "Verilog HDL Design Project"
 date:   2020-06-19T14:25:52-05:00
 author: Gyujun Jeong
-tags: projects
+tags: Undergrad_Projects
 ---
   
 <center><a href="https://github.com/gyulab/gyulab.github.io/tree/master/_posts/code/EE303_Verilog" target="_blank">Click to view the Verilog Codes!</a></center>
