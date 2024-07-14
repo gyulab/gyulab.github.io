@@ -3,7 +3,7 @@ layout: post
 title:  "PSPICE CMOS Op-amp Design"
 date:   2020-07-08T14:28:52-05:00
 author: Gyujun Jeong
-tags: projects
+tags: Undergrad_Projects
 ---
 ![alt text]({{ site.baseurl }}/assets/images/gyulab/ps1.png "image"){:.profile}
 
