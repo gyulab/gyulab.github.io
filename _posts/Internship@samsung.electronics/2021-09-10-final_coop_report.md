@@ -3,7 +3,7 @@ layout: post
 title:  "An impression and final report for Samsung Electronics Internship"
 date:   2021-09-10T14:25:52-05:00
 author: Gyujun Jeong
-tags: Samsung_Electronics_Internship
+tags: 3_Samsung_Electronics
 ---
 
 ![alt text]({{ site.baseurl }}/assets/images/intern/IMG-2618.jpg "image"){:.profile}

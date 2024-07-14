@@ -3,7 +3,7 @@ layout: post
 title:  "Isolation Technique"
 date:   2020-01-13T14:25:52-05:00
 author: Gyujun Jeong
-tags: Research@HSNL
+tags: 5_HSNL_KAIST
 ---
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/i1.jpg "image"){:.profile}
 &nbsp;&nbsp;&nbsp;&nbsp;CMOS is an abbreviation for Complementary MOS, which is a MOS device with two different types of MOS elements placed in one wafer: n-channel MOS and p-channel MOS. When the two types of devices are placed on one substrate, various problems such as leakage current and latch-up occur. Today, let's talk about isolation techniques that separate these elements.

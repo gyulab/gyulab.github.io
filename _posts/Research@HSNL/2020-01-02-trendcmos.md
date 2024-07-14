@@ -3,7 +3,7 @@ layout: post
 title:  "Scaling Trend of Semiconductor"
 date:   2020-01-02T14:25:52-05:00
 author: Gyujun Jeong
-tags: Research@HSNL
+tags: 5_HSNL_KAIST
 ---
 
 ![alt text]({{ site.baseurl }}/assets/images/mosfet/s1.png "image"){:.profile}

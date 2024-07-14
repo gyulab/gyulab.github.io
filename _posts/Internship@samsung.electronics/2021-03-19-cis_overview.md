@@ -3,7 +3,7 @@ layout: post
 title:  "Introduction to CMOS Image Sensor"
 date:   2021-03-19T14:28:52-05:00
 author: Gyujun Jeong
-tags: Samsung_Electronics_Internship
+tags: 3_Samsung_Electronics
 ---
 ![alt text]({{ site.baseurl }}/assets/images/intern/1.PNG "image"){:.profile}
 

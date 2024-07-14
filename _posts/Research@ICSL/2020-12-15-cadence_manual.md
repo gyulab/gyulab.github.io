@@ -3,7 +3,7 @@ layout: post
 title:  "Cadence Virtuoso Manual"
 date:   2020-12-15T14:25:52-05:00
 author: Gyujun Jeong
-tags: Research@ICSL
+tags: 4_ICSL_KAIST
 ---
 
 <b> Cadence Virtuoso Manual </b><br>
