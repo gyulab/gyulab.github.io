@@ -3,7 +3,7 @@ layout: post
 title:  "Georgia Tech ML Compact Model Research Archive"
 date:   2024-03-14T14:25:52-05:00
 author: Gyujun Jeong
-tags: Research@GAtech
+tags: 1_Georgia_Tech
 ---
 
 
