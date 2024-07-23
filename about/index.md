@@ -10,7 +10,7 @@ comments: false
 ## About Me
 * <b>My name is Gyujun Jeong (Kyu).</b>
 * I am an undergraduate student in <a href="https://ee.kaist.ac.kr/en/">Electrical Engineering, KAIST</a> (Korea Advanced Institute of Science and Technology).
-* I am currently at <a href="https://ece.gatech.edu/">Georgia Institute of Technology</a> from the spring semester of 2024 for an exchange program and student research, advised by <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a> and working with <a href="https://research.ibm.com/">IBM Research</a>. <br>
+* I am currently at <a href="https://ece.gatech.edu/">Georgia Institute of Technology</a> for an exchange program and undergraduate research, advised by <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a> and working with <a href="https://research.ibm.com/">IBM Research</a>. <br>
 
 ## Contact Info
 * <b>CV: <a href="https://drive.google.com/file/d/1LT-fcVCiSOm-3IK-0p3YyXvrdoWwa0Ca/preview">(link)</a></b>
