@@ -24,9 +24,9 @@ comments: false
 My research objective is in the area of analog circuit design and artificial intelligence application. Through my research, I would like to leverage artificial intelligence to address challenges in the field of traditional analog circuit design.
 
 ## Experiences
-* <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a>, Advised by Shimeng Yu [Jan.2024 -- Present]
-* <a href="https://research.ibm.com/">Undergraduate Research Assistant at Georgia Tech with IBM Research</a> [May. 2024 -- Jul. 2024]
+* <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a>, Advised by Prof. Shimeng Yu [Jan.2024 -- Present]
+* <a href="https://research.ibm.com/">Research Intern at IBM Research & Georgia Tech </a> [May. 2024 -- Jul. 2024]
 * National Agency of the Ministry of National Defense [May. 2022 -- Nov. 2023]
 * <a href="https://semiconductor.samsung.com/about-us/business-area/system-lsi/">Analog IP Team, System LSI, Samsung Electronics</a> [Mar. 2021 -- Aug. 2021]
-* <a href="https://www.icsl.kaist.ac.kr">Integrated Circuits and Systems Laboratory, KAIST</a>, Advised Jaehyeok Choi [Jul. 2020 -- Feb. 2022]
+* <a href="https://www.icsl.kaist.ac.kr">Integrated Circuits and Systems Laboratory, KAIST</a>, Advised by Prof. Jaehyeok Choi [Jul. 2020 -- Feb. 2022]
 <!-- <a href="http://hsnl.kaist.ac.kr">High-Speed Nanoelectronics Laboratory, KAIST</a>, Advised by Kyeonghoon Yang [Dec. 2019 -- Feb. 2020]-->
