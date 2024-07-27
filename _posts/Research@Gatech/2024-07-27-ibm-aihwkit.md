@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "IBM Analog Hardware Accelerator Kit Research Archive"
-date:   2024-07-28T14:25:52-05:00
+date:   2024-07-27T14:25:52-05:00
 author: Gyujun Jeong
 tags: 1_Georgia_Tech
 ---
