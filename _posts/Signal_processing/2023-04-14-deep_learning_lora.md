@@ -7,7 +7,7 @@ tags: 2_SIGINT_Agency
 ---
 ![alt text]({{ site.baseurl }}/assets/images/general_research/38.PNG "image"){:.profile}<br>
 <div style="text-align: center; color: #b22222;">
-  <p>Note: Source code details have been omitted for security reasons.</p>
+  <b><p>Note: Source code details have been omitted for security reasons.</p></b>
 </div><br>
 Deep learning algorithms have shown significant success in various signal processing and demodulation tasks. Some commonly used deep learning algorithms for signal processing and demodulation are as follows:
 
