@@ -8,12 +8,12 @@ comments: false
 ![alt text]({{ site.baseurl }}/assets/images/san-francisco.JPG "image")
 
 ## About Me
-* <b>My name is Gyujun Jeong (Kyu).</b>
-* I am an undergraduate student in <a href="https://ee.kaist.ac.kr/en/">Electrical Engineering, KAIST</a> (Korea Advanced Institute of Science and Technology).
-* I am currently at <a href="https://ece.gatech.edu/">Georgia Institute of Technology</a> for an exchange program and undergraduate research, advised by <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a>. <br>
+* <b>My name is Gyujun Jeong (Kyu), Ph.D. applicant for Fall 2025.</b>
+* I am an undergraduate student in <a href="https://ee.kaist.ac.kr/en/">Electrical Engineering, KAIST</a> (Korea Advanced Institute of Science and Technology), with an expected graduation in February 2025.
+* I participated in an exchange program and internship at <a href="https://ece.gatech.edu/">Georgia Institute of Technology</a> until July 2024, and I am currently conducting undergraduate research remotely under the supervision of <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a>.<br>
 
 ## Contact Info
-* <b>CV: <a href="https://drive.google.com/file/d/1LT-fcVCiSOm-3IK-0p3YyXvrdoWwa0Ca/preview">(link)</a></b>
+* <b>CV: <a href="https://drive.google.com/file/d/1oujY_gsymU8ubOB-sq8Kb1-x0INIrbPe/preview">(link)</a></b>
 * <b>E-mail: <a href="mailto:gyujun.jeong@gatech.edu">gyujun.jeong@gatech.edu</a> or <a href="mailto:gyujun.jeong1@gmail.com">gyujun.jeong1@gmail.com</a></b> ; both are actively used. Feel free to contact me at your preference.
 
 ## Research Interest
@@ -21,7 +21,7 @@ comments: false
 * Artificial Intelligence Application
 * Memory and IoT Devices<br>
 
-My research objective is in the area of analog circuit design and artificial intelligence application. Through my research, I would like to leverage artificial intelligence to address challenges in the field of traditional analog circuit design.
+My research objective lies in the area of analog circuit design and artificial intelligence application. Through my research, I would like to leverage artificial intelligence to address challenges in the field of traditional analog circuit design.
 
 ## Experiences
 * <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a>, Advised by Prof. Shimeng Yu [Jan.2024 -- Present]
