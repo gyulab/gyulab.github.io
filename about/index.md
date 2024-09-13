@@ -10,7 +10,7 @@ comments: false
 ## About Me
 * <b>My name is Gyujun Jeong (Kyu), Ph.D. applicant for Fall 2025.</b>
 * I am an undergraduate student in <a href="https://ee.kaist.ac.kr/en/"><b>Electrical Engineering, KAIST</b></a> (Korea Advanced Institute of Science and Technology), with an expected graduation in February 2025.
-* I participated in an exchange program and internship at <a href="https://ece.gatech.edu/"><b>Georgia Institute of Technology</b></a> until July 2024, and I am currently conducting research remotely under the supervision of <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a>.<br>
+* I participated in an exchange program and internship at <a href="https://ece.gatech.edu/"><b>Georgia Institute of Technology</b></a> until July 2024, and I am currently conducting research remotely under the supervision of Professor <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a>.<br>
 
 ## Contact Info
 * <b>CV: <a href="https://drive.google.com/file/d/1oujY_gsymU8ubOB-sq8Kb1-x0INIrbPe/preview">(link)</a></b>
