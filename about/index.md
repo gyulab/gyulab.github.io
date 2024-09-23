@@ -8,7 +8,7 @@ comments: false
 ![alt text]({{ site.baseurl }}/assets/images/san-francisco.JPG "image")
 
 ## About Me
-* <b>My name is Gyujun Jeong (Kyu), Ph.D. applicant for Fall 2025.</b>
+* <b>My name is Gyujun Jeong (Kyu).</b> <!-- Ph.D. applicant for Fall 2025.</b> -->
 * I am an undergraduate student in <a href="https://ee.kaist.ac.kr/en/"><b>Electrical Engineering, KAIST</b></a> (Korea Advanced Institute of Science and Technology), with an expected graduation in February 2025.
 * I participated in an exchange program and internship at <a href="https://ece.gatech.edu/"><b>Georgia Institute of Technology</b></a> until July 2024, and I am currently conducting research remotely under the supervision of Professor <a href="https://shimeng.ece.gatech.edu/">Shimeng Yu</a>.<br>
 
