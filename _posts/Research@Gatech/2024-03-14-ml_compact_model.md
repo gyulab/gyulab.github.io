@@ -6,11 +6,12 @@ author: Gyujun Jeong
 tags: 1_Georgia_Tech
 ---
 
-
+<!--
 <center><a href="https://github.com/gyulab/GTEEGyujun-MLproject-Share" target="_blank" class="github-button">
   <img src="/assets/images/GitHub-Mark.png" alt="GitHub Logo" style="width: 20px; height: 20px;">
   View GitHub Repository
 </a></center>
+-->
 
 <style>
 .github-button {
