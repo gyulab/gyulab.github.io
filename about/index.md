@@ -15,7 +15,7 @@ comments: false
 
 ## Contact Info
 * <b>CV: <a href="https://drive.google.com/file/d/1oujY_gsymU8ubOB-sq8Kb1-x0INIrbPe/preview">(link)</a></b>
-* <b>E-mail: <a href="mailto:gyujun.jeong@gatech.edu">gyujun.jeong@gatech.edu</a> or <a href="mailto:gyujun.jeong1@gmail.com">gyujun.jeong1@gmail.com</a></b> ; both are actively used. Feel free to contact me at your preference.
+* <b>E-mail: <a href="mailto:gyujun.jeong@alsemy.com">gyujun.jeong@alsemy.com</a> or <a href="mailto:gyujun.jeong1@gmail.com">gyujun.jeong1@gmail.com</a></b> ; both are actively used. Feel free to contact me at your preference.
 
 ## Research Interest
 * Semiconductor (Analog Circuit and Device) Design
