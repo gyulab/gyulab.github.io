@@ -10,7 +10,7 @@ comments: false
 ## About Me
 * <b>My name is Gyujun Jeong (Kyu).</b> <!-- Ph.D. applicant for Fall 2025.</b> -->
 * I am an undergraduate student in <a href="https://ee.kaist.ac.kr/en/"><b>Electrical Engineering, KAIST</b></a> (Korea Advanced Institute of Science and Technology), graduating in February 2025.
-* I participated in an exchange program and served as an undergraduate research assistant at <a href="https://ece.gatech.edu/"><b>Georgia Institute of Technology</b></a> until July 2024.
+* I participated in an exchange program and worked as an undergraduate research assistant at <a href="https://ece.gatech.edu/"><b>Georgia Institute of Technology</b></a> until July 2024.
 * Starting January 2025, I joined <a href="https://www.alsemy.com/"><b>Alsemy Inc.</b></a>, an SK hynix in-house venture startup, as an AI and device researcher.
 
 ## Contact Info
