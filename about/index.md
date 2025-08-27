@@ -9,7 +9,7 @@ comments: false
 
 ## About Me
 * <b>My name is Gyujun (Kyu) Jeong.</b> <!-- Ph.D. applicant for Fall 2025.</b> -->
-* I am an incoming Ph.D. student at <a href="https://ece.gatech.edu/"><b>Electrical and Computer Engineering, Georgia Institute of Technology</b></a>.
+* I am Ph.D. student at <a href="https://ece.gatech.edu/"><b>Electrical and Computer Engineering, Georgia Institute of Technology</b></a>.
 * I graduated with my Bachelor's degree in <a href="https://ee.kaist.ac.kr/en/"><b>Electrical Engineering from KAIST</b></a> (Korea Advanced Institute of Science and Technology).
 
 
@@ -22,7 +22,7 @@ comments: false
 * Memory Device and Systems<br>
 
 ## Research Experiences
-* Incoming Ph.D. Student at <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a> [Aug.2025 --]
+* Ph.D. Student at <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a> [Aug.2025 --]
 * <a href="https://www.alsemy.com/">Alsemy Inc.</a> [Jan. 2025 -- Jul. 2025]
 * Undergraduate Research Student at <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a> [Jan.2024 -- Jul. 2024]
 * Undergraduate Research Assistant at GT OSPO & IBM Research [May. 2024 -- Jul. 2024]
