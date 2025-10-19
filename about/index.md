@@ -2,7 +2,7 @@
 layout: page
 title: About me
 tags: 
-date: 2024-06-10
+date: 2025-06-10
 comments: false
 ---
 ![alt text]({{ site.baseurl }}/assets/images/san-francisco.JPG "image")
@@ -14,14 +14,14 @@ comments: false
 
 
 ## Contact Info
-* <b>CV: <a href="https://drive.google.com/file/d/1oujY_gsymU8ubOB-sq8Kb1-x0INIrbPe/preview">(link)</a></b>
-* <b>E-mail: <a href="mailto:gyujun.jeong1@gmail.com">gyujun.jeong1@gmail.com</a>
+* <b>CV: <a href="https://drive.google.com/file/d/1LT-fcVCiSOm-3IK-0p3YyXvrdoWwa0Ca/preview">(link)</a></b>
+* <b>E-mail: <a href="mailto:gyujun.jeong@gatech.edu">gyujun.jeong@gatech.edu</a>
 
 ## Research Interest
-* AI/ML for Semiconductor Design
+* Physics AI for Semiconductor Design
 * Memory Device and Systems<br>
 
-## Research Experiences
+## Experiences
 * Ph.D. Student at <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a> [Aug.2025 --]
 * <a href="https://www.alsemy.com/">Alsemy Inc.</a> [Jan. 2025 -- Jul. 2025]
 * Undergraduate Research Student at <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a> [Jan.2024 -- Jul. 2024]
