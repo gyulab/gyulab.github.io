@@ -8,9 +8,10 @@ comments: false
 ![alt text]({{ site.baseurl }}/assets/images/san-francisco.JPG "image")
 
 ## About Me
-* <b>My name is Gyujun (Kyu) Jeong.</b> <!-- Ph.D. applicant for Fall 2025.</b> -->
-* I am Ph.D. student at <a href="https://ece.gatech.edu/"><b>Electrical and Computer Engineering, Georgia Institute of Technology</b></a>.
+* <b>My name is Gyujun Jeong.</b> <!-- Ph.D. applicant for Fall 2025.</b> -->
+* I am a first year Ph.D. student at <a href="https://ece.gatech.edu/"><b>Electrical and Computer Engineering, Georgia Institute of Technology</b></a>.
 * I graduated with my Bachelor's degree in <a href="https://ee.kaist.ac.kr/en/"><b>Electrical Engineering from KAIST</b></a> (Korea Advanced Institute of Science and Technology).
+* <b>I am eager to connect and collaborate to pioneer the growing field of AI for Semiconductors!</b>
 
 
 ## Contact Info
@@ -18,8 +19,10 @@ comments: false
 * <b>E-mail: <a href="mailto:gyujun.jeong@gatech.edu">gyujun.jeong@gatech.edu</a>
 
 ## Research Interest
-* Physics AI for Semiconductor Design
-* Memory Device and Systems<br>
+* AI for Semiconductors
+* Physics-informed Machine Learning
+* Memory Device and Systems
+* <br>
 
 ## Experiences
 * Ph.D. Student at <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a> [Aug.2025 --]
