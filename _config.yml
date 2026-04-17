@@ -1,10 +1,10 @@
 # Site
 title:              "Gyujun Jeong"
-bio:                "Ph.D. Student at Georgia Tech<br> Electrical and Computer Engineering<br>Research Interest: AI for Semiconductor<br>🔗 LinkedIn and CV below<br>" #Ph.D. Applicant for Fall 2025<br>Now at Georgia Institute of Technology<br>
+bio:                "Ph.D. Student at Georgia Tech<br> Electrical and Computer Engineering<br>Research Interest: AI for Semiconductors<br>🔗 LinkedIn and CV below<br>" #Ph.D. Applicant for Fall 2025<br>Now at Georgia Institute of Technology<br>
 description:        "Gyujun Jeong's Portfolio Website"
 reading_time:       false
 words_per_minute:   200
-logo:               'assets/img/image_11.jpeg' #'assets/images/gyulab/IMG_3999.jpg' #'assets/images/IMG_0011.jpeg' #'assets/images/gyulab/IMG_3995.jpg'
+logo:               'assets/images/irps.png' #'assets/images/gyulab/IMG_3999.jpg' #'assets/images/IMG_0011.jpeg' #'assets/images/gyulab/IMG_3995.jpg'
 background:         'assets/images/lightgrey.png' #skyblue #'assets/img/stanford_filter.jpg' 
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
