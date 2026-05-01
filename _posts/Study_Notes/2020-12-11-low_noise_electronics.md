@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Low Noise Electronics"
-date:   2020-12-11T14:25:52-05:00
-author: Gyujun Jeong
-tags: Study_notes
+title: Low Noise Electronics
+date: "2020-12-11T14:25:52-05:00"
+description: "- Coping with offset ~ Phase Locked Loop Click to view the document if the browser does not support PDF Viewer. > - Review Notes for entire course Click to view the document if th..."
+tags: [Study_notes]
 ---
+
 - Coping with offset ~ Phase Locked Loop <br>
 <a href="https://drive.google.com/file/d/1Ygeb12TKZUvxlWgDtYGcpM_sVUH8XPj8/preview" target="_blank">Click to view the document if the browser does not support PDF Viewer.</a><br><br>
 

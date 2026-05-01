@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Cadence Virtuoso Manual"
-date:   2020-12-15T14:25:52-05:00
-author: Gyujun Jeong
-tags: 4_ICSL_KAIST
+title: Cadence Virtuoso Manual
+date: "2020-12-15T14:25:52-05:00"
+description: Cadence Virtuoso Manual
+tags: [4_ICSL_KAIST]
 ---
 
 <b> Cadence Virtuoso Manual </b><br>

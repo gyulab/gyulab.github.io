@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Analog Microelectronics Design"
-date:   2021-12-01T14:25:52-05:00
-author: Gyujun Jeong
-tags: Study_notes
+title: Analog Microelectronics Design
+date: "2021-12-01T14:25:52-05:00"
+description: Click to view the document if the browser does not support PDF Viewer.
+tags: [Study_notes]
 ---
 
 <a href="https://drive.google.com/file/d/1yv094ou4aNfCdRdjWzSc_spIqZS9zRCA/preview" target="_blank">Click to view the document if the browser does not support PDF Viewer.</a><br><br>

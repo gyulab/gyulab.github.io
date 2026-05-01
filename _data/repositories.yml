@@ -1,0 +1,8 @@
+github_users:
+  - gyulab
+
+repo_description_lines_max: 2
+
+github_repos:
+  - gyulab/gyulab.github.io
+  - gyulab/PINO-for-Semiconductor

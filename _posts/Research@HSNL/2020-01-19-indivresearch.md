@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Report for 2019 Winter Semester Individual Research"
-date:   2020-01-19T14:25:52-05:00
-author: Gyujun Jeong
-tags: 5_HSNL_KAIST
+title: Report for 2019 Winter Semester Individual Research
+date: "2020-01-19T14:25:52-05:00"
+description: Advanced CMOS Technologies The report was written in Korean. The translated version is posted on the website. Click to view the report if the browser does not support the PDF View...
+tags: [5_HSNL_KAIST]
 ---
 
 <b> Advanced CMOS Technologies </b><br>

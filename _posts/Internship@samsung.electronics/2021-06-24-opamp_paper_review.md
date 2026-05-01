@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "JSSC Paper Study: Rail-to-Rail Op-Amp by Hogervost(1994)"
-date:   2021-06-24T14:25:52-05:00
-author: Gyujun Jeong
-tags: 3_Samsung_Electronics
+title: "JSSC Paper Study: Rail-to-Rail Op-Amp by Hogervost(1994)"
+date: "2021-06-24T14:25:52-05:00"
+description: Click to view the document if the browser does not support PDF Viewer.
+tags: [3_Samsung_Electronics]
 ---
-
 
 <a href="https://drive.google.com/file/d/1qbm1Q53fFgD-3BhA5qFsRRz08p0YGbuW/preview" target="_blank">Click to view the document if the browser does not support PDF Viewer.</a><br><br>
 <iframe src="https://drive.google.com/file/d/1qbm1Q53fFgD-3BhA5qFsRRz08p0YGbuW/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
