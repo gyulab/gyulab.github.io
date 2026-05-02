@@ -6,9 +6,9 @@
 
 .navbar {
   box-shadow: none;
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  border-bottom: 1px solid v.$georgia-tech-gold;
+  background-color: v.$georgia-tech-gold;
+  opacity: 1;
 }
 
 .navbar .dropdown-menu,
@@ -17,11 +17,11 @@
   border: 1px solid var(--global-divider-color);
 
   a:not(.active) {
-    color: v.$georgia-tech-gold !important;
+    color: v.$white-color !important;
   }
 
   a:hover {
-    color: v.$georgia-tech-gold !important;
+    color: v.$white-color !important;
   }
 
   .dropdown-divider {
@@ -30,18 +30,18 @@
 }
 
 .dropdown-item {
-  color: v.$georgia-tech-gold !important;
+  color: v.$white-color !important;
 
   &:hover {
-    color: v.$georgia-tech-gold !important;
-    background-color: var(--global-bg-color);
+    color: v.$white-color !important;
+    background-color: v.$georgia-tech-gold;
   }
 }
 
 .dropdown-item.active,
 .dropdown-item:active {
   background-color: v.$georgia-tech-gold;
-  color: var(--global-hover-text-color) !important;
+  color: v.$white-color !important;
 
   &:hover {
     color: var(--global-hover-text-color);
@@ -56,24 +56,24 @@
   }
 
   .navbar-brand {
-    color: v.$georgia-tech-gold !important;
+    color: v.$white-color !important;
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: v.$georgia-tech-gold !important;
+    color: v.$white-color !important;
 
     &:hover {
-      color: v.$georgia-tech-gold !important;
+      color: v.$white-color !important;
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: v.$georgia-tech-gold !important;
+    color: v.$white-color !important;
 
     &:hover {
-      color: v.$georgia-tech-gold !important;
+      color: v.$white-color !important;
     }
   }
 
@@ -102,13 +102,13 @@
       }
 
       i::before {
-        color: var(--global-text-color);
+        color: v.$white-color;
         transition-property: all 0.2s ease-in-out;
       }
 
       &:hover {
         i::before {
-          color: var(--global-theme-color);
+          color: v.$white-color;
         }
       }
     }
@@ -120,7 +120,7 @@
     display: block;
     width: 22px;
     height: 2px;
-    background-color: var(--global-text-color);
+    background-color: v.$white-color;
     border-radius: 1px;
     margin-bottom: 4px;
     transition: all 0.2s;
@@ -159,7 +159,7 @@
   padding: 0;
   border: 0;
   background-color: inherit;
-  color: var(--global-text-color);
+  color: v.$white-color !important;
   /* Fix footprint to prevent navbar shifting when icon changes */
   width: 2rem;
   height: 2rem;
@@ -168,7 +168,7 @@
   justify-content: center;
 
   &:hover {
-    color: var(--global-hover-color);
+    color: v.$white-color !important;
   }
 }
 
@@ -182,15 +182,15 @@
   padding: 0;
   border: 0;
   background-color: inherit;
-  color: v.$georgia-tech-gold !important;
+  color: v.$white-color !important;
 
   .nav-link,
   i {
-    color: v.$georgia-tech-gold !important;
+    color: v.$white-color !important;
   }
 
   &:hover {
-    color: v.$georgia-tech-gold !important;
+    color: v.$white-color !important;
   }
 }
 
@@ -198,5 +198,5 @@
 #light-toggle i,
 #light-toggle .fa-half-sun-moon::before,
 #light-toggle .fa-half-sun-moon::after {
-  color: v.$georgia-tech-gold !important;
+  color: v.$white-color !important;
 }
