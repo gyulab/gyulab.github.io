@@ -7,7 +7,7 @@ description: OFDM systems are very sensitive towards synchronization error. Sync
 tags: [Research@Agency]
 ---
 
-![alt text](assets/img/general_research/68.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/68.PNG "image"){:.profile}<br>
 
 OFDM systems are very sensitive towards  synchronization error. Synchronization of an OFDM signal is required to find the symbol timing and carrier frequency offset (CFO). Before demodulation of subcarriers, either from explicit training data or using cyclic prefix of the OFDM signal we can get synchronization at receiver. After demodulation of the OFDM subcarriers, information about the synchronization can be obtained from training symbols embedded into the regular data symbol pattern. The estimation of synchronization error can be performed depending on the type of the training data. Orthogonal Frequency Division Multiplexing (OFDM) is a multi-carrier modulation technique that has significantly impacted modern data transmission. By distributing data bits across multiple subcarriers, OFDM transforms communication methods, effectively addressing challenges such as multipath propagation.<br>
 
@@ -22,7 +22,7 @@ I have arranged some useful notes to organize OFDM synchronization and demodulat
 Now, we will discuss the code implementation of the OFDM synchronization process. <br>
 
 # DCM Autocorrelation and Find Peak
-![alt text](assets/img/general_research/67.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/67.PNG "image"){:.profile}<br>
 DCM (Delay-Conjugate Multiply) autocorrelation in OFDM improves signal quality by reducing fading effects caused by multipath propagation. It's evaluated by delaying, conjugating, and multiplying received subcarriers, then measuring their correlation. This process enhances reliability and reduces errors in wireless communication systems. The code below calculates DCM Autocorrelation and Maximum Likelihood peak values:<br>
 <script src="https://gist.github.com/gyulab/d0c4216e798fadd68379bc43a3680f01.js"></script>
 
@@ -39,8 +39,8 @@ The following code estimates and compensates CFO by following the aforementioned
 
 # LS Equalization
 LS (Least Squares) equalization in OFDM is essential for mitigating channel distortions and improving signal quality. It's needed to counteract the effects of multipath fading and frequency-selective channels. The following figures describes the method of LS Equalization:<br>
-![alt text](assets/img/general_research/70.PNG "image"){:.profile}<br>
-![alt text](assets/img/general_research/71.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/70.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/71.PNG "image"){:.profile}<br>
 To evaluate LS equalization:<br>
 1. Collect pilot symbols (known data) transmitted in OFDM frames.
 2. Measure the received pilot symbols' values.

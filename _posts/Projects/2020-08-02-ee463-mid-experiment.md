@@ -1,12 +1,10 @@
 ---
-layout: page
+layout: post
 title: Silvaco Simulation to minimize Bird’s Beak
 date: "2020-08-02T14:25:52-05:00"
 description: Silvaco Simulation to acquire optimum condition to minimize Bird’s Beak Silvaco Simulation Code The report was written in Korean. Click to view the document if the browser does no...
 tags: [Semiconductor_processing]
-importance: 1
-category: projects
-img: assets/img/project-placeholder.png
+categories: [projects]
 ---
 
 <b> Silvaco Simulation to acquire optimum condition to minimize Bird’s Beak </b><br>

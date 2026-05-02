@@ -7,7 +7,7 @@ description: "&nbsp;&nbsp;&nbsp;&nbsp;Linear dependency is a property of a set o
 categories: [Research@signal]
 ---
 
-![alt text](assets/img/general_research/33.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/33.PNG "image"){:.profile}<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Linear dependency is a property of a set of vectors that indicates whether the vectors are linearly independent or linearly dependent. In signal analysis, linear dependency is used to determine whether a set of signals or sequences can be expressed as a linear combination of other signals or sequences. For instance, in convolutional coding, a set of encoded symbols can be considered linearly dependent, i.e., correlated, if they can be expressed as a linear combination of other encoded symbols. In this case, linear dependency analysis can be used to determine the encoded type of the symbols.<br>
 
@@ -20,7 +20,7 @@ categories: [Research@signal]
 &nbsp;&nbsp;&nbsp;&nbsp;We can also identify the encoded type by the linear dependency - linear block code or convolutional coded. Since the linear block code uses parity (N-k) X m bits with every K X m bit at encoding, total N X m bits shown subsequently. In contrast, convolutionally encoded one produces (S-k+1) X n, such that k stands for Constraint Length and n is output bit number.
 
 
-![alt text](assets/img/general_research/32.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/32.PNG "image"){:.profile}<br>
 
 
 
@@ -42,7 +42,7 @@ respectively. We should find the x vector, i.e.,
 
 &nbsp;&nbsp;&nbsp;&nbsp;By the definition of null space, collecting all corresponding x = (x_{1}, ..., x_{200}) results in the null space of the original 300 by 200 matrix. The program selects the basis of this null space. The number of bases selected in this way becomes a nullity, that is, dimension of the null space. When row operation is performed, data that can analyze channel coding is listed on the left, and the identity matrix is aligned on the far right. The found linear dependency can be approximated as the parity check matrix (H).<br>
 
-![alt text](assets/img/general_research/34.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/34.PNG "image"){:.profile}<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;For instance, if we run the code of linear block encoded data, we can obtain the matrix as above. For the result, we can analyze the parity bits from the obtained codewords. Here, the total number of rows in the above matrix represents the number of parity bits i.e., n-k while the number of columns shows the number of bits in the codeword i.e., n. In this particular example the number of rows is 3, representing total 3 parity bits and the number of columns here is 6 showing n i.e., the total bits in the codeword.<br>
 

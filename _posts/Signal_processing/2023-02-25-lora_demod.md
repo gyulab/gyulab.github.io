@@ -7,7 +7,7 @@ description: "&nbsp;&nbsp;&nbsp;&nbsp;Typically, LoRa detection is achieved in t
 tags: [Research@Agency]
 ---
 
-![alt text](assets/img/general_research/37.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/37.PNG "image"){:.profile}<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Typically, LoRa detection is achieved in two steps: (i) first, the signal is de-chirped, then (ii) typical FSK demodulation is applied. De-chirping is achieved by mixing the received LoRa symbol with an inverted chirp (down-chirp) with no frequency offset. Since the demodulator has no prior knowledge of the transmit symbols, the de-chirping signal utilizes γ(0) = −B/2. Hence, the resulting signal is given as follows:<br>
 <center>$$
 s(t) = \sqrt{\frac{E_b}{N_0}} \sqrt{SF} \exp\left(j2\pi mδ_f t\right){}

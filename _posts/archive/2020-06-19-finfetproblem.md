@@ -8,13 +8,13 @@ categories: [Projects]
 ---
 
 <br>
-![alt text](assets/img/gyulab/fd0.jpg "image"){:.profile}
+![alt text](/assets/img/gyulab/fd0.jpg "image"){:.profile}
 <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Since the multi-gate channel is on the side of the fin, it must be uniformly doped along the sidewall to eliminate parasitic resistance. However, in the previous FinFET process, a thick patterned PR mask was used as shown in Figure 24, and if the implant process is tilted at an angle exceeding 𝜃* relative to the vertical plane in Figure, the implant on the sidewall side will not proceed at all, as shown in 24E1. In addition, since FinFET has a height in the shape of a gate rising, a shadow effect occurs during ion implantation.<br>
 
 <br>
-![alt text](assets/img/gyulab/fd1.PNG "image"){:.profile}
+![alt text](/assets/img/gyulab/fd1.PNG "image"){:.profile}
 <br><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;We learned that in the ion implantation process, to prevent the channeling effect of small particles such as Boron entering the silicon lattice structure, we use a method of tilting the wafer by about 7 degrees to make the silicon lattice structure a little more dense. In the above figure, it can be seen that when the implant beam enters, it imparts with a slope of about 7 degrees. Through this, we thought that we could implant the dopant material evenly throughout the sidewall, but if we tilt and implant it, it can be shadowed by PR as seen above, and only one side of the fin is doped, resulting in a shadow effect by the fin shape itself.<br><br>
@@ -25,14 +25,14 @@ categories: [Projects]
 
 
 <br>
-![alt text](assets/img/gyulab/fd2.PNG "image"){:.profile}
+![alt text](/assets/img/gyulab/fd2.PNG "image"){:.profile}
 <br>
-![alt text](assets/img/gyulab/fd3.PNG "image"){:.profile}
+![alt text](/assets/img/gyulab/fd3.PNG "image"){:.profile}
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;The angle of the PR pattern can usually be adjusted to about 30 to 60 degrees, and this angle can also be adjusted according to the desired process. As a method of adjusting this angle, the absolute rate of the photoresist may be adjusted. Looking at the graphs of Figure 2D and E, the remaining photoresist layer disappears at the point where the exposure dose is E100. Here, if the slope of Figure 2D is more steady, it means that the time for expose dose to reach E100 from E0 (initial dose) is faster, which means that PR will disappear faster. In order to reduce the arrival time from E0 to E100, it is necessary to increase the absolute percentage rate of PR. The PR disappears quickly while accommodating more lithography sources (KrF), thereby obtaining a lower angle PR pattern.
 <br>
 <br>
-![alt text](assets/img/gyulab/fd4.PNG "image"){:.profile}
+![alt text](/assets/img/gyulab/fd4.PNG "image"){:.profile}
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;As an example, a mask pattern of a smaller angle was obtained by using a higher absolute rate of PR used in Figure 2G compared to the PR used in Figure 2F.
 

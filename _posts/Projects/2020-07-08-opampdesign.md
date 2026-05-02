@@ -1,15 +1,13 @@
 ---
-layout: page
+layout: post
 title: PSPICE CMOS Op-amp Design
 date: "2020-07-08T14:28:52-05:00"
 description: "&nbsp; &nbsp; &nbsp; &nbsp;We designed the 2-stage CMOS Amplifier as above. When we design the amplifier, we should first set the differential amplifier (M1~M5) as input to reduce..."
 tags: [Undergrad_Projects]
-importance: 5
-category: projects
-img: assets/img/gyulab/ps1.png
+categories: [projects]
 ---
 
-![alt text](assets/img/gyulab/ps1.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ps1.png "image"){:.profile}
 
 &nbsp; &nbsp; &nbsp; &nbsp;We designed the 2-stage CMOS Amplifier as above. When we design the amplifier, we should first set the differential amplifier (M1~M5) as input to reduce the common noise. In this design, we used the MOS differential pair with active load with single-ended output. By the current mirror action of the active load, the extra current (I_M1-I_M2) due to the input fluctuation flows to the load, creates amplified voltage. The M1 and M2 are the PMOS, and the M3~M5 are the NMOS. Since the NMOS has the better property on the amplifying and the PMOS has better property to offer the current load, we arranged the MOSFET as above. Especially, M5 acts as a tail-current sink, which helps the stable operation of the differential amplifier (improving CMRR).
 <br><br>
@@ -20,9 +18,9 @@ img: assets/img/gyulab/ps1.png
 &nbsp; &nbsp; &nbsp; &nbsp;Until now, we finished designing the CMOS operational amplifier. Finally, we just make the inverting amplifier with the 7k and 500k resistors. Consequently, we can obtain an amplified signal. Let us see the simulation result for the verification of the specification of the designed circuit.
 <br><br>
 
-![alt text](assets/img/gyulab/ps2.png "image"){:.profile}
-![alt text](assets/img/gyulab/ps3.png "image"){:.profile}
-![alt text](assets/img/gyulab/ps4.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ps2.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ps3.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ps4.png "image"){:.profile}
 <br>
 <br>
 &nbsp; &nbsp; &nbsp; &nbsp;We verified the specifications of the designed circuit as above using PSPICE. The supply voltage V_DD and V_SS is equal to 3.3V and 0V respectively. We gave the 1mV amplitude with 1.65V common mode voltage and 1kHz frequency to the input voltage. The gain of the designed amplifier is 59.5, which is greater than 50. The peak-to-peak amplitude of the output voltage is 119mV, which is greater than 100mV. We calculated the power consumption as follows: P=VI=V_DD*ΣI_D=3.3V*3μA = 0.0099mW, which is about 2 order lower than the 1mW power budget. 

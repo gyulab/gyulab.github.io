@@ -7,7 +7,7 @@ description: "Note: Source code details have been omitted for security reasons. 
 tags: [2_SIGINT_Agency]
 ---
 
-![alt text](assets/img/general_research/38.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/38.PNG "image"){:.profile}<br>
 <div style="text-align: center; color: #b22222;">
   <b><p>Note: Source code details have been omitted for security reasons.</p></b>
 </div><br>
@@ -32,11 +32,11 @@ The paper "LoRa Signal Demodulation Using Deep Learning, a Time-Domain Approach"
 The proposed approach uses a convolutional neural network (CNN) to directly demodulate the LoRa signal in the time-domain. The CNN is trained on a large dataset of LoRa signals with different modulation indices and spreading factors, and is able to accurately estimate the symbol rate, spreading factor, and modulation index of the received signal.<br>
 
 Here are a diagram and datasets illustrating the utilized CNN to demodulate I/Q signal of LoRa symbols:
-![alt text](assets/img/general_research/39.PNG "image"){:.profile}<br>
-![alt text](assets/img/general_research/40.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/39.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/40.PNG "image"){:.profile}<br>
 
 First, we have to generate the data giving AWGN, frequency/time offset for the noise-robust demodulation. Here are the figure and MATLAB code to generate datasets:
-![alt text](assets/img/general_research/53.PNG "image"){:.profile}
+![alt text](/assets/img/general_research/53.PNG "image"){:.profile}
 <script src="https://gist.github.com/gyulab/13917ebf1f4b7a004bf3a859e4ed6f88.js"></script>
 <br>
 Now, let's process our data, i.e., bring the data from MATLAB and preprocess data to train our network:
@@ -56,13 +56,13 @@ The paper "Deep Learning-based Signal Detection for Uplink in LoRa-like Networks
 &nbsp;&nbsp;&nbsp;&nbsp;Unlike previous approach, the proposed approach uses two NNs: the first is based on Deep forward Neural Network (DFNN), and the second on convolutional neural network (CNN), to detect the uplink signals in the presence of interference and noise.<br>
 
 1. Deep Forward Neural Network (DFNN) <br>
-![alt text](assets/img/general_research/41.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/41.PNG "image"){:.profile}<br>
 As indicated in Fig. 3, the detector relies on a DFNN architecture with four hidden layers. The number of nodes in each hidden layer is 8M, 4M, 2M, and M. The input is the modulus of the de-chirped received samples after the FFT, yielding M input nodes. The output is the bits of the transmitted symbol, yielding SF output nodes. The ReLU function is used as the activation function in the hidden layers. The sigmoid function is applied to map the outputs to the  interval [0, 1] in the output layer. Batch normalization (BN) is embedded in the hidden layers to prevent overfitting.<br>
 Here is the implement the DFNN using Pytorch based on the paper:<br>
 <script src="https://gist.github.com/gyulab/18d726f398986b1c1894194ffbd007bf.js"></script>
 
 2. Convolutional Neural Network (CNN) <br>
-![alt text](assets/img/general_research/42.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/42.PNG "image"){:.profile}<br>
 Differently from the common feedforward architecture, CNN relies mainly on convolution operations within the socalled convolutional layers. For this architecture, the input is presented as an M ×M binary image containing the modulus plots of (4), as illustrated in Fig. 5. The M nodes at the output layer correspond to the M symbols to be detected. Here, we use a structure that includes two convolutional layers and two fully connected layers (cf. Fig. 4). We set M/4 and M/2 kernels for the first and second convolutional layers, respectively. The kernel size is set to 4 × 4 for both layers. A pooling layer follows convolution steps to reduce the feature map’s dimension while keeping the most relevant information. The filter used for the average pooling layer is of size 2 × 2, and the stride is 2. The output of the second pooling layer is flattened to be the input of the fully connected layer. The first fully connected layer has 4M nodes and the second one has 2M nodes. Similarly to the DFNN, the ReLU function is used as the activation function, and batch normalization is performed. For the output classification layer, we employ the softmax function. The CNN is trained to minimize the crossentropy loss between the output and the transmitted symbols.<br>
 
 Now, let's implement the CNN using Pytorch based on the paper:<br>
@@ -78,7 +78,7 @@ LoRa enables low signal-to-noise ratio (SNR) communication. However, the standar
 
 &nbsp;&nbsp;&nbsp;&nbsp;Taking the spectrogram of both amplitude and phase as input, they first design a mask-enabled Deep Neural Network (DNN) filter that extracts multi-dimension features to capture clean chirp symbols. Second, they develop a spectrogram-based DNN decoder to decode these chirp symbols accurately. Finally, they propose a generic packet demodulation system by incorporating a method that generates high-quality chirp symbols from received signals. <br>
 
-![alt text](assets/img/general_research/52.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/52.PNG "image"){:.profile}<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;The paper introduces a neural-enhanced demodulation approach for LoRa (Low Range) signals. The proposed approach uses a dual-channel spectrogram of the chirp symbol as input to a deep neural network (DNN) model for decoding the encoded data bits. The dual-DNN model consists of two modules: a noise filter and a spectrogram-based decoder. The noise filter aims to preserve the primary features of the chirp symbol by masking the raw spectrogram, and it contains multiple blocks of convolutional neural networks (CNN) and one long short-term memory (LSTM) layer. The masked spectrogram is then input to a CNN-based decoder to capture the spatial energy peak distribution and temporal staggered pattern for decoding. The DNN model is trained using two loss functions for back-propagation, one for the noise filter and one for the decoder, with the goal of minimizing the average loss on the training dataset. Data augmentation techniques are also employed to improve the generalization of the DNN model. Experimental results demonstrate that the proposed neural-enhanced demodulation approach outperforms existing methods in terms of demodulation accuracy for LoRa signals, especially under low signal-to-noise ratio (SNR) conditions. <br>
 <!--
@@ -87,7 +87,7 @@ Here is the demo code to build a network based on this paper:<br>
 -->
 
 # Eliminating Noise Floor leveraging K-means Clustering
-![alt text](assets/img/general_research/72.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/72.PNG "image"){:.profile}<br>
 Isolating actual data from noise in LoRa demodulation domain remains a formidable challenge. Enter K-Means Clustering, a data analysis technique that's proving transformative in this context. This section delves into integrating K-Means Clustering with LoRa signal detection, revealing its pivotal role in distinguishing signals from the noise floor.<br>
 
 LoRa devices transmit signals in brief bursts, comprising a preamble, data, and often trailing noise. This noise, a blend of electromagnetic interference and other spurious signals, can obscure genuine signals, leading to inaccurate energy detection. K-Means Clustering, an unsupervised machine learning method, takes center stage as a solution. It groups data points into clusters based on their similarities. 

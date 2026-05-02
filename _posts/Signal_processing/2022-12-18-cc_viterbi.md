@@ -45,12 +45,12 @@ e.g., <code>const_len = [5 4]</code> -> k= 2 -> Block length should be multiple 
 - <code>gen_poly</code>: Generating polynomial, k by n (k/n, k: input bit #, n: output bit #) matrix. Both octal and decimal are supported.<br>
 <br>
 - Sample run 1: <code>trellis = poly2trellis(3,[6 7])</code><br>
-![alt text](assets/img/general_research/18.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/18.PNG "image"){:.profile}<br>
 <center>Trellis Structure for Rate 1/2 Feedforward Convolutional Encoder</center><br>
 <code>const_len</code> = 3,  <code>gen_poly</code> = [6 7] in octal = [110 111] in binary = [x^2+x, x^2+x^1+1] polynomials
 <br>
 - Sample run 2: <code>trellis = poly2trellis([5 4],[23 35 0; 0 5 13])</code><br>
-![alt text](assets/img/general_research/19.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/19.PNG "image"){:.profile}<br>
 <center>Trellis Structure for 2/3 Feedforward Convolutional Encoder</center><br> 
  <code>const_len</code> = [5,4],  <code>gen_poly</code> = [23 35 0; 0 5 13] in octal: input bit >= 2 -> divide row by ;
 <br>
@@ -95,24 +95,24 @@ Receives a bit file. Performs viterbi decoding on each block of given length.
 <br>
 <b> Example 1) BER calculation of convolutional code </b><br>  
 Design the convolutional encoder and the corresponding Viterbi decoder be used for channel coding where there happens a 2%-error in the 100,000 transmitted bits. <br>
-![alt text](assets/img/general_research/23.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/23.PNG "image"){:.profile}<br>
 
 - Code
 <script src="https://gist.github.com/gyulab/d1f2fa6466dc11d7026e6899a36dc6ec.js"></script>
 <br>
 - Results Plot<br>
-![alt text](assets/img/general_research/22.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/22.PNG "image"){:.profile}<br>
   
 <br>
 <br>
 <b> Example 2) BER calculation on QAM by Simulink </b><br>  
 The Simulink model below can be used to simulate a QAM communication with a given convolutional encoder and the corresponding Viterbi decoder.<br>
-![alt text](assets/img/general_research/24.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/24.PNG "image"){:.profile}<br>
   
 Here are the attributes of the Simulink model:<br>
 <script src="https://gist.github.com/gyulab/08f0a1f8e99aa7184d8d2b583c77419f.js"></script>
 <br>
-![alt text](assets/img/general_research/25.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/25.PNG "image"){:.profile}<br>
 <br>
 <br>
 <b>References</b><br>

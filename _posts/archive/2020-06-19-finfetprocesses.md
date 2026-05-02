@@ -11,7 +11,7 @@ categories: [Projects]
 &nbsp;&nbsp;&nbsp;&nbsp;In general, as the size of the device decreases, performance improves and power consumption and cost decrease. However, as the size of the device became very small at less than 20 nm, the physical distance between the source-drain became shorter, which caused the gate of the device to lose control over the channel. The channel length of MOSFET has become very short, making it difficult to control the leakage current or drain current with the MOS of the 2D planar structure. Therefore, we began to study how to use multiple gates to better control the current flowing through the channel. As a result, 3D structure devices different from the existing MOS began to be developed to prevent short channel effects that increase proportionally as the channel length is short. The most famous device structure for the 22nm structure is FinFET. FinFET is named because the channel structure of the device is shaped like a fish's fin.
 
 <br>
-![alt text](assets/img/gyulab/ff1.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ff1.png "image"){:.profile}
 <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;FinFET devices can be largely divided into Bulk-FinFET and SOI-FinFET. It stands for SOI and Silicon-on-insulator, which reduces parasitic capacitance and improves isolation between devices by using a layered substrate such as silicon-insulator-silicon. Looking at the figure, it can be seen that the SOI-FinFET has a fin formed on the oxide and is completely isolated from the substrate, but Bulk-FinFET has a fin connected to the substrate bulk. Bulk's performance itself is good, but SOI is a more preferred FinFET because it gives a Subthreshold Swing characteristic related to the on speed of the Vth or device, and isolation with adjacent devices. However, due to the characteristics of the SOI substrate, the cost and the fin part and the silicon body part that act as the channel are insulated by the oxide layer, so there is also a heat conduction problem that cannot easily dissipate the heat of the channel when the device is driven.
 <br><br>
@@ -24,7 +24,7 @@ categories: [Projects]
 - Bulk-FinFET Process Flow
  
 <br>
-![alt text](assets/img/gyulab/ff2.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ff2.png "image"){:.profile}
 <br> 
 
 
@@ -33,14 +33,14 @@ I. Substrate & Lithography<br>
 &nbsp;&nbsp;&nbsp;&nbsp;A hard mask (e.g., Silicon Nitride) and a PR pattern are created on the p-substrate. However, the actual process is not simple. Problems such as Line Edge Roughness (LER) occur in the process of making a fin, which is a raised fin-shaped channel. This is a phenomenon that occurs during the Lithography process for pattern formation of pins, and when a very short pin is made, the surface of the pin is formed in a bumpy shape. In addition, even in a process such as a Stochastic process, this phenomenon has a problem that the performance of each produced device is different. This problem can be a big problem as the circuit configured when configuring the circuit using the device may not operate normally later.
  
 <br>
-![alt text](assets/img/gyulab/ff3.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ff3.png "image"){:.profile}
 <br> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;To solve this problem, the FinFET process requires more sophisticated lithography. The most important technique in fin patterning is spacer lithography (double patterning). Double Patterning methods include LELE (Litho-Etch-Litho-Etch) and SADP (Self-Aligned Double Patterning), which is a work of fineising patterns several times after forming a basic pattern, and LELE alternately draws patterns with Lithography. LELE can draw patterns twice, so it is more sophisticated but expensive, so memory mainly uses SADP. In the 10 nm process, it was further refined with SAQP (Quadraple-) and LELLE.
 
 
 <br>
-![alt text](assets/img/gyulab/ff4.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ff4.png "image"){:.profile}
 <br> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;I would like to go through the SADP process method more deeply. The above Figure shows the spacer lithography method. First, like the Poly-Si Dummy Gate seen in Chapter 1, an unused sacrificial layer is deposited and patterned. After that, to make the spacer, the mask is deposited and etch-back to make it look like number 3. Finally, the sacrificial layer is removed through etch. (Currently, SiO2 spacer is formed through ALD using TEOS with excellent mobility and step coverage on the surface.) If this method is created through multiple fins as shown on the previous page, 2^n lines can be created when performing the nth lithography. Fin pitch will also have a value of the pattern layer. In other words, through this method, it is possible to make a line width of 50 nm through lithography for the first time and a line width of 25 nm through the second lithography.
@@ -48,13 +48,13 @@ I. Substrate & Lithography<br>
 &nbsp;&nbsp;&nbsp;&nbsp;This spacer lithography technology has two main advantages. First, several fin pitches can be made through a single lithography process. As mentioned above, when the nth litho process is performed, 2^n lines can be made as shown in Figure below.
  
 <br>
-![alt text](assets/img/gyulab/ff5.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ff5.png "image"){:.profile}
 <br> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Another advantage is that the aforementioned Fin Edge Roughness can be improved. This is because, experimentally, the standard deviation of spacer lithography is smaller than that of conventional lithography. As we saw earlier, the Edge Roughness phenomenon was a Stochastic process, so it was possible to improve the Roughness of the Edge by reducing the standard deviation.
  
 <br>
-![alt text](assets/img/gyulab/ff6.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ff6.png "image"){:.profile}
 <br> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;In particular, in the 10-nano FinFET process, Lithography equipment should also be used with a shorter wavelength than the existing light source such as KrF (λ=248 nm, 0.18um process) and ArF ((λ=193 nm). It can be thought that it is similar to having to use a thinner mechanica pencil to draw a finer picture. For example, Samsung's 7nm process introduced ASML EUV equipment in the Netherlands with a wavelength of 13.5nm.
@@ -97,13 +97,13 @@ VIII. Source/Drain Doping (Raised S/D Epitaxy)<br>
 
  
 <br>
-![alt text](assets/img/gyulab/ff7.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ff7.png "image"){:.profile}
 <br> 
 
 - SOI-FinFET Process Flow
  
 <br>
-![alt text](assets/img/gyulab/ff8.png "image"){:.profile}
+![alt text](/assets/img/gyulab/ff8.png "image"){:.profile}
 <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;Looking at the figure, it can be seen that the process is almost similar to Bulk-FinFET. However, since the oxide layer is sandwiched between the wafer, it can be seen that the oxide acts as a stop layer when etching, and the substrate and the fin are isolated. For the isolation of FinFET, Shallow Trench Isolation (STI) is also used to prevent latch-up between N and P-bulk as well as SOI.
 <br><br><br><br>

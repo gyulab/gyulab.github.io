@@ -21,7 +21,7 @@ tags: [miscellaneous]
 7. EDS (Electrical Die Sorting)
 8. Packaging process
 
-![alt text](assets/img/process.gif "Profile Picture"){:.profile}
+![alt text](/assets/img/process.gif "Profile Picture"){:.profile}
 <center>Schematic illustration of semiconductor processes</center>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;It takes hundreds of these eight processes to make a semiconductor chip, which takes about three months to make a chip. Let us find out what processes photoresist and hydrogen fluoride are used.
@@ -30,13 +30,13 @@ tags: [miscellaneous]
 
 &nbsp;&nbsp;&nbsp;&nbsp;Photoresist can be thought of as the role of this sunglasses, and if you coat the light-responsive PR and irradiate the light, the circuit becomes a schematic on the silicon wafer. However, the Photo process is to engrave nano-scale circuits, and there is a difference that the light used is ultraviolet (UV) for sunglasses and stronger ultraviolet (EUV, Extreme-) for semiconductor processes. Stronger ultraviolet rays can draw fine circuits because E=hc/lambda, i.e. the wavelength is shorter. It will be easy to understand if you think of drawing with a pencil as drawing with a sharp.
 
-![alt text](assets/img/photo.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/photo.jpg "Profile Picture"){:.profile}
 <center>Light is irradiated and a circuit is engraved on a silicon plate.</center>
 <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Hydrogen fluoride (HF) is then used in the Etching process. The etching process literally means a process of cutting down, which is a process of forming a semiconductor circuit by engraving a pattern on a silicon wafer. It means that it is carved and carved according to the sketch made in the photo process mentioned earlier. Hydrogen fluoride (HF) plays a role such as a carving knife that allows the wafer to be cut down. Hydrogen fluoride is etched in various ways, such as melting silicon wafers along the drawings engraved with the photo process.
 
-![alt text](assets/img/etching.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/etching.jpg "Profile Picture"){:.profile}
 <center>Etching process. It can be seen that the more you go down from top to bottom, the more it has a pattern and is sharpened.</center>
 <br>
 
@@ -46,7 +46,7 @@ tags: [miscellaneous]
 
 &nbsp;&nbsp;&nbsp;&nbsp;Korea only began to invest in basic science in the 1980s. In other words, it has been less than 50 years since I invested in basic science. However, Japan and other countries have already invested in science since the 1800s, and advanced European countries have invested in science since the 17th century. Naturally, the basic science and technology skills of Japan and other countries are bound to be much higher. Korea's applied science and technology is one of the highest in the world. But the case of basic science is different. Japan has already had enough time to get the hydrogen fluoride or photoresist ratio from 0,1 to 0.2. Up to 100 all have experimental data. HF and PR based on this data are bound to have good quality. Korea has been invested heavily in applied engineering since the 1980s, but it is true that it has not received much investment in basic science, and it has not been long since it started investing. Japan from 0,1 to 0.2, ... We're going to do all the experiments up to 100 and we're going to do 5, 10, 15, ... It has very limited data. Naturally, there will be a difference in purity.
 
-![alt text](assets/img/invest.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/invest.jpg "Profile Picture"){:.profile}
 <center>Japan's investment in basic science is far ahead of Korea.</center>
 <br>
 

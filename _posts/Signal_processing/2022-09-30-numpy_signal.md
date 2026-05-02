@@ -30,7 +30,7 @@ Compute the one-dimensional discrete Fourier Transform. This function computes t
 
 <script src="https://gist.github.com/gyulab/e79a05f68201ca394bb0ac1fe95e48f0.js"></script><br>
 Result plot:<br>
-![alt text](assets/img/general_research/21.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/21.PNG "image"){:.profile}<br>
 
 
 <b>Bit File readout / write example </b><br>

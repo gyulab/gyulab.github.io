@@ -40,6 +40,24 @@ body.sticky-bottom-footer {
   }
 }
 
+.post article img,
+.post img.profile,
+article img.profile {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-hero {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 0 0 1.5rem 0;
+}
+
 // Content layout uses Bootstrap's grid system with responsive columns
 // Main content flows naturally through container-mt-5 and Bootstrap grid classes
 // See _layouts/default.liquid and _includes/projects.liquid for examples

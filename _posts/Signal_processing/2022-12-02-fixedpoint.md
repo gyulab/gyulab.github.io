@@ -7,7 +7,7 @@ description: "&nbsp;&nbsp;&nbsp;&nbsp;Fixed-point conversion is the process of c
 tags: [Research@Agency]
 ---
 
-![alt text](assets/img/general_research/12.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/12.PNG "image"){:.profile}<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Fixed-point conversion is the process of converting a floating-point number to a fixed-point number. A fixed-point number has a fixed number of digits to the right of the decimal point, while a floating-point number can have a variable number of digits.<br>
 

@@ -7,7 +7,7 @@ description: "&nbsp;&nbsp;&nbsp;&nbsp;Multithreading and multiprocessing are tec
 tags: [Research@Agency]
 ---
 
-![alt text](assets/img/general_research/35.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/35.PNG "image"){:.profile}<br>
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Multithreading and multiprocessing are techniques used to improve the performance of code by allowing multiple tasks to be executed simultaneously.<br>

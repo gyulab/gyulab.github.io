@@ -7,11 +7,11 @@ description: Orthogonal Frequency Division Multiplexing (OFDM) is a multi-carrie
 tags: [Research@Agency]
 ---
 
-![alt text](assets/img/general_research/61.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/61.PNG "image"){:.profile}<br>
 Orthogonal Frequency Division Multiplexing (OFDM) is a multi-carrier modulation technique that has significantly impacted modern data transmission. By distributing data bits across multiple subcarriers, OFDM transforms communication methods, effectively addressing challenges such as multipath propagation.<br>
 
 # Advantages of OFDM
-![alt text](assets/img/general_research/62.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/62.PNG "image"){:.profile}<br>
 OFDM effectively addresses the challenge of multipath propagation, a common issue in wireless communication. Unlike traditional single-carrier systems, where multipath signals can lead to Intersymbol Interference (ISI), OFDM's use of orthogonal subcarriers prevents such problems.<br>
 The division of data into parallel subcarriers allows OFDM to handle multipath propagation adeptly. Even if some subcarriers experience fading or interference due to multipath effects, the overall impact on the data stream remains minimal. This inherent capability eliminates ISI, ensuring data accuracy and communication reliability.<br>
 
@@ -29,7 +29,7 @@ The orthogonality of subcarriers in OFDM brings several key advantages:<br>
 
 
 # OFDM Modulation and Demodulation: Unveiling the FFT Process
-![alt text](assets/img/general_research/63.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/63.PNG "image"){:.profile}<br>
 Orthogonal Frequency Division Multiplexing (OFDM) relies on a process of modulation and demodulation, driven by Fast Fourier Transforms (FFTs). <br>
 1. Frequency Domain Encoding: At the heart of OFDM lies data coding in the frequency domain. Each data bit, denoted as b0, b1, b2, and so forth up to bN-1, is transformed into a symbol. These symbols are then sent through an Inverse Fast Fourier Transform (IFFT), transitioning them from the frequency domain to the time domain.
 2. IFFT: A Transformative Conversion: The IFFT, or Inverse Fast Fourier Transform yields the frequency-to-time conversion. One symbol at a time, the IFFT processes the encoded data, yielding a stream of time-domain data points: d0, d1, d2, d3, and so on up to dN-1.
@@ -42,7 +42,7 @@ Orthogonal Frequency Division Multiplexing (OFDM) relies on a process of modulat
 
 # Integrating the Cyclic Prefix: Countering Time Dispersion
 
-![alt text](assets/img/general_research/64.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/64.PNG "image"){:.profile}<br>
 An essential aspect of Orthogonal Frequency Division Multiplexing (OFDM) is the utilization of a "cyclic prefix" (CP). This element plays a crucial role in mitigating the effects of time dispersion within the communication channel.<br>
 The cyclic prefix acts as a time-domain buffer that enhances robustness in the presence of varying propagation delays and channel complexities. During symbol transitions, the cyclic prefix introduces time guards, counteracting transient distortions through overlap-save conversion.<br>
 Two primary functions highlight the importance of the cyclic prefix:
@@ -52,10 +52,10 @@ Two primary functions highlight the importance of the cyclic prefix:
 # Challenges and Solutions in OFDM: Carrier Frequency Offset (CFO) and Peak-to-Average Power Ratio (PAPR)
 Orthogonal Frequency Division Multiplexing (OFDM) revolutionized data transmission, but it isn't immune to challenges. Two critical issues are Carrier Frequency Offset (CFO) and Peak-to-Average Power Ratio (PAPR). Here, we delve into these hurdles and the strategies that address them.
 
-![alt text](assets/img/general_research/65.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/65.PNG "image"){:.profile}<br>
 1. Carrier Frequency Offset (CFO): CFO, or deviations in carrier frequency, can distort OFDM's orthogonality. As a result, subcarriers lose their perfect alignment, causing intercarrier interference. The culprit is often Doppler shifts due to relative motion between transmitter and receiver, or local oscillator inaccuracies.<br>
 Introducing known pilot or training symbols within the OFDM frame enables accurate estimation of the CFO. By observing the shifts in these symbols, the receiver can calculate and compensate for the carrier frequency offset, thereby restoring orthogonality.
-![alt text](assets/img/general_research/66.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/66.PNG "image"){:.profile}<br>
 2. Peak-to-Average Power Ratio (PAPR): PAPR refers to the disparity between the highest and average power levels of an OFDM signal. High PAPR strains power amplifiers, leading to inefficiency and distortion, affecting overall performance.
 Solutions for PAPR are discussed below:<br>
 - Clipping: Truncate the signal peaks beyond a certain threshold. While effective, this method may introduce in-band distortion and out-of-band emissions.

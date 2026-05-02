@@ -6,10 +6,10 @@ description: "&nbsp;&nbsp;&nbsp;&nbsp;Until last time, we learned why the device
 tags: [5_HSNL_KAIST]
 ---
 
-![alt text](assets/img/mosfet/s1.png "image"){:.profile}
+![alt text](/assets/img/mosfet/s1.png "image"){:.profile}
 &nbsp;&nbsp;&nbsp;&nbsp;Until last time, we learned why the device is made small and the Short Channel Effect that occurs when it is made small. It is important to make the device smaller in terms of yield and performance, but by making it smaller and smaller, abnormal characteristics begin to appear (SCE), and normal switching becomes impossible. Let's take a look at the technology to overcome this Short Channel Effect.
 <br>
-![alt text](assets/img/mosfet/s2.png "image"){:.profile}
+![alt text](/assets/img/mosfet/s2.png "image"){:.profile}
 
 <br>
 
@@ -17,8 +17,8 @@ tags: [5_HSNL_KAIST]
 <br>
 <br>
 
-![alt text](assets/img/mosfet/s3.png "image"){:.profile}
-![alt text](assets/img/mosfet/s4.gif "image"){:.profile}
+![alt text](/assets/img/mosfet/s3.png "image"){:.profile}
+![alt text](/assets/img/mosfet/s4.gif "image"){:.profile}
 
 <br>
 
@@ -31,15 +31,15 @@ tags: [5_HSNL_KAIST]
 
 <br>
 
-![alt text](assets/img/mosfet/m10.PNG "image"){:.profile}
-![alt text](assets/img/mosfet/s5.png "image"){:.profile}
+![alt text](/assets/img/mosfet/m10.PNG "image"){:.profile}
+![alt text](/assets/img/mosfet/s5.png "image"){:.profile}
 <br>
   
 &nbsp;&nbsp;&nbsp;&nbsp; It's the Short Channel Effect that we saw last time. It is important to make the device smaller in terms of yield and performance, but the channel is shortened by making it smaller, which causes the Threshold Voltage to roll up, and results in being opened when switching is required, which cannot function as a transistor. Now let's find out how we overcame the Short Channel Effect for each nano process.
 <br>
 
-![alt text](assets/img/mosfet/s6.png "image"){:.profile}
-![alt text](assets/img/mosfet/s7.png "image"){:.profile}
+![alt text](/assets/img/mosfet/s6.png "image"){:.profile}
+![alt text](/assets/img/mosfet/s7.png "image"){:.profile}
 <br>
  
 &nbsp;&nbsp;&nbsp;&nbsp;The 250 nm process was first commercialized in 1996, and in 1987, an engineer named Kasai of the NEC Research Team in Japan succeeded in demostrate. Kasai overcame the Short Channel Effect through the following method.
@@ -56,7 +56,7 @@ IBM's Bijan Davari published the structure of the 250 nm dual-gate CMOS in his p
 
 <br>
 
-![alt text](assets/img/mosfet/s8.png "image"){:.profile}
+![alt text](/assets/img/mosfet/s8.png "image"){:.profile}
 
 <br>
  
@@ -64,7 +64,7 @@ IBM's Bijan Davari published the structure of the 250 nm dual-gate CMOS in his p
 
 <br>
 
-![alt text](assets/img/mosfet/s9.png "image"){:.profile}
+![alt text](/assets/img/mosfet/s9.png "image"){:.profile}
 
 <br>
 

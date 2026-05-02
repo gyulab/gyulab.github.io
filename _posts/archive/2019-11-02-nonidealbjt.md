@@ -25,16 +25,16 @@ Now let's take a look at these six nonideal effects in a precautionary way.
 
 
 
-![alt text](assets/img/0046.jpg "Profile Picture"){:.profile}
-![alt text](assets/img/0047.jpg "Profile Picture"){:.profile}
-![alt text](assets/img/0048.jpg "Profile Picture"){:.profile}
-![alt text](assets/img/0049.jpg "Profile Picture"){:.profile}
-![alt text](assets/img/0050.jpg "Profile Picture"){:.profile}
-![alt text](assets/img/0051.jpg "Profile Picture"){:.profile}
-![alt text](assets/img/0052.jpg "Profile Picture"){:.profile}
-![alt text](assets/img/0053.jpg "Profile Picture"){:.profile}
-![alt text](assets/img/0054.jpg "Profile Picture"){:.profile}
-![alt text](assets/img/0055.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0047.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0047.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0048.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0049.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0050.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0051.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0052.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0053.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0055.jpg "Profile Picture"){:.profile}
+![alt text](/assets/img/0055.jpg "Profile Picture"){:.profile}
 
 <br>
 [References: Neamen's Semiconductor Physics and and Devices, 4th Ed.]

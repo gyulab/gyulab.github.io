@@ -6,9 +6,20 @@ nav: false
 tags: ""
 date: 2025-06-10
 comments: false
+_styles: >
+  .about-hero {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0 0 1.5rem 0;
+  }
 ---
 
-![alt text](assets/img/san-francisco.JPG "image")
+<img class="about-hero" src="/assets/img/gyulab/profile.jpg" alt="Gyujun Jeong profile photo">
 
 ## About Me
 * <b>My name is Gyujun Jeong.</b>

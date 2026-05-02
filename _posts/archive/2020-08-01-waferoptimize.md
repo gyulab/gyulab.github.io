@@ -7,28 +7,28 @@ description: "&nbsp; &nbsp; &nbsp; &nbsp;We looked at Strain Engineering, the mo
 categories: [Projects]
 ---
 
-![alt text](assets/img/gyulab/wo1.jpg "image"){:.profile}
+![alt text](/assets/img/placeholder-big.jpg "image"){:.profile}
 <br>
 &nbsp; &nbsp; &nbsp; &nbsp;We looked at Strain Engineering, the most widely used Mobility Enhancement Technique in previous posts. In this posting, we would like to learn about the technology to improve mobility using Wafer, which is the most basic when making semiconductors.
 <br>
-![alt text](assets/img/gyulab/wo2.png "image"){:.profile}
+![alt text](/assets/img/placeholder-big.jpg "image"){:.profile}
 <br>
 
 &nbsp; &nbsp; &nbsp; &nbsp;I would like to briefly summarize the interesting contents I learned about Wafer orientation. (111) orientation can contain the largest number of atom per unit area as shown in the figure. Conversely, (100) orientation may contain the least atom per unit area. However, (111) orientation reduces the surface quality by forming an interface trap due to the large amount of dangling bonds on the surface. Because the CMOS process is based on the surface current flow, it must be fabricated in (100) wafer. On the other hand, in the case of the bipolar transistor process, the surface current is not important because it has a subjacent current flow. Therefore, all orientation is possible, but the Czochralskim method uses the easiest and cheapest (111) wafer. In addition, orientation can be seen in the shape of Wafer. Based on the primary flat, if the secondary flat forms 90 degrees, it is (100) wafer, and if it forms a 45 degree angle, it is (111) wafer.
 <br><br>
 <br>
-![alt text](assets/img/gyulab/wo3.png "image"){:.profile}
+![alt text](/assets/img/placeholder-big.jpg "image"){:.profile}
 <br>
 
 &nbsp; &nbsp; &nbsp; &nbsp;Now let's find out how to improve mobility with Wafer orientation. The mobility of the electron and hole carriers varies depending on the orientation, and it can be seen from the following figure that the mobility improves from 110 to 100 orientation, and the mobility of the hole increases from 100 to 110 orientation, so that there is a trade-off relationship between the two carriers.
 <br>
 <br>
-![alt text](assets/img/gyulab/wo4.png "image"){:.profile}
+![alt text](/assets/img/placeholder-big.jpg "image"){:.profile}
 <br>
 &nbsp; &nbsp; &nbsp; &nbsp;Due to this tendency, the drain current of NMOS decreases and the drain current of PMOS increases as it goes from (100) to (110). It is known that the reason why the mobility of the carrier changes according to the surface direction is due to the difference between the effective mass and the surface roughness scattering in each side. 
 <br>
 <br>
-![alt text](assets/img/gyulab/wo5.png "image"){:.profile}
+![alt text](/assets/img/placeholder-big.jpg "image"){:.profile}
 <br>
 
 &nbsp; &nbsp; &nbsp; &nbsp;Not only Wafer orientation but also MOS channel orientation affects mobility. Looking at the above figure, it can be seen that for MOSFETs with <100> and <110> channel directions manufactured on a substrate with (100) wafer orientation, the mobility of electrons is hardly affected by channel orientation, but especially in the case of hole mobility, it was improved at <110> channel orientation. (110) In the case of manufacturing on a substrate with wafer orientation, it was possible to obtain mobility improvement in <100> channel for electron and <110> channel orientation for hole.
@@ -37,13 +37,13 @@ categories: [Projects]
 
 
 <br>
-![alt text](assets/img/gyulab/wo6.png "image"){:.profile}
+![alt text](/assets/img/placeholder-big.jpg "image"){:.profile}
 <br>
 
 &nbsp; &nbsp; &nbsp; &nbsp;Looking at the above figure, it can be seen that eSiGe and tensioned liners, i.e., intensive stress enhancement.
 <br>
 <br>
-![alt text](assets/img/gyulab/wo7.png "image"){:.profile}
+![alt text](/assets/img/placeholder-big.jpg "image"){:.profile}
 <br>
 &nbsp; &nbsp; &nbsp; &nbsp;As a result, it can be seen that PMOS and hole mobility can be improved when NMOS is fabricated in plane (100) and PMOS in plane (110).
 <br>

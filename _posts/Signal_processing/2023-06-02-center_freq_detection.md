@@ -7,10 +7,10 @@ description: 8PSK (8-Phase Shift Keying) is a digital modulation scheme used in 
 tags: [Research@Agency]
 ---
 
-![alt text](assets/img/general_research/57.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/57.PNG "image"){:.profile}<br>
 8PSK (8-Phase Shift Keying) is a digital modulation scheme used in communication systems to transmit data over radio frequency or optical channels. It is an extension of the PSK modulation, where instead of two or four phase states (0 and π), it uses eight equally spaced phase states around a unit circle (0, π/4, π/2, 3π/4, π, 5π/4, 3π/2, and 7π/4). The eight possible phase states allow for encoding a larger number of bits per symbol compared to binary PSK modulation. This results in higher data transmission rates and increased spectral efficiency. Its utilization can be found in satellite communication, digital broadcasting, wireless LANs, mobile communication systems, and digital modems, among others.<br>
 
-![alt text](assets/img/general_research/54.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/54.PNG "image"){:.profile}<br>
 
 ;Detecting the highly accurate center frequency of an 8PSK signal is essential for precise demodulation and reliable data recovery. It enables accurate phase detection, symbol recovery, and carrier frequency estimation. It also ensures optimal interference rejection, spectral efficiency, and compatibility with receiving systems. Deviations in the center frequency can lead to errors, degraded performance, and interference with neighboring signals. Overall, accurate center frequency detection is vital for achieving high-quality demodulation and maximizing the effectiveness of 8PSK communication systems.<br>
 To accurately detect the center frequency of an 8PSK signal, a careful analysis of the 8th power spectrum becomes essential. This article explores the process of identifying two distinct peaks in the 8th power spectrum and leveraging their spacing to determine the center frequency of an 8PSK signal.<br>
@@ -18,20 +18,20 @@ To accurately detect the center frequency of an 8PSK signal, a careful analysis 
 # Understanding the 8th Power Spectrum
 The power spectrum is a valuable tool for analyzing the spectral characteristics of a signal. In the context of 8PSK signals, the 8th power spectrum exhibits distinct peaks that provide key insights into the underlying modulation scheme. Each peak in the 8th power spectrum corresponds to the frequency associated with a specific phase state of the 8PSK signal. By examining these peaks, we can infer important information about the signal, including the center frequency. For instance, the 4th power spectrum of a QPSK signal below reveals a multitude of distinct peaks, each corresponding to a specific phase state of the modulation scheme.<br>
 
-![alt text](assets/img/general_research/55.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/55.PNG "image"){:.profile}<br>
 
 Theoretically, when observing the m-th power spectrum of an m-ary PSK modulated signal, such as the 8th power spectrum of 8PSK or the 4th power spectrum of 4PSK, we expect to observe distinct peaks, as illustrated in the following figure:<br>
-![alt text](assets/img/general_research/58.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/58.PNG "image"){:.profile}<br>
 
 # Identifying the Distinct Peaks
 To detect the center frequency of an 8PSK signal, we focus on identifying two distinct peaks in the 8th power spectrum. These peaks are separated by a distance equal to twice the baud rate of the signal. By leveraging this property, we can accurately determine the center frequency. The baud rate represents the rate at which symbols are transmitted, and its doubling in this context ensures that we capture the phase transitions necessary for reliable detection.<br>
 
-![alt text](assets/img/general_research/59.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/59.PNG "image"){:.profile}<br>
 To track the carrier one first needs to at least roughly estimate the frequency of the signal. This is easy for MSK and OQPSK at least. It consists of producing a nonlinearity and then performing a FFT (Fast Fourier Transform). Simply squaring the audio signal and taking the FFT results in the following figure. As can be seen there is no peak where the carrier is. However, there are two peaks evenly spaced around where the carrier would be. Taking the average of the two peaks you obtain the carrier frequency of the transmission. Here, the difference between the two peaks are 10500bps, hence the baud rate is 5250 baud.
 
 However, The spectrum of an 8PSK signal is more challenging to detect distinct peaks compared to BPSK and QPSK due to the increased number of phase states, which results in a higher density of peaks and a greater likelihood of overlapping frequencies in the power spectrum, as you can see in the below figure:<br>
 
-![alt text](assets/img/general_research/56.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/56.PNG "image"){:.profile}<br>
 
 Due to the lack of clear peak identification, manually selecting peaks in the spectrum of an 8PSK signal is nearly impossible. To overcome this challenge, it is crucial to focus on identifying relatively distinct peaks that are separated by a distance equal to twice the baud rate of the signal. This approach ensures reliable detection of the desired peaks in the spectrum.<br>
 
@@ -51,7 +51,7 @@ Matched filtering is the first step in demodulating a PSK signal. It involves co
 ii. Symbol Timing Synchronization:<br>
 Symbol timing synchronization is essential for accurately sampling the received signal at the symbol boundaries. It involves estimating the optimal sampling instants to correctly demodulate the symbols. Timing synchronization ensures that each symbol is sampled precisely, minimizing timing errors and improving the overall demodulation performance.<br>
 
-![alt text](assets/img/general_research/60.PNG "image"){:.profile}<br>
+![alt text](/assets/img/general_research/60.PNG "image"){:.profile}<br>
 
 iii.  Carrier Frequency Synchronization:<br>
 Carrier frequency synchronization is necessary to compensate for any frequency offset between the received signal and the local oscillator at the receiver. By estimating and correcting the frequency offset, carrier frequency synchronization ensures that the receiver is operating at the correct frequency, allowing for accurate demodulation of the PSK signal.<br>
