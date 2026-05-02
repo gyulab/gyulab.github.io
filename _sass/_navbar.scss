@@ -17,11 +17,11 @@
   border: 1px solid var(--global-divider-color);
 
   a:not(.active) {
-    color: var(--global-text-color);
+    color: v.$georgia-tech-gold;
   }
 
   a:hover {
-    color: var(--global-hover-color);
+    color: v.$georgia-tech-gold;
   }
 
   .dropdown-divider {
@@ -30,17 +30,17 @@
 }
 
 .dropdown-item {
-  color: var(--global-text-color);
+  color: v.$georgia-tech-gold;
 
   &:hover {
-    color: var(--global-hover-color);
+    color: v.$georgia-tech-gold;
     background-color: var(--global-bg-color);
   }
 }
 
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: var(--global-hover-color);
+  background-color: v.$georgia-tech-gold;
   color: var(--global-hover-text-color) !important;
 
   &:hover {
@@ -56,24 +56,24 @@
   }
 
   .navbar-brand {
-    color: var(--global-text-color);
+    color: v.$georgia-tech-gold;
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color);
+    color: v.$georgia-tech-gold;
 
     &:hover {
-      color: var(--global-hover-color);
+      color: v.$georgia-tech-gold;
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: var(--global-theme-color);
+    color: v.$georgia-tech-gold;
 
     &:hover {
-      color: var(--global-hover-color);
+      color: v.$georgia-tech-gold;
     }
   }
 
@@ -182,9 +182,9 @@
   padding: 0;
   border: 0;
   background-color: inherit;
-  color: var(--global-text-color);
+  color: v.$georgia-tech-gold;
 
   &:hover {
-    color: var(--global-hover-color);
+    color: v.$georgia-tech-gold;
   }
 }
