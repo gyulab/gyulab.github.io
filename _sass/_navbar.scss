@@ -17,11 +17,11 @@
   border: 1px solid var(--global-divider-color);
 
   a:not(.active) {
-    color: v.$georgia-tech-gold;
+    color: v.$georgia-tech-gold !important;
   }
 
   a:hover {
-    color: v.$georgia-tech-gold;
+    color: v.$georgia-tech-gold !important;
   }
 
   .dropdown-divider {
@@ -30,10 +30,10 @@
 }
 
 .dropdown-item {
-  color: v.$georgia-tech-gold;
+  color: v.$georgia-tech-gold !important;
 
   &:hover {
-    color: v.$georgia-tech-gold;
+    color: v.$georgia-tech-gold !important;
     background-color: var(--global-bg-color);
   }
 }
@@ -56,24 +56,24 @@
   }
 
   .navbar-brand {
-    color: v.$georgia-tech-gold;
+    color: v.$georgia-tech-gold !important;
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: v.$georgia-tech-gold;
+    color: v.$georgia-tech-gold !important;
 
     &:hover {
-      color: v.$georgia-tech-gold;
+      color: v.$georgia-tech-gold !important;
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: v.$georgia-tech-gold;
+    color: v.$georgia-tech-gold !important;
 
     &:hover {
-      color: v.$georgia-tech-gold;
+      color: v.$georgia-tech-gold !important;
     }
   }
 
@@ -182,9 +182,21 @@
   padding: 0;
   border: 0;
   background-color: inherit;
-  color: v.$georgia-tech-gold;
+  color: v.$georgia-tech-gold !important;
+
+  .nav-link,
+  i {
+    color: v.$georgia-tech-gold !important;
+  }
 
   &:hover {
-    color: v.$georgia-tech-gold;
+    color: v.$georgia-tech-gold !important;
   }
+}
+
+#light-toggle,
+#light-toggle i,
+#light-toggle .fa-half-sun-moon::before,
+#light-toggle .fa-half-sun-moon::after {
+  color: v.$georgia-tech-gold !important;
 }
