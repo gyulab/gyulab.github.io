@@ -61,7 +61,7 @@
 
 
 
-  <link rel="shortcut icon" href="/assets/img/irps.png?v=b263594b6ed74c360c5f914759f44fbb">
+  <link rel="shortcut icon" href="/assets/img/logo.png?v=8163834d9a630e012d47c5bf38deba71">
 
 <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
 <link rel="canonical" href="https://gyulab.github.io/blog/2020/backendprocess/">
@@ -190,10 +190,6 @@
             
           
             
-          
-            
-          
-            
               
                 
                 <li class="nav-item active">
@@ -202,6 +198,16 @@
                   </a>
                 </li>
               
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -221,18 +227,7 @@
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/projects/">projects
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
+                  <a class="nav-link" href="/cv/">CV
                     
                   </a>
                 </li>
@@ -313,86 +308,86 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <p><img src="assets/img/mosfet/e1.jpg" alt="alt text" title="image" class="profile">
+      <p><img src="/assets/img/mosfet/e1.jpg" alt="alt text" title="image" class="profile">
     Semiconductors were manufactured through the semiconductor process introduced in the previous posting. However, semiconductors that are simply lumps of silicon do not perform their functions. Today, let’s look at the backend design, which is a subsequent process.
 <br>
-<img src="assets/img/mosfet/e2.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e2.jpg" alt="alt text" title="image" class="profile">
     A frontend is a process at the Transistor level as in the previous posting method. A backend is a process of making chips with passive devices such as Interconnection or L or C.
 <br></p>
 
-<p><img src="assets/img/mosfet/e3.jpg" alt="alt text" title="image" class="profile">
+<p><img src="/assets/img/mosfet/e3.jpg" alt="alt text" title="image" class="profile">
     First, we must contact the plug that will act as the electrode of the designed transistor. Let’s take a closer look at this process.
 <br>
-<img src="assets/img/mosfet/e5.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e5.jpg" alt="alt text" title="image" class="profile">
     First, cut the thick oxide layer through etching.
-<img src="assets/img/mosfet/e6.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e6.jpg" alt="alt text" title="image" class="profile">
     Then, cover the titanium layer with low contact resistance.
-<img src="assets/img/mosfet/e7.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e7.jpg" alt="alt text" title="image" class="profile">
     TiN acts as a barrier, preventing the metal to be pluggable from diffusing into oxide.
-<img src="assets/img/mosfet/e8.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e8.jpg" alt="alt text" title="image" class="profile">
     Thereafter, a tungsten (W) to serve as a plug is covered through a CVD deposition process.
 <br>
 <br>
     Continuous representation of this process results in the following.
-<img src="assets/img/mosfet/e2d.gif" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e2d.gif" alt="alt text" title="image" class="profile">
     If this process is represented by 3D structure, it will be as follows.
-<img src="assets/img/mosfet/e3d.gif" alt="alt text" title="image" class="profile"></p>
+<img src="/assets/img/mosfet/e3d.gif" alt="alt text" title="image" class="profile"></p>
 
 <p><br>
-<img src="assets/img/mosfet/e11.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e11.jpg" alt="alt text" title="image" class="profile">
     Since we installed the plug, let’s find out about the interconnection line that will connect these plugs organically.
 <br>
-<img src="assets/img/mosfet/e12.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e12.jpg" alt="alt text" title="image" class="profile">
     As shown in the figure above, the interconnect line layer can be stacked upward on 9-10 layers or more, and serves as a channel for exchanging signals between transistors.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e13.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e13.jpg" alt="alt text" title="image" class="profile">
     The most important term in this integrated circuit is RC product, which increases the delay. Delay can be minimized by adjusting R and C.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e14.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e14.jpg" alt="alt text" title="image" class="profile">
     First, how do we reduce the Capacity(C)? From a material mechanical point of view, the dielectric constant of SiO2 in general is 3.9e. Looking at SiOC reduces polarization, which reduces K. This allows the reduce of C. In another way, it is possible to reduce C by introducing Airgap.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e15.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e15.jpg" alt="alt text" title="image" class="profile">
     How can Resistance(R) can be reduced? You can use Cu or Al with the same resistance. Let’s take a look at the bottom information below.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e16.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e16.jpg" alt="alt text" title="image" class="profile">
     Since Al and Cu have different physical properties as described above, the metal wiring process of the two is completely different. The wiring process of aluminum is called RIE, and the wiring process of copper is called Damascene process. The term asterisked here may be unfamiliar, so let’s find out.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e17.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e17.jpg" alt="alt text" title="image" class="profile">
     I summarized the terms above. Moving on to the main point, let’s find out the difference between RIE and Damascene processes.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e18.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e18.jpg" alt="alt text" title="image" class="profile">
     The key difference between the two processes is in order. The RIE process forms oxide after etching, and since the Damascene process is difficult to etch as shown in the above table, there is a sequence of forming oxide, etching, and polishing the protruding part. It’s easy to think that the two are in the opposite order.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e19.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e19.jpg" alt="alt text" title="image" class="profile">
     Let’s find out more about how to deposit the Copper. The Damascene process can be considered as an inlaid technique, and when making pottery, it uses a technique of digging grooves first, filling with other materials, baking, and grinding the surface, which also has the same process.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e20.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e20.jpg" alt="alt text" title="image" class="profile">
     The surface grinding technique is called the planarization process, and the surface can be polished through various processes such as Thremal Flow, Etch back, and CMP.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e22.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e22.jpg" alt="alt text" title="image" class="profile">
     Among R, L, and C of passive devices, there has been no mention of L so far, so let’s briefly learn how to use an inductor. Intel’s Zheng researchers have been extracting papers, which can improve the quality factor by using Inductor.</p>
 
 <p><br>
 <br>
     So far, the metalization process, i.e., metal wiring process has been investigated. Now, the remaining processes are the EDS process and the packaging process, and we’ll talk about this later, and let’s just briefly talk about it now.</p>
 
-<p><img src="assets/img/mosfet/e23.jpg" alt="alt text" title="image" class="profile">
-<img src="assets/img/mosfet/e24.jpg" alt="alt text" title="image" class="profile">
-<img src="assets/img/mosfet/e25.jpg" alt="alt text" title="image" class="profile"></p>
+<p><img src="/assets/img/mosfet/e23.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e24.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e25.jpg" alt="alt text" title="image" class="profile"></p>
 
 <p>    The EDS process is a yield improvement process, and the packaging process protects the chip from the outside and packages it so that signals can be exchanged. The detailed sequence can be found by looking at the picture above.</p>
 
 <p><br>
-<img src="assets/img/mosfet/e26.jpg" alt="alt text" title="image" class="profile">
+<img src="/assets/img/mosfet/e26.jpg" alt="alt text" title="image" class="profile">
     Through these complex and diverse processes, one IC Chip can finally be produced.</p>
 
 

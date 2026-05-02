@@ -17,12 +17,12 @@
   
   
     
-      LTSpice Circuit Designing Project | Gyujun Jeong
+      PSPICE CMOS Op-amp Design | Gyujun Jeong
     
   
 </title>
 <meta name="author" content="Gyujun Jeong">
-<meta name="description" content="Click to view the .asc file (LTSpice Simulation File)! LTSpice Manual Click to view the document if the browser does not support PDF Viewer. Designing Differential Amplifier - Des...">
+<meta name="description" content="       We designed the 2-stage CMOS Amplifier as above. When we design the amplifier, we should first set the differential amplifier (M1~M5) as input to reduce...">
 
   <meta name="keywords" content="Gyujun Jeong, electrical engineering, Georgia Tech, AI for Semiconductors, physics-informed machine learning, memory devices">
 
@@ -61,10 +61,10 @@
 
 
 
-  <link rel="shortcut icon" href="/assets/img/irps.png?v=b263594b6ed74c360c5f914759f44fbb">
+  <link rel="shortcut icon" href="/assets/img/logo.png?v=8163834d9a630e012d47c5bf38deba71">
 
 <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
-<link rel="canonical" href="https://gyulab.github.io/projects/ee403_ltspice/">
+<link rel="canonical" href="https://gyulab.github.io/blog/2020/opampdesign/">
 
 
   <!-- Dark Mode -->
@@ -190,18 +190,24 @@
             
           
             
-          
-            
-          
-            
               
                 
-                <li class="nav-item ">
+                <li class="nav-item active">
                   <a class="nav-link" href="/blog/">blog
                     
                   </a>
                 </li>
               
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -220,21 +226,8 @@
             
               
                 
-                <li class="nav-item active">
-                  <a class="nav-link" href="/projects/">projects
-                    
-                      <span class="sr-only">(current)</span>
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
                 <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
+                  <a class="nav-link" href="/cv/">CV
                     
                   </a>
                 </li>
@@ -279,46 +272,149 @@
       
         
 
+
+
+
+
+
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">LTSpice Circuit Designing Project</h1>
-    <p class="post-description">Click to view the .asc file (LTSpice Simulation File)! LTSpice Manual Click to view the document if the browser does not support PDF Viewer. Designing Differential Amplifier - Des...</p>
+    <h1 class="post-title">PSPICE CMOS Op-amp Design</h1>
+    <p class="post-meta">
+      Created on July 08, 2020
+      
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <a href="/blog/2020"> <i class="fa-solid fa-calendar fa-sm"></i> 2020 </a>
+      
+      
+          ·  
+        
+          
+            <a href="/blog/tag/undergrad-projects"> <i class="fa-solid fa-hashtag fa-sm"></i> Undergrad_Projects</a>
+          
+          
+        
+      
+
+      
+          ·  
+        
+          
+            <a href="/blog/category/projects"> <i class="fa-solid fa-tag fa-sm"></i> projects</a>
+          
+          
+        
+      
+    </p>
   </header>
 
-  <article>
-    <center><a href="https://github.com/gyulab/gyulab.github.io/tree/master/_posts/code/ltspice" target="_blank" rel="external nofollow noopener">Click to view the .asc file (LTSpice Simulation File)!</a></center>
-<p><br><br></p>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p><img src="/assets/img/gyulab/ps1.png" alt="alt text" title="image" class="profile"></p>
 
-<p><b>LTSpice Manual</b><br>
-<a href="https://drive.google.com/file/d/1fl6qMCZzgI0OTYU5zf838wo_bJ_lDEaa/preview" target="_blank" rel="external nofollow noopener">Click to view the document if the browser does not support PDF Viewer.</a><br><br></p>
-<iframe src="https://drive.google.com/file/d/1fl6qMCZzgI0OTYU5zf838wo_bJ_lDEaa/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
+<p>       We designed the 2-stage CMOS Amplifier as above. When we design the amplifier, we should first set the differential amplifier (M1~M5) as input to reduce the common noise. In this design, we used the MOS differential pair with active load with single-ended output. By the current mirror action of the active load, the extra current (I_M1-I_M2) due to the input fluctuation flows to the load, creates amplified voltage. The M1 and M2 are the PMOS, and the M3~M5 are the NMOS. Since the NMOS has the better property on the amplifying and the PMOS has better property to offer the current load, we arranged the MOSFET as above. Especially, M5 acts as a tail-current sink, which helps the stable operation of the differential amplifier (improving CMRR).
+<br><br>
+       Then, we should place the amplifying stage, such as the common-source (CS) stage or the MOS inverter (D-D connection). We used the CS stage to the second amplification stage since the CS stage is the most general amplifying stage between the 3 MOS topologies (CS, CG, and SF).
+<br><br>
+       Now, the 2-stage amplifying stages are designed. To operate the amplifier, we should give bias to each stage. Hence, we used the current mirror to give bias to each stage. To make the I_ref as a golden current (current source which does not depend on the bias condition or temperature variation), we placed the DC current source above M6. By current mirror action, M5, M7 MOS current sources gives the exactly same reference current to the differential and inverter stage. Note that we should make the drain and the gate of M6 as a diode-connection to prevent the floating node. Then, we placed some coupling capacitors to obtain the AC-wise signal.
+<br><br>
+       Until now, we finished designing the CMOS operational amplifier. Finally, we just make the inverting amplifier with the 7k and 500k resistors. Consequently, we can obtain an amplified signal. Let us see the simulation result for the verification of the specification of the designed circuit.
+<br><br></p>
 
-<p><b>Designing Differential Amplifier</b><br></p>
-<ul>
-  <li>Design Description<br>
-<a href="https://drive.google.com/file/d/10j_MWERRigE3AOJ5yxEsBiehIFo8fM10/preview" target="_blank" rel="external nofollow noopener">Click to view the document if the browser does not support PDF Viewer.</a><br>
-</li>
-</ul>
-<iframe src="https://drive.google.com/file/d/10j_MWERRigE3AOJ5yxEsBiehIFo8fM10/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
-<p><br><br></p>
-<ul>
-  <li>Design Result<br>
-<a href="https://drive.google.com/file/d/1kP8968wncdG_QGMkMWfFkD4e_Qh2pvCS/preview" target="_blank" rel="external nofollow noopener">Click to view the document if the browser does not support PDF Viewer.</a><br>
-</li>
-</ul>
-<iframe src="https://drive.google.com/file/d/1kP8968wncdG_QGMkMWfFkD4e_Qh2pvCS/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
-<p><br><br></p>
+<p><img src="/assets/img/gyulab/ps2.png" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/ps3.png" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/ps4.png" alt="alt text" title="image" class="profile">
+<br>
+<br>
+       We verified the specifications of the designed circuit as above using PSPICE. The supply voltage V_DD and V_SS is equal to 3.3V and 0V respectively. We gave the 1mV amplitude with 1.65V common mode voltage and 1kHz frequency to the input voltage. The gain of the designed amplifier is 59.5, which is greater than 50. The peak-to-peak amplitude of the output voltage is 119mV, which is greater than 100mV. We calculated the power consumption as follows: P=VI=V_DD<em>ΣI_D=3.3V</em>3μA = 0.0099mW, which is about 2 order lower than the 1mW power budget. 
+<br><br>
+       Let us investigate the similarities and differences compared to theoretical results. For the aspect of the power consumption, the theoretical and empirical values are exactly identical. The reason for this result came from the accuracy of the current mirror. As we can see the displayed current in the above figure, the current mirror exactly gives 1μA to each stage and divided to each transistor as we discussed in the theoretical analysis chapter.
+<br><br>
+       However, the obtained gain is less than the theoretical value. The reason for this result may come from the assumption for calculating the gain. As we studied in the lecture, the precise gain is quite complicated compared to the intuitive gain analysis method, which we used to evaluate the theoretical values. This error may cause a gain difference. Also, the secondary effects such as the frequency response of devices, back bias effect, etc., were not considered when we evaluate the theoretical gain. If we consider those phenomena, we could evaluate the precise theoretical value which is close to the simulated gain. Nevertheless, if we think this error with the perspective of ‘10% error criteria’, which has been discussed frequently on our lecture, the error is about 9.8%, quite large but acceptable error.
+<br><br></p>
 
-<p><b>Designing Amplifier with GBW constraint</b><br>
-<a href="https://drive.google.com/file/d/1VXxIu2l4-5eZe02XpC6QeWy5-r0YZIlL/preview" target="_blank" rel="external nofollow noopener">Click to view the document if the browser does not support PDF Viewer.</a><br></p>
-<iframe src="https://drive.google.com/file/d/1VXxIu2l4-5eZe02XpC6QeWy5-r0YZIlL/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
-<p><br></p>
+<p>[References]<br>
+[1] Behzad, Razavi. (2016). Design of Analog CMOS Integrated Circuits. : McGraw-Hill Education <br>
+[2] Suman, Shruti. (2019). Two Stage CMOS Operational Amplifier: Analysis and Design. SSRN Electronic Journal. 3. 40-44. 10.2139/ssrn.3433181. <br>
+[3] J. Mahattanakul. (2005), “Design procedure for two-stage CMOS operational amplifiers employing current buffer,” in IEEE Transactions on Circuits and Systems II: Express Briefs, vol. 52, no. 11, pp. 766-770, Nov. 2005, doi: 10.1109/TCSII.2005.852530.</p>
 
 
+    </div>
   </article>
 
   
 
+  
+
+  
+    
+      
+
+  
+    
+    
+      <br>
+      <hr>
+      <br>
+      <ul class="list-disc pl-8"></ul>
+
+      <!-- Adds related posts to the end of an article -->
+      <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    
+
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2026/irps/">IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/pino/">Accelerating Semiconductor Design: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/ibm-aihwkit/">IBM Analog Hardware Accelerator Kit Research Archive</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/tapeout/">From Theory to Tapeout: SAR-ADC Full-custom IC Design Project</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/ml_compact_model/">Georgia Tech ML Compact Model Research Archive</a>
+    
+  </li>
+
+
+
+    
+  
+
+  
   
 </div>
 

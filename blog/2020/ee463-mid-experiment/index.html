@@ -17,12 +17,12 @@
   
   
     
-      Verilog HDL Design Project | Gyujun Jeong
+      Silvaco Simulation to minimize Bird’s Beak | Gyujun Jeong
     
   
 </title>
 <meta name="author" content="Gyujun Jeong">
-<meta name="description" content="Click to view the Verilog Codes! 1) Objectives     The key objectives of the project are the following: become accustomed to the Modelsim, Verilog Hardware Lan...">
+<meta name="description" content="Silvaco Simulation to acquire optimum condition to minimize Bird’s Beak Silvaco Simulation Code The report was written in Korean. Click to view the document if the browser does no...">
 
   <meta name="keywords" content="Gyujun Jeong, electrical engineering, Georgia Tech, AI for Semiconductors, physics-informed machine learning, memory devices">
 
@@ -61,10 +61,10 @@
 
 
 
-  <link rel="shortcut icon" href="/assets/img/irps.png?v=b263594b6ed74c360c5f914759f44fbb">
+  <link rel="shortcut icon" href="/assets/img/logo.png?v=8163834d9a630e012d47c5bf38deba71">
 
 <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
-<link rel="canonical" href="https://gyulab.github.io/projects/verilogproject/">
+<link rel="canonical" href="https://gyulab.github.io/blog/2020/ee463-mid-experiment/">
 
 
   <!-- Dark Mode -->
@@ -190,18 +190,24 @@
             
           
             
-          
-            
-          
-            
               
                 
-                <li class="nav-item ">
+                <li class="nav-item active">
                   <a class="nav-link" href="/blog/">blog
                     
                   </a>
                 </li>
               
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -220,21 +226,8 @@
             
               
                 
-                <li class="nav-item active">
-                  <a class="nav-link" href="/projects/">projects
-                    
-                      <span class="sr-only">(current)</span>
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
                 <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
+                  <a class="nav-link" href="/cv/">CV
                     
                   </a>
                 </li>
@@ -279,68 +272,130 @@
       
         
 
+
+
+
+
+
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">Verilog HDL Design Project</h1>
-    <p class="post-description">Click to view the Verilog Codes! 1) Objectives     The key objectives of the project are the following: become accustomed to the Modelsim, Verilog Hardware Lan...</p>
+    <h1 class="post-title">Silvaco Simulation to minimize Bird’s Beak</h1>
+    <p class="post-meta">
+      Created on August 02, 2020
+      
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <a href="/blog/2020"> <i class="fa-solid fa-calendar fa-sm"></i> 2020 </a>
+      
+      
+          ·  
+        
+          
+            <a href="/blog/tag/semiconductor-processing"> <i class="fa-solid fa-hashtag fa-sm"></i> Semiconductor_processing</a>
+          
+          
+        
+      
+
+      
+          ·  
+        
+          
+            <a href="/blog/category/projects"> <i class="fa-solid fa-tag fa-sm"></i> projects</a>
+          
+          
+        
+      
+    </p>
   </header>
 
-  <article>
-    <center><a href="https://github.com/gyulab/gyulab.github.io/tree/master/_posts/code/EE303_Verilog" target="_blank" rel="external nofollow noopener">Click to view the Verilog Codes!</a></center>
-<p><br></p>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p><b> Silvaco Simulation to acquire optimum condition to minimize Bird’s Beak </b><br></p>
 
-<p><b>1) Objectives</b><br>
-    The key objectives of the project are the following: become accustomed to the Modelsim, Verilog Hardware Language, and the concept of digital system design. Based on this knowledge, we should apply these concepts to design the cashier machine with some given constraints, such as clock frequency, clock delay for each module, asserted cycles, number of the multiplier, etc.<br><br></p>
-
-<p><b>2) Design Descriptions</b><br></p>
-
-<script src="https://gist.github.com/gyulab/d6f3a54acbdfd3ceea78ce941cd189f3.js"></script>
-
-<p><br><br></p>
-
-<p><img src="assets/img/Verilog/ee303_1.PNG" alt="alt text" title="image" class="profile"><br>
-<img src="assets/img/Verilog/ee303_0.PNG" alt="alt text" title="image" class="profile">
+<p><a href="https://github.com/gyulab/gyulab.github.io/blob/master/_posts/code/ee463/simcode_locos" target="_blank" rel="external nofollow noopener">Silvaco Simulation Code</a><br>
+The report was written in Korean.<br>
 <br>
-    The code ‘cashier.v’ plays the main role of the cashier functionality. The code proceeds the operation with respect to the input payment, items’ prices, and numbers with constraints of the size of bits. After receiving the input values, the code does some calculations and shows the state of the cashier, for instance, busy/idle state, valid, paid or not, and if paid, shows the change. In this procedure, the various registers and modules are declared.<br><br></p>
+<a href="https://drive.google.com/file/d/1rkZbHboUDY52Shh0kEoPs_rF7NYesnmq/preview" target="_blank" rel="external nofollow noopener">Click to view the document if the browser does not support PDF Viewer.</a><br></p>
 
-<p>    Some considerations should be considered, such as clock delay for each module and asserted cycles of the values. We implemented these functionalities, i.e., the clock cycle counter, with simple if-else statements. For instance, to satisfy the condition for o_valid and o_busy, we can implement the if-else statements as follows:<br><br></p>
+<iframe src="https://drive.google.com/file/d/1rkZbHboUDY52Shh0kEoPs_rF7NYesnmq/preview" type="application/pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
 
-<p><img src="assets/img/Verilog/ee303_2.PNG" alt="alt text" title="image" class="profile"><br></p>
 
-<p>    Since the usage of the multipliers is restricted, we tried to use the separated sequential multiplier module code ‘sequential_multiplier.v’ to do the multiplication operation. The basic idea of multiplication is shifting and adding, as we do the arithmetic calculation.<br><br></p>
-
-<script src="https://gist.github.com/gyulab/a44fde73abd1b8d2cf4d23814c9349c6.js"></script>
-
-<p><br><br></p>
-
-<p><img src="assets/img/Verilog/ee303_3.PNG" alt="alt text" title="image" class="profile"><br></p>
-
-<p>    The above considerations were the detailed one, which should be repeatably debugged by obtaining the waveform. The main functionality of the cashier is to subtract the required value to buy from the inserted payment. If the change has a positive value, we can regard as the payment is valid. If the change has a negative value, vice versa. We implemented a simple if-else statement to operate these functionalities as follows:<br><br></p>
-
-<p><img src="assets/img/Verilog/ee303_4.PNG" alt="alt text" title="image" class="profile"><br><br></p>
-
-<p><b>3) Experimental Results</b><br>
-<script src="https://gist.github.com/gyulab/49d8505a4f7792011a454c1c84d2c3fa.js"></script></p>
-
-<p><br>
-<br></p>
-
-<p><img src="assets/img/Verilog/ee303_5.PNG" alt="alt text" title="image" class="profile"><br><br>
-    If we insert a 10k bill and choose 2 of 3.5k item1 and 2 of 1k item2, the payment is done, thus prints 0_paid =1’b1, and the o_change should be 10k-3.5k<em>2-1k</em>2=1k, which shows the accurate result. This result shows an identical result as the guideline’s example result.<br><br>
-<img src="assets/img/Verilog/ee303_6.PNG" alt="alt text" title="image" class="profile"><br><br>
-    If we insert a 5k bill and choose 3 of 2k item1 and 4 of 2k item2, the payment is not done, thus prints 0_paid =1’b0 since the payment is not sufficient. The o_change value should be 0 since the o_paid value is equal to 1’b0. Although the payment is not done, o_valid should have the value 1’b1 since the output signals are valid. This result shows an identical result as the guideline’s example result.<br><br>
-<img src="assets/img/Verilog/ee303_7.PNG" alt="alt text" title="image" class="profile"><br><br>
-    If we insert a 5k bill and choose 2 of 2k item1 and 1 of 1k item2, the payment is done, thus prints 0_paid =1’b1, and the o_change should be 5k-2k<em>2-1k</em>1=0, which shows the accurate result. The common feature between this result and the above result is that both of these cases have 0 charge. The difference is that the o_paid value is 1 because the payment is successful.<br><br>
-<img src="assets/img/Verilog/ee303_8.PNG" alt="alt text" title="image" class="profile"><br><br></p>
-
-<p>    If we insert 65535 cents and choose 7 of 4095 cents item1 and 7 of 4095 item2, which are the maximum values that could be expressed in a given size of bits (16bits, 12bits, 3 bits, respectively), the payment is done, thus prints 0_paid =1’b1. The o_change should be 65535-4095<em>7</em>2 = 8205, which shows the accurate result.<br><br></p>
-
-<p>    From the above results, we can conclude that our Verilog-code-based cashier is well-designed. Revisiting our objectives, we can understand the concepts of the digital system design and apply these concepts to the design of a cashier machine with the project.<br><br></p>
-
+    </div>
   </article>
 
   
 
+  
+
+  
+    
+      
+
+  
+    
+    
+      <br>
+      <hr>
+      <br>
+      <ul class="list-disc pl-8"></ul>
+
+      <!-- Adds related posts to the end of an article -->
+      <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    
+
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2026/irps/">IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/pino/">Accelerating Semiconductor Design: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/ibm-aihwkit/">IBM Analog Hardware Accelerator Kit Research Archive</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/tapeout/">From Theory to Tapeout: SAR-ADC Full-custom IC Design Project</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/ml_compact_model/">Georgia Tech ML Compact Model Research Archive</a>
+    
+  </li>
+
+
+
+    
+  
+
+  
   
 </div>
 

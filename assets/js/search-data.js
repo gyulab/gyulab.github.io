@@ -23,19 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "Academic and engineering projects.",
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Redirecting to Gyujun Jeong&#39;s CV.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
-          },
-        },{id: "nav-repositories",
-          title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
+            window.location.href = "/cv/";
           },
         },{id: "post-irps-2026-pinn-assisted-compact-modeling-for-nvcap-arrays",
         
@@ -103,6 +96,17 @@ ninja.data = [{
             window.location.href = "/blog/2023/lora/";
           
         },
+      },{id: "post-feel-conference-handouts",
+        
+          title: "FEEL Conference Handouts",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/feel/";
+          
+        },
       },{id: "post-gui-development-with-pyqt",
         
           title: "GUI development with PyQT",
@@ -147,6 +151,17 @@ ninja.data = [{
             window.location.href = "/blog/2021/digital_electronics/";
           
         },
+      },{id: "post-ltspice-circuit-designing-project",
+        
+          title: "LTSpice Circuit Designing Project",
+        
+        description: "Click to view the .asc file (LTSpice Simulation File)! LTSpice Manual Click to view the document if the browser does not support PDF Viewer. Designing Differential Amplifier - Des...",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/ee403_ltspice/";
+          
+        },
       },{id: "post-analog-microelectronics-design",
         
           title: "Analog Microelectronics Design",
@@ -167,6 +182,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2021/rf_microelectronics/";
+          
+        },
+      },{id: "post-application-on-the-semiconductor-devices-and-deposition-method",
+        
+          title: "Application on the Semiconductor Devices and Deposition Method",
+        
+        description: "Project Description Investigate the following topics on your material - ZrO2. A. Where is your material used in the semiconductor device? (e.g., Logic device, DRAM,NAND flash, eme...",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/ms482_midterm/";
           
         },
       },{id: "post-an-impression-and-final-report-for-samsung-electronics-internship",
@@ -356,6 +382,83 @@ ninja.data = [{
             window.location.href = "/blog/2020/pjs/";
           
         },
+      },{id: "post-electronics-design-lab-compilation",
+        
+          title: "Electronics Design Lab Compilation",
+        
+        description: "Electronics Design Lab Compilation Click to download!",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/ee305_zip/";
+          
+        },
+      },{id: "post-issues-and-solutions-of-the-modern-semiconductor-ic-technology",
+        
+          title: "Issues and Solutions of the Modern Semiconductor IC Technology",
+        
+        description: "Issues and Solutions of the Modern Semiconductor IC Technology Project Description EE463 Semiconductor IC Technology Semester-End Homework Q1. As the device scaling continues, the...",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/advfab/";
+          
+        },
+      },{id: "post-silvaco-simulation-to-minimize-bird-s-beak",
+        
+          title: "Silvaco Simulation to minimize Bird’s Beak",
+        
+        description: "Silvaco Simulation to acquire optimum condition to minimize Bird’s Beak Silvaco Simulation Code The report was written in Korean. Click to view the document if the browser does no...",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/ee463-mid-experiment/";
+          
+        },
+      },{id: "post-pspice-cmos-op-amp-design",
+        
+          title: "PSPICE CMOS Op-amp Design",
+        
+        description: "&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;We designed the 2-stage CMOS Amplifier as above. When we design the amplifier, we should first set the differential amplifier (M1~M5) as input to reduce...",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/opampdesign/";
+          
+        },
+      },{id: "post-verilog-hdl-design-project",
+        
+          title: "Verilog HDL Design Project",
+        
+        description: "Click to view the Verilog Codes! 1) Objectives &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;The key objectives of the project are the following: become accustomed to the Modelsim, Verilog Hardware Lan...",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/verilogproject/";
+          
+        },
+      },{id: "post-keynote-for-microelectronics-project",
+        
+          title: "Keynote for Microelectronics Project",
+        
+        description: "Microelectronics Project Description: Total Score- A+ (1 of 80) Freely select 3 of the concepts on the class slide and create a slide to present the concept. The scoring criteria...",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/microproject/";
+          
+        },
+      },{id: "post-improving-device-performance-using-isotope-of-phosphorus",
+        
+          title: "Improving Device Performance Using Isotope of Phosphorus",
+        
+        description: "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;The semiconductor chip size is getting smaller and smaller. The cellphone on our hand shows overwhelming performance than the computer that is estimated as...",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/tftf/";
+          
+        },
       },{id: "post-report-for-2019-winter-semester-individual-research",
         
           title: "Report for 2019 Winter Semester Individual Research",
@@ -422,57 +525,7 @@ ninja.data = [{
             window.location.href = "/blog/2019/finfet/";
           
         },
-      },{id: "projects-improving-device-performance-using-isotope-of-phosphorus",
-          title: 'Improving Device Performance Using Isotope of Phosphorus',
-          description: "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;The semiconductor chip size is getting smaller and smaller. The cellphone on our hand shows overwhelming performance than the computer that is estimated as...",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/tftf/";
-            },},{id: "projects-keynote-for-microelectronics-project",
-          title: 'Keynote for Microelectronics Project',
-          description: "Microelectronics Project Description: Total Score- A+ (1 of 80) Freely select 3 of the concepts on the class slide and create a slide to present the concept. The scoring criteria...",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/microproject/";
-            },},{id: "projects-verilog-hdl-design-project",
-          title: 'Verilog HDL Design Project',
-          description: "Click to view the Verilog Codes! 1) Objectives &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;The key objectives of the project are the following: become accustomed to the Modelsim, Verilog Hardware Lan...",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/verilogproject/";
-            },},{id: "projects-pspice-cmos-op-amp-design",
-          title: 'PSPICE CMOS Op-amp Design',
-          description: "&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;We designed the 2-stage CMOS Amplifier as above. When we design the amplifier, we should first set the differential amplifier (M1~M5) as input to reduce...",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/opampdesign/";
-            },},{id: "projects-silvaco-simulation-to-minimize-bird-s-beak",
-          title: 'Silvaco Simulation to minimize Bird’s Beak',
-          description: "Silvaco Simulation to acquire optimum condition to minimize Bird’s Beak Silvaco Simulation Code The report was written in Korean. Click to view the document if the browser does no...",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee463-mid-experiment/";
-            },},{id: "projects-issues-and-solutions-of-the-modern-semiconductor-ic-technology",
-          title: 'Issues and Solutions of the Modern Semiconductor IC Technology',
-          description: "Issues and Solutions of the Modern Semiconductor IC Technology Project Description EE463 Semiconductor IC Technology Semester-End Homework Q1. As the device scaling continues, the...",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/advfab/";
-            },},{id: "projects-electronics-design-lab-compilation",
-          title: 'Electronics Design Lab Compilation',
-          description: "Electronics Design Lab Compilation Click to download!",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee305_zip/";
-            },},{id: "projects-application-on-the-semiconductor-devices-and-deposition-method",
-          title: 'Application on the Semiconductor Devices and Deposition Method',
-          description: "Project Description Investigate the following topics on your material - ZrO2. A. Where is your material used in the semiconductor device? (e.g., Logic device, DRAM,NAND flash, eme...",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ms482_midterm/";
-            },},{id: "projects-ltspice-circuit-designing-project",
-          title: 'LTSpice Circuit Designing Project',
-          description: "Click to view the .asc file (LTSpice Simulation File)! LTSpice Manual Click to view the document if the browser does not support PDF Viewer. Designing Differential Amplifier - Des...",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ee403_ltspice/";
-            },},{id: "projects-feel-conference-handouts",
-          title: 'FEEL Conference Handouts',
-          description: "",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/feel/";
-            },},{
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',

@@ -61,7 +61,7 @@
 
 
 
-  <link rel="shortcut icon" href="/assets/img/irps.png?v=b263594b6ed74c360c5f914759f44fbb">
+  <link rel="shortcut icon" href="/assets/img/logo.png?v=8163834d9a630e012d47c5bf38deba71">
 
 <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
 <link rel="canonical" href="https://gyulab.github.io/blog/2021/ramp/">
@@ -190,10 +190,6 @@
             
           
             
-          
-            
-          
-            
               
                 
                 <li class="nav-item active">
@@ -202,6 +198,16 @@
                   </a>
                 </li>
               
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -221,18 +227,7 @@
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/projects/">projects
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
+                  <a class="nav-link" href="/cv/">CV
                     
                   </a>
                 </li>
@@ -313,7 +308,7 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <p><img src="assets/img/intern/9.PNG" alt="alt text" title="image" class="profile"></p>
+      <p><img src="/assets/img/intern/9.PNG" alt="alt text" title="image" class="profile"></p>
 
 <p>       Basically, CIS utilizes the Column-parallel ADC Architecture, which processes data with one long ADC per column. Unlike a typical layout, the CIS layout is done in a unique way to put all ADCs in a very small pitch of about 1um. The most layout uses Dummy correctly, has a differential structure, or applies various techniques such as Common-centroid to prevent mismatch, but CIS Layout is designed in order of Mismatch due to limited space. A typical type of ADC included in such a column-parallel ADC is a Single Slope ADC or an Integrated ADC. The Single Slope ADC has the simplest structure among ADCs, and as described above, it is difficult to borrow other ADC structures due to pitch limitations. In fact, the department wanted to apply DSM ADC but compared to various design problems and performance, it does not show much difference from Single Slope ADC and needs to redesign all other existing blocks, so Single Slope ADC is used for mass production products.
 <br><br></p>
@@ -323,7 +318,7 @@
 <p><br>
        The indicator that can confirm the performance of the Ramp Generator is greatly related to Linearity. INL and Gain Linearity are typical examples. Furthermore, Horizontal Noise through Noise Analysis is another example of Ramp performance indicators. Factors that determine INL performance include Voltage Coefficient, Output Impedance, Bias Point Variation, Current Mismatch, Power IR Drop, and Parasitic Resistance. In general, the Voltage Coefficient is known as the most dominant factor, but as a result of the simulation conducted in this project, Code Nonlinearity by Current Mismatch occurred the most. This method of reducing Current Mismatches can be solved by increasing Chip Sizing as discussed in the previous REF Block. However, this method has a trade-off with Output Impedance, so the sizing should be adjusted at an appropriate rate.
 <br><br>
-<img src="assets/img/intern/10.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/intern/10.PNG" alt="alt text" title="image" class="profile">
 <br>       In addition, when we see the equation, we can solve the problem by reducing AVth, and in order to reduce AVth, it can be designed by splitting the Transistor Length.</p>
 
 <p><br>
@@ -331,7 +326,7 @@
 
 <p><br>
        Horizontal noise is basically noise, so it requires noise analysis. When calculating the noise equation of the ramp output, it has the following values:<br>
-<img src="assets/img/intern/11.PNG" alt="alt text" title="image" class="profile"><br></p>
+<img src="/assets/img/intern/11.PNG" alt="alt text" title="image" class="profile"><br></p>
 
 <p>       Based on this equation, the following design techniques can be used to reduce noise. First, it can be seen that the overall equation is proportional to Load Resistance, which can be seen that the R_L value can be reduced. In addition, to reduce current noise, increase the size of the Bias Transistor, and to reduce CASP noise, use a low noise amplifier or a Bias sampling circuit. In addition, noise can be reduced by increasing VDDA, or Nominal Voltage, to reduce noise in the first two terms, and increasing VDDA also increases Vod, which can reduce current noise by causing a decrease in gm.</p>
 

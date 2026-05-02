@@ -61,7 +61,7 @@
 
 
 
-  <link rel="shortcut icon" href="/assets/img/irps.png?v=b263594b6ed74c360c5f914759f44fbb">
+  <link rel="shortcut icon" href="/assets/img/logo.png?v=8163834d9a630e012d47c5bf38deba71">
 
 <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
 <link rel="canonical" href="https://gyulab.github.io/blog/2025/pino/">
@@ -190,10 +190,6 @@
             
           
             
-          
-            
-          
-            
               
                 
                 <li class="nav-item active">
@@ -202,6 +198,16 @@
                   </a>
                 </li>
               
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -221,18 +227,7 @@
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/projects/">projects
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
+                  <a class="nav-link" href="/cv/">CV
                     
                   </a>
                 </li>
@@ -325,7 +320,7 @@
 <p><br></p>
 
 <h4 id="tcad-vs-ai-surrogate-a-paradigm-shift">TCAD vs. AI Surrogate: A Paradigm Shift</h4>
-<p><img src="assets/img/research/comparison_chart.png" alt="Comparison of TCAD and AI" title="image" class="profile"><br></p>
+<p><img src="/assets/img/research/comparison_chart.png" alt="Comparison of TCAD and AI" title="image" class="profile"><br></p>
 
 <p>    The difference in performance is stark. While TCAD provides discrete data points at a high cost (linear scaling with the number of experiments), the AI surrogate model offers a continuous, flexible design space with negligible inference cost.</p>
 <ul>
@@ -342,7 +337,7 @@
 <p>    Our model is not a “black box.” It is a <strong>Physics-Informed Neural Operator (PINO)</strong> that learns the mapping from input conditions to physical solutions based on governing physics laws (Poisson, Gauss, Arrhenius, etc.).</p>
 
 <h4 id="architecture">Architecture</h4>
-<p><img src="assets/img/research/pino_architecture.png" alt="PINO Architecture" title="image" class="profile"><br></p>
+<p><img src="/assets/img/research/pino_architecture.png" alt="PINO Architecture" title="image" class="profile"><br></p>
 
 <p>The model takes specific experimental conditions as input and predicts full 2D physics fields as output:</p>
 <ul>
@@ -375,13 +370,13 @@ $$</center>
 <p>We validated the framework on two distinct device architectures: a standard Si Channel Single FeNAND and a more complex AOS Channel String Array.</p>
 
 <h4 id="1-silicon-channel-single-fenand">1. Silicon Channel Single FeNAND</h4>
-<p><img src="assets/img/research/planar-comparison.png" alt="AOS String Result" title="image" class="profile"><br>
-<img src="assets/img/research/temperature_sweep_reconstructed.gif" alt="AOS String Result" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
-<img src="assets/img/research/gate_charge_temperature.gif" alt="AOS String Result" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
+<p><img src="/assets/img/research/planar-comparison.png" alt="AOS String Result" title="image" class="profile"><br>
+<img src="/assets/img/research/temperature_sweep_reconstructed.gif" alt="AOS String Result" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
+<img src="/assets/img/research/gate_charge_temperature.gif" alt="AOS String Result" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
     The AI model successfully predicts 2D physics profiles with remarkable accuracy. For example, when inferring <strong>eCurrent Density</strong> at 27°C, the model matches the TCAD ground truth with approximately <strong>~0.1% error</strong>. It also faithfully captures the monotonic accumulation of trapped charge over time, governed by our physics loss.</p>
 
 <p><strong>Design Space Exploration (Interpolation):</strong>
-<img src="assets/img/research/design-space-exploration.png" alt="AOS String Result" title="image" class="profile"><br>
+<img src="/assets/img/research/design-space-exploration.png" alt="AOS String Result" title="image" class="profile"><br>
 One of the most powerful features is the ability to infer results for “unseen” geometries.</p>
 <ul>
   <li>
@@ -397,8 +392,8 @@ One of the most powerful features is the ability to infer results for “unseen�
 <h4 id="2-aos-channel-string-array-fenand">2. AOS Channel String Array FeNAND</h4>
 <p>    We extended the framework to a complex string array geometry with Oxide (AOS) channels. Even with the complex Source/Gate/Drain regions, the AI reconstructed the 2D current density maps with <strong>&lt;1% reconstruction error</strong>. This proves the model can handle complex boundaries and material interfaces essential for realistic array-level modeling.</p>
 
-<p><img src="assets/img/research/aos_result.png" alt="AOS String Result" title="image" class="profile"><br>
-<img src="assets/img/research/trapped-charge.png" alt="AOS String Result" title="image" class="profile"><br></p>
+<p><img src="/assets/img/research/aos_result.png" alt="AOS String Result" title="image" class="profile"><br>
+<img src="/assets/img/research/trapped-charge.png" alt="AOS String Result" title="image" class="profile"><br></p>
 
 <p><br><br></p>
 

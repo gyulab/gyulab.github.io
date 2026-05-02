@@ -61,7 +61,7 @@
 
 
 
-  <link rel="shortcut icon" href="/assets/img/irps.png?v=b263594b6ed74c360c5f914759f44fbb">
+  <link rel="shortcut icon" href="/assets/img/logo.png?v=8163834d9a630e012d47c5bf38deba71">
 
 <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
 <link rel="canonical" href="https://gyulab.github.io/blog/2021/abbg/">
@@ -190,10 +190,6 @@
             
           
             
-          
-            
-          
-            
               
                 
                 <li class="nav-item active">
@@ -202,6 +198,16 @@
                   </a>
                 </li>
               
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -221,18 +227,7 @@
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/projects/">projects
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
+                  <a class="nav-link" href="/cv/">CV
                     
                   </a>
                 </li>
@@ -318,12 +313,12 @@
 
 <p>       Let’s go first about Body Bias. It can be seen that the threshold voltage changes according to the body Bias as shown in the following equation.</p>
 
-<p><img src="assets/img/intern/14.PNG" alt="alt text" title="image" class="profile"><br>
+<p><img src="/assets/img/intern/14.PNG" alt="alt text" title="image" class="profile"><br>
        Here, if the body of NMOS is increased and the body of PMOS is lowered, Vt is lowered, and both Speed and Leakage are increased. This is called forward body biasing. Conversely, lowering the NMOS body and increasing the PMOS body increases the Vt, and both speed and leakage decrease. This is called reverse baby biasing. By appropriately adjusting the body bias level in this way, speed and current can be adjusted, and PVT variation can be adjusted through this. Depending on the process, sample dies in the slow region (SS) can reduce dispersion by the process by applying forward bias for Speed enhancement and sample dies in the leaky region (FF) by applying Reverse Bias for Leakage Current suppression.<br><br>
        In order to perform this ABBG function, it is necessary to monitor whether the transistor is in the Leakage region or the Slow Region, and designing such a monitoring circuit is the core of the ABBG Block. As shown in the following figure, ABBG consists of REF, Error amp, and Push-pull Amplifier. This project was conducted in the form of a thesis study and simulation analysis on the Push-pull Class-AB Output amplifier required for this ABBG.
 <br><br>
        The most important performance factors in ABBG Output Stage are Swing, Linearity, and Power Consumption. First, it must be able to cover the entire rail-to-rail voltage, and it must show a linear response without a dead zone in the middle. Also, if you always need to drive Current, such as Source Follower, you should avoid it because of the significant power consumption. Therefore, it is necessary to use Class-AB Push-pull Amp with Diode bias added instead of the basic Source Follower (Class-A) or Class-B Output Stage where Deadzone occurs. In Figure 8 below, Push-pull Operation is summarized.<br>
-<img src="assets/img/intern/15.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/intern/15.PNG" alt="alt text" title="image" class="profile">
 <br><br>
        Simulation results are difficult to attach due to in-house security, but due to PMOS/NMOS Sink/Source Coverage Limit and Settingling, we cannot ideally cover the swing, but it can be found that it can cover with quite excellent performance of about 60 dB.</p>
 

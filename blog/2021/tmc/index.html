@@ -61,7 +61,7 @@
 
 
 
-  <link rel="shortcut icon" href="/assets/img/irps.png?v=b263594b6ed74c360c5f914759f44fbb">
+  <link rel="shortcut icon" href="/assets/img/logo.png?v=8163834d9a630e012d47c5bf38deba71">
 
 <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
 <link rel="canonical" href="https://gyulab.github.io/blog/2021/tmc/">
@@ -190,10 +190,6 @@
             
           
             
-          
-            
-          
-            
               
                 
                 <li class="nav-item active">
@@ -202,6 +198,16 @@
                   </a>
                 </li>
               
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -221,18 +227,7 @@
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/projects/">projects
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
+                  <a class="nav-link" href="/cv/">CV
                     
                   </a>
                 </li>
@@ -324,14 +319,14 @@
 
 <p>Subsequently, we will discuss Auto-zeroing. This technique is similar to discrete-time sampling. However, as shown in the below figure, if we sample the offset voltage in phase 1 to the capacitance and reversely apply in phase 2, the output of the amplifier is canceled. Through this, both offset and flicker noise can be reduced. The last offset canceling technique is the chopping technique using a chopper used in this project. Chopping is similar to continuous-time sampling. To briefly explain the Chopper principle, we can conceive of it as a technique to split the signal and noise band through frequency modulation.<br></p>
 
-<p><img src="assets/img/intern/16.PNG" alt="alt text" title="image" class="profile"><br></p>
+<p><img src="/assets/img/intern/16.PNG" alt="alt text" title="image" class="profile"><br></p>
 
 <p>A chopper is a device that forms square waves for the frequency conversion, and as shown in Figure 9, it is possible to form square waves by applying +vi in phase 1 and -vi in phase 2. Since it shows excellent performance in terms of power efficiency compared to auto-zeroing, the BGR offset distribution was reduced using chopping in this project.<br></p>
 
 <p>The TMC BGR’s error sources are consisted of the following components; VBE dispersion, Current Source Mismatch, and Offset Voltage. The first two of which can be removed by trimming and Dynamic Element Matching (DEM), respectively, and Offset can be removed by chopper.<br></p>
 
-<p><img src="assets/img/intern/20.PNG" alt="alt text" title="image" class="profile"><br>
-<img src="assets/img/intern/21.PNG" alt="alt text" title="image" class="profile"><br>
+<p><img src="/assets/img/intern/20.PNG" alt="alt text" title="image" class="profile"><br>
+<img src="/assets/img/intern/21.PNG" alt="alt text" title="image" class="profile"><br>
 Chopper was added to the input and output of the Error Amp of the BGR circuit designed by the reference block, respectively, to proceed with the design. After that, Monte Carlo Simulation confirmed about 5% of Disruption Reduction in process corner. The detailed contents cannot be mentioned here due to confidential information issues.</p>
 
 <p>[References]</p>

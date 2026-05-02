@@ -61,7 +61,7 @@
 
 
 
-  <link rel="shortcut icon" href="/assets/img/irps.png?v=b263594b6ed74c360c5f914759f44fbb">
+  <link rel="shortcut icon" href="/assets/img/logo.png?v=8163834d9a630e012d47c5bf38deba71">
 
 <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
 <link rel="canonical" href="https://gyulab.github.io/blog/2021/pmc/">
@@ -190,10 +190,6 @@
             
           
             
-          
-            
-          
-            
               
                 
                 <li class="nav-item active">
@@ -202,6 +198,16 @@
                   </a>
                 </li>
               
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -221,18 +227,7 @@
               
                 
                 <li class="nav-item ">
-                  <a class="nav-link" href="/projects/">projects
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
-                <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
+                  <a class="nav-link" href="/cv/">CV
                     
                   </a>
                 </li>
@@ -315,15 +310,15 @@
     <div id="markdown-content">
       <p>This project is conducted by studying various ADC architectures- SAR, Pipeline, and Cyclic ADCs- and investigating the principle of how Cyclic ADCs designed by applying them to PMC (Power Management IP). Subsequently, we designed the components of MDAC (Multiplying-DAC)- capacitance, amplifier, S&amp;H, and reference. Finally, timing response/SNDR Simulation of MDAC and flash were conducted to understand the operating principles of PMC ADC and analyze the results to study the overall operating principles of PMC.<br></p>
 
-<p><img src="assets/img/intern/17.PNG" alt="alt text" title="image" class="profile"></p>
+<p><img src="/assets/img/intern/17.PNG" alt="alt text" title="image" class="profile"></p>
 
 <p>There are various algorithms for converting analog data to digital data. As seen in RMP(Ramp) IP, a method of comparing with the Ramp waveform can be used, or Voltage can be found through Binary Search, such as SAR. In the case of Pipeline ADC, A2D is performed by quantizing the remaining value one more time after quantizing the large amount first. Cyclic ADC is the circulation of components in the pipeline ADC through a feedback loop. In the case of cyclic ADC, a small footprint is the biggest advantage and can provide supremacy resolution. As a disadvantage, a slow conversion speed and the ADC required by the PMC is an ADC with a small space, hence the cyclic ADC is the most suitable for the purpose of PMC IP.<br></p>
 
-<p><img src="assets/img/intern/18.PNG" alt="alt text" title="image" class="profile"><br></p>
+<p><img src="/assets/img/intern/18.PNG" alt="alt text" title="image" class="profile"><br></p>
 
 <p>The most important component of the cyclic ADC is MDAC. As shown in Figure 11, the cyclic ADC consists of Flash ADC, DAC, Sample &amp; Hold, and Rescue Amp. There are two major factors to consider for MDAC design: Amplifier Gain and Noise Power. We have designed to achieve the required spec by focusing on increasing gain and reducing noise power of the amp. <br>
-<img src="assets/img/intern/23.PNG" alt="alt text" title="image" class="profile"><br>
-<img src="assets/img/intern/22.PNG" alt="alt text" title="image" class="profile"><br></p>
+<img src="/assets/img/intern/23.PNG" alt="alt text" title="image" class="profile"><br>
+<img src="/assets/img/intern/22.PNG" alt="alt text" title="image" class="profile"><br></p>
 
 <p>The designed PMC’s cyclic ADC sets an ENOB of about 10 as a target spec. In order to provide a 12-bit resolution, ADC Output is stored in Logic and the data of 32 times is Averaged. Detailed cyclic ADC operations and structures were omitted due to security. As a result of extracting the data extracted through Spectre’s SNDR Simulation with HSPICE and DFT, SNDR was about 58 dB and ENOB was about 9.3. Since both transient noise and device noise were incorporated, the simulation result is slightly lower than the required SNDR and ENOB spec.</p>
 

@@ -61,10 +61,10 @@
 
 
 
-  <link rel="shortcut icon" href="/assets/img/irps.png?v=b263594b6ed74c360c5f914759f44fbb">
+  <link rel="shortcut icon" href="/assets/img/logo.png?v=8163834d9a630e012d47c5bf38deba71">
 
 <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
-<link rel="canonical" href="https://gyulab.github.io/projects/tftf/">
+<link rel="canonical" href="https://gyulab.github.io/blog/2020/tftf/">
 
 
   <!-- Dark Mode -->
@@ -190,18 +190,24 @@
             
           
             
-          
-            
-          
-            
               
                 
-                <li class="nav-item ">
+                <li class="nav-item active">
                   <a class="nav-link" href="/blog/">blog
                     
                   </a>
                 </li>
               
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
             
           
             
@@ -220,21 +226,8 @@
             
               
                 
-                <li class="nav-item active">
-                  <a class="nav-link" href="/projects/">projects
-                    
-                      <span class="sr-only">(current)</span>
-                    
-                  </a>
-                </li>
-              
-            
-          
-            
-              
-                
                 <li class="nav-item ">
-                  <a class="nav-link" href="/repositories/">repositories
+                  <a class="nav-link" href="/cv/">CV
                     
                   </a>
                 </li>
@@ -279,14 +272,51 @@
       
         
 
+
+
+
+
+
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">Improving Device Performance Using Isotope of Phosphorus</h1>
-    <p class="post-description">    The semiconductor chip size is getting smaller and smaller. The cellphone on our hand shows overwhelming performance than the computer that is estimated as...</p>
+    <p class="post-meta">
+      Created on May 01, 2020
+      
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <a href="/blog/2020"> <i class="fa-solid fa-calendar fa-sm"></i> 2020 </a>
+      
+      
+          ·  
+        
+          
+            <a href="/blog/tag/semiconductor-processing"> <i class="fa-solid fa-hashtag fa-sm"></i> Semiconductor_processing</a>
+          
+          
+        
+      
+
+      
+          ·  
+        
+          
+            <a href="/blog/category/projects"> <i class="fa-solid fa-tag fa-sm"></i> projects</a>
+          
+          
+        
+      
+    </p>
   </header>
 
-  <article>
-    <p><img src="assets/img/mosfet/s4.gif" alt="alt text" title="image" class="profile"></p>
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <p><img src="/assets/img/mosfet/s4.gif" alt="alt text" title="image" class="profile"></p>
 
 <p><br>
     The semiconductor chip size is getting smaller and smaller. The cellphone on our hand shows overwhelming performance than the computer that is estimated as superlative about ten years ago. That huge computer is on our hand. This means the consumer requires more performance, but the footprint is limited.
@@ -301,48 +331,48 @@
     There are two main roles of the semiconductor device: amplification and switching of the signal. Namely, a good device should give the signal when we want and amplify the signal. One interesting thing is that in the past years, engineers focused on making more higher current with semiconductors, but nowadays, engineers focusing on the speed to reach the highest current. The indicator of the response speed to peak current called ‘Subthreshold Swing (SS)’. The lower SS means the device has a fast response speed. However, nowadays mass-production devices cannot break-through the 60mV/dec, the physical limit of SS in room temperature.
 <br>
 <br>
-<img src="assets/img/gyulab/t2.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/t1.PNG" alt="alt text" title="image" class="profile">
     If the carriers want to flow to the other side (i.e., current flow), the carriers should overcome the potential barrier. That is, the carrier should have some force to overcome the barrier. If the force is not enough to overcome the barrier, the current cannot flow. However, if some conditions are satisfied, the carrier neglect (goes through) the barrier and flows through the barrier, even though it does not have enough force. This phenomenon is called the ‘tunneling effect’. 
 <br>
 <br>
-<img src="assets/img/gyulab/t3.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/t1.PNG" alt="alt text" title="image" class="profile">
     As we studied in the Zener diode, which uses the tunneling effect due to the degenerated (highly-doped) silicon, the tunneling probability has the exponential dependence of some material properties. Since the equation has a minus exponential relationship, to obtain higher probability, the denominator should be higher and the numerator should have a lower value. Therefore, if the bandgap and effective electron mass has a lower value, the probability of tunneling gets higher.
 <br>
 <br>
     Engineers thought that if we use this phenomenon, we can solve the problem to overcome the limit of SS and make a faster device. We can think if we can penetrate the barrier without the additional force, it means that we can obtain the fast response of the device, which means lower SS. This device is called ‘TFET (Tunnel Field Effect Transistor)’. Engineers succeeded to make SS below the 60mV/dec. That is, we can switch the device much faster.
 <br>
 <br>
-<img src="assets/img/gyulab/t4.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/t1.PNG" alt="alt text" title="image" class="profile">
     However, there are some critical things to TFET cannot be used as a mass-production device. TFET has the problem with leakage current even though on the turn-off stage due to the trap state called TAT (Trap Assisted Tunneling) effect. The ‘trap’ plays a role to degrade OFF-state current significantly.
 <br>
     Another matter of the TFET is QCE(Quantum Confinement Effect), which is the concept we studied. For short, if the crystal size decreases, the bandgap size increases. This increased bandgap degrades the current characteristics that make ON-state current worse. This effect could be explained by the quantum dot effect- bandgap increases so wavelength decreases, shows blue-shift.
-<img src="assets/img/gyulab/t5.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/t1.PNG" alt="alt text" title="image" class="profile">
 <br>
 <br>
     Also, TFET’s current is much smaller than the normal FET device. The reasons for this kind of phenomena are that TFET use carriers in the valence band of p-type. Unlike MOSFET- source and drain types are the same as n-type in n-MOS case, TFET has a p-type source, and the electron comes from a p-type source. By the Mass-Action law of semiconductor, the electron number in p-type is much less than the n-type source. 
-<img src="assets/img/gyulab/t6.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/t1.PNG" alt="alt text" title="image" class="profile">
 <br>
 <br>
     These shortages made TFET less practical device than MOSFET, and these off-state problems should be solved. Now, we will obtain the improvement of the performance of TFET.
 <br>
 <br>
     Before we see the improvement method in-depth, let’s review the bandgap concept. If the bandgap is too large, carriers cannot move so that the current cannot flow, known as an insulator. If the bandgap is too small, carriers can move freely that the current flow enormously, called metal (conductor). However, as we have seen before, the object of the semiconductor device is the switching and amplifying, and these could be done by manipulating the energy bandgap between CB and VB. For instance, if we connect the boron-implanted silicon(p-type) and phosphorus-implanted silicon(n-type), by the energy band level difference, we can control the current flow, known as a p-n junction.
-<img src="assets/img/gyulab/t7.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/t1.PNG" alt="alt text" title="image" class="profile">
 <br>
 <br>
     The bandgap engineering has been researched to improve the performance of TFET. The key of the performance is to make TFET enhance tunneling on on-state, but prevent tunneling on off-state. We can improve the properties of current of TFET with manipulating bandgap with different materials.
 <br>
 <br>
-<img src="assets/img/gyulab/t8.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/t1.PNG" alt="alt text" title="image" class="profile">
     However, if we connect the different materials to each other (i.e., Heterojunction), the boundary would be formed. At this boundary, there would be some non-uniformities, defects, and interface oxidations. Furthermore, as we studied in the lecture, bandgap engineering has the ‘lattice mismatch’ due to the difference in the lattice constant. These defects make ‘trap’, which degrades the property of TFET as we have seen right before. These undesirable phenomena are inevitable because we should give the difference of energy band to flow and switching the currents. The desirable thing is to make bandgap with the same material. So, how can we do that?
 <br>
 <br>
-<img src="assets/img/gyulab/t9.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/t1.PNG" alt="alt text" title="image" class="profile">
     In January 2020, Seungho Kim, researcher of physics department of KAIST, applied the ‘black phosphorus’ on the device’s source and channel, which made TFET with significantly low power consumption (about 1~4 order lower) compared to preexistence device, which has been published on the Nature Nanotechnology. 
 <br>
 <br>
     With black phosphorus, we can give different bandgap on the same material. If we vary the number of layers, we can manipulate the bandgap. Namely, we can obtain different bandgap by giving the black phosphorus thickness difference without connecting the different materials. This device shows 23-24mV/dec SS, significant reduction compared to the previous device- 60mV/dec.
-<img src="assets/img/gyulab/t10.PNG" alt="alt text" title="image" class="profile">
+<img src="/assets/img/gyulab/t1.PNG" alt="alt text" title="image" class="profile">
 <br>
 <br>
     In conclusion, TFET with the black phosphorus gives us much improved SS, i.e., improved responsibility of the device without the defect on the boundary. With this device, we can make the super-fast and expeditious electronic devices that could be used in the next-generation.
@@ -356,10 +386,76 @@
 [4] Tunnel field-effect transistor. (2020, April 7). Retrieved from: https://en.wikipedia.org/wiki/Tunnel_field-effect_transistor<br>
 [5] IT Learning. (2018, November 12). [Semiconductor Devices] TFET Bandgap Engineering. Retrieved from https://it-learning.tistory.com/15</p>
 
+    </div>
   </article>
 
   
 
+  
+
+  
+    
+      
+
+  
+    
+    
+      <br>
+      <hr>
+      <br>
+      <ul class="list-disc pl-8"></ul>
+
+      <!-- Adds related posts to the end of an article -->
+      <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    
+
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2026/irps/">IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/pino/">Accelerating Semiconductor Design: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/ibm-aihwkit/">IBM Analog Hardware Accelerator Kit Research Archive</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/tapeout/">From Theory to Tapeout: SAR-ADC Full-custom IC Design Project</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/ml_compact_model/">Georgia Tech ML Compact Model Research Archive</a>
+    
+  </li>
+
+
+
+    
+  
+
+  
   
 </div>
 
