@@ -40,11 +40,23 @@ body.sticky-bottom-footer {
   }
 }
 
-.post article img,
+.post article img:not(.about-hero),
 .post img.profile,
 article img.profile {
-  max-width: 100%;
-  height: auto;
+  display: block;
+  width: auto !important;
+  max-width: min(80%, 80vw) !important;
+  height: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 576px) {
+  .post article img:not(.about-hero),
+  .post img.profile,
+  article img.profile {
+    max-width: 100% !important;
+  }
 }
 
 .about-hero {
