@@ -4,7 +4,7 @@ published: false
 title: LoRa/CSS demodulation using de-chirp and FSK demodulation
 date: "2023-02-25T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;Typically, LoRa detection is achieved in two steps: (i) first, the signal is de-chirped, then (ii) typical FSK demodulation is applied. De-chirping is achi..."
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 ![alt text](/assets/img/general_research/37.PNG "image"){:.profile}<br>

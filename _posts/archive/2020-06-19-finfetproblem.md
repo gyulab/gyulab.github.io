@@ -4,7 +4,7 @@ published: false
 title: "[EE463] FinFET Doping Issue: Overcoming Shadow Effect Problem during S/D Implantation"
 date: "2020-07-10T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;Since the multi-gate channel is on the side of the fin, it must be uniformly doped along the sidewall to eliminate parasitic resistance. However, in the pr..."
-categories: [Projects]
+tags: [Projects]
 ---
 
 <br>

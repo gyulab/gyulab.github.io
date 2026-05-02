@@ -4,7 +4,7 @@ published: false
 title: Recapitulative CMOS Process
 date: "2020-01-06T14:25:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;반도체 칩 하나를 만들기 위해서는 수 개월이 소요된다. 오늘 소개할 반도체 공정은 매우 간소화된 공정으로, 실제로는 이 공정보다 훨씬 더 복잡하고, 소개된 공정을 반복함으로써 하나의 칩을 만든다고 생각할 수 있다. &nbsp;&nbsp;&nbsp;&nbsp;하나의 칩을 만들기..."
-categories: [Academics]
+tags: [Academics]
 ---
 
 ![alt text](/assets/img/mosfet/w1.png "image"){:.profile}

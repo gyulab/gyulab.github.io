@@ -4,7 +4,7 @@ published: false
 title: "[EE463] FinFET Fabrication Process"
 date: "2020-07-09T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;In general, as the size of the device decreases, performance improves and power consumption and cost decrease. However, as the size of the device became ve..."
-categories: [Projects]
+tags: [Projects]
 ---
 
 <br>

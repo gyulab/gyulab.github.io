@@ -4,7 +4,7 @@ published: false
 title: High-K Deposition Methods
 date: "2020-06-16T14:26:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;기존의 oxide인 SiO2를 형성하기 위해서는, 열처리를 통해 oxide를 기르는 것과 같이 간단한 방법으로 절연막을 형성할 수 있었다. 하지만 High-K material을 이용하게 되면서, 기본적으로 High-k 물질은 SiO2와 다르게Silicon으로 이루어진 물질이 아..."
-categories: [Academics]
+tags: [Academics]
 ---
 
 <br>

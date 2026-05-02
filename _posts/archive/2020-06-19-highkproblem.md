@@ -4,7 +4,7 @@ published: false
 title: Problems and Solutions for the High-K Materials
 date: "2020-06-18T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;이전 포스팅까지 알아본 것과 같이, 같은 장점이 있는 High-K dielectric도 다양한 이유로 인해 사용에 어려움이 있었다. 대표적으로 다음과 같은 문제점들이 있었고, 자세한 내용은 후술하도록 한다. 1. Silicon interface 상태 문제: Silicon 위에..."
-categories: [Academics]
+tags: [Academics]
 ---
 
 <br>

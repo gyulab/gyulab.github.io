@@ -4,7 +4,7 @@ published: false
 title: Breakdown Phenomena
 date: "2019-12-22T11:25:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;Breakdown이란 다이오드에 역 바이어스 전압을 걸어주었을 때 다이오드가 견디지 못하고 전류가 크게 흐르는 현상으로, 이러한 현상이 발생하는 최소 전압을 항복전압이라고 한다. &nbsp;&nbsp;&nbsp;&nbsp;Breakdown의 첫 번째 종류는 Zener Break..."
-categories: [Academics]
+tags: [Academics]
 ---
 
 ![alt text](/assets/img/mosfet/b1.png "intro"){:.profile}

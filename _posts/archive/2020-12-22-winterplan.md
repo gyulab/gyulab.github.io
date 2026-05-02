@@ -4,7 +4,7 @@ published: false
 title: 2020 겨울학기 계획 (2020.12~2021.02)
 date: "2020-12-22T15:28:52-05:00"
 description: "1. Cadence Virtuoso EDA Tool 공부 (+Synopsys HSPICE 2. ADC 공부: 이미지 센서에 들어가는 A2D 회로 공부 (SS ADC, DSM, SAR, etc) 3. LNA 공부: Low-noise Amplifier: RF Microelectronics 공부 (Chapter 2,4,5)..."
-categories: [Daily]
+tags: [Daily]
 ---
 
 1. Cadence Virtuoso EDA Tool 공부 (+Synopsys HSPICE

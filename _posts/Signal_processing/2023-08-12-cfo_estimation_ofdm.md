@@ -4,7 +4,7 @@ published: false
 title: OFDM demodulation with synchronization techniques- CFO and Equalization
 date: "2023-08-12T14:28:52-05:00"
 description: OFDM systems are very sensitive towards synchronization error. Synchronization of an OFDM signal is required to find the symbol timing and carrier frequency offset (CFO). Before d...
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 ![alt text](/assets/img/general_research/68.PNG "image"){:.profile}<br>

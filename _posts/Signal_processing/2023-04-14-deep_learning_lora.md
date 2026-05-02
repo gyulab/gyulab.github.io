@@ -4,7 +4,7 @@ published: false
 title: "Deep Learning-based LoRa Signal Demodulation: Paper review and Implementation"
 date: "2023-04-14T14:28:52-05:00"
 description: "Note: Source code details have been omitted for security reasons. Deep learning algorithms have shown significant success in various signal processing and demodulation tasks. Some..."
-tags: [2_SIGINT_Agency]
+tags: [2_SIGINT_Agency, Signal_processing]
 ---
 
 ![alt text](/assets/img/general_research/38.PNG "image"){:.profile}<br>

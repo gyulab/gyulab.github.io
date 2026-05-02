@@ -4,7 +4,7 @@ published: false
 title: Multi-threading and processing on signal processing
 date: "2022-10-31-02T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;Multithreading and multiprocessing are techniques used to improve the performance of code by allowing multiple tasks to be executed simultaneously. &nbsp;&..."
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 ![alt text](/assets/img/general_research/35.PNG "image"){:.profile}<br>

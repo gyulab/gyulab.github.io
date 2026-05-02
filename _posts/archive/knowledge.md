@@ -4,7 +4,7 @@ published: false
 title: Equivalent Circuit Models of BJT
 date: "2019-11-02T14:25:52-05:00"
 description: "Equivalent circuit models are needed to analyze transistor circuits. Representative 3 equivalent-circuit models for the bipolar transistor. a. Ebers-Moll model: - is based on the..."
-categories: [Semiconductors]
+tags: [Semiconductors]
 ---
 
 Equivalent circuit models are needed to analyze transistor circuits.

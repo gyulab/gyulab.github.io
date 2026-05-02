@@ -4,7 +4,7 @@ published: false
 title: Channel coding analysis utilizing linear dependency
 date: "2022-12-15T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;Linear dependency is a property of a set of vectors that indicates whether the vectors are linearly independent or linearly dependent. In signal analysis,..."
-categories: [Research@signal]
+tags: [Research@signal, Signal_processing]
 ---
 
 ![alt text](/assets/img/general_research/33.PNG "image"){:.profile}<br>

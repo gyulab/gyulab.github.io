@@ -3,8 +3,7 @@ layout: post
 title: PSPICE CMOS Op-amp Design
 date: "2020-07-08T14:28:52-05:00"
 description: "&nbsp; &nbsp; &nbsp; &nbsp;We designed the 2-stage CMOS Amplifier as above. When we design the amplifier, we should first set the differential amplifier (M1~M5) as input to reduce..."
-tags: [Undergrad_Projects]
-categories: [projects]
+tags: [Undergrad_Projects, projects]
 ---
 
 ![alt text](/assets/img/gyulab/ps1.png "image"){:.profile}

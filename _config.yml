@@ -259,16 +259,15 @@ terser:
 
 jekyll-archives:
   posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled: [year, tags] # enables year and tag archives.
     permalinks:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
-      categories: "/blog/:type/:name/"
   books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled: [year, tags] # enables year and tag archives.
 
-display_tags: ["1_Georgia_Tech", "2_SIGINT_Agency", "3_Samsung_Electronics", "4_ICSL_KAIST", "5_HSNL_KAIST", "IRPS", "PINN"] # these tags will be displayed on the front page of your blog
-display_categories: ["projects", "Research@Gatech", "Signal_processing", "Study_Notes"] # these categories will be displayed on the front page of your blog
+display_tags: ["1_Georgia_Tech", "2_SIGINT_Agency", "3_Samsung_Electronics", "4_ICSL_KAIST", "5_HSNL_KAIST", "projects", "Signal_processing", "Study_notes"] # these tags will be displayed on the front page of your blog
+display_categories: [] # categories are intentionally consolidated into tags
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

@@ -4,7 +4,7 @@ published: false
 title: "Envelope Detection and Power Spectrum: MATLAB Implement"
 date: "2022-12-15T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;In the realm of digital communication systems, 8PSK (8-Phase Shift Keying) modulation plays a crucial role in achieving higher data rates and improved spec..."
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 ![alt text](/assets/img/general_research/57.PNG "image"){:.profile}<br>

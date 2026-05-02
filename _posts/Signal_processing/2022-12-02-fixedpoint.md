@@ -4,7 +4,7 @@ published: false
 title: Fixed point conversion to read out signal file
 date: "2022-12-02T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;Fixed-point conversion is the process of converting a floating-point number to a fixed-point number. A fixed-point number has a fixed number of digits to t..."
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 ![alt text](/assets/img/general_research/12.PNG "image"){:.profile}<br>

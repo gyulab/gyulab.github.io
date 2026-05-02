@@ -4,7 +4,7 @@ published: false
 title: Nonideal Effects on BJT
 date: "2019-11-02T14:25:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;The conditions of Ideal in BJT are constant doping, low level injection, width of emitter and base region are constant, energy gap is constant, and overall..."
-categories: [Research@HSNL]
+tags: [Research@HSNL]
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;The conditions of Ideal in BJT are constant doping, low level injection, width of emitter and base region are constant, energy gap is constant, and overall current is constant.

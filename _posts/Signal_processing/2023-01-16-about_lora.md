@@ -4,7 +4,7 @@ published: false
 title: LoRa PHY/MAC and CSS Modulation for IoT device communication
 date: "2023-01-16T14:28:52-05:00"
 description: 1. Overview of LoRa &nbsp;&nbsp;&nbsp;&nbsp;LoRa (Long Range) is a proprietary wireless communication technology that is used for long-range communication and low-power, low-data-...
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 <b>1. Overview of LoRa</b><br>

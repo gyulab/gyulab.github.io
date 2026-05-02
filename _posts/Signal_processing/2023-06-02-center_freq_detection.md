@@ -4,7 +4,7 @@ published: false
 title: Automatic detection of center frequency of 8-PSK modulated signal
 date: "2023-06-02T14:28:52-05:00"
 description: 8PSK (8-Phase Shift Keying) is a digital modulation scheme used in communication systems to transmit data over radio frequency or optical channels. It is an extension of the PSK m...
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 ![alt text](/assets/img/general_research/57.PNG "image"){:.profile}<br>

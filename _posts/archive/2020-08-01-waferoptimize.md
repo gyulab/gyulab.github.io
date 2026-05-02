@@ -4,7 +4,7 @@ published: false
 title: "[EE463] Wafer-Channel Orientation Optimization"
 date: "2020-08-01T14:28:52-05:00"
 description: "&nbsp; &nbsp; &nbsp; &nbsp;We looked at Strain Engineering, the most widely used Mobility Enhancement Technique in previous posts. In this posting, we would like to learn about th..."
-categories: [Projects]
+tags: [Projects]
 ---
 
 ![alt text](/assets/img/placeholder-big.jpg "image"){:.profile}

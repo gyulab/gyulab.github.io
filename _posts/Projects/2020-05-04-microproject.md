@@ -3,8 +3,7 @@ layout: post
 title: Keynote for Microelectronics Project
 date: "2020-05-04T14:28:52-05:00"
 description: "Microelectronics Project Description: Total Score- A+ (1 of 80) Freely select 3 of the concepts on the class slide and create a slide to present the concept. The scoring criteria..."
-tags: [Undergrad_Projects]
-categories: [projects]
+tags: [Undergrad_Projects, projects]
 ---
 
 <b>Microelectronics Project Description: Total Score- A+ (1 of 80)</b><br>

@@ -3,8 +3,7 @@ layout: post
 title: Verilog HDL Design Project
 date: "2020-06-19T14:25:52-05:00"
 description: "Click to view the Verilog Codes! 1) Objectives &nbsp;&nbsp;&nbsp;&nbsp;The key objectives of the project are the following: become accustomed to the Modelsim, Verilog Hardware Lan..."
-tags: [Undergrad_Projects]
-categories: [projects]
+tags: [Undergrad_Projects, projects]
 ---
 
   

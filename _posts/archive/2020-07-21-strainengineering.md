@@ -4,7 +4,7 @@ published: false
 title: "Strain Engineering: Enhancing Carrier Mobility"
 date: "2020-07-21T14:28:52-05:00"
 description: "&nbsp; &nbsp; &nbsp; &nbsp;사람들은 항상 더 빠른 chip을 얻기 위해 노력하였다. Backend process에서 배웠듯이, 비록 Aluminum에 비해서 Copper를 실리콘 공정에 사용하기가 매우 어려웠지만, 더 빠른 칩을 위해서 Damascene 공법을 통해 결국 Copper를 사용할 수 있..."
-categories: [Academics]
+tags: [Academics]
 ---
 
 ![alt text](/assets/img/gyulab/se0.jpeg "image"){:.profile}

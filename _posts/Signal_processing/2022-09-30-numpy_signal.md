@@ -4,7 +4,7 @@ published: false
 title: Signal Processing and bit processing with Numpy
 date: "2022-09-30T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;Numpy, one of Python's modules can be used in various fields. It is also an easy package for bit processing and matrix computation. Since the internal oper..."
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;Numpy, one of Python's modules can be used in various fields. It is also an easy package for bit processing and matrix computation. Since the internal operation is implemented in Fortran and C, the speed is also relatively fast. This versatile package is used in bit processing and various fields in signal processing. This time, let's process the signal file by numpy module.<br><br>

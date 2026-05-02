@@ -4,7 +4,7 @@ published: false
 title: Convolutional Codes & Viterbi Decoding by MATLAB
 date: "2022-12-18T14:28:52-05:00"
 description: "&nbsp;&nbsp;&nbsp;&nbsp;The documents and videos below are the good materials to study and understand the Convolutional Codes & Viterbi Decoding, from MIT 6.02 DRAFT Lecture Notes..."
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;The documents and videos below are the good materials to study and understand the Convolutional Codes & Viterbi Decoding, from MIT 6.02 DRAFT Lecture Notes. Let's simulate various convolutional code encoders and Viterbi coding through MATLAB.

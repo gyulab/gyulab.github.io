@@ -4,7 +4,7 @@ published: false
 title: Introduction of OFDM (Orthogonal Frequency Division Multiplexing)
 date: "2023-07-15T14:28:52-05:00"
 description: Orthogonal Frequency Division Multiplexing (OFDM) is a multi-carrier modulation technique that has significantly impacted modern data transmission. By distributing data bits acros...
-tags: [Research@Agency]
+tags: [Research@Agency, Signal_processing]
 ---
 
 ![alt text](/assets/img/general_research/61.PNG "image"){:.profile}<br>
