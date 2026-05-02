@@ -44,8 +44,8 @@ body.sticky-bottom-footer {
 .post img.profile,
 article img.profile {
   display: block;
-  width: auto !important;
-  max-width: min(80%, 80vw) !important;
+  width: min(80%, 80vw) !important;
+  max-width: 80vw !important;
   height: auto !important;
   margin-left: auto;
   margin-right: auto;
@@ -55,6 +55,7 @@ article img.profile {
   .post article img:not(.about-hero),
   .post img.profile,
   article img.profile {
+    width: 100% !important;
     max-width: 100% !important;
   }
 }
