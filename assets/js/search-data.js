@@ -34,7 +34,7 @@ ninja.data = [{
         
           title: "IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays",
         
-        description: "### Paper ### Presentation",
+        description: "First conference presentation at IRPS 2026 on physics-informed training methodologies using custom loss functions for device modeling.",
         section: "Posts",
         handler: () => {
           
