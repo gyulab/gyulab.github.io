@@ -41,6 +41,8 @@
             alt=entry.preview
           %}
         {% endif %}
+      {% else %}
+        <img class="preview z-depth-1 rounded" src="{{ '/assets/img/buzz.png' | relative_url }}" alt="publication thumbnail">
       {% endif %}
     </div>
   {% endif %}
