@@ -19,7 +19,7 @@ _styles: >
   }
 ---
 
-<img class="about-hero" src="/assets/img/gyulab/profile.jpg" alt="Gyujun Jeong profile photo">
+<img class="about-hero" src="/assets/img/san-francisco.JPG" alt="Gyujun Jeong profile photo">
 
 ## About Me
 * <b>My name is Gyujun Jeong.</b>
