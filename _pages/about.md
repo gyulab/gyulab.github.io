@@ -29,7 +29,7 @@ _styles: >
 
 
 ## Contact Info
-* <b>CV: <a href="https://drive.google.com/file/d/1LT-fcVCiSOm-3IK-0p3YyXvrdoWwa0Ca/preview">(link)</a></b>
+* <b>CV: <a href="/cv/">(link)</a></b>
 * <b>E-mail: <a href="mailto:gyujun.jeong@gatech.edu">gyujun.jeong@gatech.edu</a>
 
 ## Research Interest
