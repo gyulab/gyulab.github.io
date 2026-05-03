@@ -43,7 +43,9 @@
         display: inline-block;
         width: 96px;
         height: 72px;
-        object-fit: cover;
+        object-fit: contain;
+        padding: 0.25rem;
+        background: #fff;
       }
 
       .abbr {

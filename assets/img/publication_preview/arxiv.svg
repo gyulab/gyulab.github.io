@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">arXiv logo</title>
+  <desc id="desc">A red publication thumbnail with arXiv text.</desc>
+  <rect width="320" height="220" rx="18" fill="#ffffff"/>
+  <rect x="12" y="12" width="296" height="196" rx="14" fill="#b31b1b"/>
+  <text x="160" y="118" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="700" fill="#ffffff">arXiv</text>
+  <text x="160" y="153" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="2" fill="#f4dddd">PREPRINT</text>
+</svg>
