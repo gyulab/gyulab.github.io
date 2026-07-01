@@ -33,9 +33,14 @@ _styles: >
 * <b>E-mail: <a href="mailto:gyujun.jeong@gatech.edu">gyujun.jeong@gatech.edu</a>
 
 ## Research Interest
-* AI for Semiconductors
-* Physics-informed Machine Learning
-* Memory Device and Systems
+* AI/ML for Semiconductors
+* Physics-informed ML
+* Memory Device and Circuits
+
+## Honors & Fellowships
+* SK Hynix Global Ph.D. Fellowship
+* J. L. Trantham Fellowship
+* Korea National Scholarship
 
 ## Experiences
 * Ph.D. Student at <a href="https://shimeng.ece.gatech.edu/">Laboratory for Emerging Devices and Circuits, Georgia Tech</a> [Aug.2025 --]
