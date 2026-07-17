@@ -37,8 +37,8 @@ _styles: >
 * Physics-informed ML
 * Memory Device and Circuits
 
-## Honors & Fellowships
-* SK Hynix Global Ph.D. Fellowship
+## Scholarships & Fellowships
+* SK Hynix Global Ph.D. Scholarship
 * J. L. Trantham Fellowship
 * Korea National Scholarship
 
