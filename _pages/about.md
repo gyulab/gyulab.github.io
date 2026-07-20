@@ -23,7 +23,7 @@ _styles: >
 
 ## About Me
 * <b>My name is Gyujun Jeong.</b>
-* I am a Ph.D. student at <a href="https://ece.gatech.edu/"><b>Electrical and Computer Engineering, Georgia Institute of Technology</b></a>, and <a href="https://www.skhynix.com/"><b>SK hynix Global Ph.D. Fellow</b></a>.
+* I am a Ph.D. student at <a href="https://ece.gatech.edu/"><b>Electrical and Computer Engineering, Georgia Institute of Technology</b></a>, and <a href="https://www.skhynix.com/"><b>SK hynix Global Ph.D. Scholar</b></a>.
 * I graduated with my Bachelor's degree in <a href="https://ee.kaist.ac.kr/en/"><b>Electrical Engineering from KAIST</b></a> (Korea Advanced Institute of Science and Technology).
 * <b>I am eager to connect and collaborate to pioneer the growing field of AI for Semiconductors!</b>
 
@@ -38,7 +38,7 @@ _styles: >
 * Memory Device and Circuits
 
 ## Honors & Fellowships
-* SK Hynix Global Ph.D. Fellowship
+* SK Hynix Global Ph.D. Scholarship
 * J. L. Trantham Fellowship
 * Korea National Scholarship
 
