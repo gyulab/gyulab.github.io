@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://gyulab.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gyulab.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-08-13T20:25:45+00:00</updated><id>https://gyulab.github.io/feed.xml</id><title type="html">Gyujun Jeong</title><subtitle>Gyujun Jeong&apos;s Portfolio Website
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://gyulab.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gyulab.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-08-13T20:32:10+00:00</updated><id>https://gyulab.github.io/feed.xml</id><title type="html">Gyujun Jeong</title><subtitle>Gyujun Jeong&apos;s Portfolio Website
 </subtitle><entry><title type="html">Building an Agentic Workflow for TCAD</title><link href="https://gyulab.github.io/blog/2026/agentic-workflow-tcad/" rel="alternate" type="text/html" title="Building an Agentic Workflow for TCAD" /><published>2026-08-13T13:00:00+00:00</published><updated>2026-08-13T13:00:00+00:00</updated><id>https://gyulab.github.io/blog/2026/agentic-workflow-tcad</id><content type="html" xml:base="https://gyulab.github.io/blog/2026/agentic-workflow-tcad/"><![CDATA[<iframe src="https://drive.google.com/file/d/1Y6OE-IeEOqfVEkdmI3WGMKyysW7EPz3c/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 
 <blockquote>
-  <p>This independent educational article is not affiliated with or endorsed by Synopsys, Georgia Tech, or OpenAI. Synopsys and Sentaurus are trademarks of Synopsys, Inc. No Synopsys software, documentation, license material, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.</p>
+  <p>This independent educational article is not affiliated with or endorsed by Synopsys, Inc. No Synopsys software, documentation, license, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.</p>
 </blockquote>
 
 <p><br /></p>
 
 <h1 id="motivation-why-tcad-workflows-are-repetitive">Motivation: Why TCAD Workflows Are Repetitive</h1>
 
-<p>    Synopsys® Sentaurus™ and other TCAD tools are powerful because they expose detailed control over structure generation, physical models, meshing, bias conditions, solver settings, and post-processing. That same flexibility also creates repetitive research work. A typical study may require copying a baseline case, changing a small set of parameters, checking that placeholders were resolved, launching jobs in the correct environment, parsing logs, extracting metrics, and writing a short report.</p>
+<p>    TCAD tools are powerful because they expose detailed control over structure generation, physical models, meshing, bias conditions, solver settings, and post-processing. That same flexibility also creates repetitive research work. A typical study may require copying a baseline case, changing a small set of parameters, checking that placeholders were resolved, launching jobs in the correct environment, parsing logs, extracting metrics, and writing a short report.</p>
 
 <p>    For semiconductor researchers who are new to coding agents, the key point is not to let an agent “do TCAD.” The researcher still owns the device physics, calibration assumptions, convergence criteria, and final interpretation. The agent is useful for the surrounding workflow: file navigation, script execution, manual search, input-deck checks, sweep generation, log summarization, and reproducible bookkeeping.</p>
 
@@ -26,13 +26,11 @@
   <li><strong>TCAD execution</strong>: simulator commands run only after the agent has checked the input deck and the researcher has confirmed the exact case count.</li>
 </ol>
 
-<p>    Public references should stay public. The article can link to the <a href="https://www.synopsys.com/manufacturing/tcad.html">Synopsys TCAD product page</a>, <a href="https://www.synopsys.com/manufacturing/tcad/device-simulation/sentaurus-device.html">Sentaurus Device product page</a>, <a href="https://learn.chatgpt.com/docs/remote">OpenAI Codex remote connection documentation</a>, <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">OpenAI AGENTS.md documentation</a>, and <a href="https://learn.chatgpt.com/docs/build-skills">OpenAI skills documentation</a>. Lab manuals, license files, server names, usernames, PDKs, process recipes, and unpublished data should remain outside the post.</p>
-
 <p><br /></p>
 
-<h1 id="project-rules-agentsmd">Project Rules: <code class="language-plaintext highlighter-rouge">AGENTS.md</code></h1>
+<h1 id="master-rules-agentsmd">Master Rules: <code class="language-plaintext highlighter-rouge">AGENTS.md</code></h1>
 
-<p>    <code class="language-plaintext highlighter-rouge">AGENTS.md</code> is the persistent rulebook for the project. It should describe what the agent may read, what it must not modify, which commands are allowed, and what evidence is required before a run. The most important rule is to protect the baseline.</p>
+<p>    <code class="language-plaintext highlighter-rouge">AGENTS.md</code> is the master rulebook for the project. It should describe what the agent may read, what it must not modify, which commands are allowed, and what evidence is required before a run. The most important rule is to protect the baseline.</p>
 
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># AGENTS.md</span>
 
@@ -63,7 +61,7 @@ This repository supports generic TCAD input checking and parameter sweeps.
 
 <p><br /></p>
 
-<h1 id="task-procedure-skillmd">Task Procedure: <code class="language-plaintext highlighter-rouge">SKILL.md</code></h1>
+<h1 id="task-specific-procedure-skillmd">Task-specific Procedure: <code class="language-plaintext highlighter-rouge">SKILL.md</code></h1>
 
 <p>    A <code class="language-plaintext highlighter-rouge">SKILL.md</code> file is narrower than <code class="language-plaintext highlighter-rouge">AGENTS.md</code>. It describes a reusable operating procedure for one kind of task, such as debugging an input-deck parsing failure or preparing a bias sweep. The skill should trigger only when the task matches that procedure.</p>
 
@@ -106,8 +104,6 @@ This repository supports generic TCAD input checking and parameter sweeps.
     <span class="na">path</span><span class="pi">:</span> <span class="s">knowledge/raw/LICENSED_DOCUMENT.pdf</span>
     <span class="na">access</span><span class="pi">:</span> <span class="s">local_only</span>
 </code></pre></div></div>
-
-<p>    This is a manual-search pattern, not a publication pattern. The public website should describe the architecture but should not distribute the index, retrieved chunks, or screenshots.</p>
 
 <p><br /></p>
 
@@ -192,28 +188,7 @@ Do not add cases, retry failed cases, or change solver settings without asking.
   <li>Known limitations and next actions</li>
 </ul>
 
-<p>    The report should be sanitized before leaving the lab environment. Public summaries can describe the workflow and generic lessons learned, but not license values, internal paths, unpublished device data, or proprietary setup details.</p>
-
-<p><br /></p>
-
-<h1 id="current-limitations">Current Limitations</h1>
-
-<p>    This workflow does not replace expert TCAD judgment. It cannot decide whether a mobility model is physically appropriate, whether calibration data is sufficient, or whether a process assumption is publishable. It also depends on local setup quality: if the SSH environment is inconsistent, the manual index is stale, or the baseline is not version controlled, the agent will automate uncertainty instead of reducing it.</p>
-
-<p>    The other limitation is access control. Local manual search should be treated as internal tooling. It needs permission boundaries, document registry checks, and clear rules for what can be copied into reports.</p>
-
-<p><br /></p>
-
-<h1 id="future-work">Future Work</h1>
-
-<p>    The next step is to make the workflow more measurable. Useful additions include unit tests for deck-checking scripts, structured parsers for convergence logs, a report template with required fields, scheduler integration that respects lab policy, and a small benchmark of tasks where agent assistance reduces setup time without increasing failed simulator jobs.</p>
-
-<p>    For now, the practical daily loop is:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>connect -&gt; inspect rules -&gt; search local references -&gt; prepare cases -&gt; confirm count -&gt; run -&gt; report
-</code></pre></div></div>
-
-<p>    That loop keeps the researcher in control while moving repetitive TCAD work into scripts, checks, and reproducible records.</p>]]></content><author><name></name></author><category term="1_Georgia_Tech" /><summary type="html"><![CDATA[A practical guide for semiconductor researchers who want to use coding agents for repetitive TCAD setup, input checking, parameter sweeps, and reproducible reporting.]]></summary></entry><entry><title type="html">IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays</title><link href="https://gyulab.github.io/blog/2026/irps/" rel="alternate" type="text/html" title="IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays" /><published>2026-03-22T15:00:00+00:00</published><updated>2026-03-22T15:00:00+00:00</updated><id>https://gyulab.github.io/blog/2026/irps</id><content type="html" xml:base="https://gyulab.github.io/blog/2026/irps/"><![CDATA[<p>IRPS 2026 was my first time presenting at a conference. I presented my work on physics-informed training methodologies, focusing on how custom loss functions can guide device modeling and improve compact modeling for nvCAP arrays.</p>
+<p><br /></p>]]></content><author><name></name></author><category term="1_Georgia_Tech" /><summary type="html"><![CDATA[A practical guide for semiconductor researchers who want to use coding agents for repetitive TCAD setup, input checking, parameter sweeps, and reproducible reporting.]]></summary></entry><entry><title type="html">IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays</title><link href="https://gyulab.github.io/blog/2026/irps/" rel="alternate" type="text/html" title="IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays" /><published>2026-03-22T15:00:00+00:00</published><updated>2026-03-22T15:00:00+00:00</updated><id>https://gyulab.github.io/blog/2026/irps</id><content type="html" xml:base="https://gyulab.github.io/blog/2026/irps/"><![CDATA[<p>IRPS 2026 was my first time presenting at a conference. I presented my work on physics-informed training methodologies, focusing on how custom loss functions can guide device modeling and improve compact modeling for nvCAP arrays.</p>
 
 <p><img src="/assets/img/irps1.jpeg" alt="IRPS 2026 conference presentation" title="IRPS 2026 conference presentation" class="profile" />
 <br /></p>
