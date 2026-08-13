@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Building an Agentic Workflow for TCAD | Gyujun Jeong
+    
+  
+</title>
+<meta name="author" content="Gyujun Jeong">
+<meta name="description" content="A practical guide for semiconductor researchers who want to use coding agents for repetitive TCAD setup, input checking, parameter sweeps, and reproducible reporting.">
+
+  <meta name="keywords" content="Gyujun Jeong, electrical engineering, Georgia Tech, AI for Semiconductors, physics-informed machine learning, memory devices">
+
+
+
+
+
+
+
+
+
+
+<!-- Security: Content Security Policy -->
+<!-- Permissive CSP suitable for academic websites. Allows external images, videos, and common embed services. -->
+<!-- To customize for your needs, see: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;">
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5">
+<link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772">
+<link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap">
+
+<!-- Code Syntax Highlighting -->
+<link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light">
+
+
+
+<!-- Styles -->
+
+
+
+
+  <link rel="shortcut icon" href="/assets/img/buzz.png?v=f741d7dc6eb2a26c6967093359dce839">
+
+<link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e">
+<link rel="canonical" href="https://gyulab.github.io/blog/2026/agentic-workflow-tcad/">
+
+
+  <!-- Dark Mode -->
+  <script src="/assets/js/theme.js?v=5fea5159b787642c1bbc1f334d60f883"></script>
+  <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark">
+  <script>
+    initTheme();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          Gyujun Jeong
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">About me
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="/blog/">Blog
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/publications/">Publications
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/cv/">CV
+                    
+                  </a>
+                </li>
+              
+            
+          
+          
+            <!-- Search -->
+            <li class="nav-item">
+              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
+              </button>
+            </li>
+          
+          
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        
+
+
+
+
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Building an Agentic Workflow for TCAD</h1>
+    <p class="post-meta">
+      Created on August 13, 2026
+      
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>
+      
+      
+          ·  
+        
+          
+            <a href="/blog/tag/1-georgia-tech"> <i class="fa-solid fa-hashtag fa-sm"></i> 1_Georgia_Tech</a>
+          
+          
+        
+      
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <iframe src="https://drive.google.com/file/d/1Y6OE-IeEOqfVEkdmI3WGMKyysW7EPz3c/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
+
+<blockquote>
+  <p>This independent educational article is not affiliated with or endorsed by Synopsys, Georgia Tech, or OpenAI. Synopsys and Sentaurus are trademarks of Synopsys, Inc. No Synopsys software, documentation, license material, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.</p>
+</blockquote>
+
+<p><br></p>
+
+<h1 id="motivation-why-tcad-workflows-are-repetitive">Motivation: Why TCAD Workflows Are Repetitive</h1>
+
+<p>    Synopsys® Sentaurus™ and other TCAD tools are powerful because they expose detailed control over structure generation, physical models, meshing, bias conditions, solver settings, and post-processing. That same flexibility also creates repetitive research work. A typical study may require copying a baseline case, changing a small set of parameters, checking that placeholders were resolved, launching jobs in the correct environment, parsing logs, extracting metrics, and writing a short report.</p>
+
+<p>    For semiconductor researchers who are new to coding agents, the key point is not to let an agent “do TCAD.” The researcher still owns the device physics, calibration assumptions, convergence criteria, and final interpretation. The agent is useful for the surrounding workflow: file navigation, script execution, manual search, input-deck checks, sweep generation, log summarization, and reproducible bookkeeping.</p>
+
+<p><br></p>
+
+<h1 id="system-view-desktop-to-simulator">System View: Desktop to Simulator</h1>
+
+<p>    A practical setup has four layers:</p>
+
+<ol>
+  <li>
+<strong>Codex desktop</strong>: the researcher writes the request, reviews proposed changes, and approves any expensive run.</li>
+  <li>
+<strong>SSH server</strong>: the agent connects to a controlled compute environment where the project files and scripts live.</li>
+  <li>
+<strong>Project files</strong>: <code class="language-plaintext highlighter-rouge">AGENTS.md</code>, reusable skills, baseline input decks, generated cases, logs, and reports are stored in versioned folders.</li>
+  <li>
+<strong>TCAD execution</strong>: simulator commands run only after the agent has checked the input deck and the researcher has confirmed the exact case count.</li>
+</ol>
+
+<p>    Public references should stay public. The article can link to the <a href="https://www.synopsys.com/manufacturing/tcad.html" rel="external nofollow noopener" target="_blank">Synopsys TCAD product page</a>, <a href="https://www.synopsys.com/manufacturing/tcad/device-simulation/sentaurus-device.html" rel="external nofollow noopener" target="_blank">Sentaurus Device product page</a>, <a href="https://learn.chatgpt.com/docs/remote" rel="external nofollow noopener" target="_blank">OpenAI Codex remote connection documentation</a>, <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" rel="external nofollow noopener" target="_blank">OpenAI AGENTS.md documentation</a>, and <a href="https://learn.chatgpt.com/docs/build-skills" rel="external nofollow noopener" target="_blank">OpenAI skills documentation</a>. Lab manuals, license files, server names, usernames, PDKs, process recipes, and unpublished data should remain outside the post.</p>
+
+<p><br></p>
+
+<h1 id="project-rules-agentsmd">Project Rules: <code class="language-plaintext highlighter-rouge">AGENTS.md</code>
+</h1>
+
+<p>    <code class="language-plaintext highlighter-rouge">AGENTS.md</code> is the persistent rulebook for the project. It should describe what the agent may read, what it must not modify, which commands are allowed, and what evidence is required before a run. The most important rule is to protect the baseline.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># AGENTS.md</span>
+
+<span class="gu">## Project use</span>
+
+This repository supports generic TCAD input checking and parameter sweeps.
+
+<span class="gu">## Baseline inputs</span>
+<span class="p">
+-</span> Never edit <span class="sb">`cases/baseline/`</span> directly.
+<span class="p">-</span> Copy baseline inputs into <span class="sb">`runs/&lt;run_id&gt;/input/`</span> before modification.
+<span class="p">-</span> Keep generated cases, logs, and reports under <span class="sb">`runs/&lt;run_id&gt;/`</span>.
+
+<span class="gu">## Manual handling</span>
+<span class="p">
+-</span> Search only approved local documentation for the installed release.
+<span class="p">-</span> Cite document ID, release, and page metadata in internal run reports.
+<span class="p">-</span> Do not paste licensed manual text into Git, chat, or public notes.
+
+<span class="gu">## Execution gate</span>
+<span class="p">
+-</span> Show the input diff and intended case count before simulator execution.
+<span class="p">-</span> Ask the researcher to confirm license-consuming jobs.
+<span class="p">-</span> Stop after the first non-zero exit code unless the researcher approves another attempt.
+</code></pre></div></div>
+
+<p>    This keeps the researcher from repeating the same cautionary instructions in every prompt. A short task request can then focus on the physics objective: “debug this placeholder and prepare a three-point drain-bias sweep.”</p>
+
+<p><br></p>
+
+<h1 id="task-procedure-skillmd">Task Procedure: <code class="language-plaintext highlighter-rouge">SKILL.md</code>
+</h1>
+
+<p>    A <code class="language-plaintext highlighter-rouge">SKILL.md</code> file is narrower than <code class="language-plaintext highlighter-rouge">AGENTS.md</code>. It describes a reusable operating procedure for one kind of task, such as debugging an input-deck parsing failure or preparing a bias sweep. The skill should trigger only when the task matches that procedure.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">tcad-debug-and-sweep</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Use for generic TCAD input parsing failures, unresolved placeholders, and small researcher-confirmed voltage sweeps. Do not use for model calibration or unpublished process development decisions.</span>
+<span class="nn">---</span>
+
+<span class="p">1.</span> Read <span class="sb">`AGENTS.md`</span> and the task request.
+<span class="p">2.</span> Identify the baseline case and confirm it remains read-only.
+<span class="p">3.</span> Run host and environment checks without consuming a simulator license.
+<span class="p">4.</span> Search approved local documentation for the installed release.
+<span class="p">5.</span> Inspect the input deck and report unresolved placeholders.
+<span class="p">6.</span> Propose a minimal diff and generated case list.
+<span class="p">7.</span> Ask the researcher to confirm the exact case count before execution.
+<span class="p">8.</span> Run cases one at a time, preserving stdout, stderr, exit code, and timestamps.
+<span class="p">9.</span> Summarize convergence status, extracted metrics, and limitations.
+</code></pre></div></div>
+
+<p>    The practical difference is simple: <code class="language-plaintext highlighter-rouge">AGENTS.md</code> tells the agent the standing safety rules; <code class="language-plaintext highlighter-rouge">SKILL.md</code> tells it the ordered procedure for a repeatable task.</p>
+
+<p><br></p>
+
+<h1 id="local-manual-search-architecture">Local Manual-Search Architecture</h1>
+
+<p>    TCAD syntax depends on the installed release and the licensed tools available in the lab. An agent should not guess syntax from memory or internet snippets. A safer architecture is local manual search:</p>
+
+<ol>
+  <li>Store approved manual PDFs in a non-public <code class="language-plaintext highlighter-rouge">knowledge/raw/</code> folder on the SSH host.</li>
+  <li>Register each document with product, release, access class, and hash metadata.</li>
+  <li>Build a local text index with section and page metadata.</li>
+  <li>Search the local index before making syntax-related changes.</li>
+  <li>Return short internal citations in the run report, not manual text in public notes.</li>
+</ol>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">documents</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">doc_id</span><span class="pi">:</span> <span class="s">device_user_guide</span>
+    <span class="na">product</span><span class="pi">:</span> <span class="s">device-simulator</span>
+    <span class="na">release</span><span class="pi">:</span> <span class="s">SITE_RELEASE</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">knowledge/raw/LICENSED_DOCUMENT.pdf</span>
+    <span class="na">access</span><span class="pi">:</span> <span class="s">local_only</span>
+</code></pre></div></div>
+
+<p>    This is a manual-search pattern, not a publication pattern. The public website should describe the architecture but should not distribute the index, retrieved chunks, or screenshots.</p>
+
+<p><br></p>
+
+<h1 id="safe-input-deck-checking">Safe Input-Deck Checking</h1>
+
+<p>    Before launching a job, the agent can run cheap checks that do not consume a simulator license:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./tools/check_host.sh
+./tools/check_tcad_case.sh runs/&lt;run_id&gt;/input
+python tools/render_case_matrix.py experiments/&lt;sweep&gt;.yaml
+git diff <span class="nt">--</span> runs/&lt;run_id&gt;/input
+</code></pre></div></div>
+
+<p>    The goal is to fail early. If a placeholder remains unresolved, if an include file is missing, or if a generated sweep contains more cases than requested, the agent should block the run and ask for review.</p>
+
+<p><br></p>
+
+<h1 id="example-unresolved-vd">Example: Unresolved <code class="language-plaintext highlighter-rouge">@Vd@</code>
+</h1>
+
+<p>    A common source of failure is moving an input deck from a Workbench-style preprocessing flow into a standalone run without resolving placeholders. A generic fragment might look like this:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Electrode {
+  { Name="drain" Voltage=@Vd@ }
+}
+</code></pre></div></div>
+
+<p>    For a standalone three-point drain-bias sweep, the agent should generate explicit cases rather than editing the baseline:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">baseline</span><span class="pi">:</span> <span class="s">cases/baseline</span>
+<span class="na">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">@Vd@"</span>
+<span class="na">parameter</span><span class="pi">:</span> <span class="s">drain_voltage</span>
+<span class="na">values_V</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">0.05</span><span class="pi">,</span> <span class="nv">0.50</span><span class="pi">,</span> <span class="nv">1.00</span><span class="pi">]</span>
+<span class="na">locked_paths</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">geometry.tdr</span>
+  <span class="pi">-</span> <span class="s">physics.inc</span>
+</code></pre></div></div>
+
+<p>    The proposed diff for one generated case should be minimal:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">- { Name="drain" Voltage=@Vd@ }
+</span><span class="gi">+ { Name="drain" Voltage=0.50 }
+</span></code></pre></div></div>
+
+<p>    The agent should then report:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ready to execute 3 cases:
+1. runs/&lt;run_id&gt;/cases/Vd_0.05V
+2. runs/&lt;run_id&gt;/cases/Vd_0.50V
+3. runs/&lt;run_id&gt;/cases/Vd_1.00V
+
+Please confirm before simulator execution.
+</code></pre></div></div>
+
+<p><br></p>
+
+<h1 id="researcher-confirmation-before-license-consuming-jobs">Researcher Confirmation Before License-Consuming Jobs</h1>
+
+<p>    The confirmation gate is not bureaucracy. It protects shared licenses, queue resources, and research time. Before execution, the agent should show the exact command pattern, the generated input paths, the case count, and the stop condition. A good confirmation is explicit:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Run exactly these 3 cases.
+Stop after the first non-zero exit code.
+Do not add cases, retry failed cases, or change solver settings without asking.
+</code></pre></div></div>
+
+<p>    This keeps automation bounded. It also makes later debugging easier because every run has a clear human-approved scope.</p>
+
+<p><br></p>
+
+<h1 id="reproducible-run-records">Reproducible Run Records</h1>
+
+<p>    A useful agentic workflow ends with a run record, not just a terminal log. Each report should include:</p>
+
+<ul>
+  <li>Run ID and Git commit</li>
+  <li>Installed tool release placeholder</li>
+  <li>Confirmed case count</li>
+  <li>Input diff and generated sweep matrix</li>
+  <li>Hashes for locked files</li>
+  <li>Commands executed</li>
+  <li>Start time, end time, stdout, stderr, and exit code</li>
+  <li>Convergence checks and extracted metrics</li>
+  <li>Known limitations and next actions</li>
+</ul>
+
+<p>    The report should be sanitized before leaving the lab environment. Public summaries can describe the workflow and generic lessons learned, but not license values, internal paths, unpublished device data, or proprietary setup details.</p>
+
+<p><br></p>
+
+<h1 id="current-limitations">Current Limitations</h1>
+
+<p>    This workflow does not replace expert TCAD judgment. It cannot decide whether a mobility model is physically appropriate, whether calibration data is sufficient, or whether a process assumption is publishable. It also depends on local setup quality: if the SSH environment is inconsistent, the manual index is stale, or the baseline is not version controlled, the agent will automate uncertainty instead of reducing it.</p>
+
+<p>    The other limitation is access control. Local manual search should be treated as internal tooling. It needs permission boundaries, document registry checks, and clear rules for what can be copied into reports.</p>
+
+<p><br></p>
+
+<h1 id="future-work">Future Work</h1>
+
+<p>    The next step is to make the workflow more measurable. Useful additions include unit tests for deck-checking scripts, structured parsers for convergence logs, a report template with required fields, scheduler integration that respects lab policy, and a small benchmark of tasks where agent assistance reduces setup time without increasing failed simulator jobs.</p>
+
+<p>    For now, the practical daily loop is:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>connect -&gt; inspect rules -&gt; search local references -&gt; prepare cases -&gt; confirm count -&gt; run -&gt; report
+</code></pre></div></div>
+
+<p>    That loop keeps the researcher in control while moving repetitive TCAD work into scripts, checks, and reproducible records.</p>
+
+    </div>
+  </article>
+
+  
+
+  
+
+  
+    
+      
+
+  
+    
+    
+      <br>
+      <hr>
+      <br>
+      <ul class="list-disc pl-8"></ul>
+
+      <!-- Adds related posts to the end of an article -->
+      <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    
+
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2026/irps/">IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/pino/">Accelerating Semiconductor Design: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/ibm-aihwkit/">IBM Analog Hardware Accelerator Kit Research Archive</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/tapeout/">From Theory to Tapeout: SAR-ADC Full-custom IC Design Project</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2024/ml_compact_model/">Georgia Tech ML Compact Model Research Archive</a>
+    
+  </li>
+
+
+
+    
+  
+
+  
+  
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+
+  <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script>
+
+
+
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script>
+<script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script>
+<script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script>
+
+<!-- Badges -->
+
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+
+
+  <!-- MathJax -->
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script>
+  
+    <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script>
+    <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Scrolling Progress Bar -->
+  <script defer src="/assets/js/progress-bar.js?v=2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script>
+
+
+
+
+
+
+
+  <!-- Back to Top -->
+  <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script>
+  <script>
+    addBackToTop();
+  </script>
+
+
+
+  <!-- Search -->
+  <script type="module" src="/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script>
+  <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys>
+  <script src="/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script>
+  <script src="/assets/js/search-data.js"></script>
+  <script src="/assets/js/shortcut-key.js?v=ccc841c459bfc0e64c1c2b5acd10df02"></script>
+
+
+
+
+  </body>
+</html>

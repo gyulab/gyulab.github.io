@@ -1,5 +1,219 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://gyulab.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gyulab.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-07-22T15:44:22+00:00</updated><id>https://gyulab.github.io/feed.xml</id><title type="html">Gyujun Jeong</title><subtitle>Gyujun Jeong&apos;s Portfolio Website
-</subtitle><entry><title type="html">IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays</title><link href="https://gyulab.github.io/blog/2026/irps/" rel="alternate" type="text/html" title="IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays" /><published>2026-03-22T15:00:00+00:00</published><updated>2026-03-22T15:00:00+00:00</updated><id>https://gyulab.github.io/blog/2026/irps</id><content type="html" xml:base="https://gyulab.github.io/blog/2026/irps/"><![CDATA[<p>IRPS 2026 was my first time presenting at a conference. I presented my work on physics-informed training methodologies, focusing on how custom loss functions can guide device modeling and improve compact modeling for nvCAP arrays.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://gyulab.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gyulab.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-08-13T20:22:08+00:00</updated><id>https://gyulab.github.io/feed.xml</id><title type="html">Gyujun Jeong</title><subtitle>Gyujun Jeong&apos;s Portfolio Website
+</subtitle><entry><title type="html">Building an Agentic Workflow for TCAD</title><link href="https://gyulab.github.io/blog/2026/agentic-workflow-tcad/" rel="alternate" type="text/html" title="Building an Agentic Workflow for TCAD" /><published>2026-08-13T13:00:00+00:00</published><updated>2026-08-13T13:00:00+00:00</updated><id>https://gyulab.github.io/blog/2026/agentic-workflow-tcad</id><content type="html" xml:base="https://gyulab.github.io/blog/2026/agentic-workflow-tcad/"><![CDATA[<iframe src="https://drive.google.com/file/d/1Y6OE-IeEOqfVEkdmI3WGMKyysW7EPz3c/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
+
+<blockquote>
+  <p>This independent educational article is not affiliated with or endorsed by Synopsys, Georgia Tech, or OpenAI. Synopsys and Sentaurus are trademarks of Synopsys, Inc. No Synopsys software, documentation, license material, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.</p>
+</blockquote>
+
+<p><br /></p>
+
+<h1 id="motivation-why-tcad-workflows-are-repetitive">Motivation: Why TCAD Workflows Are Repetitive</h1>
+
+<p>    Synopsys® Sentaurus™ and other TCAD tools are powerful because they expose detailed control over structure generation, physical models, meshing, bias conditions, solver settings, and post-processing. That same flexibility also creates repetitive research work. A typical study may require copying a baseline case, changing a small set of parameters, checking that placeholders were resolved, launching jobs in the correct environment, parsing logs, extracting metrics, and writing a short report.</p>
+
+<p>    For semiconductor researchers who are new to coding agents, the key point is not to let an agent “do TCAD.” The researcher still owns the device physics, calibration assumptions, convergence criteria, and final interpretation. The agent is useful for the surrounding workflow: file navigation, script execution, manual search, input-deck checks, sweep generation, log summarization, and reproducible bookkeeping.</p>
+
+<p><br /></p>
+
+<h1 id="system-view-desktop-to-simulator">System View: Desktop to Simulator</h1>
+
+<p>    A practical setup has four layers:</p>
+
+<ol>
+  <li><strong>Codex desktop</strong>: the researcher writes the request, reviews proposed changes, and approves any expensive run.</li>
+  <li><strong>SSH server</strong>: the agent connects to a controlled compute environment where the project files and scripts live.</li>
+  <li><strong>Project files</strong>: <code class="language-plaintext highlighter-rouge">AGENTS.md</code>, reusable skills, baseline input decks, generated cases, logs, and reports are stored in versioned folders.</li>
+  <li><strong>TCAD execution</strong>: simulator commands run only after the agent has checked the input deck and the researcher has confirmed the exact case count.</li>
+</ol>
+
+<p>    Public references should stay public. The article can link to the <a href="https://www.synopsys.com/manufacturing/tcad.html">Synopsys TCAD product page</a>, <a href="https://www.synopsys.com/manufacturing/tcad/device-simulation/sentaurus-device.html">Sentaurus Device product page</a>, <a href="https://learn.chatgpt.com/docs/remote">OpenAI Codex remote connection documentation</a>, <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">OpenAI AGENTS.md documentation</a>, and <a href="https://learn.chatgpt.com/docs/build-skills">OpenAI skills documentation</a>. Lab manuals, license files, server names, usernames, PDKs, process recipes, and unpublished data should remain outside the post.</p>
+
+<p><br /></p>
+
+<h1 id="project-rules-agentsmd">Project Rules: <code class="language-plaintext highlighter-rouge">AGENTS.md</code></h1>
+
+<p>    <code class="language-plaintext highlighter-rouge">AGENTS.md</code> is the persistent rulebook for the project. It should describe what the agent may read, what it must not modify, which commands are allowed, and what evidence is required before a run. The most important rule is to protect the baseline.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># AGENTS.md</span>
+
+<span class="gu">## Project use</span>
+
+This repository supports generic TCAD input checking and parameter sweeps.
+
+<span class="gu">## Baseline inputs</span>
+<span class="p">
+-</span> Never edit <span class="sb">`cases/baseline/`</span> directly.
+<span class="p">-</span> Copy baseline inputs into <span class="sb">`runs/&lt;run_id&gt;/input/`</span> before modification.
+<span class="p">-</span> Keep generated cases, logs, and reports under <span class="sb">`runs/&lt;run_id&gt;/`</span>.
+
+<span class="gu">## Manual handling</span>
+<span class="p">
+-</span> Search only approved local documentation for the installed release.
+<span class="p">-</span> Cite document ID, release, and page metadata in internal run reports.
+<span class="p">-</span> Do not paste licensed manual text into Git, chat, or public notes.
+
+<span class="gu">## Execution gate</span>
+<span class="p">
+-</span> Show the input diff and intended case count before simulator execution.
+<span class="p">-</span> Ask the researcher to confirm license-consuming jobs.
+<span class="p">-</span> Stop after the first non-zero exit code unless the researcher approves another attempt.
+</code></pre></div></div>
+
+<p>    This keeps the researcher from repeating the same cautionary instructions in every prompt. A short task request can then focus on the physics objective: “debug this placeholder and prepare a three-point drain-bias sweep.”</p>
+
+<p><br /></p>
+
+<h1 id="task-procedure-skillmd">Task Procedure: <code class="language-plaintext highlighter-rouge">SKILL.md</code></h1>
+
+<p>    A <code class="language-plaintext highlighter-rouge">SKILL.md</code> file is narrower than <code class="language-plaintext highlighter-rouge">AGENTS.md</code>. It describes a reusable operating procedure for one kind of task, such as debugging an input-deck parsing failure or preparing a bias sweep. The skill should trigger only when the task matches that procedure.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">tcad-debug-and-sweep</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Use for generic TCAD input parsing failures, unresolved placeholders, and small researcher-confirmed voltage sweeps. Do not use for model calibration or unpublished process development decisions.</span>
+<span class="nn">---</span>
+
+<span class="p">1.</span> Read <span class="sb">`AGENTS.md`</span> and the task request.
+<span class="p">2.</span> Identify the baseline case and confirm it remains read-only.
+<span class="p">3.</span> Run host and environment checks without consuming a simulator license.
+<span class="p">4.</span> Search approved local documentation for the installed release.
+<span class="p">5.</span> Inspect the input deck and report unresolved placeholders.
+<span class="p">6.</span> Propose a minimal diff and generated case list.
+<span class="p">7.</span> Ask the researcher to confirm the exact case count before execution.
+<span class="p">8.</span> Run cases one at a time, preserving stdout, stderr, exit code, and timestamps.
+<span class="p">9.</span> Summarize convergence status, extracted metrics, and limitations.
+</code></pre></div></div>
+
+<p>    The practical difference is simple: <code class="language-plaintext highlighter-rouge">AGENTS.md</code> tells the agent the standing safety rules; <code class="language-plaintext highlighter-rouge">SKILL.md</code> tells it the ordered procedure for a repeatable task.</p>
+
+<p><br /></p>
+
+<h1 id="local-manual-search-architecture">Local Manual-Search Architecture</h1>
+
+<p>    TCAD syntax depends on the installed release and the licensed tools available in the lab. An agent should not guess syntax from memory or internet snippets. A safer architecture is local manual search:</p>
+
+<ol>
+  <li>Store approved manual PDFs in a non-public <code class="language-plaintext highlighter-rouge">knowledge/raw/</code> folder on the SSH host.</li>
+  <li>Register each document with product, release, access class, and hash metadata.</li>
+  <li>Build a local text index with section and page metadata.</li>
+  <li>Search the local index before making syntax-related changes.</li>
+  <li>Return short internal citations in the run report, not manual text in public notes.</li>
+</ol>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">documents</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">doc_id</span><span class="pi">:</span> <span class="s">device_user_guide</span>
+    <span class="na">product</span><span class="pi">:</span> <span class="s">device-simulator</span>
+    <span class="na">release</span><span class="pi">:</span> <span class="s">SITE_RELEASE</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">knowledge/raw/LICENSED_DOCUMENT.pdf</span>
+    <span class="na">access</span><span class="pi">:</span> <span class="s">local_only</span>
+</code></pre></div></div>
+
+<p>    This is a manual-search pattern, not a publication pattern. The public website should describe the architecture but should not distribute the index, retrieved chunks, or screenshots.</p>
+
+<p><br /></p>
+
+<h1 id="safe-input-deck-checking">Safe Input-Deck Checking</h1>
+
+<p>    Before launching a job, the agent can run cheap checks that do not consume a simulator license:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./tools/check_host.sh
+./tools/check_tcad_case.sh runs/&lt;run_id&gt;/input
+python tools/render_case_matrix.py experiments/&lt;sweep&gt;.yaml
+git diff <span class="nt">--</span> runs/&lt;run_id&gt;/input
+</code></pre></div></div>
+
+<p>    The goal is to fail early. If a placeholder remains unresolved, if an include file is missing, or if a generated sweep contains more cases than requested, the agent should block the run and ask for review.</p>
+
+<p><br /></p>
+
+<h1 id="example-unresolved-vd">Example: Unresolved <code class="language-plaintext highlighter-rouge">@Vd@</code></h1>
+
+<p>    A common source of failure is moving an input deck from a Workbench-style preprocessing flow into a standalone run without resolving placeholders. A generic fragment might look like this:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Electrode {
+  { Name="drain" Voltage=@Vd@ }
+}
+</code></pre></div></div>
+
+<p>    For a standalone three-point drain-bias sweep, the agent should generate explicit cases rather than editing the baseline:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">baseline</span><span class="pi">:</span> <span class="s">cases/baseline</span>
+<span class="na">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">@Vd@"</span>
+<span class="na">parameter</span><span class="pi">:</span> <span class="s">drain_voltage</span>
+<span class="na">values_V</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">0.05</span><span class="pi">,</span> <span class="nv">0.50</span><span class="pi">,</span> <span class="nv">1.00</span><span class="pi">]</span>
+<span class="na">locked_paths</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">geometry.tdr</span>
+  <span class="pi">-</span> <span class="s">physics.inc</span>
+</code></pre></div></div>
+
+<p>    The proposed diff for one generated case should be minimal:</p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">- { Name="drain" Voltage=@Vd@ }
+</span><span class="gi">+ { Name="drain" Voltage=0.50 }
+</span></code></pre></div></div>
+
+<p>    The agent should then report:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ready to execute 3 cases:
+1. runs/&lt;run_id&gt;/cases/Vd_0.05V
+2. runs/&lt;run_id&gt;/cases/Vd_0.50V
+3. runs/&lt;run_id&gt;/cases/Vd_1.00V
+
+Please confirm before simulator execution.
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h1 id="researcher-confirmation-before-license-consuming-jobs">Researcher Confirmation Before License-Consuming Jobs</h1>
+
+<p>    The confirmation gate is not bureaucracy. It protects shared licenses, queue resources, and research time. Before execution, the agent should show the exact command pattern, the generated input paths, the case count, and the stop condition. A good confirmation is explicit:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Run exactly these 3 cases.
+Stop after the first non-zero exit code.
+Do not add cases, retry failed cases, or change solver settings without asking.
+</code></pre></div></div>
+
+<p>    This keeps automation bounded. It also makes later debugging easier because every run has a clear human-approved scope.</p>
+
+<p><br /></p>
+
+<h1 id="reproducible-run-records">Reproducible Run Records</h1>
+
+<p>    A useful agentic workflow ends with a run record, not just a terminal log. Each report should include:</p>
+
+<ul>
+  <li>Run ID and Git commit</li>
+  <li>Installed tool release placeholder</li>
+  <li>Confirmed case count</li>
+  <li>Input diff and generated sweep matrix</li>
+  <li>Hashes for locked files</li>
+  <li>Commands executed</li>
+  <li>Start time, end time, stdout, stderr, and exit code</li>
+  <li>Convergence checks and extracted metrics</li>
+  <li>Known limitations and next actions</li>
+</ul>
+
+<p>    The report should be sanitized before leaving the lab environment. Public summaries can describe the workflow and generic lessons learned, but not license values, internal paths, unpublished device data, or proprietary setup details.</p>
+
+<p><br /></p>
+
+<h1 id="current-limitations">Current Limitations</h1>
+
+<p>    This workflow does not replace expert TCAD judgment. It cannot decide whether a mobility model is physically appropriate, whether calibration data is sufficient, or whether a process assumption is publishable. It also depends on local setup quality: if the SSH environment is inconsistent, the manual index is stale, or the baseline is not version controlled, the agent will automate uncertainty instead of reducing it.</p>
+
+<p>    The other limitation is access control. Local manual search should be treated as internal tooling. It needs permission boundaries, document registry checks, and clear rules for what can be copied into reports.</p>
+
+<p><br /></p>
+
+<h1 id="future-work">Future Work</h1>
+
+<p>    The next step is to make the workflow more measurable. Useful additions include unit tests for deck-checking scripts, structured parsers for convergence logs, a report template with required fields, scheduler integration that respects lab policy, and a small benchmark of tasks where agent assistance reduces setup time without increasing failed simulator jobs.</p>
+
+<p>    For now, the practical daily loop is:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>connect -&gt; inspect rules -&gt; search local references -&gt; prepare cases -&gt; confirm count -&gt; run -&gt; report
+</code></pre></div></div>
+
+<p>    That loop keeps the researcher in control while moving repetitive TCAD work into scripts, checks, and reproducible records.</p>]]></content><author><name></name></author><category term="1_Georgia_Tech" /><summary type="html"><![CDATA[A practical guide for semiconductor researchers who want to use coding agents for repetitive TCAD setup, input checking, parameter sweeps, and reproducible reporting.]]></summary></entry><entry><title type="html">IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays</title><link href="https://gyulab.github.io/blog/2026/irps/" rel="alternate" type="text/html" title="IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays" /><published>2026-03-22T15:00:00+00:00</published><updated>2026-03-22T15:00:00+00:00</updated><id>https://gyulab.github.io/blog/2026/irps</id><content type="html" xml:base="https://gyulab.github.io/blog/2026/irps/"><![CDATA[<p>IRPS 2026 was my first time presenting at a conference. I presented my work on physics-informed training methodologies, focusing on how custom loss functions can guide device modeling and improve compact modeling for nvCAP arrays.</p>
 
 <p><img src="/assets/img/irps1.jpeg" alt="IRPS 2026 conference presentation" title="IRPS 2026 conference presentation" class="profile" />
 <br /></p>
@@ -391,5 +605,4 @@ For instance, QPushButton, commonly used in the GUI, has various properties and 
 <iframe src="https://drive.google.com/file/d/12FRI9BIhTMG8AIt83z8bYOfAldOsxrId/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 <blockquote>
   <p><br /></p>
-</blockquote>]]></content><author><name></name></author><category term="Study_notes" /><summary type="html"><![CDATA[Check out my AP Physics tutoring materials for high school students with a memorable class photo :) >]]></summary></entry><entry><title type="html">Study Notes for Analog CMOS IC Design</title><link href="https://gyulab.github.io/blog/2022/cmos_ic_design/" rel="alternate" type="text/html" title="Study Notes for Analog CMOS IC Design" /><published>2022-01-08T19:25:52+00:00</published><updated>2022-01-08T19:25:52+00:00</updated><id>https://gyulab.github.io/blog/2022/cmos_ic_design</id><content type="html" xml:base="https://gyulab.github.io/blog/2022/cmos_ic_design/"><![CDATA[<p><a href="https://drive.google.com/file/d/1D0NbrVrMHSvzKVHeSDCTt1Jw2WhbXIqY/preview" target="_blank">Click to view the document if the browser does not support PDF Viewer.</a><br /><br /></p>
-<iframe src="https://drive.google.com/file/d/1D0NbrVrMHSvzKVHeSDCTt1Jw2WhbXIqY/preview" style="width:100%; height:600px;" frameborder="0"></iframe>]]></content><author><name></name></author><category term="4_ICSL_KAIST" /><summary type="html"><![CDATA[Click to view the document if the browser does not support PDF Viewer.]]></summary></entry></feed>
+</blockquote>]]></content><author><name></name></author><category term="Study_notes" /><summary type="html"><![CDATA[Check out my AP Physics tutoring materials for high school students with a memorable class photo :) >]]></summary></entry></feed>
