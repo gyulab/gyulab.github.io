@@ -8,13 +8,13 @@ tags: [1_Georgia_Tech]
 
 <iframe src="https://drive.google.com/file/d/1Y6OE-IeEOqfVEkdmI3WGMKyysW7EPz3c/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 
-> This independent educational article is not affiliated with or endorsed by Synopsys, Georgia Tech, or OpenAI. Synopsys and Sentaurus are trademarks of Synopsys, Inc. No Synopsys software, documentation, license material, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.
+> This independent educational article is not affiliated with or endorsed by Synopsys, Inc. No Synopsys software, documentation, license, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.
 
 <br>
 
 # Motivation: Why TCAD Workflows Are Repetitive
 
-&nbsp;&nbsp;&nbsp;&nbsp;Synopsys® Sentaurus™ and other TCAD tools are powerful because they expose detailed control over structure generation, physical models, meshing, bias conditions, solver settings, and post-processing. That same flexibility also creates repetitive research work. A typical study may require copying a baseline case, changing a small set of parameters, checking that placeholders were resolved, launching jobs in the correct environment, parsing logs, extracting metrics, and writing a short report.
+&nbsp;&nbsp;&nbsp;&nbsp;TCAD tools are powerful because they expose detailed control over structure generation, physical models, meshing, bias conditions, solver settings, and post-processing. That same flexibility also creates repetitive research work. A typical study may require copying a baseline case, changing a small set of parameters, checking that placeholders were resolved, launching jobs in the correct environment, parsing logs, extracting metrics, and writing a short report.
 
 &nbsp;&nbsp;&nbsp;&nbsp;For semiconductor researchers who are new to coding agents, the key point is not to let an agent "do TCAD." The researcher still owns the device physics, calibration assumptions, convergence criteria, and final interpretation. The agent is useful for the surrounding workflow: file navigation, script execution, manual search, input-deck checks, sweep generation, log summarization, and reproducible bookkeeping.
 
@@ -29,13 +29,11 @@ tags: [1_Georgia_Tech]
 3. **Project files**: `AGENTS.md`, reusable skills, baseline input decks, generated cases, logs, and reports are stored in versioned folders.
 4. **TCAD execution**: simulator commands run only after the agent has checked the input deck and the researcher has confirmed the exact case count.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Public references should stay public. The article can link to the [Synopsys TCAD product page](https://www.synopsys.com/manufacturing/tcad.html), [Sentaurus Device product page](https://www.synopsys.com/manufacturing/tcad/device-simulation/sentaurus-device.html), [OpenAI Codex remote connection documentation](https://learn.chatgpt.com/docs/remote), [OpenAI AGENTS.md documentation](https://learn.chatgpt.com/docs/agent-configuration/agents-md), and [OpenAI skills documentation](https://learn.chatgpt.com/docs/build-skills). Lab manuals, license files, server names, usernames, PDKs, process recipes, and unpublished data should remain outside the post.
-
 <br>
 
-# Project Rules: `AGENTS.md`
+# Master Rules: `AGENTS.md`
 
-&nbsp;&nbsp;&nbsp;&nbsp;`AGENTS.md` is the persistent rulebook for the project. It should describe what the agent may read, what it must not modify, which commands are allowed, and what evidence is required before a run. The most important rule is to protect the baseline.
+&nbsp;&nbsp;&nbsp;&nbsp;`AGENTS.md` is the master rulebook for the project. It should describe what the agent may read, what it must not modify, which commands are allowed, and what evidence is required before a run. The most important rule is to protect the baseline.
 
 ```markdown
 # AGENTS.md
@@ -67,7 +65,7 @@ This repository supports generic TCAD input checking and parameter sweeps.
 
 <br>
 
-# Task Procedure: `SKILL.md`
+# Task-specific Procedure: `SKILL.md`
 
 &nbsp;&nbsp;&nbsp;&nbsp;A `SKILL.md` file is narrower than `AGENTS.md`. It describes a reusable operating procedure for one kind of task, such as debugging an input-deck parsing failure or preparing a bias sweep. The skill should trigger only when the task matches that procedure.
 
@@ -110,8 +108,6 @@ documents:
     path: knowledge/raw/LICENSED_DOCUMENT.pdf
     access: local_only
 ```
-
-&nbsp;&nbsp;&nbsp;&nbsp;This is a manual-search pattern, not a publication pattern. The public website should describe the architecture but should not distribute the index, retrieved chunks, or screenshots.
 
 <br>
 
@@ -200,26 +196,4 @@ Do not add cases, retry failed cases, or change solver settings without asking.
 - Convergence checks and extracted metrics
 - Known limitations and next actions
 
-&nbsp;&nbsp;&nbsp;&nbsp;The report should be sanitized before leaving the lab environment. Public summaries can describe the workflow and generic lessons learned, but not license values, internal paths, unpublished device data, or proprietary setup details.
-
 <br>
-
-# Current Limitations
-
-&nbsp;&nbsp;&nbsp;&nbsp;This workflow does not replace expert TCAD judgment. It cannot decide whether a mobility model is physically appropriate, whether calibration data is sufficient, or whether a process assumption is publishable. It also depends on local setup quality: if the SSH environment is inconsistent, the manual index is stale, or the baseline is not version controlled, the agent will automate uncertainty instead of reducing it.
-
-&nbsp;&nbsp;&nbsp;&nbsp;The other limitation is access control. Local manual search should be treated as internal tooling. It needs permission boundaries, document registry checks, and clear rules for what can be copied into reports.
-
-<br>
-
-# Future Work
-
-&nbsp;&nbsp;&nbsp;&nbsp;The next step is to make the workflow more measurable. Useful additions include unit tests for deck-checking scripts, structured parsers for convergence logs, a report template with required fields, scheduler integration that respects lab policy, and a small benchmark of tasks where agent assistance reduces setup time without increasing failed simulator jobs.
-
-&nbsp;&nbsp;&nbsp;&nbsp;For now, the practical daily loop is:
-
-```text
-connect -> inspect rules -> search local references -> prepare cases -> confirm count -> run -> report
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;That loop keeps the researcher in control while moving repetitive TCAD work into scripts, checks, and reproducible records.
