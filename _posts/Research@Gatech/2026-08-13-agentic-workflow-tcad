@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building an Agentic Workflow for TCAD"
+title: "Building an Agentic Workflow for TCAD Simulation"
 date: "2026-08-13T09:00:00-04:00"
 description: "A practical guide for semiconductor researchers who want to use coding agents for repetitive TCAD setup, input checking, parameter sweeps, and reproducible reporting."
 tags: [1_Georgia_Tech]
@@ -179,21 +179,5 @@ Do not add cases, retry failed cases, or change solver settings without asking.
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;This bounds the automation and gives each run a human-approved scope, which makes later debugging easier.
-
-<br>
-
-# Reproducible run records
-
-&nbsp;&nbsp;&nbsp;&nbsp;The workflow should end with a run record rather than just a terminal log. Each report should include:
-
-- Run ID and Git commit
-- Installed tool release placeholder
-- Confirmed case count
-- Input diff and generated sweep matrix
-- Hashes for locked files
-- Commands executed
-- Start time, end time, stdout, stderr, and exit code
-- Convergence checks and extracted metrics
-- Known limitations and next actions
 
 <br>
