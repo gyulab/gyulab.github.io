@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-irps-2026-pinn-assisted-compact-modeling-for-nvcap-arrays",
+        },{id: "post-building-an-agentic-workflow-for-tcad-simulation",
+        
+          title: "Building an Agentic Workflow for TCAD Simulation",
+        
+        description: "A practical guide for semiconductor researchers who want to use coding agents for repetitive TCAD setup, input checking, parameter sweeps, and reproducible reporting.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/agentic-workflow-tcad/";
+          
+        },
+      },{id: "post-irps-2026-pinn-assisted-compact-modeling-for-nvcap-arrays",
         
           title: "IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays",
         
