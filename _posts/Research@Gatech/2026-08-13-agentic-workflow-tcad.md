@@ -8,7 +8,7 @@ tags: [1_Georgia_Tech]
 
 <iframe src="https://drive.google.com/file/d/1Y6OE-IeEOqfVEkdmI3WGMKyysW7EPz3c/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 
-> This independent educational article is not affiliated with or endorsed by Synopsys, Inc. No Synopsys software, documentation, license, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.
+Disclaimer: This educational-purpose post is not affiliated with or endorsed by Synopsys, Inc. No Synopsys software, documentation, license, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.
 
 <br>
 
