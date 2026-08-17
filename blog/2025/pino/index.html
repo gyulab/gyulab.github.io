@@ -306,18 +306,19 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <p><b>This project is ongoing, so stay tuned for updates!</b><br>
-<strong>Check out our Preprint</strong>: <a href="https://arxiv.org/abs/2603.06881" target="_blank" rel="external nofollow noopener">ArXiv Link: https://arxiv.org/abs/2603.06881</a><br><br></p>
+      <p><strong>Preprint</strong>: <a href="https://arxiv.org/abs/2603.06881" target="_blank" rel="external nofollow noopener">ArXiv Link: https://arxiv.org/abs/2603.06881</a><br><br>
+This work is presented at ICMC (International Compact Modeling Conference) 2026!
+<img src="/assets/img/icmc-presenting.jpg" alt="icmc-conference" title="image" class="profile"><br></p>
 
-<h1 id="motivation-the-z-scaling-bottleneck">Motivation: The Z-Scaling Bottleneck</h1>
+<h1 id="motivation-tcad-bottleneck-for-fast-dse">Motivation: TCAD Bottleneck for fast DSE</h1>
 
 <p>    As we push the boundaries of 3D FeNAND technology, continued Z-scaling is becoming increasingly limited by <strong>Lateral Charge Migration (LCM)</strong> and the complex interplay between polarization and trap charges. To optimize these devices, we need to explore a massive design space—sweeping geometries, pitches, and temperatures.</p>
 
-<p>    However, conventional Technology Computer-Aided Design (TCAD) simulations are a major bottleneck. A single simulation condition can take roughly <strong>1 day</strong> to complete. This computational cost makes large-scale design space exploration prohibitive. To solve this, we have developed an <strong>AI Surrogate Model on NVIDIA PhysicsNeMo framework</strong> using Physics-Informed Neural Operators (PINO) to drastically accelerate the design process.</p>
+<p>    However, conventional Technology Computer-Aided Design (TCAD) simulations are a major bottleneck. A single simulation condition can take roughly <strong>1 day</strong> to complete. This computational cost makes large-scale design space exploration (DSE) prohibitive. To solve this, we have developed an <strong>AI Surrogate Model on NVIDIA PhysicsNeMo framework</strong> using Physics-Informed Neural Operators (PINO) to drastically accelerate the design process.</p>
 
 <p><br></p>
 
-<h4 id="tcad-vs-ai-surrogate-a-paradigm-shift">TCAD vs. AI Surrogate: A Paradigm Shift</h4>
+<h4 id="tcad-vs-ai-surrogate">TCAD vs. AI Surrogate</h4>
 <p><img src="/assets/img/research/comparison_chart.png" alt="Comparison of TCAD and AI" title="image" class="profile"><br></p>
 
 <p>    The difference in performance is stark. While TCAD provides discrete data points at a high cost (linear scaling with the number of experiments), the AI surrogate model offers a continuous, flexible design space with negligible inference cost.</p>
