@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://gyulab.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gyulab.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-10-19T22:40:46+00:00</updated><id>https://gyulab.github.io/feed.xml</id><title type="html">Gyujun Jeong</title><subtitle>Gyujun Jeong&apos;s Portfolio Website
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://gyulab.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://gyulab.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-10-19T22:49:19+00:00</updated><id>https://gyulab.github.io/feed.xml</id><title type="html">Gyujun Jeong</title><subtitle>Gyujun Jeong&apos;s Portfolio Website
 </subtitle><entry><title type="html">Building an Agentic Workflow for TCAD Simulation</title><link href="https://gyulab.github.io/blog/2026/agentic-workflow-tcad/" rel="alternate" type="text/html" title="Building an Agentic Workflow for TCAD Simulation" /><published>2026-08-13T13:00:00+00:00</published><updated>2026-08-13T13:00:00+00:00</updated><id>https://gyulab.github.io/blog/2026/agentic-workflow-tcad</id><content type="html" xml:base="https://gyulab.github.io/blog/2026/agentic-workflow-tcad/"><![CDATA[<iframe src="https://drive.google.com/file/d/1Y6OE-IeEOqfVEkdmI3WGMKyysW7EPz3c/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 
 <p>Disclaimer: This educational-purpose post is not affiliated with or endorsed by Synopsys, Inc. No Synopsys software, documentation, license, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.</p>
@@ -180,99 +180,216 @@ Do not add cases, retry failed cases, or change solver settings without asking.
 <iframe src="https://drive.google.com/file/d/1BnDxDr7gOadz0pQjgeq49seAxvODhm0n/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 
 <h3 id="presentation">Presentation</h3>
-<iframe src="https://drive.google.com/file/d/1izrwbMtM5pC5gNj9HrCLS3ywMEDIpUpt/preview" style="width:100%; height:600px;" frameborder="0"></iframe>]]></content><author><name></name></author><category term="1_Georgia_Tech" /><summary type="html"><![CDATA[First conference presentation at IRPS 2026 on physics-informed training methodologies using custom loss functions for device modeling.]]></summary></entry><entry><title type="html">Accelerating TCAD: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework</title><link href="https://gyulab.github.io/blog/2025/pino/" rel="alternate" type="text/html" title="Accelerating TCAD: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework" /><published>2025-12-16T17:00:00+00:00</published><updated>2025-12-16T17:00:00+00:00</updated><id>https://gyulab.github.io/blog/2025/pino</id><content type="html" xml:base="https://gyulab.github.io/blog/2025/pino/"><![CDATA[<p><strong>Preprint</strong>: <a href="https://arxiv.org/abs/2603.06881" target="_blank">ArXiv Link: https://arxiv.org/abs/2603.06881</a><br /><br />
-<strong>Demo</strong>: <a href="https://github.com/gyulab/PINO-for-Semiconductor" target="_blank">Reporitory Link: https://github.com/gyulab/PINO-for-Semiconductor</a><br /></p>
+<iframe src="https://drive.google.com/file/d/1izrwbMtM5pC5gNj9HrCLS3ywMEDIpUpt/preview" style="width:100%; height:600px;" frameborder="0"></iframe>]]></content><author><name></name></author><category term="1_Georgia_Tech" /><summary type="html"><![CDATA[First conference presentation at IRPS 2026 on physics-informed training methodologies using custom loss functions for device modeling.]]></summary></entry><entry><title type="html">Accelerating TCAD: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework</title><link href="https://gyulab.github.io/blog/2025/pino/" rel="alternate" type="text/html" title="Accelerating TCAD: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework" /><published>2025-12-16T17:00:00+00:00</published><updated>2025-12-16T17:00:00+00:00</updated><id>https://gyulab.github.io/blog/2025/pino</id><content type="html" xml:base="https://gyulab.github.io/blog/2025/pino/"><![CDATA[<h4 id="tutorial-video">Tutorial Video</h4>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/hUIz8ZxcY7w" frameborder="0" allowfullscreen=""></iframe></center>
+<p><br /></p>
 
-<p>This work is presented at ICMC (International Compact Modeling Conference) 2026!
+<p><strong>Paper (ICMC 2026)</strong>: <a href="https://arxiv.org/abs/2603.06881" target="_blank">Physics-informed AI Accelerated Retention Analysis of Ferroelectric Vertical NAND: From Day-Scale TCAD to Second-Scale Surrogate Model (arXiv:2603.06881)</a><br />
+<strong>Demo Code</strong>: <a href="https://github.com/gyulab/PINO-for-Semiconductor" target="_blank">github.com/gyulab/PINO-for-Semiconductor</a><br />
+<strong>Tutorial Slides</strong>: <a href="https://github.com/gyulab/PINO-for-Semiconductor/blob/main/docs/AI-Surrogate-modeling-tutorial.pdf" target="_blank">AI-Surrogate-modeling-tutorial.pdf</a><br /><br /></p>
+
+<p>This work is a collaboration between <strong>Georgia Tech</strong>, <strong>Samsung Electronics</strong>, and <strong>NVIDIA</strong>, and was presented at ICMC (International Compact Modeling Conference) 2026!
 Note) We are preparing for the journal extension, stay tuned for updates!
 <img src="/assets/img/icmc-presenting.jpg" alt="icmc-conference" title="image" class="profile" /><br /></p>
 
-<h1 id="motivation-tcad-bottleneck-for-fast-dse">Motivation: TCAD Bottleneck for fast DSE</h1>
+<h1 id="motivation-tcad-bottleneck-for-fe-vnand-retention-analysis">Motivation: TCAD Bottleneck for Fe-VNAND Retention Analysis</h1>
 
-<p>    As we push the boundaries of 3D FeNAND technology, continued Z-scaling is becoming increasingly limited by <strong>Lateral Charge Migration (LCM)</strong> and the complex interplay between polarization and trap charges. To optimize these devices, we need to explore a massive design space—sweeping geometries, pitches, and temperatures.</p>
+<p>    Ferroelectric FET (FeFET)-based vertical NAND (<strong>Fe-VNAND</strong>) is a promising candidate to overcome the Z-scaling limitations of 3D NAND with lower programming voltages. However, its <strong>data retention</strong> is hindered by a complex, time-dependent interplay between <strong>ferroelectric depolarization</strong> and <strong>charge detrapping</strong> at the dielectric interfaces. Optimizing the gate stack against these effects requires exploring a huge design space—geometry, temperature, and retention time.</p>
 
-<p>    However, conventional Technology Computer-Aided Design (TCAD) simulations are a major bottleneck. A single simulation condition can take roughly <strong>1 day</strong> to complete. This computational cost makes large-scale design space exploration (DSE) prohibitive. To solve this, we have developed an <strong>AI Surrogate Model on NVIDIA PhysicsNeMo framework</strong> using Physics-Informed Neural Operators (PINO) to drastically accelerate the design process.</p>
+<p>    Conventional Technology Computer-Aided Design (TCAD) is accurate but computationally prohibitive: a single rigorous simulation sweeping temperature and time can take <strong>over 24 hours</strong>, and the cost scales linearly with every additional variable. To solve this, we developed a <strong>Physics-Informed Neural Operator (PINO)-based AI surrogate model on the NVIDIA PhysicsNeMo framework</strong> that predicts 2D physics maps, I<sub>D</sub>-V<sub>G</sub> curves, and V<sub>th</sub> retention loss with near-TCAD accuracy in seconds.</p>
+
+<p><br /><br /></p>
+
+<h1 id="device-and-tcad-training-data">Device and TCAD Training Data</h1>
+
+<p>    We study a single FeFET with an interlayer-engineered gate stack, where a <strong>Tunnel Dielectric Layer (TDL)</strong> is inserted between ferroelectric layers (<strong>HZO/TDL/HZO</strong>). During erase, charges accumulate at the HZO/TDL interface via Fowler-Nordheim tunneling and counteract the depolarization field. During retention, these screening charges detrap, which exacerbates the depolarization field and accelerates polarization loss.</p>
+
+<p>    Training data were generated with Synopsys Sentaurus TCAD (ferroelectric Preisach model + FN tunneling, retention up to 10<sup>4</sup> s) by sweeping three inputs, giving <strong>only 120 TCAD sweeps</strong> in total:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Input Sweep Parameter</th>
+      <th style="text-align: left">Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">HZO Thickness</td>
+      <td style="text-align: left">{5, 6, 7, 8, 9} nm</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Temperature</td>
+      <td style="text-align: left">{300, 358, 400, 473} K</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Retention Time</td>
+      <td style="text-align: left">{0, 1e0, 1e1, 1e2, 1e3, 1e4} s</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><br /></p>
 
-<h4 id="tcad-vs-ai-surrogate">TCAD vs. AI Surrogate</h4>
-<p><img src="/assets/img/research/comparison_chart.png" alt="Comparison of TCAD and AI" title="image" class="profile" /><br /></p>
-
-<p>    The difference in performance is stark. While TCAD provides discrete data points at a high cost (linear scaling with the number of experiments), the AI surrogate model offers a continuous, flexible design space with negligible inference cost.</p>
-<ul>
-  <li><strong>Simulation Time:</strong> &gt;1 hour per condition (TCAD) vs. <strong>&lt;1 second</strong> (AI).</li>
-  <li><strong>Acceleration:</strong> Approximately <strong>x1000 speedup</strong>.</li>
-</ul>
+<p>For each condition, we extract the I<sub>D</sub>-V<sub>G</sub> curve and internal 2D physics maps: <strong>electrostatic potential, polarization, and trapped electron/hole densities</strong> from the gate stack (HZO/TDL/HZO), and the <strong>current density</strong> from the entire device to capture channel conductance changes.</p>
 
 <p><br /><br /></p>
 
 <h1 id="methodology-physics-informed-neural-operator-pino">Methodology: Physics-Informed Neural Operator (PINO)</h1>
 
-<p>    Our model is not a “black box.” It is a <strong>Physics-Informed Neural Operator (PINO)</strong> that learns the mapping from input conditions to physical solutions based on governing physics laws (Poisson, Gauss, Arrhenius, etc.).</p>
+<p>    Our model is not a “black box.” Instead of directly mapping scalar inputs to I<sub>D</sub>-V<sub>G</sub> curves, it first predicts <strong>intermediate physics maps</strong>, which makes the surrogate a physically interpretable digital twin and acts as a physical regularizer for the downstream readout.</p>
 
 <h4 id="architecture">Architecture</h4>
 <p><img src="/assets/img/research/pino_architecture.png" alt="PINO Architecture" title="image" class="profile" /><br /></p>
 
-<p>The model takes specific experimental conditions as input and predicts full 2D physics fields as output:</p>
+<p>The pipeline consists of three phases:</p>
 <ul>
-  <li><strong>Input:</strong> Geometry (HZO thickness, Z-pitch), Temperature, Retention Time, and Ferroelectric material properties.</li>
-  <li><strong>Output:</strong> 2D Field Predictions (Potential, Current Density, Trapped Charge).</li>
+  <li><strong>Phase 1 – Input Embedding:</strong> Scalar device inputs (t<sub>HZO</sub>, T, log(τ)) are embedded into an input tensor.</li>
+  <li><strong>Phase 2 – PINO Physics Surrogate:</strong> A Fourier Neural Operator (FNO) backbone performs global convolutions in the Fourier domain and maps the inputs to resolution-invariant 2D physics fields (J, Q<sub>e,h</sub>, V, P) on a 256×256 grid. To avoid overfitting the sparse dataset, the FNO is strictly regularized: <strong>4 Fourier layers, modes = 12, latent width = 32</strong>.</li>
+  <li><strong>Phase 3 – IV-Net Readout:</strong> A shallow CNN map encoder extracts features from the physics maps, while the original scalar inputs bypass the surrogate through a parallel MLP (<strong>scalar context injection</strong>). The two are fused to predict the final I<sub>D</sub>-V<sub>G</sub> curve. This residual path preserves global thermodynamic context (e.g., bake temperature) that cannot be extracted from purely electrostatic 2D maps.</li>
 </ul>
 
-<h4 id="hybrid-loss-function">Hybrid Loss Function</h4>
-<p>To ensure physical validity even with sparse training data, we utilize a “Hybrid” modeling approach that minimizes two errors simultaneously:</p>
-<ol>
-  <li><strong>Data Mismatch:</strong> Matching the TCAD ground truth (Data Accuracy).</li>
-  <li><strong>Physical Violation:</strong> Enforcing consistency with Poisson’s Equation (\(\nabla^2 \phi = -\rho/\varepsilon\)), Gauss’s Law, and Arrhenius relationships.</li>
-</ol>
+<h4 id="physics-informed-loss-function">Physics-Informed Loss Function</h4>
+<p>The key difference between a purely data-driven FNO and a PINO is the dual-loss objective:</p>
 
 <center>$$
-{L}_{total} = ||\hat{u} - u_{target}||_{L_1} + \lambda \cdot ||\nabla \hat{\phi} - \nabla \phi_{target}||_{L_1}
+\mathcal{L}_{total} = \mathcal{L}_{data} + \lambda \cdot \mathcal{L}_{physics}
 $$</center>
 <p><br /></p>
 
-<p>This physics-informed loss is crucial for predicting long-term retention behaviors where purely data-driven models might produce “glitchy” or physically impossible charge migration patterns.</p>
+<p>where \(\mathcal{L}_{data}\) is the L2 error against TCAD ground truth, and \(\mathcal{L}_{physics}\) consists of two components:</p>
+
+<ol>
+  <li><strong>Poisson Residual:</strong> enforces that the predicted potential \(\phi\), charge density \(\rho\), and ferroelectric polarization \(P\) obey electrostatics.</li>
+</ol>
+<center>$$
+\mathcal{L}_{Poisson} = \nabla \cdot (\varepsilon \nabla \phi) + (\rho - \nabla \cdot P)
+$$</center>
+<ol>
+  <li><strong>Monotonicity Constraint:</strong> enforces the monotonic decay of remnant polarization and trapped charge over retention time, penalizing unphysical glitches or oscillations.</li>
+</ol>
+<center>$$
+\mathcal{L}_{mono} = ReLU\left(\frac{\partial |P_r|}{\partial \tau}\right) + ReLU\left(\frac{\partial |Q_{it}|}{\partial \tau}\right)
+$$</center>
+<p><br /></p>
+
+<p>This physics-informed loss constrains the hypothesis space when training data are sparse, which is exactly the regime of expensive semiconductor simulations.</p>
 
 <p><br /><br /></p>
 
-<h1 id="proof-of-concept--results">Proof of Concept &amp; Results</h1>
+<h1 id="results">Results</h1>
 
-<p>We validated the framework on two distinct device architectures: a standard Si Channel Single FeNAND and a more complex AOS Channel String Array.</p>
+<h4 id="1-reconstruction-accuracy-of-2d-physics-maps">1. Reconstruction Accuracy of 2D Physics Maps</h4>
+<p>    Validated against TCAD, the trained PINO reconstructs 2D profiles of electrostatic potential, trapped charge, and current density with a relative error of <strong>~0.1%</strong>.</p>
 
-<h4 id="1-silicon-channel-single-fenand">1. Silicon Channel Single FeNAND</h4>
-<p><img src="/assets/img/research/planar-comparison.png" alt="AOS String Result" title="image" class="profile" /><br />
-<img src="/assets/img/research/temperature_sweep_reconstructed.gif" alt="AOS String Result" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;" />
-<img src="/assets/img/research/gate_charge_temperature.gif" alt="AOS String Result" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;" />
-    The AI model successfully predicts 2D physics profiles with remarkable accuracy. For example, when inferring <strong>eCurrent Density</strong> at 27°C, the model matches the TCAD ground truth with approximately <strong>~0.1% error</strong>. It also faithfully captures the monotonic accumulation of trapped charge over time, governed by our physics loss.</p>
+<p><img src="/assets/img/research/planar-comparison.png" alt="Planar Comparison" title="image" class="profile" /><br />
+<img src="/assets/img/research/temperature_sweep_reconstructed.gif" alt="Temperature sweep reconstruction" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;" />
+<img src="/assets/img/research/gate_charge_temperature.gif" alt="Gate charge vs. temperature" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;" />
+<br /></p>
 
-<p><strong>Design Space Exploration (Interpolation):</strong>
-<img src="/assets/img/research/design-space-exploration.png" alt="AOS String Result" title="image" class="profile" /><br />
-One of the most powerful features is the ability to infer results for “unseen” geometries.</p>
+<h4 id="2-id-vg-prediction-and-retention-analysis">2. I<sub>D</sub>-V<sub>G</sub> Prediction and Retention Analysis</h4>
 <ul>
-  <li><strong>Training Data:</strong> 5nm, 7nm, 9nm HZO thickness.</li>
-  <li><strong>Inference:</strong> We queried the model for <strong>8nm</strong> (a thickness it had never seen).</li>
-  <li><strong>Result:</strong> The AI predicted a Max E-field of ~8.4 MV/cm, which matched the ground truth verification almost perfectly.</li>
-  <li><strong>Time Saved:</strong> The verification simulation took 30 minutes in TCAD; the AI inference took <strong>&lt; 1ms</strong>.</li>
+  <li><strong>V<sub>th</sub> Accuracy:</strong> R<sup>2</sup> &gt; <strong>0.998</strong> for V<sub>th</sub> (at I<sub>D</sub> = 100 nA) over all 120 sweep conditions.</li>
+  <li><strong>Unseen Temperature:</strong> The model produces physically consistent ΔV<sub>th</sub> retention curves at an <strong>unseen 350 K</strong>, lying between the 300 K and 400 K TCAD baselines.</li>
+  <li><strong>Physics vs. Data-Driven:</strong> The purely data-driven FNO overfits the sparse dataset and shows unstable ripples across the transfer curve, while the PINO predicts a smooth I<sub>D</sub>-V<sub>G</sub> response, improving RMSE by <strong>&gt; 40%</strong> (0.080 → 0.047).</li>
 </ul>
 
-<h4 id="2-aos-channel-string-array-fenand">2. AOS Channel String Array FeNAND</h4>
-<p>    We extended the framework to a complex string array geometry with Oxide (AOS) channels. Even with the complex Source/Gate/Drain regions, the AI reconstructed the 2D current density maps with <strong>&lt;1% reconstruction error</strong>. This proves the model can handle complex boundaries and material interfaces essential for realistic array-level modeling.</p>
+<h4 id="3-computational-efficiency">3. Computational Efficiency</h4>
 
-<p><img src="/assets/img/research/aos_result.png" alt="AOS String Result" title="image" class="profile" /><br />
-<img src="/assets/img/research/trapped-charge.png" alt="AOS String Result" title="image" class="profile" /><br /></p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Metric</th>
+      <th style="text-align: left">TCAD</th>
+      <th style="text-align: left">AI Surrogate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Single sweep</td>
+      <td style="text-align: left">30 min</td>
+      <td style="text-align: left">~0.1 s (real-time)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Full sweep</td>
+      <td style="text-align: left">60 hrs</td>
+      <td style="text-align: left">~10 s</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">DSE coverage</td>
+      <td style="text-align: left">Discrete (prone to blind spots)</td>
+      <td style="text-align: left">Continuous (mesh-free interpolation)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Cost of optimization</td>
+      <td style="text-align: left">Prohibitive</td>
+      <td style="text-align: left">Minimal</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br />
+(TCAD: Intel Xeon Platinum 8470N 52-core CPU, AI surrogate: NVIDIA Titan RTX 24 GB GPU)</p>
+
+<p>    A full retention sweep goes from <strong>60 hours to ~10 seconds</strong>, a speedup of four orders of magnitude (<strong>&gt; 10,000×</strong>).</p>
+
+<p><br /><br /></p>
+
+<h1 id="open-source-demo-pino-for-semiconductor">Open-Source Demo: PINO for Semiconductor</h1>
+
+<p>    To make the workflow reproducible, we released a demo repository, <a href="https://github.com/gyulab/PINO-for-Semiconductor" target="_blank">PINO-for-Semiconductor</a>, that applies the same NVIDIA PhysicsNeMo-based FNO/PINO pipeline to <strong>3D SONOS NAND flash</strong> devices. Watch the tutorial video at the top of this post for a walkthrough.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PINO-for-Semiconductor/
+├── code/
+│   ├── train_fno_model_sonos.py    # Standard FNO, MSE loss (data-driven only)
+│   ├── train_pino_model_sonos.py   # PINO with Poisson residual loss
+│   ├── inference_time_sweep.py     # Time-evolution animation of defect charge density
+│   └── inference_pino_time.py      # PINO time-sweep inference
+├── docs/
+│   └── AI-Surrogate-modeling-tutorial.pdf
+└── results/                        # FNO vs. PINO visualizations (below)
+</code></pre></div></div>
+
+<p>In <code class="language-plaintext highlighter-rouge">train_pino_model_sonos.py</code>, the Poisson equation \(\varepsilon \nabla^2 \phi + \rho = 0\) is implemented as a custom PhysicsNeMo <code class="language-plaintext highlighter-rouge">Node</code>, and its residual is driven to zero alongside the data loss. The training data (AMAT Ginestra simulations) are not included due to EULA/NDA restrictions.</p>
+
+<h4 id="fno-data-driven-defect-charge-density">FNO (Data-Driven): Defect Charge Density</h4>
+<p><img src="/assets/img/research/pino-demo/fno_sonos_time.gif" alt="FNO SONOS time sweep" style="width: 100%; max-width: 700px; display: block; margin: 0 auto;" />
+<img src="/assets/img/research/pino-demo/fno_sonos_thickness.gif" alt="FNO SONOS tunnel thickness sweep" style="width: 100%; max-width: 700px; display: block; margin: 0 auto;" />
+<br /></p>
+
+<h4 id="pino-physics-informed-predicted-potential-from-charge-density">PINO (Physics-Informed): Predicted Potential from Charge Density</h4>
+<p><img src="/assets/img/research/pino-demo/pino_sonos_time.gif" alt="PINO SONOS time sweep" style="width: 100%; max-width: 800px; display: block; margin: 0 auto;" />
+<img src="/assets/img/research/pino-demo/pino_sonos_thickness.gif" alt="PINO SONOS tunnel thickness sweep" style="width: 100%; max-width: 800px; display: block; margin: 0 auto;" />
+<br /></p>
+
+<p><br /><br /></p>
+
+<h1 id="preliminary-proof-of-concept">Preliminary Proof-of-Concept</h1>
+
+<p>    Before the ICMC paper, we explored the framework on other configurations.</p>
+
+<p><strong>Design Space Exploration (Interpolation):</strong> Trained on 5, 7, and 9 nm HZO thicknesses, the model was queried for an unseen <strong>8 nm</strong> device and predicted a max E-field of ~8.4 MV/cm, matching the verification TCAD simulation (30 min in TCAD vs. &lt; 1 ms in AI).
+<img src="/assets/img/research/design-space-exploration.png" alt="Design Space Exploration" title="image" class="profile" /><br /></p>
+
+<p><strong>AOS Channel String Array FeNAND:</strong> On a string array with amorphous oxide semiconductor (AOS) channels and Source/Gate/Drain regions, the AI reconstructed 2D current density maps with <strong>&lt;1% reconstruction error</strong>, showing the model can handle complex boundaries and material interfaces needed for array-level modeling.
+<img src="/assets/img/research/aos_result.png" alt="AOS String Result" title="image" class="profile" /><br />
+<img src="/assets/img/research/trapped-charge.png" alt="AOS String Trapped Charge" title="image" class="profile" /><br /></p>
 
 <p><br /><br /></p>
 
 <h1 id="summary-and-future-work">Summary and Future Work</h1>
 
-<p>    We have developed an AI Surrogate Modeling framework that “faithfully accelerates” design space exploration for 3D FeNAND.</p>
+<p>    We developed a physics-informed AI surrogate model that faithfully accelerates Fe-VNAND retention analysis:</p>
 <ul>
-  <li><strong>Efficiency:</strong> Reliable inference with very sparse training data (as few as 3 sets per parameter).</li>
-  <li><strong>Speed:</strong> Real-time inference enabling massive sweeps.</li>
-  <li><strong>Physics:</strong> Governed by fundamental laws (Poisson, Gauss, Arrhenius).</li>
+  <li><strong>Efficiency:</strong> Trained on only 120 TCAD sweeps, with strict regularization to generalize to unseen temporal, thermal, and geometric regimes.</li>
+  <li><strong>Speed:</strong> &gt; 10,000× speedup (60 hrs → ~10 s for a full retention sweep), enabling continuous design space exploration.</li>
+  <li><strong>Physics:</strong> Governed by Poisson’s equation and monotonicity constraints, eliminating unphysical artifacts and improving RMSE by &gt; 40% over a data-driven FNO.</li>
+  <li><strong>Compact Modeling:</strong> Serves as a physics-consistent data engine for compact model parameter extraction and LUT generation for reliability-aware SPICE simulation.</li>
 </ul>
 
-<p><br /></p>]]></content><author><name></name></author><category term="1_Georgia_Tech" /><summary type="html"><![CDATA[This project is ongoing, so stay tuned for updates! **Check out our Preprint**: ArXiv Link: https://arxiv.org/abs/2603.06881 # Motivation: The Z-Scaling Bottleneck &nbsp;&nbsp;&nb...]]></summary></entry><entry><title type="html">IBM Analog Hardware Accelerator Kit Research Archive</title><link href="https://gyulab.github.io/blog/2024/ibm-aihwkit/" rel="alternate" type="text/html" title="IBM Analog Hardware Accelerator Kit Research Archive" /><published>2024-07-27T19:25:52+00:00</published><updated>2024-07-27T19:25:52+00:00</updated><id>https://gyulab.github.io/blog/2024/ibm-aihwkit</id><content type="html" xml:base="https://gyulab.github.io/blog/2024/ibm-aihwkit/"><![CDATA[<iframe src="https://drive.google.com/file/d/1J8sBSpqyenYCgdGmYVPzVXodfiKUonrs/preview" style="width:100%; height:400px;" frameborder="0"></iframe>
+<p>    Next, we are extending this work to full-scale 3D Fe-VNAND string arrays in a journal version. Stay tuned!</p>
+
+<p><br /></p>]]></content><author><name></name></author><category term="1_Georgia_Tech" /><summary type="html"><![CDATA[Physics-Informed Neural Operator (PINO) surrogate for Ferroelectric Vertical NAND retention analysis on NVIDIA PhysicsNeMo: from day-scale TCAD to second-scale inference (>10,000x speedup). Presented at ICMC 2026, with an open-source demo and tutorial video.]]></summary></entry><entry><title type="html">IBM Analog Hardware Accelerator Kit Research Archive</title><link href="https://gyulab.github.io/blog/2024/ibm-aihwkit/" rel="alternate" type="text/html" title="IBM Analog Hardware Accelerator Kit Research Archive" /><published>2024-07-27T19:25:52+00:00</published><updated>2024-07-27T19:25:52+00:00</updated><id>https://gyulab.github.io/blog/2024/ibm-aihwkit</id><content type="html" xml:base="https://gyulab.github.io/blog/2024/ibm-aihwkit/"><![CDATA[<iframe src="https://drive.google.com/file/d/1J8sBSpqyenYCgdGmYVPzVXodfiKUonrs/preview" style="width:100%; height:400px;" frameborder="0"></iframe>
 <iframe src="https://drive.google.com/file/d/1Q_J0C1Z9MtZeBEsPk3PK8MJ6ZTHk2Lw_/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 <iframe src="https://drive.google.com/file/d/1rbIu6mdYRK0MGFGlL7RWprEDQ55h7E3x/preview" style="width:100%; height:600px;" frameborder="0"></iframe>]]></content><author><name></name></author><category term="1_Georgia_Tech" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">From Theory to Tapeout: SAR-ADC Full-custom IC Design Project</title><link href="https://gyulab.github.io/blog/2024/tapeout/" rel="alternate" type="text/html" title="From Theory to Tapeout: SAR-ADC Full-custom IC Design Project" /><published>2024-05-19T19:25:52+00:00</published><updated>2024-05-19T19:25:52+00:00</updated><id>https://gyulab.github.io/blog/2024/tapeout</id><content type="html" xml:base="https://gyulab.github.io/blog/2024/tapeout/"><![CDATA[<iframe src="https://drive.google.com/file/d/1YnPe18caenbF686zIvydNNdLiB8Ev-Zn/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 <p>The content is protected by a password to comply with NDA restrictions.</p>]]></content><author><name></name></author><category term="1_Georgia_Tech" /><summary type="html"><![CDATA[The content is protected by a password to comply with NDA restrictions.]]></summary></entry><entry><title type="html">Georgia Tech ML Compact Model Research Archive</title><link href="https://gyulab.github.io/blog/2024/ml_compact_model/" rel="alternate" type="text/html" title="Georgia Tech ML Compact Model Research Archive" /><published>2024-03-14T19:25:52+00:00</published><updated>2024-03-14T19:25:52+00:00</updated><id>https://gyulab.github.io/blog/2024/ml_compact_model</id><content type="html" xml:base="https://gyulab.github.io/blog/2024/ml_compact_model/"><![CDATA[<iframe src="https://drive.google.com/file/d/1xhpE8W0U8fNpVsqfjQ3sdflkr0bAAk5v/preview" style="width:100%; height:600px;" frameborder="0"></iframe>

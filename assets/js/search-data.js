@@ -56,7 +56,7 @@ ninja.data = [{
         
           title: "Accelerating TCAD: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework",
         
-        description: "This project is ongoing, so stay tuned for updates! **Check out our Preprint**: ArXiv Link: https://arxiv.org/abs/2603.06881 # Motivation: The Z-Scaling Bottleneck &amp;nbsp;&amp;nbsp;&amp;nb...",
+        description: "Physics-Informed Neural Operator (PINO) surrogate for Ferroelectric Vertical NAND retention analysis on NVIDIA PhysicsNeMo: from day-scale TCAD to second-scale inference (&gt;10,000x speedup). Presented at ICMC 2026, with an open-source demo and tutorial video.",
         section: "Posts",
         handler: () => {
           
