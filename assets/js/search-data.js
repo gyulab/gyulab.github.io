@@ -52,9 +52,9 @@ ninja.data = [{
             window.location.href = "/blog/2026/irps/";
           
         },
-      },{id: "post-accelerating-semiconductor-design-ai-surrogate-modeling-with-pino-using-nvidia-physicsnemo-framework",
+      },{id: "post-accelerating-tcad-ai-surrogate-modeling-with-pino-using-nvidia-physicsnemo-framework",
         
-          title: "Accelerating Semiconductor Design: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework",
+          title: "Accelerating TCAD: AI Surrogate Modeling with PINO using NVIDIA PhysicsNeMo Framework",
         
         description: "This project is ongoing, so stay tuned for updates! **Check out our Preprint**: ArXiv Link: https://arxiv.org/abs/2603.06881 # Motivation: The Z-Scaling Bottleneck &amp;nbsp;&amp;nbsp;&amp;nb...",
         section: "Posts",
