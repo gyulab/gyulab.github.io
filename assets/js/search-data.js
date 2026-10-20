@@ -30,11 +30,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-building-an-agentic-workflow-for-tcad-simulation",
+        },{id: "post-agentic-tcad-calibration-from-the-paper-to-a-reproducible-open-demo",
         
-          title: "Building an Agentic Workflow for TCAD Simulation",
+          title: "Agentic TCAD Calibration: From the Paper to a Reproducible Open Demo",
         
-        description: "A practical guide for semiconductor researchers who want to use coding agents for repetitive TCAD setup, input checking, parameter sweeps, and reproducible reporting.",
+        description: "A residual-guided, bounded, tool-using workflow for TCAD calibration of oxide-semiconductor transistors, with an open synthetic-data demo that runs on a laptop without a TCAD license.",
         section: "Posts",
         handler: () => {
           

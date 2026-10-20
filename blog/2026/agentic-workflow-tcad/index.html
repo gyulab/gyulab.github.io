@@ -17,12 +17,12 @@
   
   
     
-      Building an Agentic Workflow for TCAD Simulation | Gyujun Jeong
+      Agentic TCAD Calibration: From the Paper to a Reproducible Open Demo | Gyujun Jeong
     
   
 </title>
 <meta name="author" content="Gyujun Jeong">
-<meta name="description" content="A practical guide for semiconductor researchers who want to use coding agents for repetitive TCAD setup, input checking, parameter sweeps, and reproducible reporting.">
+<meta name="description" content="A residual-guided, bounded, tool-using workflow for TCAD calibration of oxide-semiconductor transistors, with an open synthetic-data demo that runs on a laptop without a TCAD license.">
 
   <meta name="keywords" content="Gyujun Jeong, electrical engineering, Georgia Tech, AI for Semiconductors, physics-informed machine learning, memory devices">
 
@@ -278,7 +278,7 @@
 
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">Building an Agentic Workflow for TCAD Simulation</h1>
+    <h1 class="post-title">Agentic TCAD Calibration: From the Paper to a Reproducible Open Demo</h1>
     <p class="post-meta">
       Created on August 13, 2026
       
@@ -306,183 +306,196 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <iframe src="https://drive.google.com/file/d/1Y6OE-IeEOqfVEkdmI3WGMKyysW7EPz3c/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
+      <p><strong>Paper</strong>: <a href="https://arxiv.org/abs/2609.12184" target="_blank" rel="external nofollow noopener">Agentic TCAD Calibration Workflow for Oxide Semiconductor Transistors (arXiv:2609.12184)</a><br>
+<strong>Demo Code</strong>: <a href="https://github.com/gyulab/agentic-TCAD-calibration-public" target="_blank" rel="external nofollow noopener">github.com/gyulab/agentic-TCAD-calibration-public</a><br><br></p>
 
-<p>Disclaimer: This educational-purpose post is not affiliated with or endorsed by Synopsys, Inc. No Synopsys software, documentation, license, or proprietary examples are distributed. Users must obtain their own licenses and follow their applicable agreements.</p>
+<p>This work is a collaboration between <strong>Georgia Tech</strong>, <strong>Samsung Electronics</strong>, and <strong>NVIDIA</strong>.</p>
 
-<p><br></p>
-
-<h1 id="motivation-why-tcad-workflows-are-repetitive">Motivation: why TCAD workflows are repetitive</h1>
-
-<p>    TCAD tools give researchers detailed control over structure generation, physical models, meshing, bias conditions, solver settings, and post-processing. That flexibility also creates repetitive work. A typical study involves copying a baseline case, changing a few parameters, checking for unresolved placeholders, launching jobs in the correct environment, parsing logs, extracting metrics, and writing a report.</p>
-
-<p>    A coding agent should not be asked to “do TCAD.” The researcher remains responsible for the device physics, calibration assumptions, convergence criteria, and interpretation. The agent can instead handle the surrounding workflow: navigating files, running scripts, searching manuals, checking input decks, generating sweeps, summarizing logs, and keeping reproducible records.</p>
+<p>Disclaimer: This educational post and the demo are not affiliated with or endorsed by Synopsys, Inc. No Synopsys software, documentation, license, input deck, or proprietary example is distributed. The demo uses synthetic data and does not reproduce the paper’s measured-device or Sentaurus results.</p>
 
 <p><br></p>
 
-<h1 id="system-view-desktop-to-simulator">System view: desktop to simulator</h1>
+<h1 id="motivation-calibration-is-an-inverse-problem">Motivation: calibration is an inverse problem</h1>
 
-<p>    A practical setup has four parts:</p>
+<p>    TCAD calibration is essential for predictive modeling of emerging oxide-semiconductor transistors. It is also slow and expert dependent. Several physical models and parameter sets can reproduce the same measured transfer curve, so a good local fit does not identify the underlying device physics. An engineer therefore spends most of the time deciding <em>what to try next</em>: which parameter to move, how far, and when an extra physics model is justified.</p>
 
-<ol>
-  <li>
-<strong>Codex desktop</strong>: The researcher describes the task, reviews proposed changes, and approves expensive runs.</li>
-  <li>
-<strong>SSH server</strong>: The agent connects to the controlled compute environment that contains the project files and scripts.</li>
-  <li>
-<strong>Project files</strong>: Versioned folders store <code class="language-plaintext highlighter-rouge">AGENTS.md</code>, reusable skills, baseline input decks, generated cases, logs, and reports.</li>
-  <li>
-<strong>TCAD execution</strong>: Simulator commands run only after the agent checks the input deck and the researcher confirms the exact case count.</li>
-</ol>
+<p>    Our paper turns these decisions into an explicit, auditable loop. Measurement–TCAD residuals and local sensitivity tests choose the next bounded update. An update is accepted only if the simulation converges and a fixed device objective improves. The point is to make each step of the calibration reviewable, so the final model can be trusted beyond the curve it was fitted to.</p>
 
 <p><br></p>
 
-<h1 id="master-rules-agentsmd">Master rules: <code class="language-plaintext highlighter-rouge">AGENTS.md</code>
-</h1>
+<h1 id="the-workflow-in-the-paper">The workflow in the paper</h1>
 
-<p>    <code class="language-plaintext highlighter-rouge">AGENTS.md</code> contains the standing rules for the project: what the agent may read, what it must not modify, which commands it may run, and what evidence it must provide before execution. Above all, it should protect the baseline inputs.</p>
+<p>    The paper calibrates a fabricated bottom-gate In–W–O (BG-IWO) transistor with Synopsys Sentaurus. Three roles are kept separate:</p>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># AGENTS.md</span>
-
-<span class="gu">## Project use</span>
-
-This repository supports generic TCAD input checking and parameter sweeps.
-
-<span class="gu">## Baseline inputs</span>
-<span class="p">
--</span> Never edit <span class="sb">`cases/baseline/`</span> directly.
-<span class="p">-</span> Copy baseline inputs into <span class="sb">`runs/&lt;run_id&gt;/input/`</span> before modification.
-<span class="p">-</span> Keep generated cases, logs, and reports under <span class="sb">`runs/&lt;run_id&gt;/`</span>.
-
-<span class="gu">## Manual handling</span>
-<span class="p">
--</span> Search only approved local documentation for the installed release.
-<span class="p">-</span> Cite document ID, release, and page metadata in internal run reports.
-<span class="p">-</span> Do not paste licensed manual text into Git, chat, or public notes.
-
-<span class="gu">## Execution gate</span>
-<span class="p">
--</span> Show the input diff and intended case count before simulator execution.
-<span class="p">-</span> Ask the researcher to confirm license-consuming jobs.
-<span class="p">-</span> Stop after the first non-zero exit code unless the researcher approves another attempt.
-</code></pre></div></div>
-
-<p>    With these rules in the repository, the researcher does not need to repeat the same constraints in every prompt. A task request can focus on the immediate objective: “debug this placeholder and prepare a three-point drain-bias sweep.”</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Role</th>
+      <th style="text-align: left">Responsibility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">LLM agent</td>
+      <td style="text-align: left">Analyze residuals and device metrics, retrieve evidence (RAG), and propose a bounded TCAD update</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">TCAD simulator</td>
+      <td style="text-align: left">Solve the device equations and return the transfer curve and convergence status</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Human reviewer</td>
+      <td style="text-align: left">Define the device stack and test splits, approve model changes, and check physical validity</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><br></p>
 
-<h1 id="task-specific-procedure-skillmd">Task-specific procedure: <code class="language-plaintext highlighter-rouge">SKILL.md</code>
-</h1>
+<p>    Each update is scored with a multi-metric objective J. J combines log- and linear-current errors with the errors in V<sub>th</sub> (at 100 nA), log I<sub>on</sub>, and subthreshold swing (SS). One-factor-at-a-time (OFAT) probes estimate the local sensitivity of each parameter group. A bounded, derivative-free Gauss–Newton (DFO-GN) step then proposes the change. An additional physics model, such as a fixed charge or a Gaussian/tail density of states, is considered only when a systematic residual persists after the existing parameters have been adjusted.</p>
 
-<p>    A <code class="language-plaintext highlighter-rouge">SKILL.md</code> file has a narrower purpose. It defines a reusable procedure for one type of task, such as debugging an input-deck parsing failure or preparing a bias sweep. The skill should run only when the request matches that procedure.</p>
-
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">name</span><span class="pi">:</span> <span class="s">tcad-debug-and-sweep</span>
-<span class="na">description</span><span class="pi">:</span> <span class="s">Use for generic TCAD input parsing failures, unresolved placeholders, and small researcher-confirmed voltage sweeps. Do not use for model calibration or unpublished process development decisions.</span>
-<span class="nn">---</span>
-
-<span class="p">1.</span> Read <span class="sb">`AGENTS.md`</span> and the task request.
-<span class="p">2.</span> Identify the baseline case and confirm it remains read-only.
-<span class="p">3.</span> Run host and environment checks without consuming a simulator license.
-<span class="p">4.</span> Search approved local documentation for the installed release.
-<span class="p">5.</span> Inspect the input deck and report unresolved placeholders.
-<span class="p">6.</span> Propose a minimal diff and generated case list.
-<span class="p">7.</span> Ask the researcher to confirm the exact case count before execution.
-<span class="p">8.</span> Run cases one at a time, preserving stdout, stderr, exit code, and timestamps.
-<span class="p">9.</span> Summarize convergence status, extracted metrics, and limitations.
-</code></pre></div></div>
-
-<p>    In short, <code class="language-plaintext highlighter-rouge">AGENTS.md</code> defines the standing project rules, while <code class="language-plaintext highlighter-rouge">SKILL.md</code> defines the steps for a repeatable task.</p>
+<p>    In the paper, five accepted updates reduce J from 2.589 to 0.181 (14.3×). The calibrated model is then held fixed. Maximum V<sub>th</sub>/I<sub>on</sub> errors are 36.1 mV/0.022 dec for varying drain bias and 46.2 mV/0.062 dec for varying channel length. These held-out tests are what separate a transferable model from a local curve fit.</p>
 
 <p><br></p>
 
-<h1 id="local-manual-search-architecture">Local manual-search architecture</h1>
+<h1 id="why-an-open-demo">Why an open demo</h1>
 
-<p>    TCAD syntax depends on the installed release and the tools licensed by the lab. The agent should not guess from memory or rely on internet snippets. It should search approved local manuals instead:</p>
+<p>    The paper’s results depend on measured device data, calibrated Sentaurus decks, and a commercial license. None of these can be shared. A reader who wants to see how the loop actually makes decisions would therefore have nothing to run.</p>
 
-<ol>
-  <li>Store approved manual PDFs in a non-public <code class="language-plaintext highlighter-rouge">knowledge/raw/</code> folder on the SSH host.</li>
-  <li>Register each document with product, release, access class, and hash metadata.</li>
-  <li>Build a local text index with section and page metadata.</li>
-  <li>Search the local index before making syntax-related changes.</li>
-  <li>Return short internal citations in the run report, not manual text in public notes.</li>
-</ol>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">documents</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="na">doc_id</span><span class="pi">:</span> <span class="s">device_user_guide</span>
-    <span class="na">product</span><span class="pi">:</span> <span class="s">device-simulator</span>
-    <span class="na">release</span><span class="pi">:</span> <span class="s">SITE_RELEASE</span>
-    <span class="na">path</span><span class="pi">:</span> <span class="s">knowledge/raw/LICENSED_DOCUMENT.pdf</span>
-    <span class="na">access</span><span class="pi">:</span> <span class="s">local_only</span>
-</code></pre></div></div>
+<p>    The open demo keeps the workflow and replaces everything proprietary. A small analytic transistor model stands in for Sentaurus, and synthetic curves stand in for the measurement. The demo needs only Python with NumPy, SciPy, Matplotlib, and PyYAML, and it finishes in about 5 s on a laptop CPU. It demonstrates the decision logic, not the device physics of In–W–O.</p>
 
 <p><br></p>
 
-<h1 id="safe-input-deck-checking">Safe input-deck checking</h1>
+<h1 id="a-synthetic-device-with-known-missing-physics">A synthetic device with known missing physics</h1>
 
-<p>    Before launching a job, the agent can run inexpensive checks that do not consume a simulator license:</p>
+<p>    The simulator is a charge-based (EKV-style) transfer-curve model with a Schottky-like contact resistance solved self-consistently. It depends on gate voltage, drain bias, and channel length. That dependence matters, because a held-out test on a model that ignores L would be meaningless. The calibration parameters mirror the paper’s effective descriptors: S/D work function (contact), gate work function, mobility prefactor μ<sub>0</sub>, and two optional components, a gate-interface fixed charge Q<sub>f</sub> and a tail-state density N<sub>tail</sub>.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./tools/check_host.sh
-./tools/check_tcad_case.sh runs/&lt;run_id&gt;/input
-python tools/render_case_matrix.py experiments/&lt;sweep&gt;.yaml
-git diff <span class="nt">--</span> runs/&lt;run_id&gt;/input
-</code></pre></div></div>
-
-<p>    These checks catch simple problems before they consume compute time or a license. The agent should block the run and ask for review if a placeholder is unresolved, an include file is missing, or the generated sweep contains more cases than requested.</p>
+<p>    The synthetic “measurement” is generated by the same model plus two effects that the calibration model never has: a gate-dependent mobility and a drain-induced threshold shift. Noise and a pA-level floor are added with a fixed seed. A perfect fit is therefore impossible by construction. This avoids the “inverse crime” of fitting data with the model that generated it, and it gives the held-out tests real model-form error to reveal.</p>
 
 <p><br></p>
 
-<h1 id="example-unresolved-vd">Example: unresolved <code class="language-plaintext highlighter-rouge">@Vd@</code>
-</h1>
+<h1 id="objective-j-and-the-accept-rule">Objective J and the accept rule</h1>
 
-<p>    A common failure occurs when an input deck moves from a Workbench-style preprocessing flow to a standalone run with unresolved placeholders. A generic fragment might look like this:</p>
+<p>    The demo uses the paper’s objective (Eq. 1) with the same weights and metric windows:</p>
 
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Electrode {
-  { Name="drain" Voltage=@Vd@ }
-}
-</code></pre></div></div>
+\[J=\frac{1}{|\mathcal{B}_{cal}|}\sum_{b\in\mathcal{B}_{cal}}\Big[0.25\,E_{\log,b}+0.10\,E_{\mathrm{lin},b}+1.00\,|\Delta V_{th,b}|+0.20\,|\Delta\log_{10}I_{on,b}|+0.25\,|\Delta SS_b|\Big]\]
 
-<p>    For a standalone three-point drain-bias sweep, the agent should generate explicit cases and leave the baseline unchanged:</p>
+<p>    The calibration biases are V<sub>D</sub> = 0.05 and 1 V at L = 1 µm. The paper states that each term is normalized by a fixed factor but does not list the values. The demo therefore declares its own normalization in the config, so its J values cannot be compared with the paper’s.</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">baseline</span><span class="pi">:</span> <span class="s">cases/baseline</span>
-<span class="na">placeholder</span><span class="pi">:</span> <span class="s2">"</span><span class="s">@Vd@"</span>
-<span class="na">parameter</span><span class="pi">:</span> <span class="s">drain_voltage</span>
-<span class="na">values_V</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">0.05</span><span class="pi">,</span> <span class="nv">0.50</span><span class="pi">,</span> <span class="nv">1.00</span><span class="pi">]</span>
-<span class="na">locked_paths</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">geometry.tdr</span>
-  <span class="pi">-</span> <span class="s">physics.inc</span>
-</code></pre></div></div>
+<p>    The bounded update solves the paper’s Eq. (3): a weighted least-squares step inside the parameter box and a trust radius. The rule that follows is strict. A trial is accepted only if every calibration simulation converges and J decreases. Otherwise it is rejected, logged with its reason, and retried with a smaller step. This rule is what keeps an automated loop from drifting into a better-looking but unphysical fit.</p>
 
-<p>    The diff for each generated case should be minimal:</p>
+<p><br></p>
 
-<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">- { Name="drain" Voltage=@Vd@ }
-</span><span class="gi">+ { Name="drain" Voltage=0.50 }
+<h1 id="agent-and-optimizer-are-different-things">Agent and optimizer are different things</h1>
+
+<p>    The most important design choice is the split between <em>choosing</em> and <em>computing</em>. The planner only chooses among legal actions: update one parameter group, request a model activation, or stop. The numbers always come from the OFAT and Gauss–Newton tools, and the accept rule is enforced by the controller. A planner can therefore never bypass the bounds or the objective, however it is implemented.</p>
+
+<p>    The default planner is a deterministic, rule-based controller. It is not an LLM. It activates a component that addresses the dominant residual when one is eligible. Otherwise it updates the group with the largest predicted gain, and it stops when nothing legal remains. An optional LLM planner can be connected to any OpenAI-compatible endpoint. It receives the same observation as JSON and must return one legal action. Invalid output is logged as an error, and the run never silently falls back to the rule planner. The default path thus needs no API key, while a real LLM can be plugged in without changing the guard rails.</p>
+
+<p>    Every decision is written to an action log, one JSON line per event:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"trial"</span><span class="p">,</span><span class="w"> </span><span class="nl">"group"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w"> </span><span class="nl">"changes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"phi_SD"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.75</span><span class="p">,</span><span class="w"> </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.51</span><span class="p">}},</span><span class="w">
+ </span><span class="nl">"J_before"</span><span class="p">:</span><span class="w"> </span><span class="mf">13.61</span><span class="p">,</span><span class="w"> </span><span class="nl">"J_trial"</span><span class="p">:</span><span class="w"> </span><span class="mf">11.40</span><span class="p">,</span><span class="w"> </span><span class="nl">"decision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="p">,</span><span class="w"> </span><span class="nl">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"converged and J decreased"</span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>    The agent should then report the cases it is ready to run:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ready to execute 3 cases:
-1. runs/&lt;run_id&gt;/cases/Vd_0.05V
-2. runs/&lt;run_id&gt;/cases/Vd_0.50V
-3. runs/&lt;run_id&gt;/cases/Vd_1.00V
-
-Please confirm before simulator execution.
-</code></pre></div></div>
+<p>    A reviewer can replay the whole calibration from this log and check why each step was taken.</p>
 
 <p><br></p>
 
-<h1 id="researcher-confirmation-before-license-consuming-jobs">Researcher confirmation before license-consuming jobs</h1>
+<h1 id="residual-guided-model-activation">Residual-guided model activation</h1>
 
-<p>    Confirmation protects shared licenses, queue resources, and research time. Before execution, the agent should show the command pattern, generated input paths, case count, and stop condition. The approval should be explicit:</p>
+<p>    Adding physics is the riskiest decision in calibration, because almost any extra term lowers the error. The demo therefore makes a component <em>eligible</em> only under three conditions. Its residual must carry at least 15% of J. It must persist through bounded parameter updates. And a trigger must show that existing parameters cannot remove it. Even then the activation needs an approval record, either from a policy file or from the researcher at the terminal.</p>
 
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Run exactly these 3 cases.
-Stop after the first non-zero exit code.
-Do not add cases, retry failed cases, or change solver settings without asking.
-</code></pre></div></div>
-
-<p>    This bounds the automation and gives each run a human-approved scope, which makes later debugging easier.</p>
+<p>    Two triggers appear in the default run. The gate work function reaches its approved bound while a V<sub>th</sub> offset remains, so the workflow requests the fixed charge Q<sub>f</sub>. Later, the SS residual persists while no active parameter can move it to first order, so the workflow requests the tail-state term. Because both candidates share the synthetic truth’s functional forms, the meaningful check is the negative one. When the synthetic device lacks a component, the workflow does not activate it. This selectivity is tested directly, and it is the evidence that the gate is not trivially permissive.</p>
 
 <p><br></p>
+
+<h1 id="results-on-synthetic-data">Results on synthetic data</h1>
+
+<p>    The run starts from a deliberately poor model with a high contact barrier, a V<sub>th</sub> offset of about 0.7 V, and no tail states.</p>
+
+<p><img src="/assets/img/research/agentic-tcad/fig1_initial_vs_target.png" alt="Initial model vs synthetic target" title="image" class="profile"><br></p>
+
+<p>    The workflow first moves the gate work function to its bound, then corrects the contact and mobility, and then activates Q<sub>f</sub> and the tail-state term when their residuals persist. J falls from 20.77 to 0.407 over 17 accepted updates, with 6 rejected trials. Parameter tuning alone stalls near J = 8.5. The largest single drop, from 8.49 to 2.66, comes with the fixed-charge activation. After the tail-state activation, J falls by another factor of four within four updates. The added terms therefore appear to remove systematic errors that the original parameters could not reach.</p>
+
+<p><img src="/assets/img/research/agentic-tcad/fig3_objective_trajectory.png" alt="Objective trajectory" title="image" class="profile"><br></p>
+
+<p>    The residual breakdown explains each action. Once the V<sub>th</sub> offset is corrected, the SS share of J grows from below 10% to about 40%. That persistent share is what triggers the tail-state activation. It falls to about 4% once the tail-state density has been adjusted.</p>
+
+<p><img src="/assets/img/research/agentic-tcad/fig4_residual_components.png" alt="Residual components" title="image" class="profile"><br></p>
+
+<p><img src="/assets/img/research/agentic-tcad/fig2_final_vs_target.png" alt="Calibrated model vs synthetic target" title="image" class="profile"><br></p>
+
+<p>    Not every parameter is identified. The gate work function and Q<sub>f</sub> enter only through V<sub>T</sub>, so only their combination is fixed by the data. μ<sub>0</sub> also absorbs the gate-dependent mobility that the model lacks. The contact work function and the tail-state density are recovered closely. This mirrors the paper’s caution that fitted values are calibration-effective descriptors, not physical extractions.</p>
+
+<p><br></p>
+
+<h1 id="held-out-evaluation-without-retuning">Held-out evaluation without retuning</h1>
+
+<p>    The calibrated model is then held fixed and evaluated on conditions it never saw: V<sub>D</sub> = 0.1, 0.2, and 0.5 V at L = 1 µm, and L = 2 µm at both calibration biases. A test confirms that corrupting the held-out data leaves the calibration unchanged.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Condition</th>
+      <th style="text-align: center">max |ΔV<sub>th</sub>|</th>
+      <th style="text-align: center">max |Δlog I<sub>on</sub>|</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Calibration (L = 1 µm, V<sub>D</sub> = 0.05, 1 V)</td>
+      <td style="text-align: center">16.9 mV</td>
+      <td style="text-align: center">0.031 dec</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Held-out drain bias (V<sub>D</sub> = 0.1–0.5 V)</td>
+      <td style="text-align: center">16.9 mV</td>
+      <td style="text-align: center">0.024 dec</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Held-out channel length (L = 2 µm)</td>
+      <td style="text-align: center">17.0 mV</td>
+      <td style="text-align: center">0.021 dec</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<p><img src="/assets/img/research/agentic-tcad/fig5_heldout_evaluation.png" alt="Held-out evaluation" title="image" class="profile"><br></p>
+
+<p>    The remaining V<sub>th</sub> errors are model-form error, not noise. They stay at 14–19 mV with the noise switched off, and they fall to about 3 mV when the missing physics is removed from the synthetic device. The held-out drain biases lie between the two calibration biases, so that test is an interpolation in V<sub>D</sub>, while the L = 2 µm test changes the geometry. Across ten noise seeds, final J ranges from 0.34 to 0.43 and the held-out V<sub>th</sub> error from 17 to 23 mV, so the seed shown here is on the favorable side.</p>
+
+<p><br></p>
+
+<h1 id="run-it-yourself">Run it yourself</h1>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/gyulab/agentic-TCAD-calibration-public
+<span class="nb">cd </span>agentic-TCAD-calibration-public
+python <span class="nt">-m</span> venv .venv <span class="o">&amp;&amp;</span> <span class="nb">source</span> .venv/bin/activate
+pip <span class="nb">install</span> <span class="nt">-r</span> requirements-lock.txt <span class="o">&amp;&amp;</span> pip <span class="nb">install</span> <span class="nt">-e</span> <span class="nb">.</span> <span class="nt">--no-deps</span>
+python <span class="nt">-m</span> agentic_tcad_demo run <span class="nt">--config</span> configs/synthetic_demo.yaml
+pytest
+</code></pre></div></div>
+
+<p>    The run writes the action log, a summary with the J trajectory and held-out tables, the final parameters, and the five figures above. Two runs give byte-identical outputs. <code class="language-plaintext highlighter-rouge">--interactive</code> asks the researcher before each model activation, and <code class="language-plaintext highlighter-rouge">--planner llm</code> connects an LLM through environment variables. A private simulator, such as an in-house TCAD wrapper, can be plugged in through a small <code class="language-plaintext highlighter-rouge">Simulator</code> interface without adding any deck or license file to the repository.</p>
+
+<p><br></p>
+
+<h1 id="what-the-demo-does-not-show">What the demo does not show</h1>
+
+<p>    The demo has clear limits, and they are worth stating once. It does not implement RAG. Retrieval from the Sentaurus manual cannot be redistributed, so candidate components are listed in the config instead. The optional LLM planner has not yet been evaluated with a specific model. The compact model is a teaching instrument, so a good synthetic calibration says nothing about industrial TCAD accuracy. Finally, the paper’s numbers come from measured data and Sentaurus, and they cannot be reproduced without those assets.</p>
+
+<p><br></p>
+
+<h1 id="takeaway">Takeaway</h1>
+
+<p>    An agentic calibration workflow is useful less for its speed than for its discipline. Residuals decide what to probe. Updates stay inside approved bounds. New physics needs evidence and approval, and every step must improve a fixed objective. Held-out conditions then test whether the model transfers. The open demo makes this discipline concrete enough to run, inspect, and test, and the same pattern would apply to other inverse problems with expensive simulators.</p>
+
+<p><br></p>
+
+<p><strong>Related</strong>: An earlier practical guide on setting up coding agents for generic TCAD tasks (<code class="language-plaintext highlighter-rouge">AGENTS.md</code>, <code class="language-plaintext highlighter-rouge">SKILL.md</code>, local manual search, and execution gates) is available as a <a href="https://drive.google.com/file/d/1Y6OE-IeEOqfVEkdmI3WGMKyysW7EPz3c/view" target="_blank" rel="external nofollow noopener">PDF</a>.</p>
 
     </div>
   </article>
