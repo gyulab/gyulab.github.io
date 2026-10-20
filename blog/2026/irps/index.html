@@ -22,7 +22,7 @@
   
 </title>
 <meta name="author" content="Gyujun Jeong">
-<meta name="description" content="First conference presentation at IRPS 2026 on physics-informed training methodologies using custom loss functions for device modeling.">
+<meta name="description" content="Physics-informed neural network (PINN) compact model for process variation in ferroelectric nvCAP crossbar arrays, enforcing monotone C-V and process trends with ReLU-based physics losses. Presented at IRPS 2026.">
 
   <meta name="keywords" content="Gyujun Jeong, electrical engineering, Georgia Tech, AI for Semiconductors, physics-informed machine learning, memory devices">
 
@@ -306,13 +306,206 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <p>IRPS 2026 was my first time presenting at a conference. I presented my work on physics-informed training methodologies, focusing on how custom loss functions can guide device modeling and improve compact modeling for nvCAP arrays.</p>
+      <p><strong>Paper (IRPS 2026)</strong>: <a href="https://ieeexplore.ieee.org/abstract/document/11499208/" target="_blank" rel="external nofollow noopener">Physics-Informed Neural Network-Assisted Compact Modeling for Process Variation in Non-volatile Capacitive Crossbar Arrays (IEEE Xplore)</a><br>
+<strong>Authors</strong>: Gyujun Jeong, Jungyoun Kwak, Madhav Vadlamani, Junmo Lee, and Shimeng Yu (Georgia Tech)<br><br></p>
+
+<p>IRPS (International Reliability Physics Symposium) 2026 was my first time presenting at a conference! I presented how <strong>custom physics-informed loss functions</strong> can guide neural network compact models to stay physically consistent, here applied to <strong>process variation (PV) in ferroelectric non-volatile capacitor (nvCAP) crossbar arrays</strong>.</p>
 
 <p><img src="/assets/img/irps1.jpeg" alt="IRPS 2026 conference presentation" title="IRPS 2026 conference presentation" class="profile">
 <br></p>
 
 <p><img src="/assets/img/irps2.jpeg" alt="IRPS 2026 presentation photo" title="IRPS 2026 presentation photo" class="profile">
 <br></p>
+
+<h1 id="motivation-process-variation-in-scaled-nvcap">Motivation: Process Variation in Scaled nvCAP</h1>
+
+<p>    The ferroelectric <strong>nvCAP</strong> is a promising device for non-destructive read and <strong>charge-domain compute-in-memory</strong>. So far, nvCAP data have mostly been measured at the µm scale, but as devices shrink to the nm regime, stochastic fabrication variations—ferroelectric thickness, dielectric constant, work function—can cause large deviations in device characteristics. Projecting yield and accuracy at future nodes requires a <strong>predictive PV-aware compact model</strong>.</p>
+
+<p>Each compact modeling approach has a trade-off:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Modeling Method</th>
+      <th style="text-align: left">Advantages</th>
+      <th style="text-align: left">Limitations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Physics-based Model (TCAD)</td>
+      <td style="text-align: left">High physical fidelity; captures internal states</td>
+      <td style="text-align: left">Computationally expensive; effort-intensive calibration</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Data-driven Model (MLP)</td>
+      <td style="text-align: left">Fast inference; simple implementation</td>
+      <td style="text-align: left">Physical inconsistency; risk of unphysical oscillations</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>PINN Model (This work)</strong></td>
+      <td style="text-align: left">Physics-aware accuracy; robust generalization</td>
+      <td style="text-align: left">Requires custom loss function design</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<p>    Neural network compact models offer &gt; 10<sup>5</sup>× inference speedup over physics-based solvers, but a pure black box can <strong>violate physical laws between training points</strong>. Our goal is to keep the speed of an MLP while forcing it to respect the physics.</p>
+
+<p><img src="/assets/img/research/irps/irps-framework.png" alt="PINN Compact Modeling Framework" title="image" class="profile"><br></p>
+<center><i>PINN compact modeling framework: TCAD C-V data under PV → PINN-assisted compact model → SPICE → ENOB of a 128×128 nvCAP crossbar.</i></center>
+
+<p><br><br></p>
+
+<h1 id="device-and-tcad-data-under-process-variation">Device and TCAD Data Under Process Variation</h1>
+
+<p>    We study a <strong>3D fin nvCAP</strong> with an ALD-grown W-doped In<sub>2</sub>O<sub>3</sub> (IWO) oxide semiconductor layer in series with a ferroelectric Hf<sub>0.5</sub>Zr<sub>0.5</sub>O<sub>2</sub> (HZO) layer. The capacitance is high (C<sub>on</sub>) when the IWO is accumulated and low (C<sub>off</sub>) when it is depleted, and the ferroelectric polarization sets which state is read at V<sub>read</sub> = 0 V.</p>
+
+<p><img src="/assets/img/research/irps/irps-device.png" alt="nvCAP Device Structure" title="image" class="profile"><br></p>
+
+<p>Since statistical variation data at these dimensions do not exist yet, we used an <strong>experimentally calibrated Sentaurus TCAD nvCAP model</strong> to synthesize C-V data over three process corners:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Sweep Parameter</th>
+      <th style="text-align: left">Default Value</th>
+      <th style="text-align: left">Variation (3 Process Corners)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">HZO Dielectric Constant (ε<sub>HZO</sub>)</td>
+      <td style="text-align: left">14</td>
+      <td style="text-align: left">Nominal ± 10%: {12.6, 14, 15.4}</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">HZO Thickness (t<sub>HZO</sub>)</td>
+      <td style="text-align: left">7 nm</td>
+      <td style="text-align: left">Nominal ± 10%: {6.3, 7, 7.7} nm</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Bottom Electrode Work Function (WF)</td>
+      <td style="text-align: left">4.5 eV</td>
+      <td style="text-align: left">Nominal ± 0.1 eV: {4.4, 4.5, 4.6} eV</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Overlap Width (W<sub>ov</sub>)</td>
+      <td style="text-align: left">40 nm</td>
+      <td style="text-align: left">{4, 10, 40} nm</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br>
+(Default design: W = 200 nm, L = 100 nm, L<sub>ov</sub> = 25 nm)</p>
+
+<h4 id="physical-trends-what-the-model-must-respect">Physical Trends (What the Model Must Respect)</h4>
+<p><img src="/assets/img/research/irps/irps-cv-pv.png" alt="C-V under PV" title="image" class="profile"><br></p>
+<ul>
+  <li>
+<strong>Work function:</strong> shifts the C-V curve laterally (built-in field offset).</li>
+  <li>
+<strong>ε<sub>HZO</sub> ↑ / t<sub>HZO</sub> ↓:</strong> both C<sub>on</sub> and C<sub>off</sub> increase, since capacitance is governed by C<sub>HZO</sub> ∝ ε<sub>HZO</sub>/t<sub>HZO</sub>. The on/off ratio also increases, because C<sub>on</sub> depends almost entirely on C<sub>HZO</sub> while C<sub>off</sub> is a series combination with the depletion capacitance.</li>
+  <li>
+<strong>W<sub>ov</sub> ↓:</strong> absolute capacitance decreases (smaller overlap area), but the on/off ratio <strong>increases</strong> because C<sub>off</sub> scales with the overlap area while C<sub>on</sub> is preserved by accumulation extending beyond the overlap.</li>
+</ul>
+
+<p>These are exactly the <strong>monotone relationships</strong> that we later encode into the loss function.</p>
+
+<p><br><br></p>
+
+<h1 id="methodology-pinn-with-monotonicity-constraints">Methodology: PINN with Monotonicity Constraints</h1>
+
+<h4 id="architecture">Architecture</h4>
+<p><img src="/assets/img/research/irps/irps-pinn-arch.png" alt="PINN Architecture" title="image" class="profile"><br></p>
+
+<p>The compact model is a small <strong>6-32-32-1 MLP</strong>:</p>
+<ul>
+  <li>
+<strong>Inputs (6):</strong> gate voltage V<sub>g</sub>, a binary on/off branch indicator (C<sub>on</sub> vs. C<sub>off</sub> branch of the ferroelectric hysteresis), and four PV parameters (ε<sub>HZO</sub>, t<sub>HZO</sub>, WF, W<sub>ov</sub>).</li>
+  <li>
+<strong>Output (1):</strong> capacitance C.</li>
+  <li>
+<strong>Training data:</strong> ~16k points from TCAD, swept over a <strong>coarse 3-corner grid</strong> (Nominal, +10%, −10%) to emulate a realistic, data-efficient design of experiments.</li>
+</ul>
+
+<h4 id="why-monotonicity">Why Monotonicity?</h4>
+<p>    With only three corners per parameter, a standard MLP easily fits the training points but produces <strong>ripples and staircase artifacts</strong> in between. A small ripple may look harmless, but a <strong>non-monotonic C-V</strong> is physically wrong (capacitance must not decrease as V<sub>g</sub> sweeps through the switching transition), and it can cause <strong>convergence failures in array-level SPICE simulation</strong>.</p>
+
+<p><img src="/assets/img/research/irps/irps-relu-loss.png" alt="ReLU-based Physics Loss" title="image" class="profile"><br></p>
+<center><i>(a) The standard MLP (red) oscillates around the TCAD reference while the PINN (green) stays smooth. (b) The MLP gradient ∂C/∂V dips below zero (violation regions). (c) The ReLU physics loss lights up exactly at those violations.</i></center>
+
+<h4 id="relu-based-physics-loss">ReLU-Based Physics Loss</h4>
+<p>The total loss combines the data fit with a weighted sum of physics penalties:</p>
+
+<center>$$
+\mathcal{L}_{Total} = \mathcal{L}_{MSE} + \mathcal{L}_{R} = \mathcal{L}_{MSE} + \sum_{k} \lambda_k \cdot \mathcal{L}_{Physics,k}
+$$</center>
+<p><br></p>
+
+<p>The key building block is \(ReLU(x) = \max(0, x)\), which acts as a <strong>conditional filter</strong>: it is zero when the physics is satisfied and positive only when it is violated. Using automatic differentiation, we compute the partial derivatives of the predicted capacitance with respect to the inputs during training and penalize negative C-V slopes:</p>
+
+<center>$$
+\mathcal{L}_{V} = ReLU\left(-\frac{\partial C}{\partial V}\right)
+$$</center>
+<p><br></p>
+
+<p>If \(\partial C / \partial V \geq 0\) (physically correct), the penalty is exactly zero; any negative slope produces a positive loss that the optimizer must remove. We extend the same idea to the process trends from TCAD, so that capacitance <strong>decreases</strong> with t<sub>HZO</sub> and <strong>increases</strong> with ε<sub>HZO</sub> and W<sub>ov</sub>:</p>
+
+<center>$$
+\mathcal{L}_{R} = \lambda_V \cdot ReLU\left(-\frac{\partial C}{\partial V}\right) + \lambda_t \cdot ReLU\left(\frac{\partial C}{\partial t}\right) + \lambda_\varepsilon \cdot ReLU\left(-\frac{\partial C}{\partial \varepsilon}\right) + \lambda_W \cdot ReLU\left(-\frac{\partial C}{\partial W}\right)
+$$</center>
+<p><br></p>
+
+<p>with \(\lambda_V = 0.05\) and \(\lambda_t = \lambda_\varepsilon = \lambda_W = 0.01\), chosen to balance the derivative magnitudes so the physics term guides the fit without overwhelming the data term. Unlike generic regularization (e.g., weight decay), these inequality constraints create a <strong>physical boundary that guides the optimizer even in regions with no training data</strong>.</p>
+
+<p>    Note) The same monotone-constraint idea later became the <strong>monotonicity loss</strong> for retention time in our <a href="https://gyulab.github.io/blog/2025/pino/">PINO surrogate for Fe-VNAND (ICMC 2026)</a>, where trapped charge and remnant polarization must decay monotonically.</p>
+
+<p><br><br></p>
+
+<h1 id="results">Results</h1>
+
+<h4 id="1-interpolation-to-an-unseen-process-corner">1. Interpolation to an Unseen Process Corner</h4>
+<p><img src="/assets/img/research/irps/irps-interpolation.png" alt="Interpolation on Unseen Corner" title="image" class="profile"><br></p>
+
+<p>We tested both models on an <strong>unseen, experimentally calibrated ε<sub>HZO</sub> = 13.5</strong>, between the trained 12.6 and 14 corners, focusing on the steep transition region (20–30 fF/µm²):</p>
+<ul>
+  <li>
+<strong>Standard MLP:</strong> R<sup>2</sup> = <strong>0.67</strong>, with unphysical oscillations.</li>
+  <li>
+<strong>PINN:</strong> R<sup>2</sup> = <strong>0.96</strong>, smooth and closely matching TCAD.</li>
+</ul>
+
+<p>    Interestingly, the standard MLP had a <em>lower</em> training MSE (1×10<sup>-5</sup>) than the PINN (3×10<sup>-5</sup>). The lower number reflects <strong>overfitting to the sparse grid</strong>; the slightly higher PINN training loss is the expected price of the physics constraints, and it buys robust generalization.</p>
+
+<h4 id="2-monte-carlo-variation-of-con--coff">2. Monte Carlo Variation of C<sub>on</sub> / C<sub>off</sub>
+</h4>
+<p><img src="/assets/img/research/irps/irps-monte-carlo.png" alt="Monte Carlo Capacitance" title="image" class="profile"><br>
+    Monte Carlo sampling of the compact model (varying ε<sub>HZO</sub>, t<sub>HZO</sub>, WF, with W<sub>ov</sub> = 4 nm to maximize the on/off ratio) shows C<sub>on</sub> spanning ~22–30 fF/µm² and C<sub>off</sub> ~1.5–1.9 fF/µm². The relative variation is comparable for both states (~20–30%).</p>
+
+<h4 id="3-array-level-impact-128128-capacitive-crossbar">3. Array-Level Impact: 128×128 Capacitive Crossbar</h4>
+<p><img src="/assets/img/research/irps/irps-enob.png" alt="ENOB Analysis" title="image" class="profile"><br>
+    Plugging the PINN compact model into SPICE for a <strong>128×128 nvCAP crossbar</strong> (charging + charge transfer phases), with thermal, jitter, and flicker noise, we computed the ENOB of the charge-domain MAC output. Device-level PV makes the ENOB vary from <strong>6.49 bits</strong> down to a worst case of <strong>5.33 bits</strong> (μ = 5.93, σ = 0.211 over 200 samples), a <strong>~20% variation</strong>. Since low-precision neural network inference typically needs &gt; 5–6 bits, this calls for tighter process control or PV-aware design.</p>
+
+<p><br><br></p>
+
+<h1 id="summary">Summary</h1>
+
+<ul>
+  <li>
+<strong>PINN Compact Model:</strong> A 6-32-32-1 MLP trained on sparse 3-corner TCAD data, with ReLU-based physics losses enforcing <strong>monotone C-V behavior</strong> and correct <strong>ε<sub>HZO</sub>, t<sub>HZO</sub>, W<sub>ov</sub> scaling trends</strong>.</li>
+  <li>
+<strong>Accuracy:</strong> R<sup>2</sup> improved from 0.67 (MLP) to <strong>0.96</strong> (PINN) on an unseen process corner, with no unphysical ripples.</li>
+  <li>
+<strong>SPICE-Ready:</strong> Monotone, smooth C-V predictions avoid convergence failures in large-array circuit simulation.</li>
+  <li>
+<strong>Reliability Insight:</strong> PV causes ~20% ENOB variation in a 128×128 nvCAP crossbar, highlighting the need for PV-aware design.</li>
+</ul>
+
+<p><br></p>
 
 <h3 id="paper">Paper</h3>
 <iframe src="https://drive.google.com/file/d/1BnDxDr7gOadz0pQjgeq49seAxvODhm0n/preview" style="width:100%; height:600px;" frameborder="0"></iframe>

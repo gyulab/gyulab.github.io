@@ -45,7 +45,7 @@ ninja.data = [{
         
           title: "IRPS 2026: PINN-Assisted Compact Modeling for nvCAP Arrays",
         
-        description: "First conference presentation at IRPS 2026 on physics-informed training methodologies using custom loss functions for device modeling.",
+        description: "Physics-informed neural network (PINN) compact model for process variation in ferroelectric nvCAP crossbar arrays, enforcing monotone C-V and process trends with ReLU-based physics losses. Presented at IRPS 2026.",
         section: "Posts",
         handler: () => {
           
