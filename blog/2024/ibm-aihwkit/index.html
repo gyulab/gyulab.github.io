@@ -22,7 +22,7 @@
   
 </title>
 <meta name="author" content="Gyujun Jeong">
-<meta name="description" content="">
+<meta name="description" content="Running transformer models (GPT-2, BERT) on analog in-memory computing hardware with IBM AIHWKit: a GPT-2 example now included in the official AIHWKit release, and a layer-wise noise sensitivity analysis of BERT on SQuAD.">
 
   <meta name="keywords" content="Gyujun Jeong, electrical engineering, Georgia Tech, AI for Semiconductors, physics-informed machine learning, memory devices">
 
@@ -306,8 +306,190 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <iframe src="https://drive.google.com/file/d/1J8sBSpqyenYCgdGmYVPzVXodfiKUonrs/preview" style="width:100%; height:400px;" frameborder="0"></iframe>
+      <h4 id="presentation-video">Presentation Video</h4>
+<iframe src="https://drive.google.com/file/d/1J8sBSpqyenYCgdGmYVPzVXodfiKUonrs/preview" style="width:100%; height:400px;" frameborder="0"></iframe>
+<p><br></p>
+
+<p><strong>Official Example (IBM AIHWKit)</strong>: <a href="https://github.com/IBM/aihwkit/blob/master/examples/36_gpt2_on_wikitext.py" target="_blank" rel="external nofollow noopener">examples/36_gpt2_on_wikitext.py</a><br>
+<strong>My Fork</strong>: <a href="https://github.com/gyulab/aihwkit" target="_blank" rel="external nofollow noopener">github.com/gyulab/aihwkit</a> (<a href="https://github.com/gyulab/aihwkit/blob/master/examples/31_gpt2_on_wikitext.py" target="_blank" rel="external nofollow noopener">GPT-2</a>, <a href="https://github.com/gyulab/aihwkit/blob/master/examples/31_gpt2_decoder_model.ipynb" target="_blank" rel="external nofollow noopener">GPT-2 notebook</a>, <a href="https://github.com/gyulab/aihwkit/blob/master/examples/32_bert_on_squad_noise_analysis.py" target="_blank" rel="external nofollow noopener">BERT noise analysis</a>)<br><br></p>
+
+<p>Update) The GPT-2 example I started in summer 2024 is now part of the official IBM AIHWKit examples as <strong>Example 36</strong> (“This example was initiated by Gyujun Jeong”), released with <strong>AIHWKit 1.1.0</strong> and later versions.</p>
+
+<h1 id="motivation-transformers-on-analog-in-memory-computing">Motivation: Transformers on Analog In-Memory Computing</h1>
+
+<p>    Analog in-memory computing (AIMC) performs matrix-vector multiplications directly inside non-volatile memory crossbars, avoiding the data movement that dominates the energy of large neural networks. However, analog weights are <strong>noisy</strong>: programming noise, read noise, conductance drift, and limited ADC/DAC precision all perturb the computation.</p>
+
+<p>    <strong>IBM Analog Hardware Acceleration Kit (AIHWKit)</strong> is an open-source PyTorch toolkit that simulates these non-idealities, so we can ask: <em>how do modern transformer models behave on analog hardware, and which layers are most sensitive to noise?</em> In this project, I explored two transformer families:</p>
+<ol>
+  <li>
+<strong>GPT-2 (decoder):</strong> an end-to-end example for analog conversion, hardware-aware (HWA) fine-tuning, and text generation.</li>
+  <li>
+<strong>BERT (encoder):</strong> a layer-by-layer noise sensitivity analysis on question answering.</li>
+</ol>
+
+<p><br><br></p>
+
+<h1 id="part-1-gpt-2-on-aihwkit">Part 1. GPT-2 on AIHWKit</h1>
+
+<h4 id="model--dataset">Model &amp; Dataset</h4>
+<ul>
+  <li>
+<strong>Model:</strong> <a href="https://huggingface.co/distilbert/distilgpt2" target="_blank" rel="external nofollow noopener">DistilGPT2</a> (88.2M parameters), the smallest GPT-2 variant, for demonstration.</li>
+  <li>
+<strong>Dataset:</strong> wikitext-2-raw-v1 (~18 MB on disk).</li>
+  <li>
+<strong>Workflow:</strong> load the pre-trained model from Hugging Face → convert it to analog with <code class="language-plaintext highlighter-rouge">convert_to_analog()</code> → HWA fine-tuning → evaluate perplexity at different weight noise levels and inference times (drift), logged to TensorBoard.</li>
+</ul>
+
+<h4 id="analog-layers">Analog Layers</h4>
+<p>    After <code class="language-plaintext highlighter-rouge">convert_to_analog()</code>, the <strong>LM head</strong> (768 → 50257) becomes an <code class="language-plaintext highlighter-rouge">AnalogLinear</code> layer mapped onto two simulated crossbar tiles. In this demonstration, the GPT-2 blocks use Hugging Face <code class="language-plaintext highlighter-rouge">Conv1D</code> modules (attention <code class="language-plaintext highlighter-rouge">c_attn</code>/<code class="language-plaintext highlighter-rouge">c_proj</code>, MLP <code class="language-plaintext highlighter-rouge">c_fc</code>/<code class="language-plaintext highlighter-rouge">c_proj</code>), which were not replaced by the converter, so they stay digital along with the embeddings and LayerNorms.</p>
+
+<p><img src="/assets/img/research/aihwkit/gpt2-layers.jpg" alt="GPT-2 Layers" title="image" class="profile"><br></p>
+
+<h4 id="results">Results</h4>
+<p><img src="/assets/img/research/aihwkit/gpt2-train-loss.jpg" alt="GPT-2 Train Loss" title="image" class="profile"><br>
+<img src="/assets/img/research/aihwkit/gpt2-validation.jpg" alt="GPT-2 Validation" title="image" class="profile"><br></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Model</th>
+      <th style="text-align: left">Validation Loss</th>
+      <th style="text-align: left">Perplexity (PPL)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Digital (reference, <a href="https://huggingface.co/Intel/distilgpt2-wikitext2" target="_blank" rel="external nofollow noopener">Intel/distilgpt2-wikitext2</a>)</td>
+      <td style="text-align: left">3.326</td>
+      <td style="text-align: left">27.8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Analog, HWA fine-tuned (AIHWKit)</td>
+      <td style="text-align: left">4.059</td>
+      <td style="text-align: left">57.9</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<p>    The analog model still generates coherent text from a prompt, showing that the full pipeline (conversion → HWA training → generation) works end-to-end:</p>
+<ul>
+  <li>
+<strong>Input:</strong> “Once upon a time”</li>
+  <li>
+<strong>Output:</strong> “Once upon a time of war, the German army was able to defeat the German army in the Battle of the Rhine”</li>
+</ul>
+
+<p><img src="/assets/img/research/aihwkit/gpt2-inference.jpg" alt="GPT-2 Inference" title="image" class="profile"><br></p>
+
+<p>    I opened a pull request to IBM/AIHWKit (<a href="https://github.com/IBM/aihwkit/pull/664" target="_blank" rel="external nofollow noopener">#664</a>). The example was later integrated by the maintainers into the official repository as <a href="https://github.com/IBM/aihwkit/blob/master/examples/36_gpt2_on_wikitext.py" target="_blank" rel="external nofollow noopener">Example 36</a>.</p>
+
+<p><br><br></p>
+
+<h1 id="part-2-bert-noise-analysis-on-squad">Part 2. BERT Noise Analysis on SQuAD</h1>
+
+<h4 id="setup">Setup</h4>
+<ul>
+  <li>
+<strong>Task:</strong> SQuAD v1.1 (100k+ question-answer pairs). BERT takes <code class="language-plaintext highlighter-rouge">[CLS] question [SEP] passage [SEP]</code> and predicts start/end logits of the answer span.</li>
+  <li>
+<strong>Metrics:</strong> F1 score (token overlap between predicted and ground-truth spans) and Exact Match (EM).</li>
+  <li>
+<strong>Analog configuration:</strong> PCM-like noise model, 512×512 tiles, 256-level DAC/ADC resolution, output noise, and global drift compensation.</li>
+  <li>
+<strong>Method:</strong> For each layer, one at a time, inject <strong>Gaussian weight noise (mean = 0, std = 0.1)</strong> and re-evaluate F1/EM. This isolates how much each layer contributes to the accuracy loss.</li>
+</ul>
+
+<p><img src="/assets/img/research/aihwkit/bert-code.jpg" alt="BERT Code" title="image" class="profile"><br>
+<img src="/assets/img/research/aihwkit/bert-layers.jpg" alt="BERT Layers" title="image" class="profile"><br></p>
+
+<h4 id="baseline">Baseline</h4>
+<p>    Without additional noise, the analog BERT achieves <strong>F1 ≈ 88</strong> and <strong>EM ≈ 81</strong>, stable over drift times up to 10<sup>6</sup> s. This is the reference for the layer-wise analysis.</p>
+
+<p><img src="/assets/img/research/aihwkit/bert-baseline.jpg" alt="BERT Baseline" title="image" class="profile"><br></p>
+
+<h4 id="layer-wise-sensitivity">Layer-wise Sensitivity</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Layer Group</th>
+      <th style="text-align: left">F1 / EM under noise</th>
+      <th style="text-align: left">Observation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">
+<strong>Embeddings</strong> (word, position, token type)</td>
+      <td style="text-align: left">F1 0.59–4.19, EM &lt; 1</td>
+      <td style="text-align: left">
+<strong>Most vulnerable</strong>: noise corrupts the input representation itself</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Attention (query/key/value)</td>
+      <td style="text-align: left">F1 86.75–87.47, EM 78.67–79.67</td>
+      <td style="text-align: left">Robust: attention tolerates noise to a certain extent</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Intermediate / output dense</td>
+      <td style="text-align: left">Mostly ~87, worst F1 77.13, EM 63.69</td>
+      <td style="text-align: left">Complex output dense layers can be highly sensitive</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">LayerNorm</td>
+      <td style="text-align: left">F1 ~87, EM ~79</td>
+      <td style="text-align: left">Strong resistance; normalization stabilizes small perturbations</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">QA outputs</td>
+      <td style="text-align: left">F1 ~87, EM ~79</td>
+      <td style="text-align: left">Robust: directly reads the contextualized embeddings</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<p><img src="/assets/img/research/aihwkit/bert-embedding.jpg" alt="BERT Embedding" title="image" class="profile"><br>
+<img src="/assets/img/research/aihwkit/bert-dense.jpg" alt="BERT Dense" title="image" class="profile"><br></p>
+
+<p>    <strong>Noise propagation:</strong> Noise injected in earlier layers propagates and can be amplified downstream. For example, the same output dense tile gives F1 87.23 in encoder layer 0 but drops to <strong>F1 77.13</strong> in layer 3.</p>
+
+<p><img src="/assets/img/research/aihwkit/bert-propagation.jpg" alt="BERT Noise Propagation" title="image" class="profile"><br></p>
+
+<h4 id="why-are-some-layers-vulnerable">Why Are Some Layers Vulnerable?</h4>
+<p><strong>Hypothesis 1, Weight magnitude:</strong> “Heavier weights dominate, so they are more noise-sensitive.” I correlated the mean and std of each tile’s weights with its F1 score. The correlation coefficients were only <strong>−0.005 (mean)</strong> and <strong>0.090 (std)</strong>, so weight magnitude is <em>not</em> the explanation.</p>
+
+<p><img src="/assets/img/research/aihwkit/bert-weight-magnitude.jpg" alt="BERT Weight Magnitude" title="image" class="profile"><br></p>
+
+<p><strong>Hypothesis 2, Distribution spread:</strong> Comparing the vulnerable layer (<code class="language-plaintext highlighter-rouge">output.dense ... array.3.0</code>, F1 77.13) with an average layer (F1 88.24), the vulnerable layer shows a <strong>wider weight distribution and less consistent neuron activations</strong>. This higher variability makes it less able to generalize under perturbation, which likely explains its lower F1.</p>
+
+<p><img src="/assets/img/research/aihwkit/bert-distribution.jpg" alt="BERT Distribution" title="image" class="profile"><br></p>
+
+<p><br><br></p>
+
+<h1 id="summary">Summary</h1>
+
+<ul>
+  <li>
+<strong>GPT-2 on AIHWKit:</strong> Built an end-to-end analog GPT-2 example (conversion, HWA fine-tuning, drift-aware evaluation, text generation), now included in the official IBM AIHWKit as Example 36.</li>
+  <li>
+<strong>Layer importance:</strong> In BERT, the first layers (embeddings) and complex final transformations (output dense) are the most critical, since they handle the initial encoding of raw input and the final prediction.</li>
+  <li>
+<strong>Layer functionality:</strong> Layers with complex transformations and <strong>wider weight/activation distributions</strong> are more susceptible to analog noise, while attention, LayerNorm, and QA outputs are comparatively robust.</li>
+  <li>
+<strong>Takeaway for hardware design:</strong> Not all layers need the same analog precision. Keeping sensitive layers (e.g., embeddings) digital or giving them more robust mapping is a practical path for transformer inference on AIMC.</li>
+</ul>
+
+<p><br></p>
+
+<h3 id="slides-bert-noise-analysis-using-aihwkit-july-18-2024">Slides: BERT Noise Analysis using AIHWKit (July 18, 2024)</h3>
 <iframe src="https://drive.google.com/file/d/1Q_J0C1Z9MtZeBEsPk3PK8MJ6ZTHk2Lw_/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
+
+<h3 id="slides-gpt-2-example-implementation-june-25-2024">Slides: GPT-2 Example Implementation (June 25, 2024)</h3>
 <iframe src="https://drive.google.com/file/d/1rbIu6mdYRK0MGFGlL7RWprEDQ55h7E3x/preview" style="width:100%; height:600px;" frameborder="0"></iframe>
 
     </div>

@@ -67,7 +67,7 @@ ninja.data = [{
         
           title: "IBM Analog Hardware Accelerator Kit Research Archive",
         
-        description: "",
+        description: "Running transformer models (GPT-2, BERT) on analog in-memory computing hardware with IBM AIHWKit: a GPT-2 example now included in the official AIHWKit release, and a layer-wise noise sensitivity analysis of BERT on SQuAD.",
         section: "Posts",
         handler: () => {
           
