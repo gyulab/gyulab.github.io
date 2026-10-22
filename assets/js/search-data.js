@@ -23,8 +23,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-cv",
-          title: "CV",
+        },{id: "nav-resume-cv",
+          title: "Resume/CV",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -562,7 +562,7 @@ ninja.data = [{
         title: 'Custom_social',
         section: 'Socials',
         handler: () => {
-          window.open("https://drive.google.com/file/d/1LT-fcVCiSOm-3IK-0p3YyXvrdoWwa0Ca/preview", "_blank");
+          window.open("/cv/", "_blank");
         },
       },{
       id: 'light-theme',
