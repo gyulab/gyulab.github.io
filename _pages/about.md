@@ -30,7 +30,7 @@ _styles: >
 
 ## Contact Info
 * <b><a href="https://www.linkedin.com/in/gyujun-jeong/">(Linkedin)</a></b>
-* <b><a href="/cv/">(CV)</a></b>
+* <b><a href="/cv/">(Resume/CV)</a></b>
 * <b>E-mail: <a href="mailto:gjeong35@gatech.edu">gjeong35@gatech.edu</a>
 
 ## Research Interest
